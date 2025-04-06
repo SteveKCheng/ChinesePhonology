@@ -1,0 +1,74 @@
+a:any-link {
+    text-decoration: none;
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color:  rgb(2%, 0, 98%);
+}
+
+a:hover {
+    background-color: rgb(223, 223, 95);
+}
+
+.ipa {
+    font-family: sans-serif;
+}
+
+th {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+tbody th {
+    text-align: left;
+}
+
+td {
+    border: 1px solid;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+col.sounds-group-1 {
+    background-color: rgb(92%, 92%, 92%);
+}
+
+col.sounds-group-2 {
+    background-color: rgb(96%, 96%, 96%);
+}
+
+col.sounds-group-3 {
+    background-color: rgb(92%, 92%, 92%);
+}
+
+col.sounds-group-4 {
+    background-color: rgb(96%, 96%, 96%);
+}
+
+span.pinyin {
+    font-style: italic;
+}
+
+span.romaji {
+    font-style: italic;
+}
+
+p.heading {
+    font-weight: bold;
+}
+
+div.section-1 p.heading {
+    font-size: 120%;
+}
+
+@media print {
+    div.section {
+        page-break-after: always;
+    }
+}

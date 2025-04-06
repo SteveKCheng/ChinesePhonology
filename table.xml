@@ -1,0 +1,497 @@
+<?xml-stylesheet type="text/xsl" href="table.xsl" ?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:p="http://www.gold-saucer.org/chinese-phonology"
+      xmlns:s="http://www.gold-saucer.org/structured-html"
+      lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="table.css" />
+
+  <p:link-group id="initials38">
+    <p:link-item key="幫" href="https://ytenx.org/kyonh/cjeng/幫/" /> 
+    <p:link-item key="滂" href="https://ytenx.org/kyonh/cjeng/滂/" /> 
+    <p:link-item key="並" href="https://ytenx.org/kyonh/cjeng/並/" /> 
+    <p:link-item key="明" href="https://ytenx.org/kyonh/cjeng/明/" />
+    <p:link-item key="端" href="https://ytenx.org/kyonh/cjeng/端/" /> 
+    <p:link-item key="透" href="https://ytenx.org/kyonh/cjeng/透/" /> 
+    <p:link-item key="定" href="https://ytenx.org/kyonh/cjeng/定/" /> 
+    <p:link-item key="泥" href="https://ytenx.org/kyonh/cjeng/泥/" />
+    <p:link-item key="知" href="https://ytenx.org/kyonh/cjeng/知/" /> 
+    <p:link-item key="徹" href="https://ytenx.org/kyonh/cjeng/徹/" /> 
+    <p:link-item key="澄" href="https://ytenx.org/kyonh/cjeng/澄/" /> 
+    <p:link-item key="娘" href="https://ytenx.org/kyonh/cjeng/孃/" />
+    <p:link-item key="精" href="https://ytenx.org/kyonh/cjeng/精/" /> 
+    <p:link-item key="清" href="https://ytenx.org/kyonh/cjeng/清/" /> 
+    <p:link-item key="從" href="https://ytenx.org/kyonh/cjeng/從/" /> 
+    <p:link-item key="心" href="https://ytenx.org/kyonh/cjeng/心/" /> 
+    <p:link-item key="邪" href="https://ytenx.org/kyonh/cjeng/邪/" />
+    <p:link-item key="莊" href="https://ytenx.org/kyonh/cjeng/莊/" /> 
+    <p:link-item key="初" href="https://ytenx.org/kyonh/cjeng/初/" /> 
+    <p:link-item key="崇" href="https://ytenx.org/kyonh/cjeng/崇/" /> 
+    <p:link-item key="生" href="https://ytenx.org/kyonh/cjeng/生/" /> 
+    <p:link-item key="俟" href="https://ytenx.org/kyonh/cjeng/俟/" />
+    <p:link-item key="章" href="https://ytenx.org/kyonh/cjeng/章/" /> 
+    <p:link-item key="昌" href="https://ytenx.org/kyonh/cjeng/昌/" /> 
+    <p:link-item key="常" href="https://ytenx.org/kyonh/cjeng/常/" /> 
+    <p:link-item key="書" href="https://ytenx.org/kyonh/cjeng/書/" /> 
+    <p:link-item key="船" href="https://ytenx.org/kyonh/cjeng/船/" />
+    <p:link-item key="見" href="https://ytenx.org/kyonh/cjeng/見/" /> 
+    <p:link-item key="溪" href="https://ytenx.org/kyonh/cjeng/溪/" /> 
+    <p:link-item key="羣" href="https://ytenx.org/kyonh/cjeng/羣/" /> 
+    <p:link-item key="疑" href="https://ytenx.org/kyonh/cjeng/疑/" />
+    <p:link-item key="曉" href="https://ytenx.org/kyonh/cjeng/曉/" /> 
+    <p:link-item key="匣" href="https://ytenx.org/kyonh/cjeng/匣/" /> 
+    <p:link-item key="影" href="https://ytenx.org/kyonh/cjeng/影/" /> 
+    <p:link-item key="云" href="https://ytenx.org/kyonh/cjeng/云/" /> 
+    <p:link-item key="以" href="https://ytenx.org/kyonh/cjeng/以/" />
+    <p:link-item key="來" href="https://ytenx.org/kyonh/cjeng/來/" />
+    <p:link-item key="日" href="https://ytenx.org/kyonh/cjeng/日/" />
+  </p:link-group>
+</head>
+
+<body>
+
+<s:section>
+  <s:heading>Initials of Middle Chinese</s:heading>
+      
+  <table>
+    <colgroup>
+      <col class="sounds-left-headings" />
+      <col span="3" class="sounds-group-1" />
+      <col span="2" class="sounds-group-2" />
+      <col class="sounds-group-3" />
+      <col class="sounds-group-4" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th />
+        <th colspan="3">
+          Stops <p:mc>塞音</p:mc> &amp; Affricates <p:mc>塞擦音</p:mc>
+        </th>
+        <th colspan="2">
+          Fricatives <p:mc>擦音</p:mc>
+        </th>
+        <th rowspan="2">
+          Nasals<br /> <p:mc>鼻音</p:mc>
+        </th>
+        <th rowspan="2">
+          Approximants<br /> <p:mc>近音</p:mc>
+        </th>          
+      </tr>
+      <tr>
+        <th />
+        <th>Tenuis</th>
+        <th>Aspirated</th>
+        <th>Voiced</th>
+        <th>Tenuis</th>
+        <th>Voiced</th>
+      </tr>
+      <tr>
+        <th />
+        <th><p:ac>全清</p:ac></th>
+        <th><p:ac>次清</p:ac></th>
+        <th><p:ac>濁</p:ac></th>
+        <th><p:ac>清</p:ac></th>
+        <th><p:ac>濁</p:ac></th>
+        <th><p:ac>清濁</p:ac></th>
+        <th><p:ac>清濁</p:ac></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>
+          Labials <p:ac>唇音</p:ac>
+        </th>
+        <td>
+          <p:ac p:lg="initials38">幫</p:ac>
+          <p:in
+            title="Voiceless bilabial plosive (Wikipedia)"
+            href="https://en.wikipedia.org/wiki/Voiceless_bilabial_plosive">p</p:in>
+        </td>
+        <td>
+          <p:ac p:lg="initials38">滂</p:ac>
+          <p:i>pʰ</p:i>
+        </td>
+        <td>
+          <p:ac p:lg="initials38">並</p:ac>
+          <p:in
+            title="Voiced bilabial plosive (Wikipedia)"
+            href="https://en.wikipedia.org/wiki/Voiced_bilabial_plosive">b</p:in>
+        </td>
+        <td />
+        <td />
+        <td>
+          <p:ac p:lg="initials38">明</p:ac>
+          <p:in
+            title="Voiced bilabial nasal (Wikipedia)" 
+            href="https://en.wikipedia.org/wiki/Voiced_bilabial_nasal">m</p:in>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Alveolar <p:ac>舌頭音</p:ac>
+        </th>
+        <td>
+          <p:ac p:lg="initials38">端</p:ac>
+          <p:i>t</p:i>
+        </td>
+        <td>
+          <p:ac p:lg="initials38">透</p:ac>
+          <p:i>tʰ</p:i>
+        </td>
+        <td>
+          <p:ac p:lg="initials38">定</p:ac>
+          <p:i>d</p:i>
+        </td>
+        <td />
+        <td />
+        <td>
+          <p:ac p:lg="initials38">泥</p:ac>
+          <p:i>n</p:i>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Retroflex <p:ac>舌上音</p:ac><p:fn idref="舌上音" />
+        </th>
+        <td>
+          <p:ac p:lg="initials38">知</p:ac>
+          <p:i>ʈ</p:i>
+        </td>
+        <td>
+          <p:ac p:lg="initials38">徹</p:ac>
+          <p:i>ʈʰ</p:i>
+        </td>
+        <td>
+          <p:ac p:lg="initials38">澄</p:ac>
+          <p:i>ɖ</p:i>
+        </td>
+        <td />
+        <td />
+        <td>
+          <p:ac p:lg="initials38">娘</p:ac><p:fn idref="泥-vs-娘" />
+          <p:i>ɳ</p:i>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Alveolar sibilants <p:ac>齒頭音</p:ac>
+        </th>
+        <td>
+          <p:ac p:lg="initials38">精</p:ac>
+          <p:i>ts</p:i>
+        </td>
+        <td>
+          <p:ac p:lg="initials38">清</p:ac>
+          <p:i>tsʰ</p:i>
+        </td>
+        <td>
+          <p:ac p:lg="initials38">從</p:ac>
+          <p:i>dz</p:i>
+        </td>
+        <td>
+          <p:ac p:lg="initials38">心</p:ac>
+          <p:i>s</p:i>
+        </td>
+        <td>
+          <p:ac p:lg="initials38">邪</p:ac>
+          <p:i>z</p:i>
+        </td>
+      </tr>      
+      <tr>
+        <th>
+          Retroflex sibilants <p:ac>齒上音</p:ac><p:fn idref="齒上音" />
+        </th>
+        <td>
+          <p:ac p:lg="initials38">莊</p:ac>
+          <p:i>tʂ</p:i>
+        </td>
+        <td>
+          <p:ac p:lg="initials38">初</p:ac>
+          <p:i>tʂʰ</p:i>
+        </td>
+        <td>
+          <p:ac p:lg="initials38">崇</p:ac>
+          <p:i>dʐ</p:i>
+        </td>
+        <td>
+          <p:ac p:lg="initials38">生</p:ac>
+          <p:i>ʂ</p:i>
+        </td>
+        <td>
+          <p:ac p:lg="initials38">俟</p:ac>
+          <p:i>ʐ</p:i>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Alveolo-palatal sibilants <p:ac>正齒音</p:ac>
+        </th>
+        <td>
+          <p:ac p:lg="initials38">章</p:ac>
+          <p:i>tɕ</p:i>
+        </td>
+        <td>
+          <p:ac p:lg="initials38">昌</p:ac>
+          <p:i>tɕ</p:i>
+        </td>
+        <td>
+          <p:ac p:lg="initials38">船</p:ac>
+          <p:i>dʑʰ</p:i>
+        </td>
+        <td>
+          <p:ac p:lg="initials38">書</p:ac>
+          <p:i>ɕ</p:i>
+        </td>
+        <td>
+          <p:ac p:lg="initials38">禪</p:ac>
+          <p:i>ʑ</p:i>
+        </td>
+        <td />
+      </tr>
+      <tr>
+        <th>
+          Palatal <p:ac>半齒音</p:ac><p:fn idref="半齒音" /> &amp; Lateral <p:ac>半舌音</p:ac><p:fn idref="半舌音" />
+        </th>
+        <td />
+        <td />
+        <td />
+        <td />
+        <td />
+        <td>
+          <p:ac p:lg="initials38">日</p:ac>
+          <p:i>ɲ</p:i>
+        </td>
+        <td>
+          <p:ac p:lg="initials38">來</p:ac>
+          <p:i>l</p:i>
+        </td>
+      </tr>      
+      <tr>
+        <th>
+          Velars <p:ac>牙音</p:ac>
+        </th>
+        <td>
+          <p:ac p:lg="initials38">見</p:ac>
+          <p:i>k</p:i>
+        </td>
+        <td>
+          <p:ac p:lg="initials38">溪</p:ac>
+          <p:i>kʰ</p:i>
+        </td>
+        <td>
+          <p:ac p:lg="initials38">群</p:ac>
+          <p:i>g</p:i>
+        </td>
+        <td />
+        <td />
+        <td>
+          <p:ac p:lg="initials38">疑</p:ac>
+          <p:i>ŋ</p:i>
+        </td>
+      </tr>
+      <tr>
+        <th rowspan="2">
+          Laryngeals <p:ac>喉音</p:ac><p:fn idref="laryngeals" />
+        </th>
+        <td>
+          <p:ac p:lg="initials38">影</p:ac>
+          <p:i>ʔ</p:i>
+        </td>
+        <td />
+        <td />
+        <td>
+          <p:ac p:lg="initials38">曉</p:ac>
+          <p:i>x</p:i>
+        </td>
+        <td>
+          <p:ac p:lg="initials38">匣</p:ac>
+          <p:i>ɣ</p:i>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td />
+        <td />
+        <td />
+        <td>
+          <p:ac p:lg="initials38">云</p:ac>
+          <p:i>ɣʲ</p:i>
+        </td>
+        <td />
+        <td>
+          <p:ac p:lg="initials38">以</p:ac>
+          <p:i>j</p:i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p:notes-list>
+    <li id="泥-vs-娘">
+      <p>
+        Some authors merge <p:ac p:lg="initials38">娘</p:ac> into 
+        <p:ac p:lg="initials38">泥</p:ac>, on the belief that
+        they were not pronounced any differently, at least
+        by the time the <p:ac>廣韻</p:ac> was written. Nevertheless
+        it can be confirmed in the present day there 
+        remains a phonemic distinction, in that the 
+        <p:ac>反切</p:ac> from 
+        <p:ac>廣韻</p:ac>
+          form two equivalence classes for 
+        <p:ac>泥</p:ac> and
+        <p:ac>娘</p:ac>. 
+      </p>
+    </li>
+    <li id="舌上音">
+      <p>
+        Early re-constructions of Middle Chinese determine these
+        initials to be (alveolo-)palatal stops <p:mc>舌面塞音</p:mc>.
+        The consensus seems to have settled on these being retroflex,
+        after considering they might have emerged from a medial *r
+        from Old Chinese. The philological term 
+        <p:ac>舌上音</p:ac>, literally meaning
+        "above-tongue sound", is itself ambiguous on this matter.
+      </p>
+    </li>
+    <li id="齒上音">
+      <p>
+        <p:ac>齒上音</p:ac> is a relatively modern appellation for these initials.
+        In other texts, this row may simply be called <p:ac>正齒音</p:ac>, mixing it up
+        with the next row for the alveolo-palatal sibilants.  <p:ac>正齒音</p:ac> was
+        the original Chinese philological term, but only in the 19<sup>th</sup> century 
+        did <p:mc>陳澧</p:mc> (in his pioneering work <p:mc>《切韻考》</p:mc>)
+        discovered that, what had been called <p:ac>正齒音</p:ac> consisted of two
+        sets of initials.  Later investigations revealed that the initials
+        in this row (i.e. <p:ac>齒上音</p:ac>) were likely retroflex in the same way as 
+        <p:ac>舌上音</p:ac>.
+      </p>
+    </li>
+    <li id="laryngeals">
+      <p>
+        The consonants 
+        are definitely grouped very oddly in this row: 
+        we elect to do so to make the table more compact, at the
+        same time adhering to established convention from Chinese philology.
+        From the modern point of view,
+        <p:i>x</p:i>, <p:i>ɣ</p:i> are clearly velars, while 
+        <p:i>j</p:i> is a palatal glide.
+        (On the other hand, <p:ac>喉音</p:ac> literally
+        means "throat sounds".)
+        The details are too complicated to get into here, but
+        initials referred to by
+        <p:ac p:lg="initials38">匣</p:ac>, 
+        <p:ac p:lg="initials38">云</p:ac>,
+        <p:ac p:lg="initials38">以</p:ac> had gotten mixed up historically
+        because of sound mergers, explaining why they all ended up
+        being categorized as <p:ac>喉音</p:ac>. However, they are
+        distinguishable as (three) equivalent classes in
+        <p:ac>反切</p:ac> from the <p:ac>廣韻</p:ac>.
+        Many authors, in the modern context,
+        categorize these initials into the respective rows for
+        velars and palatals. 
+      </p>
+    </li>
+    <li id="半齒音">
+      <p>
+        <p:ac p:lg="initials38">日</p:ac> is often categorized into the 
+        row for <p:ac>正齒音</p:ac>, as those initials there
+        were also articulated with the palate.
+      </p>
+      <p>
+        Occasionally, one may still encounter a phonetic description like
+        <p:i>nʑ</p:i> for the <p:ac>日</p:ac> initial.
+        That is plain wrong as a sound value, because consonant 
+        clusters were already lost 
+        by the period of Early Middle Chinese, but is meant to suggest
+        that it is the precursor to the retroflex that later developed in
+        northern Chinese varieties (e.g. <p:py>r-</p:py> in <p:mc>普通話</p:mc>
+        which can be pronounced as <p:i>ʐ</p:i>), while southern Chinese varieties
+        might have preserved the nasal pronunciation.
+      </p>
+      <p>
+        The philological term <p:ac>半齒音</p:ac>, literally "half-tooth sound", 
+        was probably meant to suggest this initial did 
+        become a sound like <p:i>ʐ</p:i>
+        in later Chinese varieties, 
+        as opposed to <p:ac>半舌音</p:ac> (below) meaning "half-tongue sound".
+      </p>
+      <p>
+        The reader may notice too, interestingly enough, in Japanese 
+        this initial similarly became <p:jr>z-</p:jr>.
+      </p>
+    </li>
+    <li id="半舌音">
+      <p>
+        <p:ac p:lg="initials38">來</p:ac> is often categorized into the 
+        row for <p:ac>舌頭音</p:ac>.
+      </p>
+    </li>
+  </p:notes-list>
+</s:section>
+
+<s:section>
+  <s:heading>Finals of Middle Chinese</s:heading>
+
+  <p:middle-chinese-finals-table />
+  <p:middle-chinese-finals-table coda="1" />
+  <p:middle-chinese-finals-table coda="1" tone="4" />
+
+</s:section>
+
+<s:section>
+  <s:heading>Bibliography</s:heading>
+
+  <dl>
+    <dt>Haraoka 2019</dt>
+    <dd>
+      原岡 かおる (Haraoka, Kaoru). 
+      日本語における漢字音の受容と通時的変遷に関する研究.
+      東京女子大学言語文化研究 (Studies in Language and Culture) 28 (2019) pp. 57-76.
+    </dd>
+    <dt>Tōdō 1980</dt>
+    <dd>
+      藤堂 明保 (Tōdō, Akiyasu). 中国語音韻論 その歴史的研究. 光生館, 1980.
+    </dd>
+    <dt>Wáng 2013</dt>
+    <dd>
+      王力 (Wáng, Lì). 漢語史稿 (Draft to a History of the Chinese Language). 中華書局, 2013.
+    </dd>
+    <dt>Wáng 2014</dt>
+    <dd>
+      王力 (Wáng, Lì). 漢語語音史 (Phonological History of the Chinese Language). 中華書局, 2014.
+    </dd>
+    <dt>Shào 2008</dt>
+    <dd>
+      邵榮芬 (Shào, Róngfēn). 切韻研究 (校訂本). 中華書局, 2008.
+    </dd>
+    <dt>Dǒng 2021</dt>
+    <dd>
+      Dǒng, Hóngyuán (董紅源). A History of the Chinese Language. Second Edition. Routledge, 2021.
+    </dd>
+    <dt>Baxter 1992</dt>
+    <dd>
+      Baxter, William H. A Handbook of Old Chinese Phonology. Mouton De Gruyter, 1992.
+    </dd>
+    <dt>Mineya 1953</dt>
+    <dd>
+      三根谷 徹 (Mineya, Tōru). 
+      <ruby>韻<rt>いん</rt>鏡<rt>きょう</rt></ruby>
+      の三・四<ruby>等<rt>とう</rt></ruby>について (On the III and IV Divisions of the Yùnjìng).
+      言語研究 (Journal of the Linguistic Society of Japan), issue 22–23, March 1953, p. 56–74.
+    </dd>
+    <dt>Hayashi 1983</dt>
+    <dd>
+      林 史典 (Hayashi, Chikafumi). 
+      中古漢語の介母と日本呉音 (On the Relationship between Medial of Ancient Chinese and Japanese Go-on). 
+      文藝言語研究 言語篇, vol 8, August 1983, p. 165–183.
+    </dd>
+  </dl>
+
+</s:section>
+
+  
+
+</body>
+</html>
