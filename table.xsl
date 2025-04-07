@@ -5,6 +5,7 @@
   xmlns:p="http://www.gold-saucer.org/chinese-phonology"
   xmlns:s="http://www.gold-saucer.org/structured-html"
   xmlns:data="http://www.gold-saucer.org/chinese-phonology-data"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   exclude-result-prefixes="p s data html">
 
@@ -185,67 +186,31 @@
     </p>
   </xsl:template>
 
-  <xsl:template match="p:middle-chinese-finals-table">
-    <table>
-      <thead>
-        <tr>
-          <th colspan="2"><p:ac>等</p:ac> Division</th>
-          <th>1</th>
-          <th>2</th>
-          <th>3A</th>
-          <th>3B</th>
-          <th>3C</th>
-          <th>3D</th>
-          <th>4</th>
-        </tr>
-        <tr>
-          <th colspan="2">Has high front medial?</th>
-          <th colspan="2">No</th>
-          <th colspan="4">Yes</th>
-          <th>Develops later</th>
-        </tr>
-        <tr>
-          <th><p:ac>攝</p:ac></th>
-          <th><p:ac>呼</p:ac></th>
-        </tr>
-      </thead>
-      <tbody>
-        <xsl:variable name="finals">
-          <xsl:call-template name="retrieve-middle-chinese-finals">
-            <xsl:with-param name="coda" select="@coda" />
-            <xsl:with-param name="tone" select="@tone" />
-          </xsl:call-template>
-        </xsl:variable>
+  <xsl:template match="p:middle-chinese-finals-rows">
+    <xsl:variable name="finals">
+      <xsl:call-template name="retrieve-middle-chinese-finals">
+        <xsl:with-param name="coda" select="xs:boolean(@coda)" />
+        <xsl:with-param name="tone" select="xs:integer(@tone)" />
+      </xsl:call-template>
+    </xsl:variable>
 
-        <!-- Loop over each rhyme group -->
-        <xsl:for-each-group select="$finals/*" group-by="@rg">
-          <!-- Process in the hinted order given by the input phonological data -->
-          <xsl:sort select="number(@n)" stable="yes" order="ascending" />
+    <!-- Loop over each rhyme group -->
+    <xsl:for-each-group select="$finals/*" group-by="@rg">
+      <!-- Process in the hinted order given by the input phonological data -->
+      <xsl:sort select="xs:integer(@n)" stable="yes" order="ascending" />
 
-          <xsl:variable name="rows">
-            <!-- Loop over possible values of @u -->
-            <xsl:for-each-group select="current-group()" group-by="@u">
+      <xsl:variable name="rows">
+        <!-- Loop over possible values of @u -->
+        <xsl:for-each-group select="current-group()" group-by="@u">
 
-              <!-- Process in the order 開,合 
-                   (exploiting that 開 occurs later than 合 in Unicode) -->
-              <xsl:sort select="@u" stable="yes" order="descending" 
-                        collation="http://www.w3.org/2005/xpath-functions/collation/codepoint" />
+          <!-- Process in the order 開,合 
+                (exploiting that 開 occurs later than 合 in Unicode) -->
+          <xsl:sort select="@u" stable="yes" order="descending" 
+                    collation="http://www.w3.org/2005/xpath-functions/collation/codepoint" />
 
-              <!-- Collect rows with same (rg, u) and display together in table -->
-              <xsl:call-template name="display-rhyme-subgroup">
-                <xsl:with-param name="items" select="current-group()" />
-                <xsl:with-param name="head">
-                  <td>
-                    <xsl:call-template name="display-ac-phono-element">
-                      <xsl:with-param name="content" select="current-grouping-key()" />
-                    </xsl:call-template>
-                  </td>
-                </xsl:with-param>
-              </xsl:call-template>
-            </xsl:for-each-group>
-          </xsl:variable>
-
-          <xsl:apply-templates select="$rows" mode="prepend-head-cell-to-table-rows">
+          <!-- Collect rows with same (rg, u) and display together in table -->
+          <xsl:call-template name="display-rhyme-subgroup">
+            <xsl:with-param name="items" select="current-group()" />
             <xsl:with-param name="head">
               <td>
                 <xsl:call-template name="display-ac-phono-element">
@@ -253,12 +218,21 @@
                 </xsl:call-template>
               </td>
             </xsl:with-param>
-          </xsl:apply-templates>
-          
+          </xsl:call-template>
         </xsl:for-each-group>
+      </xsl:variable>
 
-      </tbody>
-    </table>
+      <xsl:apply-templates select="$rows" mode="prepend-head-cell-to-table-rows">
+        <xsl:with-param name="head">
+          <td>
+            <xsl:call-template name="display-ac-phono-element">
+              <xsl:with-param name="content" select="current-grouping-key()" />
+            </xsl:call-template>
+          </td>
+        </xsl:with-param>
+      </xsl:apply-templates>
+      
+    </xsl:for-each-group>
   </xsl:template>
 
   <xsl:template name="retrieve-middle-chinese-finals">

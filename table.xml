@@ -434,9 +434,77 @@
 <s:section>
   <s:heading>Finals of Middle Chinese</s:heading>
 
-  <p:middle-chinese-finals-table />
-  <p:middle-chinese-finals-table coda="1" />
-  <p:middle-chinese-finals-table coda="1" tone="4" />
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2"><p:ac>等</p:ac> Division</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3A</th>
+        <th>3B</th>
+        <th>3C</th>
+        <th>3D</th>
+        <th>4</th>
+      </tr>
+      <tr>
+        <th colspan="2">Has high front medial?</th>
+        <th colspan="2">No</th>
+        <th colspan="4">Yes</th>
+        <th>Develops later</th>
+      </tr>
+      <tr>
+        <th><p:ac>攝</p:ac></th>
+        <th><p:ac>呼</p:ac></th>
+      </tr>
+    </thead>
+    <tbody>
+      <p:middle-chinese-finals-rows coda="false" tone="0" />
+    </tbody>
+  </table>      
+
+<!--
+  <p:notes-list>
+
+  </p:notes-list>
+-->
+
+  <table>
+    <thead>
+      <tr>
+        <th><p:ac>攝</p:ac></th>
+        <th><p:ac>呼</p:ac></th>
+        <th>1</th>
+        <th>2</th>
+        <th>3A</th>
+        <th>3B</th>
+        <th>3C</th>
+        <th>3D</th>
+        <th>4</th>
+      </tr>
+    </thead>
+    <tbody>
+      <p:middle-chinese-finals-rows coda="true" tone="0" />
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><p:ac>攝</p:ac></th>
+        <th><p:ac>呼</p:ac></th>
+        <th>1</th>
+        <th>2</th>
+        <th>3A</th>
+        <th>3B</th>
+        <th>3C</th>
+        <th>3D</th>
+        <th>4</th>
+      </tr>
+    </thead>
+    <tbody>
+      <p:middle-chinese-finals-rows coda="true" tone="4" />
+    </tbody>
+  </table>
 
 </s:section>
 
