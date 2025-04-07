@@ -6,8 +6,7 @@
   xmlns:s="http://www.gold-saucer.org/structured-html"
   xmlns:data="http://www.gold-saucer.org/chinese-phonology-data"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:exsl="http://exslt.org/common"
-  exclude-result-prefixes="p s exsl data">
+  exclude-result-prefixes="p s data">
 
   <xsl:output omit-xml-declaration="yes" indent="no" />
 
@@ -200,13 +199,12 @@
         </tr>
       </thead>
       <tbody>
-        <xsl:variable name="finals-rtf">
+        <xsl:variable name="finals">
           <xsl:call-template name="retrieve-middle-chinese-finals">
             <xsl:with-param name="coda" select="@coda" />
             <xsl:with-param name="tone" select="@tone" />
           </xsl:call-template>
         </xsl:variable>
-        <xsl:variable name="finals" select="exsl:node-set($finals-rtf)" />
 
         <!-- Loop over each rhyme group -->
         <xsl:for-each select="distinct-values($finals/*/@rg)">
@@ -312,13 +310,12 @@
     <xsl:param name="items-root" /><!-- Points to node-set from retrieve-middle-chinese-finals -->
     <xsl:param name="head" /><!-- html:td for head cell of rows, if any -->
     
-    <xsl:variable name="items-count-rtf">
+    <xsl:variable name="items-count">
       <xsl:call-template name="count-rows-in-rhyme-subgroup">
         <xsl:with-param name="rgu" select="$rgu" />
         <xsl:with-param name="items-root" select="$items-root" />
       </xsl:call-template>
     </xsl:variable>
-    <xsl:variable name="items-count" select="number($items-count-rtf)" />
 
     <!-- Loop over distinct @j values -->
     <xsl:for-each select="distinct-values(key('finals-by-rgu', $rgu, $items-root)/@j)">
