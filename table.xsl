@@ -21,7 +21,7 @@
 
   <xsl:key
     name="id"
-    match="html:*[@id]"
+    match="*[@id]"
     use="@id" />
 
   <xsl:key
@@ -184,6 +184,21 @@
     <p class="heading">
       <xsl:apply-templates select="node()" />
     </p>
+  </xsl:template>
+
+  <!-- Wrapper element that falls away, for the purpose of grouping multiple elements
+       to be referred to by s:copy-of -->
+  <xsl:template match="s:fragment">
+    <xsl:apply-templates />
+  </xsl:template>
+
+  <!-- Repeat content in the source XML to avoid source-level duplication -->
+  <xsl:template match="s:copy-of">
+    <xsl:variable name="source" select="key('id', @idref)" />
+    <xsl:if test="count($source) != 1">
+      <xsl:message>warning: <xsl:value-of select="@idref" /> does not refer to a unique element in the source XML</xsl:message>
+    </xsl:if>
+    <xsl:apply-templates select="$source[position()=1]" />
   </xsl:template>
 
   <xsl:template match="p:middle-chinese-finals-rows">

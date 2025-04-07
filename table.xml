@@ -438,13 +438,16 @@
     <thead>
       <tr>
         <th colspan="2"><p:ac>等</p:ac> Division</th>
-        <th>1</th>
-        <th>2</th>
-        <th>3A</th>
-        <th>3B</th>
-        <th>3C</th>
-        <th>3D</th>
-        <th>4</th>
+
+        <s:fragment id="mc-finals-divisions-th">
+          <th>1</th>
+          <th>2</th>
+          <th>3A</th>
+          <th>3B</th>
+          <th>3C</th>
+          <th>3D</th>
+          <th>4</th>
+        </s:fragment>
       </tr>
       <tr>
         <th colspan="2">Has high front medial?</th>
@@ -473,13 +476,7 @@
       <tr>
         <th><p:ac>攝</p:ac></th>
         <th><p:ac>呼</p:ac></th>
-        <th>1</th>
-        <th>2</th>
-        <th>3A</th>
-        <th>3B</th>
-        <th>3C</th>
-        <th>3D</th>
-        <th>4</th>
+        <s:copy-of idref="mc-finals-divisions-th" />
       </tr>
     </thead>
     <tbody>
@@ -492,13 +489,7 @@
       <tr>
         <th><p:ac>攝</p:ac></th>
         <th><p:ac>呼</p:ac></th>
-        <th>1</th>
-        <th>2</th>
-        <th>3A</th>
-        <th>3B</th>
-        <th>3C</th>
-        <th>3D</th>
-        <th>4</th>
+        <s:copy-of idref="mc-finals-divisions-th" />
       </tr>
     </thead>
     <tbody>
