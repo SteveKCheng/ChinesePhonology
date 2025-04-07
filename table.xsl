@@ -25,16 +25,6 @@
     match="p:fn"
     use="@idref" />
 
-  <xsl:key
-    name="finals-by-rgudj"
-    match="data:middle-chinese-final"
-    use="concat(@rg, @u, @d, @j)" />
-
-  <xsl:key
-    name="finals-by-rgu"
-    match="data:middle-chinese-final"
-    use="concat(@rg, @u)" />
-
   <xsl:template match="html:*|text()|@*">
     <xsl:copy>
       <xsl:apply-templates select="node()|@*" />
@@ -214,8 +204,12 @@
             <xsl:for-each-group select="current-group()" group-by="@u">
               <!-- Collect rows with same (rg, u) and display together in table -->
               <xsl:call-template name="display-rhyme-subgroup">
-                <xsl:with-param name="rgu" select="concat(@rg, @u)" />
-                <xsl:with-param name="items-root" select="$finals" />
+                <xsl:with-param name="items" select="current-group()" />
+                <xsl:with-param name="head">
+                  <td>
+                    <xsl:value-of select="current-grouping-key()" />
+                  </td>
+                </xsl:with-param>
               </xsl:call-template>
             </xsl:for-each-group>
           </xsl:variable>
@@ -223,7 +217,7 @@
           <xsl:apply-templates select="$rows" mode="prepend-head-cell-to-table-rows">
             <xsl:with-param name="head">
               <td>
-                <xsl:value-of select="@rg" />
+                <xsl:value-of select="current-grouping-key()" />
               </td>
             </xsl:with-param>
           </xsl:apply-templates>
@@ -279,24 +273,23 @@
   </xsl:template>
 
   <xsl:template name="display-rhyme-subgroup">
-    <xsl:param name="rgu" />
-    <xsl:param name="items-root" /><!-- Points to node-set from retrieve-middle-chinese-finals -->
+    <xsl:param name="items" />
+    <xsl:param name="head" />
     
     <xsl:variable name="rows">
       <!-- Loop over distinct @j values -->
-      <xsl:for-each select="distinct-values(key('finals-by-rgu', $rgu, $items-root)/@j)">
-        <xsl:variable name="j" select="." />
+      <xsl:for-each-group select="$items" group-by="@j">
 
         <tr>
           <!-- Loop over divisions (horizontal axis of table)-->
           <xsl:for-each select="'1', '2', '3A', '3B', '3C', '3D', '4'">
             <xsl:variable name="d" select="." />
 
-            <xsl:variable name="cell" select="key('finals-by-rgudj', concat($rgu, $d, $j), $items-root)" />
+            <xsl:variable name="cell" select="current-group()[@d=$d]" />
             <xsl:if test="count($cell) > 1">
               <xsl:message>
                 <xsl:text>warning: more than one Middle Chinese final for the combination: </xsl:text>
-                <xsl:value-of select="concat($rgu, $d, $j)" />
+                <xsl:value-of select="concat($cell/@rg, $d, $cell/@j)" />
               </xsl:message>
             </xsl:if>
 
@@ -307,18 +300,14 @@
                 <xsl:value-of select="$cell[position()=1]/@p" />
               </xsl:if>
             </td>
-
-          </xsl:for-each><!-- loop over divisions -->
+          </xsl:for-each>
         </tr>
-      </xsl:for-each><!-- loop over @j -->
+
+      </xsl:for-each-group>
     </xsl:variable>
 
     <xsl:apply-templates select="$rows" mode="prepend-head-cell-to-table-rows">
-      <xsl:with-param name="head">
-        <td>
-          <xsl:value-of select="substring($rgu, 2)" />
-        </td>
-      </xsl:with-param>
+      <xsl:with-param name="head" select="$head" />
     </xsl:apply-templates>
 
   </xsl:template>
