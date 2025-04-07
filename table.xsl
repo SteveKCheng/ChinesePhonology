@@ -45,12 +45,30 @@
     </span>
   </xsl:template>
 
+  <!-- Mark up 聲母, 韻母 given in Chinese characters. 
+       This template is called when generating tables of Middle Chinese 
+       phonological data.  The effect is as if the text is written
+       inside a p:ac element. -->
+  <xsl:template name="display-ac-phono-element">
+    <xsl:param name="content" />
+    <span lang="zh-tw">
+      <xsl:copy-of select="$content" />
+    </span>
+  </xsl:template>
+
   <!-- Phonetic description in the standard International Phonetic Alphabet -->
   <xsl:template match="p:i">
     <span class="ipa">
       <xsl:text>/</xsl:text>
       <xsl:apply-templates select="node()|@*" />
       <xsl:text>/</xsl:text>
+    </span>
+  </xsl:template>
+
+  <xsl:template name="display-ipa">
+    <xsl:param name="content" />
+    <span class="ipa">
+      <xsl:copy-of select="$content" />
     </span>
   </xsl:template>
 
@@ -215,7 +233,9 @@
                 <xsl:with-param name="items" select="current-group()" />
                 <xsl:with-param name="head">
                   <td>
-                    <xsl:value-of select="current-grouping-key()" />
+                    <xsl:call-template name="display-ac-phono-element">
+                      <xsl:with-param name="content" select="current-grouping-key()" />
+                    </xsl:call-template>
                   </td>
                 </xsl:with-param>
               </xsl:call-template>
@@ -225,7 +245,9 @@
           <xsl:apply-templates select="$rows" mode="prepend-head-cell-to-table-rows">
             <xsl:with-param name="head">
               <td>
-                <xsl:value-of select="current-grouping-key()" />
+                <xsl:call-template name="display-ac-phono-element">
+                  <xsl:with-param name="content" select="current-grouping-key()" />
+                </xsl:call-template>
               </td>
             </xsl:with-param>
           </xsl:apply-templates>
@@ -305,9 +327,13 @@
 
             <td>
               <xsl:if test="count($cell) > 0">
-                <xsl:value-of select="$cell[position()=1]/@c" />
+                <xsl:call-template name="display-ac-phono-element">
+                  <xsl:with-param name="content" select="string($cell[position()=1]/@c)" />
+                </xsl:call-template>
                 <xsl:text> </xsl:text>
-                <xsl:value-of select="$cell[position()=1]/@p" />
+                <xsl:call-template name="display-ipa">
+                  <xsl:with-param name="content" select="string($cell[position()=1]/@p)" />
+                </xsl:call-template>
               </xsl:if>
             </td>
           </xsl:for-each>
