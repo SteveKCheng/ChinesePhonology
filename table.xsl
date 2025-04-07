@@ -314,6 +314,11 @@
     <xsl:param name="tone" select="@tone" />
 
     <xsl:for-each select="document('rhyme-groups.xml')/data/item">
+      <!-- Explicitly sort so the order of rows in the HTML output is independent
+           of the order in the input TSV/XML data -->
+      <xsl:sort select="@n" data-type="number" /><!-- more logical order of 攝韻 used in 《切韻研究》 by 邵榮芬 -->
+      <xsl:sort select="@j" /><!-- order within a single 攝韻+呼+等 combination -->
+
       <xsl:variable name="pronunciation">
         <xsl:choose>
           <xsl:when test="$tone = 4"><xsl:value-of select="@p4" /></xsl:when>
@@ -351,7 +356,7 @@
       <xsl:message>processing item</xsl:message>
       <xsl:if test="$rhyme-char != '' and $item-has-coda = boolean($coda)">
         <data:middle-chinese-final
-          rg="{@rg}" i="{@i}" u="{@u}" d="{@d}" j="{@j}"
+          rg="{@rg}" u="{@u}" d="{@d}" j="{@j}"
           c="{$rhyme-char}" p="{$pronunciation}" />
       </xsl:if>
     </xsl:for-each>
