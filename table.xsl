@@ -1,5 +1,5 @@
 <xsl:stylesheet 
-  version="1.0" 
+  version="2.0" 
   xmlns="http://www.w3.org/1999/xhtml"
   xmlns:html="http://www.w3.org/1999/xhtml"
   xmlns:p="http://www.gold-saucer.org/chinese-phonology"
@@ -7,10 +7,7 @@
   xmlns:data="http://www.gold-saucer.org/chinese-phonology-data"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:exsl="http://exslt.org/common"
-  xmlns:re="http://exslt.org/regular-expressions"
-  xmlns:set="http://exslt.org/sets"
-  xmlns:str="http://exslt.org/strings"
-  exclude-result-prefixes="p s exsl re set str data">
+  exclude-result-prefixes="p s exsl data">
 
   <xsl:output omit-xml-declaration="yes" indent="no" />
 
@@ -212,7 +209,7 @@
         <xsl:variable name="finals" select="exsl:node-set($finals-rtf)" />
 
         <!-- Loop over each rhyme group -->
-        <xsl:for-each select="set:distinct($finals/*/@rg)">
+        <xsl:for-each select="distinct-values($finals/*/@rg)">
           <xsl:variable name="rg" select="." />
 
           <!-- Compute row span for column in first cell -->
@@ -238,7 +235,7 @@
             select="number($items-count-open) + number($items-count-closed) + number($items-count)" />
             
           <!-- Loop over possible values of @u -->
-          <xsl:for-each select="set:distinct($finals/*[@rg=$rg]/@u)">
+          <xsl:for-each select="distinct-values($finals/*[@rg=$rg]/@u)">
 
             <!-- Collect rows with same (rg, u) and display together in table -->
             <xsl:call-template name="display-rhyme-subgroup">
@@ -277,15 +274,7 @@
         </xsl:choose>
       </xsl:variable>
 
-      <xsl:variable name="last-letter" select="substring($pronunciation, string-length($pronunciation))" />
-
-
-      <xsl:variable name="item-has-coda" select="re:test($pronunciation, '[mnŋptk]ˋ?$')" />
-
-<!--
-      <xsl:variable name="item-has-coda" select="$last-letter = 'm' or $last-letter = 'n' or $last-letter = 'ŋ' 
-      or $last-letter = 'p' or $last-letter = 't' or $last-letter = 'k'" />
--->
+      <xsl:variable name="item-has-coda" select="matches($pronunciation, '[mnŋptk]ˋ?$')" />
 
       <xsl:variable name="rhyme-char">
         <!-- 韻目 -->
@@ -316,7 +305,7 @@
     <xsl:param name="rgu" />
     <xsl:param name="items-root" />
     <xsl:for-each select="$items-root[position()=1]">
-      <xsl:value-of select="count(set:distinct(key('finals-by-rgu', $rgu)/@j))" />
+      <xsl:value-of select="count(distinct-values(key('finals-by-rgu', $rgu)/@j))" />
     </xsl:for-each>
   </xsl:template>
 
@@ -337,7 +326,7 @@
     <xsl:for-each select="$items-root[position()=1]">
 
       <!-- Loop over distinct @j values -->
-      <xsl:for-each select="set:distinct(key('finals-by-rgu', $rgu)/@j)">
+      <xsl:for-each select="distinct-values(key('finals-by-rgu', $rgu)/@j)">
         <xsl:variable name="j" select="." />
 
         <tr>
@@ -347,7 +336,7 @@
           </xsl:if>
 
           <!-- Loop over divisions (horizontal axis of table)-->
-          <xsl:for-each select="str:tokenize('1 2 3A 3B 3C 3D 4', ' ')">
+          <xsl:for-each select="'1', '2', '3A', '3B', '3C', '3D', '4'">
             <xsl:variable name="d" select="." />
 
             <xsl:for-each select="$items-root[position()=1]">
