@@ -210,45 +210,26 @@
         <xsl:for-each select="distinct-values($finals/*/@rg)">
           <xsl:variable name="rg" select="." />
 
-          <!-- Compute row span for column in first cell -->
-          <xsl:variable name="items-count">
-            <xsl:call-template name="count-rows-in-rhyme-subgroup">
-              <xsl:with-param name="rgu" select="$rg" />
-              <xsl:with-param name="items-root" select="$finals" />
-            </xsl:call-template>
-          </xsl:variable>
-          <xsl:variable name="items-count-open">
-            <xsl:call-template name="count-rows-in-rhyme-subgroup">
-              <xsl:with-param name="rgu" select="concat($rg, '開')" />
-              <xsl:with-param name="items-root" select="$finals" />
-            </xsl:call-template>
-          </xsl:variable>
-          <xsl:variable name="items-count-closed">
-            <xsl:call-template name="count-rows-in-rhyme-subgroup">
-              <xsl:with-param name="rgu" select="concat($rg, '合')" />
-              <xsl:with-param name="items-root" select="$finals" />
-            </xsl:call-template>
-          </xsl:variable>
-          <xsl:variable name="items-count-all"
-            select="number($items-count-open) + number($items-count-closed) + number($items-count)" />
-            
-          <!-- Loop over possible values of @u -->
-          <xsl:for-each select="distinct-values($finals/*[@rg=$rg]/@u)">
+          <xsl:variable name="rows">
+            <!-- Loop over possible values of @u -->
+            <xsl:for-each select="distinct-values($finals/*[@rg=$rg]/@u)">
 
-            <!-- Collect rows with same (rg, u) and display together in table -->
-            <xsl:call-template name="display-rhyme-subgroup">
-              <xsl:with-param name="rgu" select="concat($rg, string(.))" />
-              <xsl:with-param name="items-root" select="$finals" />
-              <xsl:with-param name="head">
-                <xsl:if test="position() = 1">
-                  <td rowspan="{$items-count-all}">
-                    <xsl:value-of select="$rg" />
-                  </td>
-                </xsl:if>
-              </xsl:with-param>
-            </xsl:call-template>
-            
-          </xsl:for-each>
+              <!-- Collect rows with same (rg, u) and display together in table -->
+              <xsl:call-template name="display-rhyme-subgroup">
+                <xsl:with-param name="rgu" select="concat($rg, string(.))" />
+                <xsl:with-param name="items-root" select="$finals" />
+              </xsl:call-template>
+            </xsl:for-each>
+          </xsl:variable>
+
+          <xsl:apply-templates select="$rows" mode="prepend-head-cell-to-table-rows">
+            <xsl:with-param name="head">
+              <td>
+                <xsl:value-of select="$rg" />
+              </td>
+            </xsl:with-param>
+          </xsl:apply-templates>
+          
         </xsl:for-each>
 
       </tbody>
@@ -299,58 +280,81 @@
     </xsl:for-each>
   </xsl:template>
 
-  <xsl:template name="count-rows-in-rhyme-subgroup">
-    <xsl:param name="rgu" />
-    <xsl:param name="items-root" />
-    <xsl:value-of select="count(distinct-values(key('finals-by-rgu', $rgu, $items-root)/@j))" />
-  </xsl:template>
-
   <xsl:template name="display-rhyme-subgroup">
     <xsl:param name="rgu" />
     <xsl:param name="items-root" /><!-- Points to node-set from retrieve-middle-chinese-finals -->
-    <xsl:param name="head" /><!-- html:td for head cell of rows, if any -->
     
-    <xsl:variable name="items-count">
-      <xsl:call-template name="count-rows-in-rhyme-subgroup">
-        <xsl:with-param name="rgu" select="$rgu" />
-        <xsl:with-param name="items-root" select="$items-root" />
-      </xsl:call-template>
+    <xsl:variable name="rows">
+      <!-- Loop over distinct @j values -->
+      <xsl:for-each select="distinct-values(key('finals-by-rgu', $rgu, $items-root)/@j)">
+        <xsl:variable name="j" select="." />
+
+        <tr>
+          <!-- Loop over divisions (horizontal axis of table)-->
+          <xsl:for-each select="'1', '2', '3A', '3B', '3C', '3D', '4'">
+            <xsl:variable name="d" select="." />
+
+            <xsl:variable name="cell" select="key('finals-by-rgudj', concat($rgu, $d, $j), $items-root)" />
+            <xsl:if test="count($cell) > 1">
+              <xsl:message>
+                <xsl:text>warning: more than one Middle Chinese final for the combination: </xsl:text>
+                <xsl:value-of select="concat($rgu, $d, $j)" />
+              </xsl:message>
+            </xsl:if>
+
+            <td>
+              <xsl:if test="count($cell) > 0">
+                <xsl:value-of select="$cell[position()=1]/@c" />
+                <xsl:text> </xsl:text>
+                <xsl:value-of select="$cell[position()=1]/@p" />
+              </xsl:if>
+            </td>
+
+          </xsl:for-each><!-- loop over divisions -->
+        </tr>
+      </xsl:for-each><!-- loop over @j -->
     </xsl:variable>
 
-    <!-- Loop over distinct @j values -->
-    <xsl:for-each select="distinct-values(key('finals-by-rgu', $rgu, $items-root)/@j)">
-      <xsl:variable name="j" select="." />
-
-      <tr>
-        <xsl:if test="position() = 1">
-          <xsl:copy-of select="$head" />
-          <td rowspan="{$items-count}"><xsl:value-of select="substring($rgu, 2)" /></td>
-        </xsl:if>
-
-        <!-- Loop over divisions (horizontal axis of table)-->
-        <xsl:for-each select="'1', '2', '3A', '3B', '3C', '3D', '4'">
-          <xsl:variable name="d" select="." />
-
-          <xsl:variable name="cell" select="key('finals-by-rgudj', concat($rgu, $d, $j), $items-root)" />
-          <xsl:if test="count($cell) > 1">
-            <xsl:message>
-              <xsl:text>warning: more than one Middle Chinese final for the combination: </xsl:text>
-              <xsl:value-of select="concat($rgu, $d, $j)" />
-            </xsl:message>
-          </xsl:if>
-
-          <td>
-            <xsl:if test="count($cell) > 0">
-              <xsl:value-of select="$cell[position()=1]/@c" />
-              <xsl:text> </xsl:text>
-              <xsl:value-of select="$cell[position()=1]/@p" />
-            </xsl:if>
-          </td>
-
-        </xsl:for-each><!-- loop over divisions -->
-      </tr>
-    </xsl:for-each><!-- loop over @j -->
+    <xsl:apply-templates select="$rows" mode="prepend-head-cell-to-table-rows">
+      <xsl:with-param name="head">
+        <td>
+          <xsl:value-of select="substring($rgu, 2)" />
+        </td>
+      </xsl:with-param>
+    </xsl:apply-templates>
 
   </xsl:template>
   
+  <xsl:template mode="prepend-head-cell-to-table-rows" match="html:tr[position()=1]">
+    <xsl:param name="head" />
+
+    <xsl:variable name="row-count" select="count(../html:tr)" />
+
+    <!-- Replicate html:tr and its existing attributes -->
+    <xsl:copy>
+      <xsl:copy-of select="@*" />
+
+      <!-- Copy $head which is assumed to be html:td or html:th element,
+           setting its row span to the number of html:tr instances found. -->
+      <xsl:for-each select="$head/node()">
+        <xsl:copy>
+          <xsl:copy-of select="@*" />
+          <xsl:if test="self::html:td or self::html:th">
+            <xsl:attribute name="rowspan">
+              <xsl:value-of select="$row-count" />
+            </xsl:attribute>
+          </xsl:if>
+          <xsl:copy-of select="node()" />
+        </xsl:copy>
+      </xsl:for-each>
+    
+      <!-- Copy in the original contents of the html:tr element -->
+      <xsl:copy-of select="node()" />
+    </xsl:copy>
+  </xsl:template>
+
+  <xsl:template mode="prepend-head-cell-to-table-rows" match="@*|node()">
+    <xsl:copy-of select="." />
+  </xsl:template>
+
 </xsl:stylesheet>
