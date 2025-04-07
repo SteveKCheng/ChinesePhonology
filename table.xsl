@@ -10,8 +10,7 @@
   xmlns:re="http://exslt.org/regular-expressions"
   xmlns:set="http://exslt.org/sets"
   xmlns:str="http://exslt.org/strings"
-  xmlns:math="http://exslt.org/math"
-  exclude-result-prefixes="p s exsl math re set str data">
+  exclude-result-prefixes="p s exsl re set str data">
 
   <xsl:output omit-xml-declaration="yes" indent="no" />
 
@@ -212,49 +211,6 @@
         </xsl:variable>
         <xsl:variable name="finals" select="exsl:node-set($finals-rtf)" />
 
-<!--
-        <xsl:for-each select="$finals/*">
-          <tr>
-            <td><xsl:value-of select="@rg" /></td>
-            <td><xsl:value-of select="@u" /></td>
-            <xsl:variable name="item" select="." />
-            <xsl:for-each select="str:tokenize('1 2 3A 3B 3C 3D 4', ' ')">
-              <td>
-                <xsl:if test="$item/@d = .">
-                  <span lang="zh-tw">
-                    <xsl:value-of select="$item/@c" />
-                  </span>
-                  <xsl:text> </xsl:text>
-                  <span class="ipa">
-                    <xsl:value-of select="$item/@p" />
-                  </span>
-                </xsl:if>
-              </td>
-            </xsl:for-each>
-          </tr>
-        </xsl:for-each>
--->
-
-<!--
-        <xsl:for-each select="set:distinct($finals/@rgu)">
-          <xsl:for-each select="$finals[@rgu = current()]">
-            <tr>
-              <xsl:if test="position() = 1">
-                <xsl:if test="generate-id($finals[@rg = current()/@rg]) = generate-id(.)">
-                  <td rowspan="{count($finals[@rg = current()/@rg])}">
-                    <xsl:value-of select="@rg" />
-                  </td>
-                </xsl:if>
-                <td rowspan="{last()}">
-                  <xsl:value-of select="@u" />
-                </td>
-              </xsl:if>
-
-            </tr>
-          </xsl:for-each>
-        </xsl:for-each>
--->
-
         <!-- Loop over each rhyme group -->
         <xsl:for-each select="set:distinct($finals/*/@rg)">
           <xsl:variable name="rg" select="." />
@@ -296,15 +252,10 @@
                 </xsl:if>
               </xsl:with-param>
             </xsl:call-template>
+            
           </xsl:for-each>
         </xsl:for-each>
 
-<!--
-        <xsl:call-template name="display-rhyme-subgroup">
-          <xsl:with-param name="rgu" select="'止開'" />
-          <xsl:with-param name="items-root" select="$finals" />
-        </xsl:call-template>
--->
       </tbody>
     </table>
   </xsl:template>
@@ -353,7 +304,6 @@
           </xsl:otherwise>
         </xsl:choose>
       </xsl:variable>
-      <xsl:message>processing item</xsl:message>
       <xsl:if test="$rhyme-char != '' and $item-has-coda = boolean($coda)">
         <data:middle-chinese-final
           rg="{@rg}" u="{@u}" d="{@d}" j="{@j}"
