@@ -207,30 +207,28 @@
         </xsl:variable>
 
         <!-- Loop over each rhyme group -->
-        <xsl:for-each select="distinct-values($finals/*/@rg)">
-          <xsl:variable name="rg" select="." />
+        <xsl:for-each-group select="$finals/*" group-by="@rg">
 
           <xsl:variable name="rows">
             <!-- Loop over possible values of @u -->
-            <xsl:for-each select="distinct-values($finals/*[@rg=$rg]/@u)">
-
+            <xsl:for-each-group select="current-group()" group-by="@u">
               <!-- Collect rows with same (rg, u) and display together in table -->
               <xsl:call-template name="display-rhyme-subgroup">
-                <xsl:with-param name="rgu" select="concat($rg, string(.))" />
+                <xsl:with-param name="rgu" select="concat(@rg, @u)" />
                 <xsl:with-param name="items-root" select="$finals" />
               </xsl:call-template>
-            </xsl:for-each>
+            </xsl:for-each-group>
           </xsl:variable>
 
           <xsl:apply-templates select="$rows" mode="prepend-head-cell-to-table-rows">
             <xsl:with-param name="head">
               <td>
-                <xsl:value-of select="$rg" />
+                <xsl:value-of select="@rg" />
               </td>
             </xsl:with-param>
           </xsl:apply-templates>
           
-        </xsl:for-each>
+        </xsl:for-each-group>
 
       </tbody>
     </table>
