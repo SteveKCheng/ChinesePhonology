@@ -198,10 +198,18 @@
 
         <!-- Loop over each rhyme group -->
         <xsl:for-each-group select="$finals/*" group-by="@rg">
+          <!-- Process in the hinted order given by the input phonological data -->
+          <xsl:sort select="number(@n)" stable="yes" order="ascending" />
 
           <xsl:variable name="rows">
             <!-- Loop over possible values of @u -->
             <xsl:for-each-group select="current-group()" group-by="@u">
+
+              <!-- Process in the order 開,合 
+                   (exploiting that 開 occurs later than 合 in Unicode) -->
+              <xsl:sort select="@u" stable="yes" order="descending" 
+                        collation="http://www.w3.org/2005/xpath-functions/collation/codepoint" />
+
               <!-- Collect rows with same (rg, u) and display together in table -->
               <xsl:call-template name="display-rhyme-subgroup">
                 <xsl:with-param name="items" select="current-group()" />
@@ -279,6 +287,8 @@
     <xsl:variable name="rows">
       <!-- Loop over distinct @j values -->
       <xsl:for-each-group select="$items" group-by="@j">
+        <xsl:sort select="@j" stable="yes" order="ascending"
+                  collation="http://www.w3.org/2005/xpath-functions/collation/codepoint" />
 
         <tr>
           <!-- Loop over divisions (horizontal axis of table)-->
