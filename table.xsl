@@ -304,9 +304,7 @@
   <xsl:template name="count-rows-in-rhyme-subgroup">
     <xsl:param name="rgu" />
     <xsl:param name="items-root" />
-    <xsl:for-each select="$items-root[position()=1]">
-      <xsl:value-of select="count(distinct-values(key('finals-by-rgu', $rgu)/@j))" />
-    </xsl:for-each>
+    <xsl:value-of select="count(distinct-values(key('finals-by-rgu', $rgu, $items-root)/@j))" />
   </xsl:template>
 
   <xsl:template name="display-rhyme-subgroup">
@@ -322,47 +320,40 @@
     </xsl:variable>
     <xsl:variable name="items-count" select="number($items-count-rtf)" />
 
-    <!-- Dummy for-each to target temporary data for XPath key function -->
-    <xsl:for-each select="$items-root[position()=1]">
+    <!-- Loop over distinct @j values -->
+    <xsl:for-each select="distinct-values(key('finals-by-rgu', $rgu, $items-root)/@j)">
+      <xsl:variable name="j" select="." />
 
-      <!-- Loop over distinct @j values -->
-      <xsl:for-each select="distinct-values(key('finals-by-rgu', $rgu)/@j)">
-        <xsl:variable name="j" select="." />
+      <tr>
+        <xsl:if test="position() = 1">
+          <xsl:copy-of select="$head" />
+          <td rowspan="{$items-count}"><xsl:value-of select="substring($rgu, 2)" /></td>
+        </xsl:if>
 
-        <tr>
-          <xsl:if test="position() = 1">
-            <xsl:copy-of select="$head" />
-            <td rowspan="{$items-count}"><xsl:value-of select="substring($rgu, 2)" /></td>
+        <!-- Loop over divisions (horizontal axis of table)-->
+        <xsl:for-each select="'1', '2', '3A', '3B', '3C', '3D', '4'">
+          <xsl:variable name="d" select="." />
+
+          <xsl:variable name="cell" select="key('finals-by-rgudj', concat($rgu, $d, $j), $items-root)" />
+          <xsl:if test="count($cell) > 1">
+            <xsl:message>
+              <xsl:text>warning: more than one Middle Chinese final for the combination: </xsl:text>
+              <xsl:value-of select="concat($rgu, $d, $j)" />
+            </xsl:message>
           </xsl:if>
 
-          <!-- Loop over divisions (horizontal axis of table)-->
-          <xsl:for-each select="'1', '2', '3A', '3B', '3C', '3D', '4'">
-            <xsl:variable name="d" select="." />
+          <td>
+            <xsl:if test="count($cell) > 0">
+              <xsl:value-of select="$cell[position()=1]/@c" />
+              <xsl:text> </xsl:text>
+              <xsl:value-of select="$cell[position()=1]/@p" />
+            </xsl:if>
+          </td>
 
-            <xsl:for-each select="$items-root[position()=1]">
+        </xsl:for-each><!-- loop over divisions -->
+      </tr>
+    </xsl:for-each><!-- loop over @j -->
 
-              <xsl:variable name="cell" select="key('finals-by-rgudj', concat($rgu, $d, $j))" />
-              <xsl:if test="count($cell) > 1">
-                <xsl:message>
-                  <xsl:text>warning: more than one Middle Chinese final for the combination: </xsl:text>
-                  <xsl:value-of select="concat($rgu, $d, $j)" />
-                </xsl:message>
-              </xsl:if>
-
-              <td>
-                <xsl:if test="count($cell) > 0">
-                  <xsl:value-of select="$cell[position()=1]/@c" />
-                  <xsl:text> </xsl:text>
-                  <xsl:value-of select="$cell[position()=1]/@p" />
-                </xsl:if>
-              </td>
-            </xsl:for-each>
-
-          </xsl:for-each><!-- loop over divisions -->
-        </tr>
-      </xsl:for-each><!-- loop over @j -->
-
-    </xsl:for-each>
   </xsl:template>
   
 </xsl:stylesheet>
