@@ -6,9 +6,12 @@
   xmlns:s="http://www.gold-saucer.org/structured-html"
   xmlns:data="http://www.gold-saucer.org/chinese-phonology-data"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  exclude-result-prefixes="p s data">
+  exclude-result-prefixes="p s data html">
 
-  <xsl:output omit-xml-declaration="yes" indent="no" />
+  <xsl:output method="xhtml" 
+              omit-xml-declaration="no" 
+              encoding="utf-8"
+              indent="no" />
 
   <xsl:key 
     name="link-groups" 
