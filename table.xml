@@ -56,7 +56,7 @@
   <s:heading>Initials of Middle Chinese</s:heading>
       
   <table>
-    <colgroup>
+    <colgroup class="mc-initials">
       <col class="sounds-left-headings" />
       <col span="3" class="sounds-group-1" />
       <col span="2" class="sounds-group-2" />
@@ -434,7 +434,16 @@
 <s:section>
   <s:heading>Finals of Middle Chinese</s:heading>
 
-  <table>
+  <table class="mc-finals">
+    <colgroup id="mc-finals-colgroup">
+      <col class="rhyme-group" />
+      <col class="u-medial" />
+      <col class="sound division-1" />
+      <col class="sound division-2" />
+      <col class="sound division-3" span="4" />
+      <col class="sound division-4" />
+    </colgroup>
+
     <thead>
       <tr>
         <th colspan="2"><p:ac>等</p:ac> Division</th>
@@ -471,7 +480,8 @@
   </p:notes-list>
 -->
 
-  <table>
+  <table class="mc-finals">
+    <s:copy-of idref="mc-finals-colgroup" />
     <thead>
       <tr>
         <th><p:ac>攝</p:ac></th>
@@ -484,7 +494,8 @@
     </tbody>
   </table>
 
-  <table>
+  <table class="mc-finals">
+    <s:copy-of idref="mc-finals-colgroup" />
     <thead>
       <tr>
         <th><p:ac>攝</p:ac></th>

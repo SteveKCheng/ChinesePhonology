@@ -237,7 +237,7 @@
           <xsl:call-template name="display-rhyme-subgroup">
             <xsl:with-param name="items" select="current-group()" />
             <xsl:with-param name="head">
-              <td>
+              <td class="u-medial">
                 <xsl:call-template name="display-ac-phono-element">
                   <xsl:with-param name="content" select="current-grouping-key()" />
                 </xsl:call-template>
@@ -249,7 +249,7 @@
 
       <xsl:apply-templates select="$rows" mode="prepend-head-cell-to-table-rows">
         <xsl:with-param name="head">
-          <td>
+          <td class="rhyme-group">
             <xsl:call-template name="display-ac-phono-element">
               <xsl:with-param name="content" select="current-grouping-key()" />
             </xsl:call-template>
@@ -329,6 +329,7 @@
 
             <td>
               <xsl:if test="count($cell) > 0">
+                <xsl:attribute name="class">sound</xsl:attribute>
                 <xsl:call-template name="display-ac-phono-element">
                   <xsl:with-param name="content" select="string($cell[position()=1]/@c)" />
                 </xsl:call-template>
