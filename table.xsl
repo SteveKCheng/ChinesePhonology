@@ -35,6 +35,14 @@
     </xsl:copy>
   </xsl:template>
 
+  <xsl:template match="@id">
+    <!-- id attributes from the source XML are not copied to the output if strip-id is set -->
+    <xsl:param name="strip-id" tunnel="yes" select="false()" />
+    <xsl:if test="not($strip-id)">
+      <xsl:apply-templates select="node()" />
+    </xsl:if>
+  </xsl:template>       
+
   <!-- "mc" stands for terminology in Modern Chinese -->
   <xsl:template match="p:mc">
     <span lang="zh-tw">
@@ -198,7 +206,9 @@
     <xsl:if test="count($source) != 1">
       <xsl:message>warning: <xsl:value-of select="@idref" /> does not refer to a unique element in the source XML</xsl:message>
     </xsl:if>
-    <xsl:apply-templates select="$source[position()=1]" />
+    <xsl:apply-templates select="$source[position()=1]">
+      <xsl:with-param name="strip-id" tunnel="yes" select="true()" />
+    </xsl:apply-templates>
   </xsl:template>
 
   <xsl:template match="p:middle-chinese-finals-rows">
