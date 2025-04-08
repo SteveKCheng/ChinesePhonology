@@ -435,45 +435,49 @@
 <s:section>
   <s:heading>Finals of Middle Chinese</s:heading>
 
-  <table class="mc-finals">
-    <colgroup id="mc-finals-colgroup">
-      <col class="rhyme-group" />
-      <col class="u-medial" />
-      <col class="sound division-1" />
-      <col class="sound division-2" />
-      <col class="sound division-3" span="4" />
-      <col class="sound division-4" />
-    </colgroup>
+  <s:section>
+    <s:heading>Syllables without codas (open syllables)</s:heading>
 
-    <thead>
-      <tr>
-        <th colspan="2"><p:ac>等</p:ac> Division</th>
+    <table class="mc-finals">
+      <colgroup id="mc-finals-colgroup">
+        <col class="rhyme-group" />
+        <col class="u-medial" />
+        <col class="sound division-1" />
+        <col class="sound division-2" />
+        <col class="sound division-3" span="4" />
+        <col class="sound division-4" />
+      </colgroup>
 
-        <s:fragment id="mc-finals-divisions-th">
-          <th>1</th>
-          <th>2</th>
-          <th>3A</th>
-          <th>3B</th>
-          <th>3C</th>
-          <th>3D</th>
-          <th>4</th>
-        </s:fragment>
-      </tr>
-      <tr>
-        <th colspan="2">Has high front medial?</th>
-        <th colspan="2">No</th>
-        <th colspan="4">Yes</th>
-        <th>Develops later</th>
-      </tr>
-      <tr>
-        <th><p:ac>攝</p:ac></th>
-        <th><p:ac>呼</p:ac></th>
-      </tr>
-    </thead>
-    <tbody>
-      <p:middle-chinese-finals-rows coda="false" tone="0" />
-    </tbody>
-  </table>      
+      <thead>
+        <tr>
+          <th colspan="2"><p:ac>等</p:ac> Division</th>
+
+          <s:fragment id="mc-finals-divisions-th">
+            <th>1</th>
+            <th>2</th>
+            <th>3A</th>
+            <th>3B</th>
+            <th>3C</th>
+            <th>3D</th>
+            <th>4</th>
+          </s:fragment>
+        </tr>
+        <tr>
+          <th colspan="2">Has high front medial?</th>
+          <th colspan="2">No</th>
+          <th colspan="4">Yes</th>
+          <th>Develops later</th>
+        </tr>
+        <tr>
+          <th><p:ac>攝</p:ac></th>
+          <th><p:ac>呼</p:ac></th>
+        </tr>
+      </thead>
+      <tbody>
+        <p:middle-chinese-finals-rows coda="false" tone="0" />
+      </tbody>
+    </table>      
+  </s:section>
 
 <!--
   <p:notes-list>
@@ -481,33 +485,41 @@
   </p:notes-list>
 -->
 
-  <table class="mc-finals">
-    <s:copy-of idref="mc-finals-colgroup" />
-    <thead>
-      <tr>
-        <th><p:ac>攝</p:ac></th>
-        <th><p:ac>呼</p:ac></th>
-        <s:copy-of idref="mc-finals-divisions-th" />
-      </tr>
-    </thead>
-    <tbody>
-      <p:middle-chinese-finals-rows coda="true" tone="0" />
-    </tbody>
-  </table>
+  <s:section>
+    <s:heading>Syllables with nasal codas</s:heading>
 
-  <table class="mc-finals">
-    <s:copy-of idref="mc-finals-colgroup" />
-    <thead>
-      <tr>
-        <th><p:ac>攝</p:ac></th>
-        <th><p:ac>呼</p:ac></th>
-        <s:copy-of idref="mc-finals-divisions-th" />
-      </tr>
-    </thead>
-    <tbody>
-      <p:middle-chinese-finals-rows coda="true" tone="4" />
-    </tbody>
-  </table>
+    <table class="mc-finals">
+      <s:copy-of idref="mc-finals-colgroup" />
+      <thead>
+        <tr>
+          <th><p:ac>攝</p:ac></th>
+          <th><p:ac>呼</p:ac></th>
+          <s:copy-of idref="mc-finals-divisions-th" />
+        </tr>
+      </thead>
+      <tbody>
+        <p:middle-chinese-finals-rows coda="true" tone="0" />
+      </tbody>
+    </table>
+  </s:section>
+
+  <s:section>
+    <s:heading>Syllables with plosive codas</s:heading>
+
+    <table class="mc-finals">
+      <s:copy-of idref="mc-finals-colgroup" />
+      <thead>
+        <tr>
+          <th><p:ac>攝</p:ac></th>
+          <th><p:ac>呼</p:ac></th>
+          <s:copy-of idref="mc-finals-divisions-th" />
+        </tr>
+      </thead>
+      <tbody>
+        <p:middle-chinese-finals-rows coda="true" tone="4" />
+      </tbody>
+    </table>
+  </s:section>
 
 </s:section>
 

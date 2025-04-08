@@ -191,6 +191,7 @@
 
   <xsl:template match="s:heading">
     <p class="heading">
+      <xsl:number level="multiple" count="s:section" format="1. " />
       <xsl:apply-templates select="node()" />
     </p>
   </xsl:template>
