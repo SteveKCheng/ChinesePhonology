@@ -170,8 +170,9 @@
         <td />
         <td />
         <td>
-          <p:ac p:lg="initials38">娘</p:ac><p:fn idref="泥-vs-娘" />
+          <p:ac p:lg="initials38">娘</p:ac>
           <p:i>ɳ</p:i>
+          <p:fn idref="泥-vs-娘" />
         </td>
       </tr>
       <tr>

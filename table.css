@@ -18,6 +18,10 @@ a:hover {
     font-family: sans-serif;
 }
 
+sup.footnote a:any-link {
+    color: blue;    
+}
+
 th {
     font-family: sans-serif;
     text-align: center;

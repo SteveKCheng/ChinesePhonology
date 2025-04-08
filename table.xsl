@@ -144,7 +144,7 @@
   </xsl:template>
 
   <xsl:template match="p:notes-list">
-    <ol>
+    <ol class="footnotes">
       <xsl:apply-templates select="node()|@*" />
     </ol>
   </xsl:template>
@@ -155,7 +155,7 @@
       <xsl:variable name="referrer" select="key('fn', ../@id)" />
       <xsl:if test="count($referrer) = 1">
         <xsl:for-each select="$referrer">
-          <a href="#{generate-id()}">^</a>
+          <a href="#{generate-id()}" class="footnote-return">▲</a>
           <xsl:text> </xsl:text>
         </xsl:for-each>
       </xsl:if>
@@ -172,7 +172,8 @@
       <xsl:when test="$target">
         <xsl:for-each select="$target">
           <a href="#{$idref}" id="{$here}">
-            <sup>
+            <sup class="footnote">
+              <xsl:text>▼</xsl:text>
               <xsl:number format="1" />
             </sup>
           </a>
