@@ -1,4 +1,7 @@
-<?xml-stylesheet type="text/xsl" href="table.xsl" ?>
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html [
+  <!ENTITY bibliography SYSTEM "bibliography.xml">
+]>
 
 <html xmlns="http://www.w3.org/1999/xhtml" 
       xmlns:p="http://www.gold-saucer.org/chinese-phonology"
@@ -574,7 +577,11 @@
 
 </s:section>
 
-  
+<s:section>
+  <s:heading>Bibliography</s:heading>
+
+  &bibliography;
+</s:section>  
 
 </body>
 </html>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<bibliography xmlns="http://www.gold-saucer.org/xmlns/bibliography">
+  <book xml:lang="ja" key="Tōdō 1980">
+    <author>藤堂 明保</author>
+    <title>中国語音韻論 その歴史的研究</title>
+    <publisher>光生館</publisher>
+    <year>1980</year>
+    <trans xml:lang="en">
+      <author>Tōdō, Akiyasu</author>
+    </trans>
+  </book>
+
+  <book xml:lang="zh-tw" key="Wáng 2013">
+    <author>王力</author>
+    <title>漢語史稿</title>
+    <publisher>中華書局</publisher>
+    <year>2013</year>
+    <trans xml:lang="en">
+      <author>Wáng, Lì</author>
+      <title>Draft to a History of the Chinese Language</title>
+    </trans>
+  </book>
+
+  <book xml:lang="zh-tw" key="Wáng 2014">
+    <author>王力</author>
+    <title>漢語語音史</title>
+    <publisher>中華書局</publisher>
+    <year>2014</year>
+    <trans xml:lang="en">
+      <author>Wáng, Lì</author>
+      <title>Phonological History of the Chinese Language</title>
+    </trans>
+  </book>
+
+  <book xml:lang="zh-tw" key="Shào 2008">
+    <author>邵榮芬</author>
+    <title>切韻研究</title>
+    <edition>校訂本</edition>
+    <publisher>中華書局</publisher>
+    <year>2008</year>
+    <trans xml:lang="en">
+      <author>Shào, Róngfēn</author>
+    </trans>
+  </book>
+
+  <book xml:lang="en" key="Dǒng 2008">
+    <author>Dǒng, Hóngyuán</author>
+    <title>A History of the Chinese Language</title>
+    <edition>Second Edition</edition>
+    <publisher>中華書局</publisher>
+    <year>2008</year>
+    <trans xml:lang="zh-tw">
+      <author>董紅源</author>
+    </trans>
+  </book>
+
+  <article xml:lang="ja" key="Haraoka 2019">
+    <author>原岡 かおる</author>
+    <title>日本語における漢字音の受容と通時的変遷に関する研究</title>
+    <journal>東京女子大学言語文化研究</journal>
+    <year>2019</year>
+    <number>28</number>
+    <pages>57-76</pages>
+    <trans xml:lang="en">
+      <author>Haraoka, Kaoru</author>
+      <journal>Studies in Language and Culture</journal>
+    </trans>
+  </article>
+
+  <article xml:lang="ja" key="Hayashi 1983">
+    <author>林 史典</author>
+    <title>中古漢語の介母と日本呉音</title>
+    <journal>文藝言語研究 言語篇</journal>
+    <year>1983</year>
+    <month>3</month>
+    <volume>8</volume>
+    <pages>165–183</pages>
+    <trans xml:lang="en">
+      <author>Hayashi, Chikafumi</author>
+      <title>On the Relationship between Medial of Ancient Chinese and Japanese Go-on</title>
+    </trans>
+  </article>
+
+  <book xml:lang="en" key="Baxter 1992">
+    <author>Baxter, William H.</author>
+    <title>A Handbook of Old Chinese Phonology</title>
+    <publisher>Mouton De Gruyter</publisher>
+    <year>1992</year>
+  </book>
+
+  <misc xml:lang="zh-tw" key="Ayaka 1">
+    <author>綾香</author>
+    <title>粵語（廣州音）與中古音對應關係</title>
+    <year>2020</year>
+    <url>https://ayaka.shn.hk/teoi/</url>
+  </misc>
+
+  <misc xml:lang="zh-tw" key="Ayaka 2">
+    <author>綾香</author>
+    <title>《分韻撮要》音系與中古音對應關係</title>
+    <url>https://ayaka.shn.hk/fanwan/</url>
+    <trans xml:lang="en:">
+      <author>Ayaka</author>
+    </trans>
+  </misc>
+
+  <book xml:lang="zh-tw" key="Ho 1992">
+    <author>何國祥</author>
+    <title>常用字廣州話讀音表</title>
+    <edition>一九九二年修訂本</edition>
+    <publisher>香港教育署語文教育學院中文系</publisher>
+    <year>1992</year>
+    <url>https://ile1992.jyut.net/</url>
+  </book>
+
+  <in-proceedings xml:lang="en" key="CCKM 2022">
+    <author>Chang, Calvin</author>
+    <author>Cui, Chenxuan</author>
+    <author>Kim, Youngmin</author>
+    <author>Mortensen, David R.</author>
+    <year>2022</year>
+    <month>10</month>
+    <title>WikiHan: A New Comparative Dataset for Chinese Languages</title>
+    <booktitle>In Proceedings of the 29th International Conference on Computational Linguistics (COLING 2022), Gyeongju, Korea.</booktitle>
+  </in-proceedings>
+
+</bibliography>

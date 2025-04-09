@@ -14,6 +14,8 @@
               encoding="utf-8"
               indent="no" />
 
+  <xsl:include href="bibliography.xsl" />
+
   <xsl:key 
     name="link-groups" 
     match="p:link-item"
