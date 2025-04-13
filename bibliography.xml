@@ -21,22 +21,22 @@
         </book>
 
         <book xml:lang="en" key="Baxter 1992">
-          <author>Baxter, William H.</author>
+          <author>Baxter, William H</author>
           <title>A Handbook of Old Chinese Phonology</title>
           <publisher>Mouton De Gruyter</publisher>
           <year>1992</year>
         </book>
 
-        <in-proceedings xml:lang="en" key="CCKM 2022">
+        <article xml:lang="en" key="CCKM 2022">
           <author>Chang, Calvin</author>
           <author>Cui, Chenxuan</author>
           <author>Kim, Youngmin</author>
-          <author>Mortensen, David R.</author>
+          <author>Mortensen, David R</author>
           <year>2022</year>
           <month>10</month>
           <title>WikiHan: A New Comparative Dataset for Chinese Languages</title>
-          <booktitle>In Proceedings of the 29th International Conference on Computational Linguistics (COLING 2022), Gyeongju, Korea.</booktitle>
-        </in-proceedings>
+          <journal>In Proceedings of the 29th International Conference on Computational Linguistics (COLING 2022), Gyeongju, Korea</journal>
+        </article>
 
       </bibliography>
     </s:section>
@@ -128,14 +128,15 @@
           <title>中古漢語の介母と日本呉音</title>
           <journal>文藝言語研究 言語篇</journal>
           <year>1983</year>
-          <month>3</month>
+          <month>03</month>
           <volume>8</volume>
           <pages>165–183</pages>
           <trans xml:lang="en">
             <author>Hayashi, Chikafumi</author>
-            <title>On the Relationship between Medial of Ancient Chinese and Japanese Go-on</title>
+            <title>On the Relationship between Medials of Ancient Chinese and Japanese Go-on</title>
           </trans>
         </article>
+
         <book xml:lang="ja" key="Tōdō 1980">
           <author>藤堂 明保</author>
           <title>中国語音韻論 その歴史的研究</title>
@@ -145,6 +146,24 @@
             <author>Tōdō, Akiyasu</author>
           </trans>
         </book>
+
+        <article xml:lang="ja" key="Mineya 1953">
+          <author>三根谷 徹</author>
+          <bib:title xmlns:bib="http://www.gold-saucer.org/xmlns/bibliography"
+          xmlns="http://www.w3.org/1999/xhtml">
+          <ruby>韻<rt>いん</rt>鏡<rt>きょう</rt></ruby>
+          の三・四<ruby>等<rt>とう</rt></ruby>について</bib:title>
+          <journal>言語研究</journal>
+          <issue>22–23</issue>
+          <month>03</month>
+          <year>1953</year>
+          <pages>56–74</pages>
+          <trans xml:lang="en">
+            <author>Mineya, Tōru</author>
+            <title>On the III and IV Divisions of the Yùnjìng</title>
+            <journal>Journal of the Linguistic Society of Japan</journal>
+          </trans>
+        </article>
 
       </bibliography>
     </s:section>
