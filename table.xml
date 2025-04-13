@@ -4,8 +4,8 @@
 ]>
 
 <html xmlns="http://www.w3.org/1999/xhtml" 
-      xmlns:p="http://www.gold-saucer.org/chinese-phonology"
-      xmlns:s="http://www.gold-saucer.org/structured-html"
+      xmlns:p="http://www.gold-saucer.org/xmlns/chinese-phonology"
+      xmlns:s="http://www.gold-saucer.org/xmlns/structured-html"
       lang="en">
 
 <head>

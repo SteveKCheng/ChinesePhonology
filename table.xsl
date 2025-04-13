@@ -2,9 +2,9 @@
   version="2.0" 
   xmlns="http://www.w3.org/1999/xhtml"
   xmlns:html="http://www.w3.org/1999/xhtml"
-  xmlns:p="http://www.gold-saucer.org/chinese-phonology"
-  xmlns:s="http://www.gold-saucer.org/structured-html"
-  xmlns:data="http://www.gold-saucer.org/chinese-phonology-data"
+  xmlns:p="http://www.gold-saucer.org/xmlns/chinese-phonology"
+  xmlns:s="http://www.gold-saucer.org/xmlns/structured-html"
+  xmlns:data="http://www.gold-saucer.org/xmlns/chinese-phonology-data"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   exclude-result-prefixes="p s data html">
