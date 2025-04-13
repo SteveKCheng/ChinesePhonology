@@ -577,11 +577,7 @@
 
 </s:section>
 
-<s:section>
-  <s:heading>Bibliography</s:heading>
-
-  &bibliography;
-</s:section>  
+&bibliography;
 
 </body>
 </html>
