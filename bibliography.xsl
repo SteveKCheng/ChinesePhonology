@@ -6,18 +6,42 @@
   exclude-result-prefixes="bib">
 
   <xsl:template match="bib:bibliography">
-    <xsl:apply-templates mode="biblio" />
+    <dl class="bibliography">
+      <xsl:apply-templates mode="biblio" />
+    </dl>
   </xsl:template>
 
   <xsl:template mode="biblio" match="bib:*">
   </xsl:template>
 
   <xsl:template mode="biblio" match="bib:book">
-    <p class="bibliography book">
-    <xsl:call-template name="display-biblio-author" />
-    <xsl:call-template name="display-biblio-title" />
-    <xsl:call-template name="display-biblio-publisher" />
-    </p>
+    <xsl:call-template name="display-biblio-key" />
+    <dd>
+      <xsl:call-template name="display-biblio-author" />
+      <xsl:call-template name="display-biblio-title" />
+      <xsl:call-template name="display-biblio-publisher" />
+    </dd>
+  </xsl:template>
+
+  <xsl:template name="display-biblio-key">
+    <dt>
+      <xsl:call-template name="get-biblio-key" />
+    </dt>
+  </xsl:template> 
+
+  <xsl:template name="get-biblio-key">
+    <xsl:choose>
+      <xsl:when test="@key">
+        <xsl:value-of select="@key" />
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:text>bib-entry-</xsl:text>
+        <xsl:number level="any" 
+                    from="/" 
+                    count="bib:bibliography/bib:*" 
+                    format="1" />
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template name="display-biblio-author">
