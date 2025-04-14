@@ -10,6 +10,13 @@
       <s:heading>Works in, or translated to, English</s:heading>
       <bibliography>
 
+        <book xml:lang="en" key="Williams 1856">
+          <author>Williams, Samuel Wells</author>
+          <title>A Tonic Dictionary of the Chinese Language in the Canton Dialect</title>
+          <publisher>Canton, printed at the Office of the Chinese Repository</publisher>
+          <year>1856</year>
+        </book>
+
         <book xml:lang="en" key="Dǒng 2008">
           <author>Dǒng, Hóngyuán</author>
           <title>A History of the Chinese Language</title>
@@ -38,6 +45,28 @@
           <title>WikiHan: A New Comparative Dataset for Chinese Languages</title>
           <journal>In Proceedings of the 29th International Conference on Computational Linguistics (COLING 2022), Gyeongju, Korea</journal>
         </article>
+
+        <book xml:lang="en" key="Xiàng 2023 Ⅰ">
+          <author>Xiàng, Xī</author>
+          <title>A Brief History of the Chinese Language I: The Basics of Chinese Phonetics</title>
+          <publisher>Routledge</publisher>
+          <year>2023</year>
+          <trans xml:lang="zh-tw">
+            <author>向熹</author>
+            <title>簡明漢語史: 上編</title>
+          </trans>
+        </book>
+
+        <book xml:lang="en" key="Xiàng 2023 Ⅱ">
+          <author>Xiàng, Xī</author>
+          <title>A Brief History of the Chinese Language II: From Old Chinese to Middle Chinese Phonetic System</title>
+          <publisher>Routledge</publisher>
+          <year>2023</year>
+          <trans xml:lang="zh-tw">
+            <author>向熹</author>
+            <title>簡明漢語史: 上編</title>
+          </trans>
+        </book>
 
       </bibliography>
     </s:section>
