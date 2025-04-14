@@ -44,6 +44,7 @@
     <xsl:call-template name="display-biblio-author" />
     <xsl:call-template name="display-biblio-title" />
     <xsl:call-template name="display-biblio-publisher" />
+    <xsl:call-template name="display-biblio-note" />
     <xsl:call-template name="display-biblio-link" />
   </xsl:template>
 
@@ -51,6 +52,7 @@
     <xsl:call-template name="display-biblio-author" />
     <xsl:call-template name="display-biblio-title" />
     <xsl:call-template name="display-biblio-journal" />
+    <xsl:call-template name="display-biblio-note" />
     <xsl:call-template name="display-biblio-link" />
   </xsl:template>
 
@@ -62,7 +64,25 @@
       <xsl:with-param name="prefix">Last update: </xsl:with-param>
       <xsl:with-param name="suffix">. </xsl:with-param>
     </xsl:call-template>
+    <xsl:call-template name="display-biblio-note" />
     <xsl:call-template name="display-biblio-link" />
+  </xsl:template>
+
+  <xsl:template name="display-biblio-note">
+    <xsl:for-each select="bib:note">
+      <br />
+
+      <xsl:text>[</xsl:text>
+      <xsl:choose>
+        <xsl:when test="@category">
+          <xsl:value-of select="@category" />
+        </xsl:when>
+        <xsl:otherwise>note</xsl:otherwise>
+      </xsl:choose>
+      <xsl:text>] </xsl:text>
+
+      <xsl:apply-templates />
+    </xsl:for-each>
   </xsl:template>
 
   <xsl:template name="display-biblio-link">
