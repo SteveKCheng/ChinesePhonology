@@ -56,6 +56,80 @@
 <body>
 
 <s:section>
+  <s:heading>What is Middle Chinese?</s:heading>
+
+  <p>
+    <s:term>Middle Chinese</s:term> <p:mc>中古漢語</p:mc> represents the stages of Chinese 
+    presumed to have been spoken roughly between 200 AD to 1300 AD, from the start of the 
+    Three Kingdoms period (after the Han dynasties)
+    to the Song dynasties (before the invasion of China by the Mongols).  Informally, we may 
+    treat it a language like any other in history, which can be subjected to linguistic
+    study, e.g. using the comparative method.  But technically speaking, Middle Chinese is 
+    a constructed system of pronunciation, which has been passed down to us through
+    written records of philologists from that era and since.  
+  </p>
+
+  <p>
+    We know, from the written record, that fairly divergent dialects of Chinese even 
+    existed back then, so certainly no one could be said to have <em>spoken a single
+    language</em> called "Middle Chinese".  However, what linguists have been able to deduce is that
+    varieties of Chinese had evolved from a proto-language with the following characteristics:
+  </p>
+
+  <ul>
+    <li>Its spoken form was primarily monosyllabic: not only everyday words, but even vocabulary that
+    we would consider rather specialized today, like names of species of plants and animals,
+    consisted of one syllable. </li>
+    <li>Only later were multi-syllabic words  incorporated into everyday language, often replacing 
+    old monosyllabic 
+    words as the latter became too ambiguous.   
+    Not only because the limits on the number of distinguishable phonological 
+    features were hit, preventing the coining of new words with new syllables, 
+    but also individual words were increasingly overloaded with many shades of meaning, 
+    as society evolved to articulate new concepts.</li>
+    <li>It had a distinctive written form consisting of "characters", whose modern, evolved form
+    are recognizable to many people today. </li>
+    <li>Each character was pronounced as one syllable.   
+    For monosyllabic words that means one character
+    corresponds to one word.  For compound words made of a series of monosyllabic morphemes, the
+    compound word would be written with the corresponding characters to those monosyllabic morphemes.
+    Genuinely multi-syllabic morphemes (usually disyllabic) would still be written with multiple
+    characters even if though the characters may have no meaning outside of being part of the
+    multi-syllabic morpheme. </li>
+    <li>The above key aspects of the language are retained to this day in modern Chinese dialects. </li>
+    <li>Many of the phonological changes in varieties of Chinese could be analyzed syllable-by-syllable
+    — though not all, of course.  
+    So we can effectively speak of a Chinese character having certain a "pronunciation" at a certain
+    time and place, and how it changes throughout
+    history across different dialects. </li>
+  </ul>
+
+  <p>
+    The proto-language that Middle Chinese evolved from is called <s:term>Old Chinese</s:term>
+    <p:mc>上古漢語</p:mc>.  Old Chinese is way beyond the scope of this article, and its re-construction
+    is subject to considerable uncertainty.  But knowing some
+    aspects of its evolution is still useful, in shedding light on certain pecularities of Middle Chinese.
+    We will point out some of the salient details as we go along.
+  </p>
+
+  <p>
+    As to the nature of the written history on Middle Chinese, two major kinds of records stand out:
+  </p>
+
+  <ul>
+    <li><s:term>Rhyme dictionaries</s:term>, exemplified by the work <p:ac>廣韻</p:ac>,
+    completed in 1011 AD in the Northern Song dynasty <s:bib-ref key="Dǒng 2008" pages="58–59" />
+    An earlier 
+    
+    compiled by
+    <p:ac>陸法言</p:ac> 
+    </li>
+  </ul>
+
+
+</s:section>
+
+<s:section>
   <s:heading>Initials of Middle Chinese</s:heading>
       
   <table>
