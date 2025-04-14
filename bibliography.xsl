@@ -150,6 +150,7 @@
       <xsl:apply-templates />
       <xsl:call-template name="display-biblio-trans">
         <xsl:with-param name="original" select="." />
+        <xsl:with-param name="position" select="position()" />
       </xsl:call-template>
       <xsl:if test="position()=last()">
         <xsl:text>. </xsl:text>
@@ -260,10 +261,10 @@
 
   <xsl:template name="display-biblio-trans">
     <xsl:param name="original" required="yes" />
+    <xsl:param name="position" select="1" />
 
-    <xsl:variable name="p" select="$original/position()" />
     <xsl:variable name="n" select="$original/local-name()" />
-    <xsl:variable name="t" select="($original/../bib:trans/bib:*[local-name()=$n])[position()=$p]" />
+    <xsl:variable name="t" select="($original/../bib:trans/bib:*[local-name()=$n])[position()=$position]" />
 
     <xsl:if test="$t">
       <xsl:text> ⦅</xsl:text>
