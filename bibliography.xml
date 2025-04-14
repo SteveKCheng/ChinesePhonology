@@ -33,6 +33,8 @@
           <title>A Handbook of Old Chinese Phonology</title>
           <publisher>Mouton De Gruyter</publisher>
           <year>1992</year>
+          <link class="ad" url="https://www.degruyterbrill.com/document/doi/10.1515/9783110857085/html" />
+          <link class="doi" url="https://doi.org/10.1515/9783110857085" />
         </book>
 
         <article xml:lang="en" key="CCKM 2022">
@@ -44,6 +46,9 @@
           <month>10</month>
           <title>WikiHan: A New Comparative Dataset for Chinese Languages</title>
           <journal>In Proceedings of the 29th International Conference on Computational Linguistics (COLING 2022), Gyeongju, Korea</journal>
+          <link class="meta" url="https://aclanthology.org/2022.coling-1.314/" />
+          <link class="source" url="https://aclanthology.org/2022.coling-1.314.pdf">full-text PDF</link>
+          <link class="home" url="https://github.com/cmu-llab/wikihan">WikiHan project on GitHub</link>
         </article>
 
         <book xml:lang="en" key="Xiàng 2023 Ⅰ">
@@ -55,6 +60,8 @@
             <author>向熹</author>
             <title>簡明漢語史: 上編</title>
           </trans>
+          <link class="ad" url="https://www.taylorfrancis.com/books/mono/10.4324/9781003343516/brief-history-chinese-language-xi-xiang" />
+          <link class="doi" url="https://doi.org/10.4324/9781003343516" />
         </book>
 
         <book xml:lang="en" key="Xiàng 2023 Ⅱ">
@@ -66,6 +73,8 @@
             <author>向熹</author>
             <title>簡明漢語史: 上編</title>
           </trans>
+          <link class="ad" url="https://www.taylorfrancis.com/books/mono/10.4324/9781003343523/brief-history-chinese-language-ii-xi-xiang" />
+          <link class="doi" url="https://doi.org/10.4324/9781003343523" />
         </book>
 
       </bibliography>
@@ -79,15 +88,20 @@
           <author>綾香</author>
           <title>粵語（廣州音）與中古音對應關係</title>
           <year>2020</year>
-          <url>https://ayaka.shn.hk/teoi/</url>
+          <trans xml:lang="en">
+            <author>Ayaka</author>
+            <title>Correspondences between Cantonese and Middle Chinese</title>
+          </trans>
+          <link class="source" url="https://ayaka.shn.hk/teoi/" />
         </misc>
 
         <misc xml:lang="zh-tw" key="Ayaka 2">
           <author>綾香</author>
           <title>《分韻撮要》音系與中古音對應關係</title>
-          <url>https://ayaka.shn.hk/fanwan/</url>
-          <trans xml:lang="en:">
+          <link class="source" url="https://ayaka.shn.hk/fanwan/" />
+          <trans xml:lang="en">
             <author>Ayaka</author>
+            <title>Correspondences between Qing-era Cantonese and Middle Chinese</title>
           </trans>
         </misc>
 
@@ -103,6 +117,7 @@
             <title>Table of Cantonese Readings of Common Characters</title>
             <edition>1992 Revised Edition</edition>
           </trans>
+          <link class="home" url="https://ile1992.jyut.net/" />
         </book>
 
         <book xml:lang="zh-tw" key="Wáng 2013">
@@ -140,6 +155,17 @@
           </trans>
         </book>
 
+        <book xml:lang="zh-tw" key="Ho 1999">
+          <author>何文匯</author>
+          <author>朱國藩</author>
+          <title>粵音正讀字彙</title>
+          <publisher>香港教育圖書公司</publisher>
+          <year>1999</year>
+          <trans xml:lang="en">
+            <title>Correct Cantonese Pronunciations of Characters</title>
+          </trans>
+        </book>
+
       </bibliography>
     </s:section>
 
@@ -159,6 +185,10 @@
             <title>Study on Chinese Character Readings as Adopted into Japanese, and their Evolution</title>
             <journal>Studies in Language and Culture</journal>
           </trans>
+          <link class="meta" url="https://twcu.repo.nii.ac.jp/records/26619" />
+          <link class="source" url="https://twcu.repo.nii.ac.jp/record/26619/files/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E6%BC%A2%E5%AD%97%E9%9F%B3%E3%81%AE%E5%8F%97%E5%AE%B9%E3%81%A8%E9%80%9A%E6%99%82%E7%9A%84%E5%A4%89%E9%81%B7%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E7%A0%94%E7%A9%B6.pdf">
+            full-text PDF from https://twcu.repo.nii.ac.jp/
+          </link>
         </article>
 
         <article xml:lang="ja" key="Hayashi 1983">
@@ -173,17 +203,21 @@
             <author>Hayashi, Chikafumi</author>
             <title>On the Relationship between Medials of Ancient Chinese and Japanese Go-on</title>
           </trans>
+          <link class="archive" url="https://core.ac.uk/download/pdf/56649011.pdf">
+            scanned PDF from https://core.ac.uk/
+          </link>
         </article>
 
         <book xml:lang="ja" key="Tōdō 1980">
           <author>藤堂 明保</author>
-          <title>中国語音韻論 その歴史的研究</title>
+          <title>中国語音韻論 その歴史的研究</title>
           <publisher>光生館</publisher>
           <year>1980</year>
           <trans xml:lang="en">
             <author>Tōdō, Akiyasu</author>
             <title>Chinese Phonology: A Historical Study</title>
           </trans>
+          <link class="meta" url="https://cir.nii.ac.jp/crid/1130000797864209664" />
         </book>
 
         <article xml:lang="ja" key="Mineya 1953">
@@ -199,8 +233,38 @@
             <title>On the III and IV Divisions of the Yùnjìng</title>
             <journal>Journal of the Linguistic Society of Japan</journal>
           </trans>
+          <link class="meta" url="https://cir.nii.ac.jp/crid/1520572360057837696" />
         </article>
 
+        <book xml:lang="ja" key="Nitta 2009">
+          <author>仁田 義雄</author>
+          <author>and others</author>
+          <title>日本語要説</title>
+          <edition>改訂版</edition>
+          <publisher>ひつじ書房</publisher>
+          <year>2009</year>
+          <trans xml:lang="en">
+            <author>Nitta, Yoshio</author>
+            <title>Outline of the Japanese Language</title>
+            <edition>Revised Edition</edition>
+          </trans>
+          <link class="meta" url="https://cir.nii.ac.jp/crid/1020282257440598528" />
+          <link class="ad" url="https://www.hituzi.co.jp/books/468.html" />
+        </book>
+
+        <book xml:lang="ja" key="Yuzawa 2004">
+          <author>湯澤 質幸</author>
+          <author>松崎 寛</author>
+          <title>音声・音韻探求法 日本語音声へいざない</title>
+          <publisher>朝倉書店</publisher>
+          <year>2004</year>
+          <trans xml:lang="en">
+            <author>Yuzawa, Tadayuki</author>
+            <author>Matsuzaki, Hiroshi</author>
+            <title>Methods in Phonetics &amp; Phonemics: An Introduction to Japanese Phonology</title>
+          </trans>
+          <link class="ad" url="https://www.asakura.co.jp/detail.php?book_code=51503" />
+        </book>
       </bibliography>
     </s:section>
 
