@@ -2,296 +2,367 @@
 
 <s:section xmlns:s="http://www.gold-saucer.org/xmlns/structured-html"
            xmlns:h="http://www.w3.org/1999/xhtml"
-           xmlns="http://www.gold-saucer.org/xmlns/bibliography">
+           xmlns="http://www.w3.org/1999/xhtml">
 
   <s:heading>Bibliography</s:heading>
 
-    <s:section>
-      <s:heading>Works in, or translated to, English</s:heading>
-      <bibliography>
+  <p>
+    In writing this article, I have consulted sources in all three languages, English, Chinese and Japanese.
+    Each language source has unique viewpoints to offer, and all have been a pleasure to read.
+  </p>
 
-        <book xml:lang="en" key="Williams 1856">
-          <author>Williams, Samuel Wells</author>
-          <title>A Tonic Dictionary of the Chinese Language in the Canton Dialect</title>
-          <publisher>Canton, printed at the Office of the Chinese Repository</publisher>
-          <year>1856</year>
-        </book>
+  <ul>
+    <li>
+      <p>
+        Most of the English works below, usually aimed at students of Sinology or Chinese linguistics, 
+        are comparatively easy to understand. They use modern linguistic terminology and notation that you 
+        may already be familiar with from other languages. And they take care to explain 
+        background supporting information, such as the meanings of any cited texts written in Classical
+        Chinese.  
+      </p>
+      <p>
+        Even without consulting native-language works, the English texts already give a good
+        survey of Old &amp; Middle Chinese and their features.  They also more readily draw
+        connections with other languages spoken in areas bordering China, e.g. 
+        tonogenesis was first established
+        in Vietnamese by Western linguists, and later Old Chinese was postulated to have
+        undergone an analogous process.
+      </p>
+    </li>
+    <li>
+      <p>
+        The works in Standard Chinese add more flair and detail, with copious evidence from classical 
+        literature.  They are especially good at tracing
+        each historical change going from Middle Chinese onwards.
+      </p>
+      <p>
+        Yet, undoubtedly because of the political
+        unpopularity of the topic, the information contained therein on non-Mandarin dialects 
+        tend to be an afterthought.  Fortunately, there are many reference works for
+        specifically Cantonese (owing to Hong Kong's history and culture) that can fill the gaps.
+      </p>
+    </li>
+    <li>
+      <p>
+        Then, we have works in Japanese authors. Naturally, they excel at connecting Chinese phonology with
+        concurrent and subsequent changes in the Japanese language.  While Chinese and English writers
+        all acknowledge the role played by sino-xenic readings in Chinese linguistics, the information
+        they offer on Japanese tends to be superficial — nothing that advanced learners of Japanese could
+        not deduce themselves after learning a bit about Middle Chinese.  Understandably, Japanese is a
+        difficult enough language that few non-Japanese could be expected to analyze at a high academic level.
+      </p>
+      <p>
+        On the other hand, a good number of Japanese sinologists are world-renowned in their own right.
+        And they do sometimes bring up important connections in Middle Chinese phonology that other 
+        authors neglect, e.g. how the difference in medials under divisions 3 and 4 manifest
+        in modern languages today (notably Mandarin, Japanese and Korean).
+      </p>
+    </li>
+  </ul>
 
-        <book xml:lang="en" key="Dǒng 2008">
-          <author>Dǒng, Hóngyuán</author>
-          <title>A History of the Chinese Language</title>
-          <edition>Second Edition</edition>
-          <publisher>Routledge</publisher>
-          <year>2008</year>
-          <trans xml:lang="zh-tw">
-            <author>董紅源</author>
-          </trans>
-        </book>
+  <p>
+    Most of the non-English works cited here do not have official English titles.  For the benefit
+    of the reader I have supplied my own translations.  If you want to search for a work yourself,
+    please look it up under the original non-English title.
+  </p>
 
-        <book xml:lang="en" key="Baxter 1992">
-          <author>Baxter, William H</author>
-          <title>A Handbook of Old Chinese Phonology</title>
-          <publisher>Mouton De Gruyter</publisher>
-          <year>1992</year>
-          <link class="ad" url="https://www.degruyterbrill.com/document/doi/10.1515/9783110857085/html" />
-          <link class="doi" url="https://doi.org/10.1515/9783110857085" />
-        </book>
+  <p>
+    Some works here, particularly dictionaries, overlap greatly.  I have listed them all
+    as authors on this article's topics do occasionally disagree, if not in opinion then in 
+    terminology and notation, and so had to be cross-checked.
+  </p>
 
-        <article xml:lang="en" key="CCKM 2022">
-          <author>Chang, Calvin</author>
-          <author>Cui, Chenxuan</author>
-          <author>Kim, Youngmin</author>
-          <author>Mortensen, David R</author>
-          <year>2022</year>
-          <month>10</month>
-          <title>WikiHan: A New Comparative Dataset for Chinese Languages</title>
-          <journal>In Proceedings of the 29th International Conference on Computational Linguistics (COLING 2022), Gyeongju, Korea</journal>
-          <link class="meta" url="https://aclanthology.org/2022.coling-1.314/" />
-          <link class="source" url="https://aclanthology.org/2022.coling-1.314.pdf">full-text PDF</link>
-          <link class="home" url="https://github.com/cmu-llab/wikihan">WikiHan project on GitHub</link>
-        </article>
+  <s:section>
+    <s:heading>Works in, or translated to, English</s:heading>
+    <bibliography xmlns="http://www.gold-saucer.org/xmlns/bibliography">
 
-        <book xml:lang="en" key="Xiàng 2023 Ⅰ">
-          <author>Xiàng, Xī</author>
-          <title>A Brief History of the Chinese Language I: The Basics of Chinese Phonetics</title>
-          <publisher>Routledge</publisher>
-          <year>2023</year>
-          <trans xml:lang="zh-tw">
-            <author>向熹</author>
-            <title>簡明漢語史: 上編</title>
-          </trans>
-          <note>This work has been translated from the Chinese whose title is given above; the numbering of the original volumes is different. </note>
-          <link class="ad" url="https://www.taylorfrancis.com/books/mono/10.4324/9781003343516/brief-history-chinese-language-xi-xiang" />
-          <link class="doi" url="https://doi.org/10.4324/9781003343516" />
-        </book>
 
-        <book xml:lang="en" key="Xiàng 2023 Ⅱ">
-          <author>Xiàng, Xī</author>
-          <title>A Brief History of the Chinese Language II: From Old Chinese to Middle Chinese Phonetic System</title>
-          <publisher>Routledge</publisher>
-          <year>2023</year>
-          <trans xml:lang="zh-tw">
-            <author>向熹</author>
-            <title>簡明漢語史: 上編</title>
-          </trans>
-          <note>As [Xiàng 2023 Ⅰ] above. </note>
-          <link class="ad" url="https://www.taylorfrancis.com/books/mono/10.4324/9781003343523/brief-history-chinese-language-ii-xi-xiang" />
-          <link class="doi" url="https://doi.org/10.4324/9781003343523" />
-        </book>
+      <book xml:lang="en" key="Williams 1856">
+        <author>Williams, Samuel Wells</author>
+        <title>A Tonic Dictionary of the Chinese Language in the Canton Dialect</title>
+        <publisher>Canton, printed at the Office of the Chinese Repository</publisher>
+        <year>1856</year>
+      </book>
 
-      </bibliography>
-    </s:section>
+      <book xml:lang="en" key="Dǒng 2008">
+        <author>Dǒng, Hóngyuán</author>
+        <title>A History of the Chinese Language</title>
+        <edition>Second Edition</edition>
+        <publisher>Routledge</publisher>
+        <year>2008</year>
+        <trans xml:lang="zh-tw">
+          <author>董紅源</author>
+        </trans>
+      </book>
 
-    <s:section>
-      <s:heading>Works in Chinese</s:heading>
-      <bibliography>
+      <book xml:lang="en" key="Baxter 1992">
+        <author>Baxter, William H</author>
+        <title>A Handbook of Old Chinese Phonology</title>
+        <publisher>Mouton De Gruyter</publisher>
+        <year>1992</year>
+        <link class="ad" url="https://www.degruyterbrill.com/document/doi/10.1515/9783110857085/html" />
+        <link class="doi" url="https://doi.org/10.1515/9783110857085" />
+      </book>
 
-        <misc xml:lang="zh-tw" key="Ayaka 1">
-          <author>綾香</author>
-          <title>粵語（廣州音）與中古音對應關係</title>
-          <year>2020</year>
-          <trans xml:lang="en">
-            <author>Ayaka</author>
-            <title>Correspondences between Cantonese and Middle Chinese</title>
-          </trans>
-          <link class="source" url="https://ayaka.shn.hk/teoi/" />
-        </misc>
+      <article xml:lang="en" key="CCKM 2022">
+        <author>Chang, Calvin</author>
+        <author>Cui, Chenxuan</author>
+        <author>Kim, Youngmin</author>
+        <author>Mortensen, David R</author>
+        <year>2022</year>
+        <month>10</month>
+        <title>WikiHan: A New Comparative Dataset for Chinese Languages</title>
+        <journal>In Proceedings of the 29th International Conference on Computational Linguistics (COLING 2022), Gyeongju, Korea</journal>
+        <link class="meta" url="https://aclanthology.org/2022.coling-1.314/" />
+        <link class="source" url="https://aclanthology.org/2022.coling-1.314.pdf">full-text PDF</link>
+        <link class="home" url="https://github.com/cmu-llab/wikihan">WikiHan project on GitHub</link>
+      </article>
 
-        <misc xml:lang="zh-tw" key="Ayaka 2">
-          <author>綾香</author>
-          <title>《分韻撮要》音系與中古音對應關係</title>
-          <link class="source" url="https://ayaka.shn.hk/fanwan/" />
-          <trans xml:lang="en">
-            <author>Ayaka</author>
-            <title>Correspondences between Qing-era Cantonese and Middle Chinese</title>
-          </trans>
-        </misc>
+      <book xml:lang="en" key="Xiàng 2023 Ⅰ">
+        <author>Xiàng, Xī</author>
+        <title>A Brief History of the Chinese Language I: The Basics of Chinese Phonetics</title>
+        <publisher>Routledge</publisher>
+        <year>2023</year>
+        <trans xml:lang="zh-tw">
+          <author>向熹</author>
+          <title>簡明漢語史: 上編</title>
+        </trans>
+        <note>This work has been translated from the Chinese whose title is given above; the numbering of the original volumes is different. </note>
+        <link class="ad" url="https://www.taylorfrancis.com/books/mono/10.4324/9781003343516/brief-history-chinese-language-xi-xiang" />
+        <link class="doi" url="https://doi.org/10.4324/9781003343516" />
+      </book>
 
-        <book xml:lang="zh-tw" key="Chao 1983">
-          <author>趙元任</author>
-          <title>通字方案</title>
-          <publisher>商務印書館</publisher>
-          <year>1983</year>
-          <note>This work is bilingual, with English and Chinese presented side-by-side. </note>
-          <trans xml:lang="en">
-            <author>Chao, Yuen Ren</author>
-            <title>A Project for General Chinese</title>
-          </trans>
-        </book>
+      <book xml:lang="en" key="Xiàng 2023 Ⅱ">
+        <author>Xiàng, Xī</author>
+        <title>A Brief History of the Chinese Language II: From Old Chinese to Middle Chinese Phonetic System</title>
+        <publisher>Routledge</publisher>
+        <year>2023</year>
+        <trans xml:lang="zh-tw">
+          <author>向熹</author>
+          <title>簡明漢語史: 上編</title>
+        </trans>
+        <note>As [Xiàng 2023 Ⅰ] above. </note>
+        <link class="ad" url="https://www.taylorfrancis.com/books/mono/10.4324/9781003343523/brief-history-chinese-language-ii-xi-xiang" />
+        <link class="doi" url="https://doi.org/10.4324/9781003343523" />
+      </book>
 
-        <book xml:lang="zh-tw" key="Ho 1992">
-          <author>何國祥</author>
-          <title>常用字廣州話讀音表</title>
-          <edition>一九九二年修訂本</edition>
-          <publisher>香港教育署語文教育學院中文系</publisher>
-          <year>1992</year>
-          <url>https://ile1992.jyut.net/</url>
-          <trans xml:lang="en">
-            <author>Ho, Kwok Cheung</author>
-            <title>Table of Cantonese Readings of Common Characters</title>
-            <edition>1992 Revised Edition</edition>
-          </trans>
-          <link class="home" url="https://ile1992.jyut.net/" />
-        </book>
+    </bibliography>
+  </s:section>
 
-        <book xml:lang="zh-tw" key="Dǒng 1996">
-          <author>董同龢</author>
-          <title>漢語音韻學</title>
-          <publisher>文史哲出版社</publisher>
-          <year>1996</year>
-          <trans xml:lang="en">
-            <author>Dǒng, Tónghé</author>
-            <title>Chinese Phonology</title>
-          </trans>
-        </book>
+  <s:section>
+    <s:heading>Works in Chinese</s:heading>
+    <bibliography xmlns="http://www.gold-saucer.org/xmlns/bibliography">
+      <misc xml:lang="zh-tw" key="Ayaka 1">
+        <author>綾香</author>
+        <title>粵語（廣州音）與中古音對應關係</title>
+        <year>2020</year>
+        <trans xml:lang="en">
+          <author>Ayaka</author>
+          <title>Correspondences between Cantonese and Middle Chinese</title>
+        </trans>
+        <link class="source" url="https://ayaka.shn.hk/teoi/" />
+      </misc>
 
-        <book xml:lang="zh-tw" key="Wáng 2013">
-          <author>王力</author>
-          <title>漢語史稿</title>
-          <publisher>中華書局</publisher>
-          <year>2013</year>
-          <trans xml:lang="en">
-            <author>Wáng, Lì</author>
-            <title>Draft to a History of the Chinese Language</title>
-          </trans>
-        </book>
+      <misc xml:lang="zh-tw" key="Ayaka 2">
+        <author>綾香</author>
+        <title>《分韻撮要》音系與中古音對應關係</title>
+        <link class="source" url="https://ayaka.shn.hk/fanwan/" />
+        <trans xml:lang="en">
+          <author>Ayaka</author>
+          <title>Correspondences between Qing-era Cantonese and Middle Chinese</title>
+        </trans>
+      </misc>
 
-        <book xml:lang="zh-tw" key="Wáng 2014">
-          <author>王力</author>
-          <title>漢語語音史</title>
-          <publisher>中華書局</publisher>
-          <year>2014</year>
-          <trans xml:lang="en">
-            <author>Wáng, Lì</author>
-            <title>Phonological History of the Chinese Language</title>
-          </trans>
-        </book>
+      <book xml:lang="zh-tw" key="Chao 1983">
+        <author>趙元任</author>
+        <title>通字方案</title>
+        <publisher>商務印書館</publisher>
+        <year>1983</year>
+        <note>This work is bilingual, with English and Chinese presented side-by-side. </note>
+        <trans xml:lang="en">
+          <author>Chao, Yuen Ren</author>
+          <title>A Project for General Chinese</title>
+        </trans>
+      </book>
 
-        <book xml:lang="zh-tw" key="Shào 2008">
-          <author>邵榮芬</author>
-          <title>切韻研究</title>
-          <edition>校訂本</edition>
-          <publisher>中華書局</publisher>
-          <year>2008</year>
-          <trans xml:lang="en">
-            <author>Shào, Róngfēn</author>
-            <title>Studies on the Qièyùn</title>
-            <edition>Revised Edition</edition>
-          </trans>
-        </book>
+      <book xml:lang="zh-tw" key="Ho 1992">
+        <author>何國祥</author>
+        <title>常用字廣州話讀音表</title>
+        <edition>一九九二年修訂本</edition>
+        <publisher>香港教育署語文教育學院中文系</publisher>
+        <year>1992</year>
+        <url>https://ile1992.jyut.net/</url>
+        <trans xml:lang="en">
+          <author>Ho, Kwok Cheung</author>
+          <title>Table of Cantonese Readings of Common Characters</title>
+          <edition>1992 Revised Edition</edition>
+        </trans>
+        <link class="home" url="https://ile1992.jyut.net/" />
+      </book>
 
-        <book xml:lang="zh-tw" key="Ho 1999">
-          <author>何文匯</author>
-          <author>朱國藩</author>
-          <title>粵音正讀字彙</title>
-          <publisher>香港教育圖書公司</publisher>
-          <year>1999</year>
-          <trans xml:lang="en">
-            <title>Correct Cantonese Pronunciations of Characters</title>
-          </trans>
-        </book>
+      <book xml:lang="zh-tw" key="Dǒng 1996">
+        <author>董同龢</author>
+        <title>漢語音韻學</title>
+        <publisher>文史哲出版社</publisher>
+        <year>1996</year>
+        <trans xml:lang="en">
+          <author>Dǒng, Tónghé</author>
+          <title>Chinese Phonology</title>
+        </trans>
+      </book>
 
-      </bibliography>
-    </s:section>
+      <book xml:lang="zh-tw" key="Wáng 2013">
+        <author>王力</author>
+        <title>漢語史稿</title>
+        <publisher>中華書局</publisher>
+        <year>2013</year>
+        <trans xml:lang="en">
+          <author>Wáng, Lì</author>
+          <title>Draft to a History of the Chinese Language</title>
+        </trans>
+      </book>
 
-    <s:section>
-      <s:heading>Works in Japanese</s:heading>
-      <bibliography>
-      
-        <article xml:lang="ja" key="Haraoka 2019">
-          <author>原岡 かおる</author>
-          <title>日本語における漢字音の受容と通時的変遷に関する研究</title>
-          <journal>東京女子大学言語文化研究</journal>
-          <year>2019</year>
-          <number>28</number>
-          <pages>57-76</pages>
-          <trans xml:lang="en">
-            <author>Haraoka, Kaoru</author>
-            <title>Study on Chinese Character Readings as Adopted into Japanese, and their Evolution</title>
-            <journal>Studies in Language and Culture</journal>
-          </trans>
-          <link class="meta" url="https://twcu.repo.nii.ac.jp/records/26619" />
-          <link class="source" url="https://twcu.repo.nii.ac.jp/record/26619/files/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E6%BC%A2%E5%AD%97%E9%9F%B3%E3%81%AE%E5%8F%97%E5%AE%B9%E3%81%A8%E9%80%9A%E6%99%82%E7%9A%84%E5%A4%89%E9%81%B7%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E7%A0%94%E7%A9%B6.pdf">
-            full-text PDF from https://twcu.repo.nii.ac.jp/
-          </link>
-        </article>
+      <book xml:lang="zh-tw" key="Wáng 2014">
+        <author>王力</author>
+        <title>漢語語音史</title>
+        <publisher>中華書局</publisher>
+        <year>2014</year>
+        <trans xml:lang="en">
+          <author>Wáng, Lì</author>
+          <title>Phonological History of the Chinese Language</title>
+        </trans>
+      </book>
 
-        <article xml:lang="ja" key="Hayashi 1983">
-          <author>林 史典</author>
-          <title>中古漢語の介母と日本呉音</title>
-          <journal>文藝言語研究 言語篇</journal>
-          <year>1983</year>
-          <month>03</month>
-          <volume>8</volume>
-          <pages>165–183</pages>
-          <trans xml:lang="en">
-            <author>Hayashi, Chikafumi</author>
-            <title>On the Relationship between Medials of Ancient Chinese and Japanese Go-on</title>
-          </trans>
-          <link class="archive" url="https://core.ac.uk/download/pdf/56649011.pdf">
-            scanned PDF from https://core.ac.uk/
-          </link>
-        </article>
+      <book xml:lang="zh-tw" key="Shào 2008">
+        <author>邵榮芬</author>
+        <title>切韻研究</title>
+        <edition>校訂本</edition>
+        <publisher>中華書局</publisher>
+        <year>2008</year>
+        <trans xml:lang="en">
+          <author>Shào, Róngfēn</author>
+          <title>Studies on the Qièyùn</title>
+          <edition>Revised Edition</edition>
+        </trans>
+      </book>
 
-        <book xml:lang="ja" key="Tōdō 1980">
-          <author>藤堂 明保</author>
-          <title>中国語音韻論 その歴史的研究</title>
-          <publisher>光生館</publisher>
-          <year>1980</year>
-          <trans xml:lang="en">
-            <author>Tōdō, Akiyasu</author>
-            <title>Chinese Phonology: A Historical Study</title>
-          </trans>
-          <link class="meta" url="https://cir.nii.ac.jp/crid/1130000797864209664" />
-        </book>
+      <book xml:lang="zh-tw" key="Ho 1999">
+        <author>何文匯</author>
+        <author>朱國藩</author>
+        <title>粵音正讀字彙</title>
+        <publisher>香港教育圖書公司</publisher>
+        <year>1999</year>
+        <trans xml:lang="en">
+          <title>Correct Cantonese Pronunciations of Characters</title>
+        </trans>
+      </book>
 
-        <article xml:lang="ja" key="Mineya 1953">
-          <author>三根谷 徹</author>
-          <title><h:ruby>韻<h:rt>いん</h:rt>鏡<h:rt>きょう</h:rt></h:ruby>の三・四<h:ruby>等<h:rt>とう</h:rt></h:ruby>について</title>
-          <journal>言語研究</journal>
-          <issue>22–23</issue>
-          <month>03</month>
-          <year>1953</year>
-          <pages>56–74</pages>
-          <trans xml:lang="en">
-            <author>Mineya, Tōru</author>
-            <title>On the III and IV Divisions of the Yùnjìng</title>
-            <journal>Journal of the Linguistic Society of Japan</journal>
-          </trans>
-          <link class="meta" url="https://cir.nii.ac.jp/crid/1520572360057837696" />
-        </article>
+    </bibliography>
+  </s:section>
 
-        <book xml:lang="ja" key="Nitta 2009">
-          <author>仁田 義雄</author>
-          <author>and others</author>
-          <title>日本語要説</title>
-          <edition>改訂版</edition>
-          <publisher>ひつじ書房</publisher>
-          <year>2009</year>
-          <trans xml:lang="en">
-            <author>Nitta, Yoshio</author>
-            <title>Outline of the Japanese Language</title>
-            <edition>Revised Edition</edition>
-          </trans>
-          <link class="meta" url="https://cir.nii.ac.jp/crid/1020282257440598528" />
-          <link class="ad" url="https://www.hituzi.co.jp/books/468.html" />
-        </book>
+  <s:section>
+    <s:heading>Works in Japanese</s:heading>
+    <bibliography xmlns="http://www.gold-saucer.org/xmlns/bibliography">
+    
+      <article xml:lang="ja" key="Haraoka 2019">
+        <author>原岡 かおる</author>
+        <title>日本語における漢字音の受容と通時的変遷に関する研究</title>
+        <journal>東京女子大学言語文化研究</journal>
+        <year>2019</year>
+        <number>28</number>
+        <pages>57-76</pages>
+        <trans xml:lang="en">
+          <author>Haraoka, Kaoru</author>
+          <title>Study on Chinese Character Readings as Adopted into Japanese, and their Evolution</title>
+          <journal>Studies in Language and Culture</journal>
+        </trans>
+        <link class="meta" url="https://twcu.repo.nii.ac.jp/records/26619" />
+        <link class="source" url="https://twcu.repo.nii.ac.jp/record/26619/files/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E6%BC%A2%E5%AD%97%E9%9F%B3%E3%81%AE%E5%8F%97%E5%AE%B9%E3%81%A8%E9%80%9A%E6%99%82%E7%9A%84%E5%A4%89%E9%81%B7%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E7%A0%94%E7%A9%B6.pdf">
+          full-text PDF from https://twcu.repo.nii.ac.jp/
+        </link>
+      </article>
 
-        <book xml:lang="ja" key="Yuzawa 2004">
-          <author>湯澤 質幸</author>
-          <author>松崎 寛</author>
-          <title>音声・音韻探求法 日本語音声へいざない</title>
-          <publisher>朝倉書店</publisher>
-          <year>2004</year>
-          <trans xml:lang="en">
-            <author>Yuzawa, Tadayuki</author>
-            <author>Matsuzaki, Hiroshi</author>
-            <title>Methods in Phonetics &amp; Phonemics: An Introduction to Japanese Phonology</title>
-          </trans>
-          <link class="ad" url="https://www.asakura.co.jp/detail.php?book_code=51503" />
-        </book>
-      </bibliography>
-    </s:section>
+      <article xml:lang="ja" key="Hayashi 1983">
+        <author>林 史典</author>
+        <title>中古漢語の介母と日本呉音</title>
+        <journal>文藝言語研究 言語篇</journal>
+        <year>1983</year>
+        <month>03</month>
+        <volume>8</volume>
+        <pages>165–183</pages>
+        <trans xml:lang="en">
+          <author>Hayashi, Chikafumi</author>
+          <title>On the Relationship between Medials of Ancient Chinese and Japanese Go-on</title>
+        </trans>
+        <link class="archive" url="https://core.ac.uk/download/pdf/56649011.pdf">
+          scanned PDF from https://core.ac.uk/
+        </link>
+      </article>
+
+      <book xml:lang="ja" key="Tōdō 1980">
+        <author>藤堂 明保</author>
+        <title>中国語音韻論 その歴史的研究</title>
+        <publisher>光生館</publisher>
+        <year>1980</year>
+        <trans xml:lang="en">
+          <author>Tōdō, Akiyasu</author>
+          <title>Chinese Phonology: A Historical Study</title>
+        </trans>
+        <link class="meta" url="https://cir.nii.ac.jp/crid/1130000797864209664" />
+      </book>
+
+      <article xml:lang="ja" key="Mineya 1953">
+        <author>三根谷 徹</author>
+        <title><h:ruby>韻<h:rt>いん</h:rt>鏡<h:rt>きょう</h:rt></h:ruby>の三・四<h:ruby>等<h:rt>とう</h:rt></h:ruby>について</title>
+        <journal>言語研究</journal>
+        <issue>22–23</issue>
+        <month>03</month>
+        <year>1953</year>
+        <pages>56–74</pages>
+        <trans xml:lang="en">
+          <author>Mineya, Tōru</author>
+          <title>On the III and IV Divisions of the Yùnjìng</title>
+          <journal>Journal of the Linguistic Society of Japan</journal>
+        </trans>
+        <link class="meta" url="https://cir.nii.ac.jp/crid/1520572360057837696" />
+      </article>
+
+      <book xml:lang="ja" key="Nitta 2009">
+        <author>仁田 義雄</author>
+        <author>and others</author>
+        <title>日本語要説</title>
+        <edition>改訂版</edition>
+        <publisher>ひつじ書房</publisher>
+        <year>2009</year>
+        <trans xml:lang="en">
+          <author>Nitta, Yoshio</author>
+          <title>A Synopsis of the Japanese Language</title>
+          <edition>Revised Edition</edition>
+        </trans>
+        <link class="meta" url="https://cir.nii.ac.jp/crid/1020282257440598528" />
+        <link class="ad" url="https://www.hituzi.co.jp/books/468.html" />
+      </book>
+
+      <book xml:lang="ja" key="Yuzawa 2004">
+        <author>湯澤 質幸</author>
+        <author>松崎 寛</author>
+        <title>音声・音韻探求法 日本語音声へいざない</title>
+        <publisher>朝倉書店</publisher>
+        <year>2004</year>
+        <trans xml:lang="en">
+          <author>Yuzawa, Tadayuki</author>
+          <author>Matsuzaki, Hiroshi</author>
+          <title>Methods in Phonetics &amp; Phonemics: An Introduction to Japanese Phonology</title>
+        </trans>
+        <link class="ad" url="https://www.asakura.co.jp/detail.php?book_code=51503" />
+      </book>
+    </bibliography>
+  </s:section>
+
+  <s:section>
+    <s:heading>General explanatory articles in English</s:heading>
+
+  </s:section>
 
 </s:section>  
 
