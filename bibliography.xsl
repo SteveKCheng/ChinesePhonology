@@ -44,12 +44,73 @@
     <xsl:call-template name="display-biblio-author" />
     <xsl:call-template name="display-biblio-title" />
     <xsl:call-template name="display-biblio-publisher" />
+    <xsl:call-template name="display-biblio-link" />
   </xsl:template>
 
   <xsl:template mode="biblio" match="bib:article">
     <xsl:call-template name="display-biblio-author" />
     <xsl:call-template name="display-biblio-title" />
     <xsl:call-template name="display-biblio-journal" />
+    <xsl:call-template name="display-biblio-link" />
+  </xsl:template>
+
+  <!-- Informally published articles -->
+  <xsl:template mode="biblio" match="bib:misc">
+    <xsl:call-template name="display-biblio-author" />
+    <xsl:call-template name="display-biblio-title" />
+    <xsl:call-template name="display-biblio-year-month">
+      <xsl:with-param name="prefix">Last update: </xsl:with-param>
+      <xsl:with-param name="suffix">. </xsl:with-param>
+    </xsl:call-template>
+    <xsl:call-template name="display-biblio-link" />
+  </xsl:template>
+
+  <xsl:template name="display-biblio-link">
+    <xsl:param name="title" select="bib:title[1]" />
+    
+    <xsl:for-each select="bib:link">
+      <br />
+
+      <xsl:variable name="class">
+        <xsl:choose>
+          <xsl:when test="@class = 'ad'">advertisement</xsl:when>
+          <xsl:when test="@class = 'meta'">metadata</xsl:when>
+          <xsl:when test="@class = 'doi'">DOI</xsl:when>
+          <xsl:when test="@class = 'archive'">archive</xsl:when>
+          <xsl:when test="@class = 'source'">source</xsl:when>
+          <xsl:when test="@class = 'home'">home</xsl:when>
+        </xsl:choose>
+      </xsl:variable>
+
+      <xsl:if test="$class != ''">
+        <xsl:text>[</xsl:text>
+        <xsl:value-of select="$class" />
+        <xsl:text>] </xsl:text>
+      </xsl:if>
+
+      <a href="{@url}">
+        <xsl:attribute name="title">
+          <xsl:value-of select="$title" />
+          <xsl:if test="$class != ''">
+            <xsl:text> [</xsl:text>
+            <xsl:value-of select="$class" />
+            <xsl:text>] </xsl:text>
+          </xsl:if>
+        </xsl:attribute>
+        <xsl:choose>
+          <xsl:when test="node()">
+            <!-- Let source XML override the displayed text for the hyperlink.
+                 Can replace long complicated URLs that are not useful to display
+                 neither in print nor online. -->
+            <xsl:apply-templates select="node()" />
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="@url" />
+          </xsl:otherwise>
+        </xsl:choose>
+      </a>
+    </xsl:for-each>
+
   </xsl:template>
 
   <xsl:template name="get-biblio-key">
@@ -133,7 +194,9 @@
         <xsl:with-param name="delimiter">, issue </xsl:with-param>
       </xsl:call-template>
 
-      <xsl:call-template name="display-biblio-year-month" />
+      <xsl:call-template name="display-biblio-year-month">
+        <xsl:with-param name="context" select=".." />
+      </xsl:call-template>
 
       <xsl:call-template name="display-biblio-part">
         <xsl:with-param name="part" select="../bib:pages" />
@@ -162,10 +225,13 @@
   <!-- Display an optional year and month (for a journal), preceded by a comma. 
        The month is spelled out in full in English. -->
   <xsl:template name="display-biblio-year-month">
-    <xsl:param name="year" select="../bib:year[1]" />
-    <xsl:param name="month" select="../bib:month[1]" />
+    <xsl:param name="prefix" select="', '" />
+    <xsl:param name="suffix" select="''" />
+    <xsl:param name="context" select="." />
+    <xsl:variable name="year" select="$context/bib:year[1]" />
+    <xsl:variable name="month" select="$context/bib:month[1]" />
     <xsl:if test="$year">
-      <xsl:text>, </xsl:text>
+      <xsl:copy-of select="$prefix" />
       <xsl:choose>
         <xsl:when test="$month">
           <xsl:value-of select="format-date(xs:date(concat($year, '-', $month, '-01')), '[MNn] [Y]', 'en', (), ())" />
@@ -174,6 +240,7 @@
           <xsl:value-of select="$year" />
         </xsl:otherwise>
       </xsl:choose>
+      <xsl:copy-of select="$suffix" />
     </xsl:if>
   </xsl:template>
 
