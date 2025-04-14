@@ -402,4 +402,61 @@
     <xsl:copy-of select="." />
   </xsl:template>
 
+  <!-- In our flavor of HTML, we allow paragraphs to contain inline content and
+       block-level content mixed together.  In official HTML that is not allowed.
+       This template flattens the content.  Text that occurs in between blocks
+       inside a paragraph or after the last block in the paragraph will be 
+       separated out into p elements in the HTML output with the "continuation"
+       class.  
+  -->
+  <xsl:template name="flatten-html-paragraph" match="html:p">
+    <xsl:variable name="blocks" select="html:div|html:ul|html:ol|html:dl|html:pre|html:hr|html:blockquote|html:address|html:table" />
+    <xsl:variable name="only-inline-content" select="empty($blocks)" />
+    <p>
+      <xsl:apply-templates select="@*" />
+      <xsl:apply-templates select="node()[$only-inline-content or . &lt;&lt; $blocks[1]]" />
+    </p>
+
+    <!-- Flatten any embedded block-level content inside this paragraph -->
+    <xsl:if test="not($only-inline-content)">
+      <xsl:call-template name="flatten-html-paragraph-part">
+        <xsl:with-param name="blocks" select="$blocks" />
+      </xsl:call-template>
+    </xsl:if>
+  </xsl:template>
+
+  <!-- Recursive template invoked internally by flatten-html-paragraph. 
+       Each invocation processes one block and the inline content following it (if any). -->
+  <xsl:template name="flatten-html-paragraph-part">
+    <xsl:param name="blocks" required="yes" />
+    <xsl:variable name="this-block" select="$blocks[1]" />
+    <xsl:variable name="next-blocks" select="$blocks[position() > 1]" />
+    <xsl:variable name="is-last-block" select="empty($next-blocks)" />
+
+    <!-- Output the block-level element that is inside the parent paragraph. -->
+    <xsl:apply-templates select="$this-block" />
+
+    <!-- Output immediately-following inline content unless it is only whitespace -->
+    <xsl:variable 
+      name="inline-content" 
+      select="$this-block/following-sibling::node()[$is-last-block or .&lt;&lt; $next-blocks[1]]" />
+    <xsl:variable
+      name="inline-content-is-whitespace"
+      select="every $t in $inline-content satisfies ($t/self::text() and $t/normalize-space() = '')" />
+    <xsl:if test="not($inline-content-is-whitespace)">
+      <xsl:variable name="parent" select="$this-block/ancestor::*[1]" />
+      <p class="continuation">
+        <xsl:apply-templates select="$parent/@*" />
+        <xsl:apply-templates select="$inline-content" />
+      </p>
+    </xsl:if>
+
+    <!-- Continue on to process any following blocks -->
+    <xsl:if test="not($is-last-block)">
+      <xsl:call-template name="flatten-html-paragraph-part">
+        <xsl:with-param name="blocks" select="$next-blocks" />
+      </xsl:call-template>
+    </xsl:if>
+  </xsl:template>  
+
 </xsl:stylesheet>
