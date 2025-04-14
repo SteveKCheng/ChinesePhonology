@@ -192,6 +192,13 @@
     </xsl:choose>
   </xsl:template>
 
+  <xsl:template match="s:term">
+    <em class="term">
+      <!-- Copy attriubtes ?? -->
+      <xsl:apply-templates />
+    </em>
+  </xsl:template>
+
   <xsl:template match="s:section">
     <xsl:variable name="depth" select="count(ancestor-or-self::s:section)" />
     <div class="section section-{$depth}">
