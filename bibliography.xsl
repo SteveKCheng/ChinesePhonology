@@ -82,6 +82,7 @@
 
   <xsl:template name="display-biblio-publisher">
     <xsl:for-each select="bib:publisher[1]">
+      <br />
       <xsl:apply-templates />
       <xsl:call-template name="display-biblio-trans">
         <xsl:with-param name="original" select="." />

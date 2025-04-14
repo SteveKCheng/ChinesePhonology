@@ -7,7 +7,7 @@
   <s:heading>Bibliography</s:heading>
 
     <s:section>
-      <s:heading>Works in English</s:heading>
+      <s:heading>Works in, or translated to, English</s:heading>
       <bibliography>
 
         <book xml:lang="en" key="Dǒng 2008">
@@ -69,6 +69,11 @@
           <publisher>香港教育署語文教育學院中文系</publisher>
           <year>1992</year>
           <url>https://ile1992.jyut.net/</url>
+          <trans xml:lang="en">
+            <author>Ho, Kwok Cheung</author>
+            <title>Table of Cantonese Readings of Common Characters</title>
+            <edition>1992 Revised Edition</edition>
+          </trans>
         </book>
 
         <book xml:lang="zh-tw" key="Wáng 2013">
@@ -101,6 +106,8 @@
           <year>2008</year>
           <trans xml:lang="en">
             <author>Shào, Róngfēn</author>
+            <title>Studies on the Qièyùn</title>
+            <edition>Revised Edition</edition>
           </trans>
         </book>
 
@@ -120,6 +127,7 @@
           <pages>57-76</pages>
           <trans xml:lang="en">
             <author>Haraoka, Kaoru</author>
+            <title>Study on Chinese Character Readings as Adopted into Japanese, and their Evolution</title>
             <journal>Studies in Language and Culture</journal>
           </trans>
         </article>
