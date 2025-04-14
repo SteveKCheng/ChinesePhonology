@@ -107,6 +107,18 @@
           </trans>
         </misc>
 
+        <book xml:lang="zh-tw" key="Chao 1983">
+          <author>趙元任</author>
+          <title>通字方案</title>
+          <publisher>商務印書館</publisher>
+          <year>1983</year>
+          <note>This work is bilingual, with English and Chinese presented side-by-side. </note>
+          <trans xml:lang="en">
+            <author>Chao, Yuen Ren</author>
+            <title>A Project for General Chinese</title>
+          </trans>
+        </book>
+
         <book xml:lang="zh-tw" key="Ho 1992">
           <author>何國祥</author>
           <title>常用字廣州話讀音表</title>
@@ -120,6 +132,17 @@
             <edition>1992 Revised Edition</edition>
           </trans>
           <link class="home" url="https://ile1992.jyut.net/" />
+        </book>
+
+        <book xml:lang="zh-tw" key="Dǒng 1996">
+          <author>董同龢</author>
+          <title>漢語音韻學</title>
+          <publisher>文史哲出版社</publisher>
+          <year>1996</year>
+          <trans xml:lang="en">
+            <author>Dǒng, Tónghé</author>
+            <title>Chinese Phonology</title>
+          </trans>
         </book>
 
         <book xml:lang="zh-tw" key="Wáng 2013">
