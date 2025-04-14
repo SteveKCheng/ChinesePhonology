@@ -2,14 +2,32 @@
   version="2.0" 
   xmlns="http://www.w3.org/1999/xhtml"
   xmlns:bib="http://www.gold-saucer.org/xmlns/bibliography"
+  xmlns:s="http://www.gold-saucer.org/xmlns/structured-html"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   exclude-result-prefixes="bib xs">
 
+  <xsl:key 
+    name="bib-ref"
+    match="bib:*[@key]"
+    use="@key" />
+
+  <xsl:template match="s:bib-ref">
+    <xsl:text>[</xsl:text>
+    <a class="bib-ref" href="#{key('bib-ref', @key)/generate-id()}">
+      <xsl:value-of select="@key" />
+    </a>
+    <xsl:if test="@pages">
+      <xsl:text>, pages </xsl:text>
+      <xsl:value-of select="@pages" />
+    </xsl:if>
+    <xsl:text>]</xsl:text>
+  </xsl:template>
+
   <xsl:template match="bib:bibliography">
     <dl class="bibliography">
       <xsl:for-each select="bib:*">
-        <dt>
+        <dt id="{generate-id()}">
           <xsl:call-template name="get-biblio-key" />
         </dt>
         <dd>
