@@ -88,7 +88,9 @@
         <xsl:text>] </xsl:text>
       </xsl:if>
 
-      <a href="{@url}">
+      <xsl:variable name="url" select="@url" />
+
+      <a href="{$url}">
         <xsl:attribute name="title">
           <xsl:value-of select="$title" />
           <xsl:if test="$class != ''">
@@ -104,8 +106,20 @@
                  neither in print nor online. -->
             <xsl:apply-templates select="node()" />
           </xsl:when>
+          <xsl:when test="@class = 'doi'">
+            <!-- Parse out the DOI (Digital Object Identifier) -->
+            <xsl:analyze-string select="$url" regex="^https://doi.org/([^/]+/[^/]+)$">
+              <xsl:matching-substring>
+                <xsl:value-of select="regex-group(1)" />
+              </xsl:matching-substring>
+              <xsl:non-matching-substring>
+                <xsl:message>warning: DOI identifier is incorrect</xsl:message>
+                <xsl:value-of select="$url" />
+              </xsl:non-matching-substring>
+            </xsl:analyze-string>
+          </xsl:when>
           <xsl:otherwise>
-            <xsl:value-of select="@url" />
+            <xsl:value-of select="$url" />
           </xsl:otherwise>
         </xsl:choose>
       </a>
