@@ -7,7 +7,7 @@
   xmlns:data="http://www.gold-saucer.org/xmlns/chinese-phonology-data"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  exclude-result-prefixes="p s data html">
+  exclude-result-prefixes="p s data html xs">
 
   <xsl:output method="xhtml" 
               omit-xml-declaration="no" 
@@ -31,7 +31,15 @@
     match="p:fn"
     use="@idref" />
 
-  <xsl:template match="html:*|text()|@*">
+  <!-- Copy HTML elements from input to output, but force the XHTML namespace
+       to be the default namespace to accomodate Web browsers. -->
+  <xsl:template match="html:*">
+    <xsl:element name="{local-name()}" namespace="{namespace-uri()}">
+      <xsl:apply-templates select="node()|@*"/>
+    </xsl:element>
+  </xsl:template>
+
+  <xsl:template match="text()|@*">
     <xsl:copy>
       <xsl:apply-templates select="node()|@*" />
     </xsl:copy>

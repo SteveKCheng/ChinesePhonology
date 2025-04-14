@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <s:section xmlns:s="http://www.gold-saucer.org/xmlns/structured-html"
+           xmlns:h="http://www.w3.org/1999/xhtml"
            xmlns="http://www.gold-saucer.org/xmlns/bibliography">
 
   <s:heading>Bibliography</s:heading>
@@ -144,15 +145,13 @@
           <year>1980</year>
           <trans xml:lang="en">
             <author>Tōdō, Akiyasu</author>
+            <title>Chinese Phonology: A Historical Study</title>
           </trans>
         </book>
 
         <article xml:lang="ja" key="Mineya 1953">
           <author>三根谷 徹</author>
-          <bib:title xmlns:bib="http://www.gold-saucer.org/xmlns/bibliography"
-          xmlns="http://www.w3.org/1999/xhtml">
-          <ruby>韻<rt>いん</rt>鏡<rt>きょう</rt></ruby>
-          の三・四<ruby>等<rt>とう</rt></ruby>について</bib:title>
+          <title><h:ruby>韻<h:rt>いん</h:rt>鏡<h:rt>きょう</h:rt></h:ruby>の三・四<h:ruby>等<h:rt>とう</h:rt></h:ruby>について</title>
           <journal>言語研究</journal>
           <issue>22–23</issue>
           <month>03</month>

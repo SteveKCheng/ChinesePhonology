@@ -4,7 +4,7 @@
   xmlns:bib="http://www.gold-saucer.org/xmlns/bibliography"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  exclude-result-prefixes="bib">
+  exclude-result-prefixes="bib xs">
 
   <xsl:template match="bib:bibliography">
     <dl class="bibliography">
