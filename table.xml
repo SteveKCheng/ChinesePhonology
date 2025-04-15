@@ -74,35 +74,35 @@
     existed back then, so certainly no one could be said to have <em>spoken a single
     language</em> called "Middle Chinese".  However, what linguists have been able to deduce is that
     varieties of Chinese had evolved from a proto-language with the following characteristics:
-  </p>
 
-  <ul>
-    <li>Its spoken form was primarily monosyllabic: not only everyday words, but even vocabulary that
-    we would consider rather specialized today, like names of species of plants and animals,
-    consisted of one syllable. </li>
-    <li>Only later were multi-syllabic words  incorporated into everyday language, often replacing 
-    old monosyllabic 
-    words as the latter became too ambiguous.   
-    Not only because the limits on the number of distinguishable phonological 
-    features were hit, preventing the coining of new words with new syllables, 
-    but also individual words were increasingly overloaded with many shades of meaning, 
-    as society evolved to articulate new concepts.</li>
-    <li>It had a distinctive written form consisting of "characters", whose modern, evolved form
-    are recognizable to many people today. </li>
-    <li>Each character was pronounced as one syllable.   
-    For monosyllabic words that means one character
-    corresponds to one word.  For compound words made of a series of monosyllabic morphemes, the
-    compound word would be written with the corresponding characters to those monosyllabic morphemes.
-    Genuinely multi-syllabic morphemes (usually disyllabic) would still be written with multiple
-    characters even if though the characters may have no meaning outside of being part of the
-    multi-syllabic morpheme. </li>
-    <li>The above key aspects of the language are retained to this day in modern Chinese dialects. </li>
-    <li>Many of the phonological changes in varieties of Chinese could be analyzed syllable-by-syllable
-    — though not all, of course.  
-    So we can effectively speak of a Chinese character having certain a "pronunciation" at a certain
-    time and place, and how it changes throughout
-    history across different dialects. </li>
-  </ul>
+    <ul>
+      <li>Its spoken form was primarily monosyllabic: not only everyday words, but even vocabulary that
+      we would consider rather specialized today, like names of species of plants and animals,
+      consisted of one syllable. </li>
+      <li>Only later were multi-syllabic words  incorporated into everyday language, often replacing 
+      old monosyllabic 
+      words as the latter became too ambiguous.   
+      Not only because the limits on the number of distinguishable phonological 
+      features were hit, preventing the coining of new words with new syllables, 
+      but also individual monosyllabic words were increasingly overloaded with many shades of meaning, 
+      or even completely new meanings, as society evolved to articulate new concepts.</li>
+      <li>It had a distinctive written form consisting of "characters", whose modern, evolved form
+      are recognizable to many people today. </li>
+      <li>Each character was pronounced as one syllable.   
+      For monosyllabic words that means one character
+      corresponds to one word.  For compound words made of a series of monosyllabic morphemes, the
+      compound word would be written with the corresponding characters to those monosyllabic morphemes.
+      Genuinely multi-syllabic morphemes (usually disyllabic) would still be written with multiple
+      characters even if though the characters may have no meaning outside of being part of the
+      multi-syllabic morpheme. </li>
+      <li>The above key aspects of the language are retained to this day in modern Chinese dialects. </li>
+      <li>Many of the phonological changes in varieties of Chinese could be analyzed syllable-by-syllable
+      — though not all, of course.  
+      So we can effectively speak of a Chinese character having certain a "pronunciation" at a certain
+      time and place, and how it changes throughout
+      history across different dialects. </li>
+    </ul>
+  </p>
 
   <p>
     The proto-language that Middle Chinese evolved from is called <s:term>Old Chinese</s:term>
@@ -112,19 +112,106 @@
     We will point out some of the salient details as we go along.
   </p>
 
+</s:section>
+
+<s:section>
+  <s:heading>Primary sources on Middle Chinese</s:heading>
+
   <p>
-    As to the nature of the written history on Middle Chinese, two major kinds of records stand out:
+    We give a brief overview of the major kinds of data we have on Middle Chinese.
+
+    <ul>
+      <li>
+        <s:term>Rhyme dictionaries</s:term>, which list out groups of characters that sound the same
+        or similar. As the term implies, one of the purposes of rhyme dictionaries were to 
+        help ancient poets write rhyming poetry.
+      </li>
+      <li>
+        <s:term>Rhyme tables</s:term>, which list out all the syllables of the language systematically,
+        arranged in two-dimensional tables where all the possible initial consonants run 
+        across one axis, and the all the possible ending vowel sounds run across the other axis. 
+      </li>
+      <li>
+        The ancient poetry whose verses are supposed to rhyme, from which sinologists can deduce
+        which characters sound the same or similar.
+      </li>
+      <li>
+        Other dictionary-like and expository texts written in ancient times.  As one might expect,
+        ancient terminology and notation were nowhere as precise as in modern linguistics, 
+        but Chinese writers had still managed to write down tidbits of useful information, 
+        influenced as they were by the methods of phonological analysis that ancient India brought to 
+        bear on Sanskrit.
+      </li>
+      <li>
+        How characters are actually pronounced or read 
+        in modern times in Chinese dialects and sino-xenic languages obviously give input
+        as to how Middle Chinese sounded.  (This kind of analysis would be called 
+        the <s:term>comparative method</s:term> in the field of linguistics.)
+      </li>
+      <li>
+        Phonetic transcriptions of known foreign terms/loanwords into Chinese characters also give clues
+        to ancient character pronunciation.  To give an example that everybody can recognize, 
+        the word <em>buddha</em> was, and continues to be to this day, phonetically approximated 
+        by the character
+        <p:mc>佛</p:mc>.  From this fact we may surmise that this character was originally
+        pronounced with a <p:i>b-</p:i> initial consonant, despite it being pronounced today 
+        as <p:py>fó</p:py> in Mandarin and <p:yp>fat⁶</p:yp> in Cantonese, though it is indeed
+        pronounced as <p:jr>butu</p:jr> (<p:j>仏</p:j>) in Japanese.
+      </li>
+    </ul>
+        
   </p>
 
-  <ul>
-    <li><s:term>Rhyme dictionaries</s:term>, exemplified by the work <p:ac>廣韻</p:ac>,
-    completed in 1011 AD in the Northern Song dynasty <s:bib-ref key="Dǒng 2008" pages="58–59" />
-    An earlier 
-    
-    compiled by
-    <p:ac>陸法言</p:ac> 
-    </li>
-  </ul>
+  <s:section>
+    <s:heading>Rhyme dictionaries</s:heading>
+
+    <p>
+              , exemplified by the work <p:ac>廣韻</p:ac>,
+          completed in 1011 AD in the Northern Song dynasty <s:bib-ref key="Dǒng 2008" pages="58–59" />.
+          Such dictionaries list out <s:term>rhymes</s:term>, which are sets of characters which end
+          in a similar (but not necessarily the same) sound.  Each rhyme is represented by a head character <p:ac>韻目</p:ac>.
+
+    </p>
+        <p>
+          In the first page, reproduced below, from the table of contents of the first volume of
+          <p:ac>廣韻</p:ac>, 
+          we can see 18 rhymes listed: <p:ac>東</p:ac>, <p:ac>冬</p:ac>, <p:ac>鍾</p:ac>, and so on.
+          <img class="page" src="https://ytenx.org/static/img/DrakDzuonDang/volume1/p014.jpg" />
+        </p>
+        <p>
+          Each rhyme is further divided into sub-groups of completely homophonous characters.  For instance,
+          the first rhyme <p:ac>東</p:ac> contains the sub-groups <p:ac>東</p:ac>, <p:ac>菄</p:ac>, 
+          <p:ac>鶇</p:ac> and so on, as shown below:
+          <img class="page" src="https://ytenx.org/static/img/DrakDzuonDang/volume1/p015.jpg" />.
+        </p>
+
+  <blockquote>
+    <p>
+      It is mentioned that at the beginning of the Kāihuáng 開皇 era (AD 581–600) of the
+      reign of Emperor Wen of Sui, there was a small gathering hosted by 
+      <p:ac>陸法言</p:ac> (Lù Fǎyán), 
+      where discussions about correct pronunciations came up. They noted that the 
+      dialects at that time had considerable phonological differences, and a standard or
+      correct pronunciation system was need by scholars and their students. Therefore,
+      they compared the pronunciations from the south and the north and decided on
+      the correct pronunciations, often with reference to older rhyme dictionaries, thus
+      producing the first manuscript of the <p:ac>切韻</p:ac> (Qièyùn).
+    </p>
+  </blockquote>
+
+
+  </s:section>
+
+  <s:section>
+    <s:heading>Rhyme tables</s:heading>
+
+    <p>
+    exemplified by <p:ac>韻鏡</p:ac>, compiled in c.a. 1131 AD – 1162 AD,
+          during the Southern Song dynasty <s:bib-ref key="Dǒng 1996" pages="112" />.  
+        </p>
+
+  </s:section>
+
 
 
 </s:section>
