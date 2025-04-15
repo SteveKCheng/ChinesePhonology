@@ -477,4 +477,29 @@
     </xsl:if>
   </xsl:template>  
 
+  <!-- Create table of contents -->
+  <xsl:template match="html:body">
+    <xsl:call-template name="table-of-contents" />
+    <div id="body">
+      <xsl:apply-templates />
+    </div>
+  </xsl:template>
+
+  <xsl:template name="table-of-contents">
+    <div id="toc-sidebar">
+      <xsl:call-template name="table-of-contents-subtree" />
+    </div>
+  </xsl:template>
+
+  <xsl:template name="table-of-contents-subtree">
+    <ol class="toc">
+      <xsl:for-each select="s:section">
+        <li>
+          <xsl:apply-templates select="s:heading" />
+          <xsl:call-template name="table-of-contents-subtree" />
+        </li>
+      </xsl:for-each>
+    </ol>
+  </xsl:template>
+
 </xsl:stylesheet>

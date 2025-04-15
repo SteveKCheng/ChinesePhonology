@@ -120,6 +120,44 @@ img.page {
     max-width: 100%
 }
 
+div#toc-sidebar {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+ol.toc {
+    /* ol is used for its semantic meaning only.  We supply our own section numbering
+       and must suppress the default numbering. */
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+@media screen {
+    div#toc-sidebar {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    div#toc-sidebar {
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 21em;
+        overflow: auto;
+        box-shadow: -0.1em 0 0.25em inset;
+    }
+
+    div#body {
+        margin-left: 24em;
+    }
+}
+
 @media print {
     div.section {
         page-break-after: always;
