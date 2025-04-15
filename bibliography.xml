@@ -195,7 +195,7 @@
         <note><p:mc>《漢語拼音方案》</p:mc> is a well-known document whose first version appeared in 1957, 
         and reproduced everywhere since. This version I have found randomly on the Internet is convenient in that it includes
         the equivalent notations under both IPA and 
-        <a href="https://en.wikipedia.org/wiki/Bopomofo" title="Wikipedia: Bopomofo">Bopomofo</a> (phonetic symbols used in Taiwan; <p:mc>國語注音符號</p:mc>).
+        <h:a href="https://en.wikipedia.org/wiki/Bopomofo" title="Wikipedia: Bopomofo">Bopomofo</h:a> (phonetic symbols used in Taiwan; <p:mc>國語注音符號</p:mc>).
         </note>
       </misc>
 
