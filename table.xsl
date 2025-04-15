@@ -148,29 +148,23 @@
 
   <!-- Pinyin transcription -->
   <xsl:template match="p:py">
-    <xsl:text>‹ </xsl:text>
     <span class="pinyin">
       <xsl:apply-templates select="node()|@*" />
     </span>
-    <xsl:text> ›</xsl:text>
   </xsl:template>
 
   <!-- Japanese romaji transcription -->
   <xsl:template match="p:jr">
-    <xsl:text>‹ </xsl:text>
     <span class="romaji">
       <xsl:apply-templates select="node()|@*" />
     </span>
-    <xsl:text> ›</xsl:text>
   </xsl:template>
 
   <!-- Jyutping transcription -->
   <xsl:template match="p:yp">
-    <xsl:text>‹ </xsl:text>
     <span class="jyutping">
       <xsl:apply-templates select="node()|@*" />
     </span>
-    <xsl:text> ›</xsl:text>
   </xsl:template>
 
   <xsl:template match="html:head/p:*">
