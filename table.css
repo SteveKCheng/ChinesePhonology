@@ -135,6 +135,19 @@ ol.toc {
     padding-left: 0;
 }
 
+ol.toc-1 {
+    padding-bottom: 1em;
+}
+
+ol.toc-1 > li > a.toc-title {
+    font-weight: bold;
+}
+
+span.toc-number {
+    float: left;    /* needed to fix the width of this inline element */
+    width: 2em;     /* fixed width so all entries in TOC align */
+}
+
 @media screen {
     div#toc-sidebar {
         display: none;

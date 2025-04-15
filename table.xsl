@@ -31,6 +31,11 @@
     match="p:fn"
     use="@idref" />
 
+  <xsl:key
+    name="section-number"
+    match="s:section"
+    use="s:make-section-number(.)" />
+
   <!-- Copy HTML elements from input to output, but force the XHTML namespace
        to be the default namespace to accomodate Web browsers. -->
   <xsl:template match="html:*">
@@ -219,17 +224,23 @@
 
   <xsl:template match="s:section">
     <xsl:variable name="depth" select="count(ancestor-or-self::s:section)" />
-    <div class="section section-{$depth}">
+    <div class="section section-{$depth}" id="sec-{s:make-section-number(.)}">
       <xsl:apply-templates select="node()|@*" />
     </div>
   </xsl:template>
 
   <xsl:template match="s:heading">
     <p class="heading">
-      <xsl:number level="multiple" count="s:section" format="1. " />
+      <xsl:value-of select="s:make-section-number(.)" />
+      <xsl:text>. </xsl:text>
       <xsl:apply-templates select="node()" />
     </p>
   </xsl:template>
+
+  <xsl:function name="s:make-section-number">
+    <xsl:param name="target" as="element()" />
+    <xsl:number level="multiple" select="$target" count="s:section" format="1.1" />
+  </xsl:function>
 
   <!-- Wrapper element that falls away, for the purpose of grouping multiple elements
        to be referred to by s:copy-of -->
@@ -492,11 +503,27 @@
   </xsl:template>
 
   <xsl:template name="table-of-contents-subtree">
-    <ol class="toc">
+    <xsl:param name="depth" as="xs:integer" select="1" />
+    <ol class="toc toc-{$depth}">
       <xsl:for-each select="s:section">
         <li>
-          <xsl:apply-templates select="s:heading" />
-          <xsl:call-template name="table-of-contents-subtree" />
+          <xsl:variable name="section-number" select="s:make-section-number(.)" />
+          <span class="toc-number">
+            <xsl:value-of select="$section-number" />
+          </span>
+          <xsl:text> </xsl:text>
+          <a class="toc-title" href="#sec-{$section-number}">            
+            <xsl:apply-templates select="s:heading/node()|s:heading/@*" />
+          </a>
+
+          <!-- Recursively generate entries at deeper levels. 
+               But do not generate even the html:ol container if there
+               are no entries at all. -->
+          <xsl:if test="s:section">
+            <xsl:call-template name="table-of-contents-subtree">
+              <xsl:with-param name="depth" select="$depth + 1" />
+            </xsl:call-template>
+          </xsl:if>
         </li>
       </xsl:for-each>
     </ol>
