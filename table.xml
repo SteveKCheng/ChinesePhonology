@@ -167,7 +167,7 @@
 
     <p>
               , exemplified by the work <p:ac>廣韻</p:ac>,
-          completed in 1011 AD in the Northern Song dynasty <s:bib-ref key="Dǒng 2008" pages="58–59" />.
+          completed in 1011 AD in the Northern Song dynasty <s:cite key="Dǒng 2008" pages="58–59" />.
           Such dictionaries list out <s:term>rhymes</s:term>, which are sets of characters which end
           in a similar (but not necessarily the same) sound.  Each rhyme is represented by a head character <p:ac>韻目</p:ac>.
 
@@ -207,7 +207,7 @@
 
     <p>
     exemplified by <p:ac>韻鏡</p:ac>, compiled in c.a. 1131 AD – 1162 AD,
-          during the Southern Song dynasty <s:bib-ref key="Dǒng 1996" pages="112" />.  
+          during the Southern Song dynasty <s:cite key="Dǒng 1996" pages="112" />.  
         </p>
 
   </s:section>

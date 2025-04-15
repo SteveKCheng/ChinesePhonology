@@ -8,17 +8,17 @@
   exclude-result-prefixes="bib xs">
 
   <xsl:key 
-    name="bib-ref"
+    name="biblio"
     match="bib:*[@key]"
     use="@key" />
 
-  <xsl:template match="s:bib-ref">
+  <xsl:template match="s:cite">
     <xsl:text>[</xsl:text>
-    <a class="bib-ref" href="#{key('bib-ref', @key)/generate-id()}">
+    <a class="cite" href="#{key('biblio', @key)/generate-id()}">
       <xsl:value-of select="@key" />
     </a>
     <xsl:if test="@pages">
-      <xsl:text>, pages </xsl:text>
+      <xsl:text>, p. </xsl:text>
       <xsl:value-of select="@pages" />
     </xsl:if>
     <xsl:text>]</xsl:text>
