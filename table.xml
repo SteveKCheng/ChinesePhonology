@@ -56,6 +56,238 @@
 <body>
 
 <s:section>
+  <s:heading>Introduction</s:heading>
+
+  <p>...</p>
+
+  <p>
+    We will end our introduction with a teaser.  Everybody learning Chinese characters knows the
+    phonetic hints in phono-semantic characters <p:mc>形聲字</p:mc> are ‘broken’.  To give
+    one series of many examples:
+  </p>
+
+    <table>
+      <tr>
+        <th><p:mc>根</p:mc></th>
+        <td>root</td>
+        <td><p:py>gēn</p:py></td>
+        <td><p:yp>gan¹</p:yp></td>
+        <td><p:jr>kon</p:jr></td>
+        <td><p:jr>kon</p:jr></td>
+        
+        <th><p:mc>痕</p:mc></th>
+        <td>scar; trace</td>
+        <td><p:py>hén</p:py></td>
+        <td><p:yp>han⁴</p:yp></td>
+        <td><p:jr>gon</p:jr></td>
+        <td><p:jr>kon</p:jr></td>
+
+        <th><p:mc>恨</p:mc></th>
+        <td>resent</td>
+        <td><p:py>hèn</p:py></td>
+        <td><p:yp>han⁶</p:yp></td>
+        <td><p:jr>gon</p:jr></td>
+        <td><p:jr>kon</p:jr></td>
+      </tr>
+
+      <tr>
+        <th><p:mc>湯</p:mc></th>
+        <td>soup; hot water</td>
+        <td><p:py>tāng</p:py></td>
+        <td><p:yp>tong¹</p:yp></td>
+        <td><p:jr>tau</p:jr></td>
+        <td><p:jr>tau</p:jr></td>
+
+        <th><p:mc>陽</p:mc></th>
+        <td>sun</td>
+        <td><p:py>yáng</p:py></td>
+        <td><p:yp>joeng⁴</p:yp></td>
+        <td><p:jr>yau</p:jr></td>
+        <td><p:jr>yau</p:jr></td>
+        
+        <th><p:mc>傷</p:mc></th>
+        <td>wound</td>
+        <td><p:py>shāng</p:py></td>
+        <td><p:yp>shoeng¹</p:yp></td>
+        <td><p:jr>syau</p:jr></td>
+        <td><p:jr>syau</p:jr></td>
+      </tr>
+
+      <tr>
+        <th><p:mc>澤</p:mc></th>
+        <td>swamp</td>
+        <td><p:py>zé</p:py></td>
+        <td><p:yp>zaak⁹</p:yp></td>
+        <td><p:jr>zyaku</p:jr></td>
+        <td><p:jr>taku</p:jr></td>
+
+        <th><p:mc>譯</p:mc></th>
+        <td>translate; explain</td>
+        <td><p:py>yì</p:py></td>
+        <td><p:yp>yik⁹</p:yp></td>
+        <td><p:jr>yaku</p:jr></td>
+        <td><p:jr>eki</p:jr></td>
+        
+        <th><p:mc>驛</p:mc></th>
+        <td>station</td>
+        <td><p:py>yì</p:py></td>
+        <td><p:yp>yik⁹</p:yp></td>
+        <td><p:jr>yaku</p:jr></td>
+        <td><p:jr>eki</p:jr></td>
+      </tr>
+        
+      <tr>
+        <th><p:mc>藥</p:mc></th>
+        <td>medicine</td>
+        <td><p:py>yào</p:py></td>
+        <td><p:yp>joek⁹</p:yp></td>
+        <td><p:jr>yaku</p:jr></td>
+        <td><p:jr>yaku</p:jr></td>
+        
+        <th><p:mc>樂</p:mc></th>
+        <td>enjoy</td>
+        <td><p:py>lé</p:py></td>
+        <td><p:yp>lok⁹</p:yp></td>
+        <td><p:jr>raku</p:jr></td>
+        <td><p:jr>raku</p:jr></td>
+
+        <th><p:mc>礫</p:mc></th>
+        <td>rubble</td>
+        <td><p:py>lì</p:py></td>
+        <td><p:yp>lik⁷</p:yp></td>
+        <td><p:jr>ryaku</p:jr></td>
+        <td><p:jr>reki</p:jr></td>
+      </tr>
+        
+      <tr>
+        <th><p:mc>都</p:mc></th>
+        <td>metropolis</td>
+        <td><p:py>dū</p:py></td>
+        <td><p:yp>dou¹</p:yp></td>
+        <td><p:jr>tu</p:jr></td>
+        <td><p:jr>to</p:jr></td>
+
+        <th><p:mc>者</p:mc></th>
+        <td>person</td>
+        <td><p:py>zhě</p:py></td>
+        <td><p:yp>ze²</p:yp></td>
+        <td><p:jr>sya</p:jr></td>
+        <td><p:jr>sya</p:jr></td>
+        
+        <th><p:mc>猪</p:mc></th>
+        <td>pig; boar</td>
+        <td><p:py>zhū</p:py></td>
+        <td><p:yp>zyu¹</p:yp></td>
+        <td><p:jr>tyo</p:jr></td>
+        <td><p:jr>tyo</p:jr></td>
+      </tr>
+
+    </table>
+
+<!-- 
+  
+  コン
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+
+
+
+
+        <th colspan="3">重</th>
+        <td>
+
+        <th colspan="3">動</th>
+
+        <th colspan="3">董</th>
+      </tr>
+
+      <tr>
+        <td>
+      </tr>
+
+zhòng
+dòng 
+dǒng
+
+zung6
+dung6
+dung2
+
+ヂュウ
+ヅ
+
+チョウ
+トウ
+トウ
+
+トウ
+ドウ
+
+      <tr>
+        <th colspan="3">童</th>
+
+        <th colspan="3">鐘</th>
+
+
+        <th colspan="3">憧</th>
+      </tr>
+
+
+
+        <td><p:mc>門</p:mc></td>
+        <td><p:py>tóng</p:py></td>
+        <td><p:yp>tung⁴</p:py></td>
+        <td><p:jr>ヅウ</p:jr></td>
+        <td><p:jr>トウ</p:jr></td>
+        <td><p:jr>ドウ</p:jr></td>
+        
+
+        
+         <p:yp></p:py></td>
+        <td><p:mc>鐘</p:mc></td>ドウ
+        <tr><p:py>wén</p:py></td>
+        
+
+    <ul>
+      <li> 
+      
+      <p:mc>椅</p:mc> can hardly be said to sound ‘similar’.
+
+-->
+
+
+</s:section>
+
+
+
+
+<s:section>
   <s:heading>What is Middle Chinese?</s:heading>
 
   <p>
@@ -76,34 +308,43 @@
     varieties of Chinese had evolved from a proto-language with the following characteristics:
 
     <ul>
-      <li>Its spoken form was primarily monosyllabic: not only everyday words, but even vocabulary that
-      we would consider rather specialized today, like names of species of plants and animals,
-      consisted of one syllable. <s:cite key="Xiàng 2023 Ⅳ" sec="2" />
+      <li>
+        Its spoken form was primarily monosyllabic: not only everyday words, but even vocabulary that
+        we would consider rather specialized today, like names of species of plants and animals,
+        consisted of one syllable. <s:cite key="Xiàng 2023 Ⅳ" sec="2" />
       </li>
-      <li>Only later were multi-syllabic words  incorporated into everyday language, often replacing 
-      old monosyllabic 
-      words as the latter became too ambiguous.   
-      Not only because the limits on the number of distinguishable phonological 
-      features were hit, preventing the coining of new words with new syllables, 
-      but also individual monosyllabic words were increasingly overloaded with many shades of meaning, 
-      or even completely new meanings, as society evolved to articulate new concepts.
-      <s:cite key="Xiàng 2023 Ⅳ" sec="3" />
+      <li>
+        Only later were multi-syllabic words  incorporated into everyday language, often replacing 
+        old monosyllabic words as the latter became too ambiguous.   
+        Not only because the limits on the number of distinguishable phonological 
+        features were hit, preventing the coining of new words with new syllables, 
+        but also individual monosyllabic words were increasingly overloaded with many shades of meaning, 
+        or even completely new meanings, as society evolved to articulate new concepts.
+        <s:cite key="Xiàng 2023 Ⅳ" sec="3" />
       </li>
-      <li>It had a distinctive written form consisting of "characters", whose modern, evolved form
-      are recognizable to many people today. </li>
-      <li>Each character was pronounced as one syllable.   
-      For monosyllabic words that means one character
-      corresponds to one word.  For compound words made of a series of monosyllabic morphemes, the
-      compound word would be written with the corresponding characters to those monosyllabic morphemes.
-      Genuinely multi-syllabic morphemes (usually disyllabic) would still be written with multiple
-      characters even if though the characters may have no meaning outside of being part of the
-      multi-syllabic morpheme. </li>
-      <li>The above key aspects of the language are retained to this day in modern Chinese dialects. </li>
-      <li>Many of the phonological changes in varieties of Chinese could be analyzed syllable-by-syllable
-      — though not all, of course.  
-      So we can effectively speak of a Chinese character having certain a "pronunciation" at a certain
-      time and place, and how it changes throughout
-      history across different dialects. </li>
+      <li>
+        It had a distinctive written form consisting of "characters", whose modern, evolved form
+        are recognizable to many people today. 
+      </li>
+      <li>
+        Each character was pronounced as one syllable.   
+        For monosyllabic words that means one character
+        corresponds to one word.  For compound words made of a series of monosyllabic morphemes, the
+        compound word would be written with the corresponding characters to those monosyllabic morphemes.
+        Genuinely multi-syllabic morphemes (usually disyllabic) would still be written with multiple
+        characters even if though the characters may have no meaning outside of being part of the
+        multi-syllabic morpheme. 
+      </li>
+      <li>
+        The above key aspects of the language are retained to this day in modern Chinese dialects. 
+      </li>
+      <li>
+        Many of the phonological changes in varieties of Chinese could be analyzed syllable-by-syllable
+        — though not all, of course.  
+        So we can effectively speak of a Chinese character having certain a "pronunciation" at a certain
+        time and place, and how it changes throughout
+        history across different dialects. 
+      </li>
     </ul>
   </p>
 
@@ -122,47 +363,69 @@
 
   <p>
     We give a brief overview of the major kinds of data we have on Middle Chinese.
+  </p>
 
-    <ul>
-      <li>
-        <s:term>Rhyme dictionaries</s:term>, which list out groups of characters that sound the same
-        or similar. As the term implies, one of the purposes of rhyme dictionaries were to 
-        help ancient poets write rhyming poetry.
-      </li>
-      <li>
-        <s:term>Rhyme tables</s:term>, which list out all the syllables of the language systematically,
-        arranged in two-dimensional tables where all the possible initial consonants run 
-        across one axis, and the all the possible ending vowel sounds run across the other axis. 
-      </li>
-      <li>
-        The ancient poetry whose verses are supposed to rhyme, from which sinologists can deduce
-        which characters sound the same or similar.
-      </li>
-      <li>
-        Other dictionary-like and expository texts written in ancient times.  As one might expect,
-        ancient terminology and notation were nowhere as precise as in modern linguistics, 
-        but Chinese writers had still managed to write down tidbits of useful information, 
-        influenced as they were by the methods of phonological analysis that ancient India brought to 
-        bear on Sanskrit.
-      </li>
-      <li>
-        How characters are actually pronounced or read 
-        in modern times in Chinese dialects and sino-xenic languages obviously give input
-        as to how Middle Chinese sounded.  (This kind of analysis would be called 
-        the <s:term>comparative method</s:term> in the field of linguistics.)
-      </li>
-      <li>
-        Phonetic transcriptions of known foreign terms/loanwords into Chinese characters also give clues
-        to ancient character pronunciation.  To give an example that everybody can recognize, 
-        the word <em>buddha</em> was, and continues to be to this day, phonetically approximated 
-        by the character
-        <p:mc>佛</p:mc>.  From this fact we may surmise that this character was originally
-        pronounced with a <p:i>b-</p:i> initial consonant, despite it being pronounced today 
-        as <p:py>fó</p:py> in Mandarin and <p:yp>fat⁶</p:yp> in Cantonese, though it is indeed
-        pronounced as <p:jr>butu</p:jr> (<p:j>仏</p:j>) in Japanese.
-      </li>
-    </ul>
-        
+  <ul>
+    <li>
+      <s:term>Rhyme dictionaries</s:term>, which list out groups of characters that sound the same
+      or similar. As the term implies, one of the purposes of rhyme dictionaries were to 
+      help ancient poets write rhyming poetry.
+    </li>
+    <li>
+      <s:term>Rhyme tables</s:term>, which organize all the syllables of the language systematically
+      in two-dimensional tables, analogously to how we do the same today for Mandarin Chinese (e.g. 
+      <s:cite key="Pīnyīn 2008" />).
+    </li>
+    <li>
+      The ancient poetry whose verses are supposed to rhyme, thus giving clues to pronunciation.
+    </li>
+    <li>
+      Other dictionary-like and expository texts written in ancient times. 
+    </li>
+  </ul>
+
+  <p>
+    For the moment, let us contrast the situation of Middle Chinese versus a Western language 
+    written with an alphabet, say Ancient Greek.  Even though the sounds assigned to various letters 
+    may change over time, and the spelling of words may become fossilized (i.e. retaining 
+    etymological spellings that do not reflect current pronunciation anymore), intuitively nobody
+    seriously doubts a fairly direct connection between how words are written versus how they sound.
+  </p>
+
+  <p>
+    But because Chinese, until modern times, had never employed phonetic writing in a systematic manner,
+    one may reasonably wonder how much value do Chinese historical records give.  To that point, 
+    the evidence from the four categories of works mentioned so far can be fairly indirect.  
+    The saving grace is that ancient Chinese philologists learned to analyze their language
+    as ancient India did to 
+    <a href="https://en.wikipedia.org/wiki/Sanskrit" title="Wikipedia: Sanskrit">Sanskrit</a>.
+    (Though, as one might expect,
+    ancient terminology and notation were nowhere as precise and unambiguous 
+    as in modern linguistics.) 
+  </p>
+
+  <p>
+    Finally, we have data that can be subject to the <em>comparative method</em>
+    like linguistics applied to any other language:
+  </p>
+
+  <ul>
+    <li>
+      Pronunciations or readings of characters in sino-xenic languages and Modern Chinese varieties.
+    </li>
+    <li>
+      Phonetic transcriptions of known foreign terms/loanwords into Chinese characters.  
+    </li>
+  </ul>
+
+  <p>
+    To give an example that everybody can recognize, 
+    the word <em>buddha</em> was, and continues to be to this day, phonetically approximated 
+    by the character
+    <p:mc>佛</p:mc>.  From this fact we may surmise that this character was originally
+    pronounced with a <p:i>b-</p:i> initial consonant, despite it being pronounced today 
+    as <p:py>fó</p:py> in Mandarin and <p:yp>fat⁶</p:yp> in Cantonese, though it is indeed
+    pronounced as <p:jr>butu</p:jr> (<p:j>仏</p:j>) in Japanese.
   </p>
 
   <s:section>
