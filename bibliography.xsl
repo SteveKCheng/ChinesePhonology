@@ -22,6 +22,10 @@
     <a class="cite" href="#{key('biblio', @key)/generate-id()}">
       <xsl:value-of select="@key" />
     </a>
+    <xsl:if test="@sec">
+      <xsl:text>, §</xsl:text>
+      <xsl:value-of select="@sec" />
+    </xsl:if>
     <xsl:if test="@pages">
       <xsl:text>, p. </xsl:text>
       <xsl:value-of select="@pages" />
