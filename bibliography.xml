@@ -141,11 +141,24 @@
           <author>向熹</author>
           <title>簡明漢語史: 上編</title>
         </trans>
-        <note>As [Xiàng 2023 Ⅰ] above. </note>
+        <note>As <s:cite key="Xiàng 2023 Ⅰ" /> above. </note>
         <link class="ad" url="https://www.taylorfrancis.com/books/mono/10.4324/9781003343523/brief-history-chinese-language-ii-xi-xiang" />
         <link class="doi" url="https://doi.org/10.4324/9781003343523" />
       </book>
 
+      <book xml:lang="en" key="Xiàng 2023 Ⅳ">
+        <author>Xiàng, Xī</author>
+        <title>A Brief History of the Chinese Language IV: Old Chinese Lexicon</title>
+        <publisher>Routledge</publisher>
+        <year>2023</year>
+        <trans xml:lang="zh-tw">
+          <author>向熹</author>
+          <title>簡明漢語史: 上編</title>
+        </trans>
+        <note>As <s:cite key="Xiàng 2023 Ⅰ" /> above. </note>
+        <link class="ad" url="https://www.taylorfrancis.com/books/mono/10.4324/9781003365556/brief-history-chinese-language-iv-xi-xiang" />
+        <link class="doi" url="https://doi.org/10.4324/9781003365556" />
+      </book>
     </bibliography>
   </s:section>
 
