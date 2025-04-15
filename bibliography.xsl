@@ -14,6 +14,11 @@
 
   <xsl:template match="s:cite">
     <xsl:text>[</xsl:text>
+    <xsl:call-template name="cite-biblio" />
+    <xsl:text>]</xsl:text>
+  </xsl:template>
+
+  <xsl:template name="cite-biblio">
     <a class="cite" href="#{key('biblio', @key)/generate-id()}">
       <xsl:value-of select="@key" />
     </a>
@@ -21,6 +26,18 @@
       <xsl:text>, p. </xsl:text>
       <xsl:value-of select="@pages" />
     </xsl:if>
+  </xsl:template>
+
+  <!-- Groups multiple s:cite children together so only one set
+       of brackets surrounds all the items -->
+  <xsl:template match="s:cite-group">
+    <xsl:text>[</xsl:text>
+    <xsl:for-each select="s:cite">
+      <xsl:if test="position() > 1">
+        <xsl:text>; </xsl:text>
+      </xsl:if>
+      <xsl:call-template name="cite-biblio" />
+    </xsl:for-each>
     <xsl:text>]</xsl:text>
   </xsl:template>
 
