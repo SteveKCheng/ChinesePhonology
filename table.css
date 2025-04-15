@@ -104,12 +104,20 @@ span.romaji {
     font-style: italic;
 }
 
+span.jyutping {
+    font-style: italic;
+}
+
 p.heading {
     font-weight: bold;
 }
 
 div.section-1 p.heading {
     font-size: 120%;
+}
+
+img.page {
+    max-width: 100%
 }
 
 @media print {

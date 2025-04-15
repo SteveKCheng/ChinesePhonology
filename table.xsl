@@ -67,6 +67,15 @@
     </span>
   </xsl:template>
 
+  <!-- Japanese term.  Could also be used to display 
+       Japanese variant of kanji in case the reader might not be familiar
+       with the traditional form. -->
+  <xsl:template match="p:j">
+    <span lang="ja">
+      <xsl:apply-templates select="node()|@*" />
+    </span>
+  </xsl:template>
+
   <!-- Mark up 聲母, 韻母 given in Chinese characters. 
        This template is called when generating tables of Middle Chinese 
        phonological data.  The effect is as if the text is written
@@ -145,6 +154,15 @@
   <xsl:template match="p:jr">
     <xsl:text>‹ </xsl:text>
     <span class="romaji">
+      <xsl:apply-templates select="node()|@*" />
+    </span>
+    <xsl:text> ›</xsl:text>
+  </xsl:template>
+
+  <!-- Jyutping transcription -->
+  <xsl:template match="p:yp">
+    <xsl:text>‹ </xsl:text>
+    <span class="jyutping">
       <xsl:apply-templates select="node()|@*" />
     </span>
     <xsl:text> ›</xsl:text>
