@@ -62,8 +62,8 @@
 
   <p>
     We will end our introduction with a teaser.  Everybody learning Chinese characters knows the
-    phonetic hints in phono-semantic characters <p:mc>形聲字</p:mc> are ‘broken’ — the cause of
-    no end of troubles for learners everywhere. 
+    phonetic hints in phono-semantic characters <p:mc>形聲字</p:mc> are ‘broken’ — the bane of 
+    learners and native speakers alike. 
     Take a look
     at the following chart containing only a handful of the numerous examples of such characters.
   </p>
@@ -169,7 +169,7 @@
         <td rowspan="2"><p:jr>tyo</p:jr></td>
 
         <th rowspan="2"><p:mc>都</p:mc></th>
-        <td rowspan="2">metropolis</td>
+        <td rowspan="2">city; capital</td>
         <td><p:py>dū</p:py></td>
         <td><p:jr>tu</p:jr></td>
       </tr>
@@ -243,20 +243,21 @@
       <li>
         Across each row, the characters from the first two groups of columns 
         (labeled A and B), we see the modern Chinese pronunciations are similar.  The upper sub-row
-        shows the Mandarin (<p:mc>普</p:mc>); the lower sub-row shows the Cantonese (<p:mc>粵</p:mc>).
+        shows the Mandarin (<p:mc><strong>普</strong>通話</p:mc>); the lower sub-row shows the Cantonese 
+        (<p:mc><strong>粵</strong>語</p:mc>).
       </li>
       <li>
         To the right of each Chinese pronunciation is the Japanese pronunciation.  
         As you may already know, characters get different readings in Japanese depending, among
         other things, the time period when they were imported.
-        The upper sub-row gives the Go-on variant of the character's readings; the lower sub-row gives 
-        the Kan-on reading.
+        The upper sub-row gives the Go-on (<p:j><strong>呉</strong>音</p:j>) variant of the character's readings; the lower sub-row gives 
+        the Kan-on (<p:j><strong>漢</strong>音</p:j>) reading.
         Wherever Go-on and Kan-on happen to be the same, they are combined into one cell.
       </li>
       <li>
         The Japanese readings may look a bit unfamiliar: they are in 
         <a href="https://en.wikipedia.org/wiki/Historical_kana_orthography" title="Wikipedia: Historical kana orthography">
-        historical (etymological) kana spelling</a>, 
+        historical (etymological) spelling</a>, 
         which makes sound correspondences a lot more obvious.
       </li>
     </ul>
@@ -274,7 +275,7 @@
     are likely to have changed since they were first devised hundreds of years ago.  But the recurring patterns
     of similar pronunciations for similar-looking characters seen today would seem to suggest the 
     changes cannot be entirely random for each character.
-    So then, for the ‘exceptional’ characters, were the ancients just sloppy in spelling out their
+    So then, for the ‘exceptional’ characters, were the ancients just drunkenly sloppy in spelling out their
     sounds?  When I was but a schoolkid, I certainly thought so.
   </p>
   <p>
@@ -292,18 +293,24 @@
         In row 2, the pronunciation of all three characters seems ‘regular’ enough in Mandarin, 
         all having vowel <em>a</em>; and so does the Japanese.  Cantonese is the odd one out
         in that we have the contrasting vowels <em>oe</em> and <em>o</em>.  Yet, if we look at the
-        Japanese, what is distinct about the character C is that it is spelled with no <em>y</em>
+        Japanese, what is distinct about character C is that it is spelled with no <em>y</em>
         but characters A and B are.  Perhaps the ancient pronunciation only differs in the <em>y</em> sound
         which might explain the phonetic component <p:mc>昜</p:mc> being the same.
       </li>
       <li>
-        The same thing happens in row 3, where even column A and column B sound different enough
-        already — with Japanese taking two different consonants <em>s</em> and <em>t</em> even. 
-        Most native-language speakers (in any of the three languages) 
-        probably do not realize the graphical component <p:mc>者</p:mc> occurring in 
-        <p:mc>都</p:mc> as even phonologically related to the characters 
-        <p:mc>者</p:mc>, <p:mc>豬</p:mc> (and quite a few others like <p:mc>緒</p:mc>, <p:mc>署</p:mc>);
-        I certainly did not until I started researching for this article!
+        <p>
+          The same thing happens in row 3, where column A and column B sound different enough
+          already — with Japanese taking two different consonants <em>s</em> and <em>t</em> even. 
+          Most native-language speakers (in any of the three languages) 
+          probably do not realize the graphical component <p:mc>者</p:mc> occurring in 
+          <p:mc>都</p:mc> even indicates any phonological value like in the characters 
+          <p:mc>者</p:mc>, <p:mc>豬</p:mc> (and quite a few others like <p:mc>緒</p:mc>, <p:mc>署</p:mc>).  
+          I certainly did not until I read <s:cite key="Dǒng 2008" pages="41–42" />!
+        </p>
+        <p>
+          This particular series of characters is also discussed in
+          <s:cite key="Xiàng 2023 Ⅰ" pages="81 &amp; 102" />.
+        </p>
       </li>
       <li>
         In row 4, Japanese has consonant <em>r</em> corresponding to <em>l</em> in Chinese, naturally. 
@@ -325,13 +332,13 @@
 
   <p>
     So, with scant knowledge of what ancient Chinese sounded like, by just comparing the reflexes from 
-    just three modern languages, we have been able to partially uncover a little of the mysteries
+    just three modern languages, we have been able to partially uncover the mysteries
     surrounding these characters and their phonetic components.  
     This, I hope, convinces you that our investigation will prove interesting
     and fruitful.  
     Once we explore 
-    ancient Chinese phonology more, we will soon find that the observations 
-    we have made so far are <em>no mere coincidences</em> but have logical explanations.
+    ancient Chinese phonology more, we will soon find that all the observations 
+    we have made are <em>no mere coincidences</em> but have logical explanations.
   </p> 
 
 </s:section>
