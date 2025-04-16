@@ -1,9 +1,49 @@
 /*
+ * Web fonts
+ */
+@font-face {
+    font-family: "Frank Ruhl Libre";
+    src: url("fonts/FrankRuhlLibre-Variable.ttf") format("truetype");    
+}
+
+/* 
+    The following two fonts are made for "Simplified Chinese (SC)", but traditional
+    characters display fine, and so do Japanese- and Cantonese-specific characters,
+    without any jarring misalignment or change of style.
+
+    I actually prefer them here over "Traditional Chinese (TC)" fonts because the
+    style strikes a good balance between the conventional forms used in Chinese
+    and Japanese.  TC fonts often display certain components in characters in
+    an archaic way (e.g. in 清, 娘, 曾) which may confuse readers not familiar
+    with the traditional forms — and some are just more difficult to read
+    than necessary even at the size of normal body text. 
+   
+    Also Noto is simply a very-well engineered font with Google backing it.
+    Some lesser-used fonts show undesirable artifacts at small sizes, when bolded, 
+    etc.
+*/
+
+@font-face {
+    font-family: "Noto Serif SC";
+    src: url("fonts/NotoSerifSC-Variable.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Noto Sans SC";
+    src: url("fonts/NotoSansSC-Variable.ttf") format("truetype");
+}
+
+/*
  * Defaults 
  */
 html {
     background-color: white;
+    font-family: "Frank Ruhl Libre", serif;
     color: black;
+}
+
+:lang(zh), :lang(ja) {
+    font-family: "Noto Serif SC", "NSimSun", "MS PMincho", "MingLiU" !important;
 }
 
 a:any-link {
@@ -31,7 +71,6 @@ sup.footnote a:any-link {
 }
 
 th {
-    font-family: sans-serif;
     text-align: center;
 }
 

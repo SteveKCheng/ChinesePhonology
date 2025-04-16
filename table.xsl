@@ -60,14 +60,14 @@
 
   <!-- "mc" stands for terminology in Modern Chinese -->
   <xsl:template match="p:mc">
-    <span lang="zh-tw">
+    <span lang="zh">
       <xsl:apply-templates select="node()|@*" />
     </span>
   </xsl:template>
 
   <!-- "ac" stands for terminology in Chinese from 'ancient' times -->
   <xsl:template match="p:ac">
-    <span lang="zh-tw">
+    <span lang="zh">
       <xsl:call-template name="look-up-link" />
     </span>
   </xsl:template>
@@ -87,7 +87,7 @@
        inside a p:ac element. -->
   <xsl:template name="display-ac-phono-element">
     <xsl:param name="content" />
-    <span lang="zh-tw">
+    <span lang="zh">
       <xsl:copy-of select="$content" />
     </span>
   </xsl:template>
