@@ -382,6 +382,27 @@
         </trans>
         <link class="ad" url="https://www.asakura.co.jp/detail.php?book_code=51503" />
       </book>
+
+      <book xml:lang="ja" key="Morohashi 2000">
+        <author>諸橋 轍次</author>
+        <author>鎌田 正</author>
+        <author>米山 寅太郎</author>
+        <title>大漢和辞典</title>
+        <edition>修訂第二版</edition>
+        <publisher>大修館書店</publisher>
+        <year>2000</year>
+        <trans xml:lang="en">
+          <author>Morohashi, Tetsuji</author>
+          <title>Dai Kan-Wa Jiten (The Great Chinese–Japanese Dictionary)</title>
+          <edition>2<h:sup>nd</h:sup> Revised Edition</edition>
+        </trans>
+        <note>The grand-daddy of Chinese character dictionaries in Japanese. I used it to confirm 
+        readings in the historical kana spelling; sometimes 
+        <h:a href="https://en.wiktionary.org/" title="Wiktionary (English)">Wiktionary</h:a> gets them wrong,
+        while other Japanese dictionaries may not always carry obscure readings.
+         </note>
+      </book>
+
     </bibliography>
   </s:section>
 
