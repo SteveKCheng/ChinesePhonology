@@ -1,3 +1,11 @@
+/*
+ * Defaults 
+ */
+html {
+    background-color: white;
+    color: black;
+}
+
 a:any-link {
     text-decoration: none;
 }
@@ -95,6 +103,33 @@ table.mc-finals td.u-medial {
     text-align: center;
 }
 
+/*
+ The table comparing sounds of characters in the introduction
+ */
+table.sound-comparison th.chinese, table.sound-comparison th.japanese {
+    width: 5em;
+    font-size: 90%;
+    font-weight: normal;
+}
+
+table.sound-comparison th.character {
+    width: 2em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+}
+
+table.sound-comparison th.gloss {
+    text-align: left;
+    font-weight: normal;
+}
+
+table.sound-comparison th {
+    text-align: center;
+}
+
+table.sound-comparison col.highlight {
+    background-color:rgb(96%, 96%, 96%);
+}
 
 span.pinyin {
     font-style: italic;

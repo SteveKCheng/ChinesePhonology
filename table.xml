@@ -62,225 +62,277 @@
 
   <p>
     We will end our introduction with a teaser.  Everybody learning Chinese characters knows the
-    phonetic hints in phono-semantic characters <p:mc>形聲字</p:mc> are ‘broken’.  To give
-    one series of many examples:
+    phonetic hints in phono-semantic characters <p:mc>形聲字</p:mc> are ‘broken’ — the cause of
+    no end of troubles for learners everywhere. 
+    Take a look
+    at the following chart containing only a handful of the numerous examples of such characters.
   </p>
 
-    <table>
+  <table class="sound-comparison">
+    <thead>
+      <col class="row-number" />
+
+      <colgroup>
+        <col class="character" />
+        <col class="gloss" />
+        <col class="chinese" />
+        <col class="japanese" />
+      </colgroup>
+      <colgroup>
+        <col class="character" />
+        <col class="gloss" />
+        <col class="chinese" />
+        <col class="japanese" />
+      </colgroup>
+      <colgroup>
+        <col class="character highlight" />
+        <col class="gloss highlight" />
+        <col class="chinese highlight" />
+        <col class="japanese highlight" />
+      </colgroup>
+
       <tr>
-        <th><p:mc>根</p:mc></th>
-        <td>root</td>
-        <td><p:py>gēn</p:py></td>
-        <td><p:yp>gan¹</p:yp></td>
-        <td><p:jr>kon</p:jr></td>
-        <td><p:jr>kon</p:jr></td>
-        
-        <th><p:mc>痕</p:mc></th>
-        <td>scar; trace</td>
+        <th></th>
+        <th class="character">A</th>
+        <th class="gloss">Gloss</th>
+        <th class="chinese"><p:mc>中:普粵</p:mc></th>
+        <th class="japanese"><p:j>日:吳漢</p:j></th>
+        <th class="character">B</th>
+        <th class="gloss">Gloss</th>
+        <th class="chinese"><p:mc>中:普粵</p:mc></th>
+        <th class="japanese"><p:j>日:吳漢</p:j></th>
+        <th class="character">C</th>
+        <th class="gloss">Gloss</th>
+        <th class="chinese"><p:mc>中:普粵</p:mc></th>
+        <th class="japanese"><p:j>日:吳漢</p:j></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th rowspan="2">①</th>
+        <th rowspan="2"><p:mc>痕</p:mc></th>
+        <td rowspan="2">scar; trace</td>
         <td><p:py>hén</p:py></td>
-        <td><p:yp>han⁴</p:yp></td>
         <td><p:jr>gon</p:jr></td>
-        <td><p:jr>kon</p:jr></td>
 
-        <th><p:mc>恨</p:mc></th>
-        <td>resent</td>
+        <th rowspan="2"><p:mc>恨</p:mc></th>
+        <td rowspan="2">resent, hate</td>
         <td><p:py>hèn</p:py></td>
-        <td><p:yp>han⁶</p:yp></td>
         <td><p:jr>gon</p:jr></td>
+
+        <th rowspan="2"><p:mc>根</p:mc></th>
+        <td rowspan="2">root</td>
+        <td><p:py>gēn</p:py></td>
+        <td rowspan="2"><p:jr>kon</p:jr></td>
+      </tr>
+      <tr>
+        <td><p:yp>han⁴</p:yp></td>
         <td><p:jr>kon</p:jr></td>
+        <td><p:yp>han⁶</p:yp></td>
+        <td><p:jr>kon</p:jr></td>
+        <td><p:yp>gan¹</p:yp></td>
       </tr>
 
       <tr>
-        <th><p:mc>湯</p:mc></th>
-        <td>soup; hot water</td>
-        <td><p:py>tāng</p:py></td>
-        <td><p:yp>tong¹</p:yp></td>
-        <td><p:jr>tau</p:jr></td>
-        <td><p:jr>tau</p:jr></td>
-
-        <th><p:mc>陽</p:mc></th>
-        <td>sun</td>
+        <th rowspan="2">②</th>
+        <th rowspan="2"><p:mc>陽</p:mc></th>
+        <td rowspan="2">sun; positive</td>
         <td><p:py>yáng</p:py></td>
-        <td><p:yp>joeng⁴</p:yp></td>
-        <td><p:jr>yau</p:jr></td>
-        <td><p:jr>yau</p:jr></td>
+        <td rowspan="2"><p:jr>yau</p:jr></td>
         
-        <th><p:mc>傷</p:mc></th>
-        <td>wound</td>
+        <th rowspan="2"><p:mc>傷</p:mc></th>
+        <td rowspan="2">wound, injury</td>
         <td><p:py>shāng</p:py></td>
+        <td rowspan="2"><p:jr>syau</p:jr></td>
+
+        <th rowspan="2"><p:mc>湯</p:mc></th>
+        <td rowspan="2">soup; hot water</td>
+        <td><p:py>tāng</p:py></td>
+        <td rowspan="2"><p:jr>tau</p:jr></td>
+      </tr>
+      <tr>
+        <td><p:yp>joeng⁴</p:yp></td>
         <td><p:yp>shoeng¹</p:yp></td>
-        <td><p:jr>syau</p:jr></td>
-        <td><p:jr>syau</p:jr></td>
+        <td><p:yp>tong¹</p:yp></td>
       </tr>
 
       <tr>
-        <th><p:mc>澤</p:mc></th>
-        <td>swamp</td>
-        <td><p:py>zé</p:py></td>
-        <td><p:yp>zaak⁹</p:yp></td>
-        <td><p:jr>zyaku</p:jr></td>
-        <td><p:jr>taku</p:jr></td>
-
-        <th><p:mc>譯</p:mc></th>
-        <td>translate; explain</td>
-        <td><p:py>yì</p:py></td>
-        <td><p:yp>yik⁹</p:yp></td>
-        <td><p:jr>yaku</p:jr></td>
-        <td><p:jr>eki</p:jr></td>
-        
-        <th><p:mc>驛</p:mc></th>
-        <td>station</td>
-        <td><p:py>yì</p:py></td>
-        <td><p:yp>yik⁹</p:yp></td>
-        <td><p:jr>yaku</p:jr></td>
-        <td><p:jr>eki</p:jr></td>
-      </tr>
-        
-      <tr>
-        <th><p:mc>藥</p:mc></th>
-        <td>medicine</td>
-        <td><p:py>yào</p:py></td>
-        <td><p:yp>joek⁹</p:yp></td>
-        <td><p:jr>yaku</p:jr></td>
-        <td><p:jr>yaku</p:jr></td>
-        
-        <th><p:mc>樂</p:mc></th>
-        <td>enjoy</td>
-        <td><p:py>lé</p:py></td>
-        <td><p:yp>lok⁹</p:yp></td>
-        <td><p:jr>raku</p:jr></td>
-        <td><p:jr>raku</p:jr></td>
-
-        <th><p:mc>礫</p:mc></th>
-        <td>rubble</td>
-        <td><p:py>lì</p:py></td>
-        <td><p:yp>lik⁷</p:yp></td>
-        <td><p:jr>ryaku</p:jr></td>
-        <td><p:jr>reki</p:jr></td>
-      </tr>
-        
-      <tr>
-        <th><p:mc>都</p:mc></th>
-        <td>metropolis</td>
-        <td><p:py>dū</p:py></td>
-        <td><p:yp>dou¹</p:yp></td>
-        <td><p:jr>tu</p:jr></td>
-        <td><p:jr>to</p:jr></td>
-
-        <th><p:mc>者</p:mc></th>
-        <td>person</td>
+        <th rowspan="2">③</th>
+        <th rowspan="2"><p:mc>者</p:mc></th>
+        <td rowspan="2">person</td>
         <td><p:py>zhě</p:py></td>
-        <td><p:yp>ze²</p:yp></td>
-        <td><p:jr>sya</p:jr></td>
-        <td><p:jr>sya</p:jr></td>
+        <td rowspan="2"><p:jr>sya</p:jr></td>
         
-        <th><p:mc>猪</p:mc></th>
-        <td>pig; boar</td>
+        <th rowspan="2"><p:mc>豬</p:mc>(<p:j>猪</p:j>)</th>
+        <td rowspan="2">pig; boar</td>
         <td><p:py>zhū</p:py></td>
+        <td rowspan="2"><p:jr>tyo</p:jr></td>
+
+        <th rowspan="2"><p:mc>都</p:mc></th>
+        <td rowspan="2">metropolis</td>
+        <td><p:py>dū</p:py></td>
+        <td><p:jr>tu</p:jr></td>
+      </tr>
+      <tr>
+        <td><p:yp>ze²</p:yp></td>
         <td><p:yp>zyu¹</p:yp></td>
-        <td><p:jr>tyo</p:jr></td>
-        <td><p:jr>tyo</p:jr></td>
-      </tr>
-
-    </table>
-
-<!-- 
-  
-  コン
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        
-        
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-
-
-
-
-        <th colspan="3">重</th>
-        <td>
-
-        <th colspan="3">動</th>
-
-        <th colspan="3">董</th>
+        <td><p:yp>dou¹</p:yp></td>
+        <td><p:jr>to</p:jr></td>
       </tr>
 
       <tr>
-        <td>
+        <th rowspan="2">④</th>
+        <th rowspan="2"><p:mc>樂</p:mc></th>
+        <td rowspan="2">enjoy; happy</td>
+        <td><p:py>lé</p:py></td>
+        <td rowspan="2"><p:jr>raku</p:jr></td>
+
+        <th rowspan="2"><p:mc>礫</p:mc></th>
+        <td rowspan="2">pebble; rubble</td>
+        <td><p:py>lì</p:py></td>
+        <td><p:jr>ryaku</p:jr></td>
+
+        <th rowspan="2"><p:mc>藥</p:mc></th>
+        <td rowspan="2">medicine; drug</td>
+        <td><p:py>yào</p:py></td>
+        <td rowspan="2"><p:jr>yaku</p:jr></td>
       </tr>
-
-zhòng
-dòng 
-dǒng
-
-zung6
-dung6
-dung2
-
-ヂュウ
-ヅ
-
-チョウ
-トウ
-トウ
-
-トウ
-ドウ
-
       <tr>
-        <th colspan="3">童</th>
-
-        <th colspan="3">鐘</th>
-
-
-        <th colspan="3">憧</th>
+        <td><p:yp>lok⁹</p:yp></td>
+        <td><p:yp>lik⁷</p:yp></td>
+        <td><p:jr>reki</p:jr></td>
+        <td><p:yp>joek⁹</p:yp></td>
       </tr>
-
-
-
-        <td><p:mc>門</p:mc></td>
-        <td><p:py>tóng</p:py></td>
-        <td><p:yp>tung⁴</p:py></td>
-        <td><p:jr>ヅウ</p:jr></td>
-        <td><p:jr>トウ</p:jr></td>
-        <td><p:jr>ドウ</p:jr></td>
         
+      <tr>
+        <th rowspan="2">⑤</th>
+        <th rowspan="2"><p:mc>譯</p:mc>(<p:j>訳</p:j>)</th>
+        <td rowspan="2">translate; explain</td>
+        <td><p:py>yì</p:py></td>
+        <td><p:jr>yaku</p:jr></td>
+        
+        <th rowspan="2"><p:mc>驛</p:mc>(<p:j>駅</p:j>)</th>
+        <td rowspan="2">station, stop</td>
+        <td><p:py>yì</p:py></td>
+        <td><p:jr>yaku</p:jr></td>
 
-        
-         <p:yp></p:py></td>
-        <td><p:mc>鐘</p:mc></td>ドウ
-        <tr><p:py>wén</p:py></td>
-        
+        <th rowspan="2"><p:mc>擇</p:mc>(<p:j>択</p:j>)</th>
+        <td rowspan="2">select, choose</td>
+        <td><p:py>zé</p:py></td>
+        <td><p:jr>dyaku</p:jr></td>
+      </tr>
+      <tr>
+        <td><p:yp>yik⁹</p:yp></td>
+        <td><p:jr>eki</p:jr></td>
+        <td><p:yp>yik⁹</p:yp></td>
+        <td><p:jr>eki</p:jr></td>
+        <td><p:yp>zaak⁹</p:yp></td>
+        <td><p:jr>taku</p:jr></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    The above table is read as follows:
 
     <ul>
-      <li> 
-      
-      <p:mc>椅</p:mc> can hardly be said to sound ‘similar’.
+      <li>
+        Each major row in the table (labeled 1 to 5) contains three characters sharing the same
+        phonetic component.  
+      </li>
+      <li>
+        Across each row, the characters from the first two groups of columns 
+        (labeled A and B), we see the modern Chinese pronunciations are similar.  The upper sub-row
+        shows the Mandarin (<p:mc>普</p:mc>); the lower sub-row shows the Cantonese (<p:mc>粵</p:mc>).
+      </li>
+      <li>
+        To the right of each Chinese pronunciation is the Japanese pronunciation.  
+        As you may already know, characters get different readings in Japanese depending, among
+        other things, the time period when they were imported.
+        The upper sub-row gives the Go-on variant of the character's readings; the lower sub-row gives 
+        the Kan-on reading.
+        Wherever Go-on and Kan-on happen to be the same, they are combined into one cell.
+      </li>
+      <li>
+        The Japanese readings may look a bit unfamiliar: they are in 
+        <a href="https://en.wikipedia.org/wiki/Historical_kana_orthography" title="Wikipedia: Historical kana orthography">
+        historical (etymological) kana spelling</a>, 
+        which makes sound correspondences a lot more obvious.
+      </li>
+    </ul>
+  </p>
 
--->
+  <p>
+    Observe that the third group of columns (labeled C) has the seemingly exceptional pronunciation
+    in Chinese.  For example, in row 1 the characters share the phonetic component <p:mc>艮</p:mc>, but
+    the <p:mc>根</p:mc> (cell C1) has the initial consonant <em>g</em> while 
+    <p:mc>痕</p:mc> (cell A1) and <p:mc>恨</p:mc> (cell B1)
+    has the initial consonant <em>h</em>.
+  </p>
+  <p>
+    Now, most people intuitively understand that pronunciations of characters 
+    are likely to have changed since they were first devised hundreds of years ago.  But the recurring patterns
+    of similar pronunciations for similar-looking characters seen today would seem to suggest the 
+    changes cannot be entirely random for each character.
+    So then, for the ‘exceptional’ characters, were the ancients just sloppy in spelling out their
+    sounds?  When I was but a schoolkid, I certainly thought so.
+  </p>
+  <p>
+    If we examine the table more closely, we see that the Japanese pronunciations in column group C 
+    also seem to be distinguish themselves from those in column groups A and B.  This suggests, firstly, that the
+    characters already had diverging pronuncations very early on for them to manifest in both Chinese and Japanese.  
+    Furthermore, we can spot the following:
+    <ul>
+      <li>
+        In row 1, that the Japanese Go-on has a voiced consonant <em>g</em> in columns A and B
+        but not in column C, so whatever difference the pronuncation turns out to be in ancient times
+        might just have something to do with voicing and de-voicing. 
+      </li>
+      <li>
+        In row 2, the pronunciation of all three characters seems ‘regular’ enough in Mandarin, 
+        all having vowel <em>a</em>; and so does the Japanese.  Cantonese is the odd one out
+        in that we have the contrasting vowels <em>oe</em> and <em>o</em>.  Yet, if we look at the
+        Japanese, what is distinct about the character C is that it is spelled with no <em>y</em>
+        but characters A and B are.  Perhaps the ancient pronunciation only differs in the <em>y</em> sound
+        which might explain the phonetic component <p:mc>昜</p:mc> being the same.
+      </li>
+      <li>
+        The same thing happens in row 3, where even column A and column B sound different enough
+        already — with Japanese taking two different consonants <em>s</em> and <em>t</em> even. 
+        Most native-language speakers (in any of the three languages) 
+        probably do not realize the graphical component <p:mc>者</p:mc> occurring in 
+        <p:mc>都</p:mc> as even phonologically related to the characters 
+        <p:mc>者</p:mc>, <p:mc>豬</p:mc> (and quite a few others like <p:mc>緒</p:mc>, <p:mc>署</p:mc>);
+        I certainly did not until I started researching for this article!
+      </li>
+      <li>
+        In row 4, Japanese has consonant <em>r</em> corresponding to <em>l</em> in Chinese, naturally. 
+        Both the Japanese <em>r</em> and the Chinese <em>l</em> disappear at the same time for
+        the exceptional character.  But the vowel in Japanese does not really differ between
+        the three characters, suggesting that <p:mc>藥</p:mc> has phonetic component <p:mc>樂</p:mc> because
+        the two characters sounded closer than in modern Chinese dialects.
+      </li>
+      <li>
+        In row 5, Japanese gains a consonant <em>d</em> or <em>t</em> to distinguish the character 
+        from column C.  Under Go-on the vowel is <em>a</em> on all three characters, but changes
+        under Kan-on except for character C, suggesting characters A and B were diverging further from C
+        (particularly, with respect to the vowel) in the 
+        time period between when Go-on and Kan-on got established
+        (and thus long after the three characters got devised).
+      </li>
+    </ul>
+  </p>
 
+  <p>
+    So, with scant knowledge of what ancient Chinese sounded like, by just comparing the reflexes from 
+    just three modern languages, we have been able to partially uncover a little of the mysteries
+    surrounding these characters and their phonetic components.  
+    This, I hope, convinces you that our investigation will prove interesting
+    and fruitful.  
+    Once we explore 
+    ancient Chinese phonology more, we will soon find that the observations 
+    we have made so far are <em>no mere coincidences</em> but have logical explanations.
+  </p> 
 
 </s:section>
 
