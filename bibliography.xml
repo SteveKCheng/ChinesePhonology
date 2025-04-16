@@ -396,11 +396,31 @@
           <title>Dai Kan-Wa Jiten (The Great Chinese–Japanese Dictionary)</title>
           <edition>2<h:sup>nd</h:sup> Revised Edition</edition>
         </trans>
-        <note>The grand-daddy of Chinese character dictionaries in Japanese. I used it to confirm 
-        readings in the historical kana spelling; sometimes 
+        <note>The great grand-daddy of Classical/Literary Chinese dictionaries in 
+        Japanese. I used it to confirm
+        character  readings in the historical kana spelling; sometimes 
         <h:a href="https://en.wiktionary.org/" title="Wiktionary (English)">Wiktionary</h:a> gets them wrong,
         while other Japanese dictionaries may not always carry obscure readings.
+        This dictionary, besides being the magnum opus of its genre, 
+        is famous for being one of the reference sources for 
+        the <h:a href="https://en.wikipedia.org/wiki/Unicode" title="Wikipedia: Unicode">Unicode</h:a> standard.
          </note>
+      </book>
+
+      <book xml:lang="ja" key="Tōdō 2018">
+        <author>藤堂 明保</author>
+        <title>漢字源</title>
+        <edition>改訂第六版</edition>
+        <publisher>学研プラス</publisher>
+        <year>2018</year>
+        <note>A much more convenient and compact Chinese character dictionary 
+        than <s:cite key="Morohashi 2000" />, while still properly distinguishing historical readings. </note>
+        <trans xml:lang="en">
+          <author>Tōdō, Akiyasu</author>
+          <title>Kanji Gen (Source of Chinese Characters)</title>
+          <edition>6<h:sup>th</h:sup> Edition</edition>
+        </trans>
+        <link class="ad" url="https://hon.gakken.jp/book/1230461900" />
       </book>
 
     </bibliography>
