@@ -90,7 +90,7 @@
         <edition>Second Edition</edition>
         <publisher>Routledge</publisher>
         <year>2008</year>
-        <trans xml:lang="zh-tw">
+        <trans xml:lang="zh">
           <author>董紅源</author>
         </trans>
       </book>
@@ -123,7 +123,7 @@
         <title>A Brief History of the Chinese Language I: The Basics of Chinese Phonetics</title>
         <publisher>Routledge</publisher>
         <year>2023</year>
-        <trans xml:lang="zh-tw">
+        <trans xml:lang="zh">
           <author>向熹</author>
           <title>簡明漢語史: 上編</title>
         </trans>
@@ -137,7 +137,7 @@
         <title>A Brief History of the Chinese Language II: From Old Chinese to Middle Chinese Phonetic System</title>
         <publisher>Routledge</publisher>
         <year>2023</year>
-        <trans xml:lang="zh-tw">
+        <trans xml:lang="zh">
           <author>向熹</author>
           <title>簡明漢語史: 上編</title>
         </trans>
@@ -151,7 +151,7 @@
         <title>A Brief History of the Chinese Language IV: Old Chinese Lexicon</title>
         <publisher>Routledge</publisher>
         <year>2023</year>
-        <trans xml:lang="zh-tw">
+        <trans xml:lang="zh">
           <author>向熹</author>
           <title>簡明漢語史: 上編</title>
         </trans>
@@ -165,7 +165,7 @@
   <s:section>
     <s:heading>Works in Chinese</s:heading>
     <bibliography xmlns="http://www.gold-saucer.org/xmlns/bibliography">
-      <misc xml:lang="zh-tw" key="Ayaka 1">
+      <misc xml:lang="zh" key="Ayaka 1">
         <author>綾香</author>
         <title>粵語（廣州音）與中古音對應關係</title>
         <year>2020</year>
@@ -176,7 +176,7 @@
         <link class="source" url="https://ayaka.shn.hk/teoi/" />
       </misc>
 
-      <misc xml:lang="zh-tw" key="Ayaka 2">
+      <misc xml:lang="zh" key="Ayaka 2">
         <author>綾香</author>
         <title>《分韻撮要》音系與中古音對應關係</title>
         <link class="source" url="https://ayaka.shn.hk/fanwan/" />
@@ -186,7 +186,7 @@
         </trans>
       </misc>
 
-      <misc xml:lang="zh-tw" key="Pīnyīn 2008">
+      <misc xml:lang="zh" key="Pīnyīn 2008">
         <title>漢語拼音方案</title>
         <trans xml:lang="en">
           <title>Chart of the Chinese Pīnyīn System</title>
@@ -199,7 +199,7 @@
         </note>
       </misc>
 
-      <book xml:lang="zh-tw" key="Chao 1983">
+      <book xml:lang="zh" key="Chao 1983">
         <author>趙元任</author>
         <title>通字方案</title>
         <publisher>商務印書館</publisher>
@@ -211,7 +211,7 @@
         </trans>
       </book>
 
-      <book xml:lang="zh-tw" key="Ho 1992">
+      <book xml:lang="zh" key="Ho 1992">
         <author>何國祥</author>
         <title>常用字廣州話讀音表</title>
         <edition>一九九二年修訂本</edition>
@@ -226,7 +226,7 @@
         <link class="home" url="https://ile1992.jyut.net/" />
       </book>
 
-      <book xml:lang="zh-tw" key="Dǒng 1996">
+      <book xml:lang="zh" key="Dǒng 1996">
         <author>董同龢</author>
         <title>漢語音韻學</title>
         <publisher>文史哲出版社</publisher>
@@ -237,7 +237,7 @@
         </trans>
       </book>
 
-      <book xml:lang="zh-tw" key="Wáng 2013">
+      <book xml:lang="zh" key="Wáng 2013">
         <author>王力</author>
         <title>漢語史稿</title>
         <publisher>中華書局</publisher>
@@ -248,7 +248,7 @@
         </trans>
       </book>
 
-      <book xml:lang="zh-tw" key="Wáng 2014">
+      <book xml:lang="zh" key="Wáng 2014">
         <author>王力</author>
         <title>漢語語音史</title>
         <publisher>中華書局</publisher>
@@ -259,7 +259,7 @@
         </trans>
       </book>
 
-      <book xml:lang="zh-tw" key="Shào 2008">
+      <book xml:lang="zh" key="Shào 2008">
         <author>邵榮芬</author>
         <title>切韻研究</title>
         <edition>校訂本</edition>
@@ -272,7 +272,7 @@
         </trans>
       </book>
 
-      <book xml:lang="zh-tw" key="Ho 1999">
+      <book xml:lang="zh" key="Ho 1999">
         <author>何文匯</author>
         <author>朱國藩</author>
         <title>粵音正讀字彙</title>

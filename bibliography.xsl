@@ -45,6 +45,14 @@
     <xsl:text>]</xsl:text>
   </xsl:template>
 
+  <!-- Copy xml:lang attribute as HTML lang attribute -->
+  <xsl:template name="copy-xml-lang">
+    <xsl:param name="target" select="." as="element()" />
+    <xsl:if test="$target/@xml:lang">
+      <xsl:attribute name="lang" select="$target/@xml:lang" />
+    </xsl:if>
+  </xsl:template>
+
   <xsl:template match="bib:bibliography">
     <dl class="bibliography">
       <xsl:for-each select="bib:*">
@@ -52,6 +60,9 @@
           <xsl:call-template name="get-biblio-key" />
         </dt>
         <dd>
+          <!-- Note: the language of the bibliographic entry is not propagated here
+               as the generated formatting (e.g. the words "volume", "issue") 
+               are in the language/style of the main text. -->
           <xsl:apply-templates mode="biblio" select="." />
         </dd>
       </xsl:for-each>
@@ -188,7 +199,14 @@
       <xsl:if test="position()>1">
         <xsl:text>; </xsl:text>
       </xsl:if>
-      <xsl:apply-templates />
+
+      <span>
+        <xsl:call-template name="copy-xml-lang">
+          <xsl:with-param name="target" select=".." />
+        </xsl:call-template>
+        <xsl:apply-templates />
+      </span>
+
       <xsl:call-template name="display-biblio-trans">
         <xsl:with-param name="original" select="." />
         <xsl:with-param name="position" select="position()" />
@@ -201,7 +219,13 @@
 
   <xsl:template name="display-biblio-title">
     <xsl:for-each select="bib:title[1]">
-      <xsl:apply-templates />
+      <span>
+        <xsl:call-template name="copy-xml-lang">
+          <xsl:with-param name="target" select=".." />
+        </xsl:call-template>
+        <xsl:apply-templates />
+      </span>
+ 
       <xsl:call-template name="display-biblio-trans">
         <xsl:with-param name="original" select="." />
       </xsl:call-template>
@@ -209,6 +233,7 @@
       <xsl:call-template name="display-biblio-part">
         <xsl:with-param name="part" select="../bib:edition" />
         <xsl:with-param name="delimiter">; </xsl:with-param>
+        <xsl:with-param name="target-language" select="true()" />
       </xsl:call-template>
 
       <xsl:text>. </xsl:text>
@@ -218,7 +243,14 @@
   <xsl:template name="display-biblio-publisher">
     <xsl:for-each select="bib:publisher[1]">
       <br />
-      <xsl:apply-templates />
+ 
+      <span>
+        <xsl:call-template name="copy-xml-lang">
+          <xsl:with-param name="target" select=".." />
+        </xsl:call-template>
+        <xsl:apply-templates />
+      </span>
+ 
       <xsl:call-template name="display-biblio-trans">
         <xsl:with-param name="original" select="." />
       </xsl:call-template>
@@ -235,7 +267,14 @@
   <xsl:template name="display-biblio-journal">
     <xsl:for-each select="bib:journal[1]">
       <br />
-      <xsl:apply-templates />
+ 
+      <span>
+        <xsl:call-template name="copy-xml-lang">
+          <xsl:with-param name="target" select=".." />
+        </xsl:call-template>
+        <xsl:apply-templates />
+      </span>
+ 
       <xsl:call-template name="display-biblio-trans">
         <xsl:with-param name="original" select="." />
       </xsl:call-template>
@@ -267,10 +306,19 @@
   <xsl:template name="display-biblio-part">
     <xsl:param name="part" required="yes" />
     <xsl:param name="delimiter" required="yes" />
+    <xsl:param name="target-language" select="false()" as="xs:boolean" />
 
     <xsl:for-each select="$part[1]">
       <xsl:value-of select="$delimiter" />
-      <xsl:apply-templates />
+
+      <span>
+        <xsl:if test="$target-language">
+          <xsl:call-template name="copy-xml-lang">
+            <xsl:with-param name="target" select=".." />
+          </xsl:call-template>
+        </xsl:if>
+        <xsl:apply-templates />
+      </span>
 
       <xsl:call-template name="display-biblio-trans">
         <xsl:with-param name="original" select="." />
@@ -305,12 +353,18 @@
     <xsl:param name="position" select="1" />
 
     <xsl:variable name="n" select="$original/local-name()" />
-    <xsl:variable name="t" select="($original/../bib:trans/bib:*[local-name()=$n])[position()=$position]" />
+    <xsl:variable name="c" select="$original/../bib:trans" />
+    <xsl:variable name="t" select="($c/bib:*[local-name()=$n])[position()=$position]" />
 
     <xsl:if test="$t">
-      <xsl:text> ⦅</xsl:text>
-      <xsl:apply-templates select="$t/node()" />
-      <xsl:text>⦆</xsl:text>
+      <span class="translation">
+        <xsl:call-template name="copy-xml-lang">
+          <xsl:with-param name="target" select="$c" />
+        </xsl:call-template>
+        <xsl:text> ⦅</xsl:text>
+        <xsl:apply-templates select="$t/node()" />
+        <xsl:text>⦆</xsl:text>
+      </span>
     </xsl:if>
   </xsl:template>
 
