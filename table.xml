@@ -168,7 +168,7 @@
         <s:fragment><tr><th rowspan="2">⑤</th></tr></s:fragment>
         <p:mcgk-comparison-table-block 
           char="譯" char-j="訳" gloss="translate; explain"
-          m="yì" c="yik⁹" g="raku" k="eki" />
+          m="yì" c="yik⁹" g="yaku" k="eki" />
         <p:mcgk-comparison-table-block 
           char="驛" char-j="駅" gloss="station, stop"
           m="yì" c="yik⁹" g="yaku" k="eki" />
@@ -213,7 +213,7 @@
   <p>
     Observe that the third group of columns (labeled C) has the seemingly exceptional pronunciation
     in Chinese.  For example, in row 1 the characters share the phonetic component <p:mc>艮</p:mc>, but
-    the <p:mc>根</p:mc> (cell C1) has the initial consonant <em>g</em> while 
+    <p:mc>根</p:mc> (cell C1) has the initial consonant <em>g</em> while 
     <p:mc>痕</p:mc> (cell A1) and <p:mc>恨</p:mc> (cell B1)
     has the initial consonant <em>h</em>.
   </p>
@@ -227,7 +227,7 @@
   </p>
   <p>
     If we examine the table more closely, we see that the Japanese pronunciations in column group C 
-    also seem to be distinguish themselves from those in column groups A and B.  This suggests, firstly, that the
+    also seem to distinguish themselves from those in column groups A and B.  This suggests, firstly, that the
     characters already had diverging pronuncations very early on for them to manifest in both Chinese and Japanese.  
     Furthermore, we can spot the following:
     <ul>
