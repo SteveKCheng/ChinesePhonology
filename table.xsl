@@ -167,6 +167,14 @@
     </span>
   </xsl:template>
 
+  <!-- Make tone numbers expressed as ASCII digits into superscripts -->
+  <xsl:template match="p:yp/text()">
+    <xsl:analyze-string select="." regex="[0-9]+">
+      <xsl:matching-substring><sup><xsl:value-of select="." /></sup></xsl:matching-substring>
+      <xsl:non-matching-substring><xsl:value-of select="." /></xsl:non-matching-substring>
+    </xsl:analyze-string>
+  </xsl:template>
+
   <xsl:template match="html:head/p:*">
   </xsl:template>
 
