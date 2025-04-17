@@ -69,27 +69,27 @@
   </p>
 
   <table class="sound-comparison">
-    <thead>
-      <col class="row-number" />
+    <col class="row-number" />
 
-      <colgroup>
-        <col class="character" />
-        <col class="gloss" />
-        <col class="chinese" />
-        <col class="japanese" />
-      </colgroup>
-      <colgroup>
-        <col class="character" />
-        <col class="gloss" />
-        <col class="chinese" />
-        <col class="japanese" />
-      </colgroup>
-      <colgroup>
-        <col class="character highlight" />
-        <col class="gloss highlight" />
-        <col class="chinese highlight" />
-        <col class="japanese highlight" />
-      </colgroup>
+    <colgroup>
+      <col class="character" />
+      <col class="gloss" />
+      <col class="chinese" />
+      <col class="japanese" />
+    </colgroup>
+    <colgroup>
+      <col class="character" />
+      <col class="gloss" />
+      <col class="chinese" />
+      <col class="japanese" />
+    </colgroup>
+    <colgroup>
+      <col class="character highlight" />
+      <col class="gloss highlight" />
+      <col class="chinese highlight" />
+      <col class="japanese highlight" />
+    </colgroup>
+    <thead>
 
       <tr>
         <th></th>
@@ -108,127 +108,70 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th rowspan="2">①</th>
-        <th rowspan="2"><p:mc>痕</p:mc></th>
-        <td rowspan="2">scar; trace</td>
-        <td><p:py>hén</p:py></td>
-        <td><p:jr>gon</p:jr></td>
+      <s:merge-table-rows>
+        <s:fragment><tr><th rowspan="2">①</th></tr></s:fragment>
+        <p:mcgk-comparison-table-block 
+          char="痕" gloss="scar; trace"
+          m="hén" c="han⁴" g="gon" k="kon" />
+        <p:mcgk-comparison-table-block
+          char="恨" gloss="resent, hate"
+          m="hèn" c="han⁶" g="gon" k="kon" />
+        <p:mcgk-comparison-table-block
+          char="根" gloss="root"
+          m="gēn" c="gan¹" g="kon" />
+      </s:merge-table-rows>
 
-        <th rowspan="2"><p:mc>恨</p:mc></th>
-        <td rowspan="2">resent, hate</td>
-        <td><p:py>hèn</p:py></td>
-        <td><p:jr>gon</p:jr></td>
+      <s:merge-table-rows>
+        <s:fragment><tr><th rowspan="2">②</th></tr></s:fragment>
+        <p:mcgk-comparison-table-block 
+          char="陽" gloss="sun; positive"
+          m="yáng" c="joeng⁴" g="yau" />
+        <p:mcgk-comparison-table-block 
+          char="傷" gloss="wound, injury"
+          m="shāng" c="shoeng¹" g="syau" />
+        <p:mcgk-comparison-table-block 
+          char="湯" gloss="soup; hot water"
+          m="tāng" c="tong¹" g="tau" />
+      </s:merge-table-rows>
 
-        <th rowspan="2"><p:mc>根</p:mc></th>
-        <td rowspan="2">root</td>
-        <td><p:py>gēn</p:py></td>
-        <td rowspan="2"><p:jr>kon</p:jr></td>
-      </tr>
-      <tr>
-        <td><p:yp>han⁴</p:yp></td>
-        <td><p:jr>kon</p:jr></td>
-        <td><p:yp>han⁶</p:yp></td>
-        <td><p:jr>kon</p:jr></td>
-        <td><p:yp>gan¹</p:yp></td>
-      </tr>
+      <s:merge-table-rows>
+        <s:fragment><tr><th rowspan="2">③</th></tr></s:fragment>
+        <p:mcgk-comparison-table-block 
+          char="者" gloss="person"
+          m="zhě" c="ze²" g="sya" />
+        <p:mcgk-comparison-table-block 
+          char="豬" char-j="猪" gloss="pig; boar"
+          m="zhū" c="zyu¹" g="tyo" />
+        <p:mcgk-comparison-table-block 
+          char="都" gloss="city; capital"
+          m="dū" c="dou¹" g="tu" k="to" />
+      </s:merge-table-rows>
 
-      <tr>
-        <th rowspan="2">②</th>
-        <th rowspan="2"><p:mc>陽</p:mc></th>
-        <td rowspan="2">sun; positive</td>
-        <td><p:py>yáng</p:py></td>
-        <td rowspan="2"><p:jr>yau</p:jr></td>
-        
-        <th rowspan="2"><p:mc>傷</p:mc></th>
-        <td rowspan="2">wound, injury</td>
-        <td><p:py>shāng</p:py></td>
-        <td rowspan="2"><p:jr>syau</p:jr></td>
+      <s:merge-table-rows>
+        <s:fragment><tr><th rowspan="2">④</th></tr></s:fragment>
+        <p:mcgk-comparison-table-block 
+          char="樂" gloss="enjoy; happy"
+          m="lé" c="lok⁹" g="raku" />
+        <p:mcgk-comparison-table-block 
+          char="礫" gloss="pebble; rubble"
+          m="lì" c="lik⁷" g="ryaku" k="reki" />
+        <p:mcgk-comparison-table-block 
+          char="藥" gloss="medicine; drug"
+          m="yào" c="joek⁹" g="yaku" />
+      </s:merge-table-rows>
 
-        <th rowspan="2"><p:mc>湯</p:mc></th>
-        <td rowspan="2">soup; hot water</td>
-        <td><p:py>tāng</p:py></td>
-        <td rowspan="2"><p:jr>tau</p:jr></td>
-      </tr>
-      <tr>
-        <td><p:yp>joeng⁴</p:yp></td>
-        <td><p:yp>shoeng¹</p:yp></td>
-        <td><p:yp>tong¹</p:yp></td>
-      </tr>
-
-      <tr>
-        <th rowspan="2">③</th>
-        <th rowspan="2"><p:mc>者</p:mc></th>
-        <td rowspan="2">person</td>
-        <td><p:py>zhě</p:py></td>
-        <td rowspan="2"><p:jr>sya</p:jr></td>
-        
-        <th rowspan="2"><p:mc>豬</p:mc>(<p:j>猪</p:j>)</th>
-        <td rowspan="2">pig; boar</td>
-        <td><p:py>zhū</p:py></td>
-        <td rowspan="2"><p:jr>tyo</p:jr></td>
-
-        <th rowspan="2"><p:mc>都</p:mc></th>
-        <td rowspan="2">city; capital</td>
-        <td><p:py>dū</p:py></td>
-        <td><p:jr>tu</p:jr></td>
-      </tr>
-      <tr>
-        <td><p:yp>ze²</p:yp></td>
-        <td><p:yp>zyu¹</p:yp></td>
-        <td><p:yp>dou¹</p:yp></td>
-        <td><p:jr>to</p:jr></td>
-      </tr>
-
-      <tr>
-        <th rowspan="2">④</th>
-        <th rowspan="2"><p:mc>樂</p:mc></th>
-        <td rowspan="2">enjoy; happy</td>
-        <td><p:py>lé</p:py></td>
-        <td rowspan="2"><p:jr>raku</p:jr></td>
-
-        <th rowspan="2"><p:mc>礫</p:mc></th>
-        <td rowspan="2">pebble; rubble</td>
-        <td><p:py>lì</p:py></td>
-        <td><p:jr>ryaku</p:jr></td>
-
-        <th rowspan="2"><p:mc>藥</p:mc></th>
-        <td rowspan="2">medicine; drug</td>
-        <td><p:py>yào</p:py></td>
-        <td rowspan="2"><p:jr>yaku</p:jr></td>
-      </tr>
-      <tr>
-        <td><p:yp>lok⁹</p:yp></td>
-        <td><p:yp>lik⁷</p:yp></td>
-        <td><p:jr>reki</p:jr></td>
-        <td><p:yp>joek⁹</p:yp></td>
-      </tr>
-        
-      <tr>
-        <th rowspan="2">⑤</th>
-        <th rowspan="2"><p:mc>譯</p:mc>(<p:j>訳</p:j>)</th>
-        <td rowspan="2">translate; explain</td>
-        <td><p:py>yì</p:py></td>
-        <td><p:jr>yaku</p:jr></td>
-        
-        <th rowspan="2"><p:mc>驛</p:mc>(<p:j>駅</p:j>)</th>
-        <td rowspan="2">station, stop</td>
-        <td><p:py>yì</p:py></td>
-        <td><p:jr>yaku</p:jr></td>
-
-        <th rowspan="2"><p:mc>擇</p:mc>(<p:j>択</p:j>)</th>
-        <td rowspan="2">select, choose</td>
-        <td><p:py>zé</p:py></td>
-        <td><p:jr>dyaku</p:jr></td>
-      </tr>
-      <tr>
-        <td><p:yp>yik⁹</p:yp></td>
-        <td><p:jr>eki</p:jr></td>
-        <td><p:yp>yik⁹</p:yp></td>
-        <td><p:jr>eki</p:jr></td>
-        <td><p:yp>zaak⁹</p:yp></td>
-        <td><p:jr>taku</p:jr></td>
-      </tr>
+      <s:merge-table-rows>
+        <s:fragment><tr><th rowspan="2">⑤</th></tr></s:fragment>
+        <p:mcgk-comparison-table-block 
+          char="譯" char-j="訳" gloss="translate; explain"
+          m="yì" c="yik⁹" g="raku" k="eki" />
+        <p:mcgk-comparison-table-block 
+          char="驛" char-j="駅" gloss="station, stop"
+          m="yì" c="yik⁹" g="yaku" k="eki" />
+        <p:mcgk-comparison-table-block 
+          char="擇" char-j="択" gloss="select, choose"
+          m="zé" c="zaak⁹" g="dyaku" k="taku" />
+      </s:merge-table-rows>
     </tbody>
   </table>
 

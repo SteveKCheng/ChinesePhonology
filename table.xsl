@@ -242,6 +242,16 @@
     <xsl:apply-templates />
   </xsl:template>
 
+  <xsl:template match="s:fragment" mode="retain-outer-fragment">
+    <xsl:copy>
+      <xsl:apply-templates />
+    </xsl:copy>
+  </xsl:template>
+
+  <xsl:template match="node()" mode="retain-outer-fragment">
+    <xsl:apply-templates select="." />
+  </xsl:template>
+
   <!-- Repeat content in the source XML to avoid source-level duplication -->
   <xsl:template match="s:copy-of">
     <xsl:variable name="source" select="key('id', @idref)" />
@@ -521,6 +531,88 @@
         </li>
       </xsl:for-each>
     </ol>
+  </xsl:template>
+
+
+  <!-- Helper to let parts of an HTML table be written independent as sub-blocks.
+       The content inside s:merge-table-rows is evaluated and is expected to result
+       in zero or more s:fragment elements. 
+
+       Each s:fragment is expected to contain a sequence of html:tr elements.
+       The result transformation from s:merge-table-rows will be html:tr elements,
+       where each row consists of cells from the html:tr at the corresponding 
+       position from each s:fragment, concatenated together to form bigger rows.  -->
+  <xsl:template match="s:merge-table-rows">
+    <xsl:variable name="fragments">
+      <xsl:apply-templates mode="retain-outer-fragment" />
+    </xsl:variable>
+    <xsl:variable 
+      name="is-valid"
+      select="(every $t in $fragments/text() satisfies $t/normalize-space() = '') and 
+              not($fragments/* except $fragments/s:fragment)" />
+    <xsl:if test="not($is-valid)">
+      <xsl:message>s:merge-table-rows must only contain s:fragment children but does not</xsl:message>
+    </xsl:if>
+
+    <!-- Count max number of rows across all fragments -->
+    <xsl:variable name="count-rows" select="max(for $f in $fragments/s:fragment return count($f/html:tr))" />
+
+    <xsl:for-each select="1 to $count-rows">
+      <xsl:variable name="row-index" select="." />
+      <tr>
+        <xsl:for-each select="$fragments/s:fragment">
+          <xsl:copy-of select="html:tr[$row-index]/node()" copy-namespaces="no" />
+        </xsl:for-each>
+      </tr>
+    </xsl:for-each>
+  </xsl:template>
+
+  <!-- 
+       Generate a block of information about a character for a table incorporating 
+       sound comparisons between our three languages.  It looks like:
+
+       ┌───────┬────────┬──────┬─────┐
+       │       │        │ @m   │ @g  │
+       │ @char │ @gloss ├──────┼─────┤
+       │       │        │ @c   │ @k  │
+       └───────┴────────┴──────┴─────┘
+       
+       with appropriate inline markup for the attribute text.  The cells for
+       @g and @k may be combined in a row span if @k is missing.
+  -->
+  <xsl:template match="p:mcgk-comparison-table-block">
+    <xsl:variable name="content">
+      <tr>
+        <th rowspan="2">
+          <p:mc><xsl:value-of select="@char" /></p:mc>
+          <xsl:if test="@char-j">
+            <xsl:text> </xsl:text>
+            <p:j>(<xsl:value-of select="@char-j" />)</p:j>
+          </xsl:if>
+        </th>
+        <td rowspan="2"><xsl:value-of select="@gloss" /></td>
+        <td><p:py><xsl:value-of select="@m" /></p:py></td><!-- pinyin -->
+        <td>
+          <xsl:if test="not(@k)">
+            <xsl:attribute name="rowspan" select="'2'" />
+          </xsl:if>
+          <p:jr><xsl:value-of select="@g" /></p:jr><!-- go-on -->
+        </td>
+      </tr>
+      <tr>
+        <td><p:yp><xsl:value-of select="@c" /></p:yp></td><!-- jyutping -->
+        <xsl:if test="@k != ''">
+          <td>
+            <p:jr><xsl:value-of select="@k" /></p:jr><!-- kan-on -->
+          </td>
+        </xsl:if>
+      </tr>
+    </xsl:variable>
+
+    <s:fragment>
+      <!-- Need to transform the literal p:* elements above -->
+      <xsl:apply-templates select="$content" />
+    </s:fragment>
   </xsl:template>
 
 </xsl:stylesheet>
