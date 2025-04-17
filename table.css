@@ -1,0 +1,274 @@
+/*
+ * Web fonts
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+SC:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+ /* 
+    The following two fonts are made for "Simplified Chinese (SC)", but traditional
+    characters display fine, and so do Japanese- and Cantonese-specific characters,
+    without any jarring misalignment or change of style.
+
+    I actually prefer them here over "Traditional Chinese (TC)" fonts because the
+    style strikes a good balance between the conventional forms used in Chinese
+    and Japanese.  TC fonts often display certain components in characters in
+    an archaic way (e.g. in 清, 娘, 曾) which may confuse readers not familiar
+    with the traditional forms — and some are just more difficult to read
+    than necessary even at the size of normal body text. 
+   
+    Also Noto is simply a very-well engineered font with Google backing it.
+    Some lesser-used fonts show undesirable artifacts at small sizes, when bolded, 
+    etc.  
+
+    Note that even though the Latin letters are fairly well-styled for a Chinese font,
+    we do not use the SC fonts for the main text because their letters are too big.
+*/
+
+/*
+@font-face {
+    font-family: "Noto Serif SC";
+    src: url("fonts/NotoSerifSC-Variable.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Noto Sans SC";
+    src: url("fonts/NotoSansSC-Variable.ttf") format("opentype");
+}
+*/
+
+/*
+    Use the Noto fonts for the main body (English, IPA, etc.) too
+    as their font metrics should match better with Noto SC than most
+    other fonts.  
+ */
+
+/*
+ @font-face {
+    font-family: "Noto Serif";
+    src: url("fonts/NotoSerif-Variable.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("fonts/NotoSans-Variable.ttf") format("opentype");
+}
+*/
+
+/*
+ * Defaults 
+ */
+html {
+    background-color: white;
+    font-family: "Noto Serif", serif;
+    color: black;
+}
+
+:lang(zh), :lang(ja) {
+    font-family: "Noto Serif SC", "NSimSun", "MS PMincho", "MingLiU" !important;
+}
+
+a:any-link {
+    text-decoration: none;
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color:  rgb(2%, 0, 98%);
+}
+
+a:hover {
+    background-color: rgb(223, 223, 95);
+}
+
+.ipa {
+    font-family: "Noto Sans SC", sans-serif;
+}
+
+sup.footnote a:any-link {
+    color: blue;    
+}
+
+th {
+    text-align: center;
+}
+
+tbody th {
+    text-align: left;
+}
+
+td {
+    border: 1px solid;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+colgroup.mc-initials col.sounds-group-1 {
+    background-color: rgb(92%, 92%, 92%);
+}
+
+colgroup.mc-initials col.sounds-group-2 {
+    background-color: rgb(96%, 96%, 96%);
+}
+
+colgroup.mc-initials col.sounds-group-3 {
+    background-color: rgb(92%, 92%, 92%);
+}
+
+colgroup.mc-initials col.sounds-group-4 {
+    background-color: rgb(96%, 96%, 96%);
+}
+
+/*
+  Tables of Middle Chinese finals
+ */
+
+table.mc-finals col.sound {
+    width: 4em;
+}
+
+table.mc-finals col.rhyme-group {
+    width: 3em;
+}
+
+table.mc-finals col.u-medial {
+    width: 3em;
+}
+
+table.mc-finals col.division-1 {
+    background-color: rgb(92%, 92%, 92%)
+}
+
+table.mc-finals col.division-2 {
+    background-color: rgb(94%, 94%, 94%)
+}
+
+table.mc-finals col.division-3 {
+    background-color: rgb(96%, 96%, 96%)
+}
+
+table.mc-finals col.division-4 {
+    background-color: rgb(98%, 98%, 98%)
+}
+
+table.mc-finals td.rhyme-group {
+    text-align: center;
+}
+
+table.mc-finals td.u-medial {
+    text-align: center;
+}
+
+/*
+ The table comparing sounds of characters in the introduction
+ */
+table.sound-comparison th.chinese, table.sound-comparison th.japanese {
+    width: 5em;
+    font-size: 90%;
+    font-weight: normal;
+}
+
+table.sound-comparison th.character {
+    width: 2em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+}
+
+table.sound-comparison th.gloss {
+    text-align: left;
+    font-weight: normal;
+}
+
+table.sound-comparison th {
+    text-align: center;
+}
+
+table.sound-comparison col.highlight {
+    background-color:rgb(96%, 96%, 96%);
+}
+
+span.pinyin {
+    font-style: italic;
+}
+
+span.romaji {
+    font-style: italic;
+}
+
+span.jyutping {
+    font-style: italic;
+}
+
+p.heading {
+    font-weight: bold;
+}
+
+div.section-1 p.heading {
+    font-size: 120%;
+}
+
+img.page {
+    max-width: 100%
+}
+
+div#toc-sidebar {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+ol.toc {
+    /* ol is used for its semantic meaning only.  We supply our own section numbering
+       and must suppress the default numbering. */
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+ol.toc-1 {
+    padding-bottom: 1em;
+}
+
+ol.toc-1 > li > a.toc-title {
+    font-weight: bold;
+}
+
+span.toc-number {
+    float: left;    /* needed to fix the width of this inline element */
+    width: 2em;     /* fixed width so all entries in TOC align */
+}
+
+@media screen {
+    div#toc-sidebar {
+        display: none;
+        background: white;
+    }
+}
+
+@media screen and (min-width: 40em) {
+    div#toc-sidebar {
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 21em;
+        overflow: auto;
+        box-shadow: -0.1em 0 0.25em inset;
+    }
+
+    div#body {
+        margin-left: 24em;
+    }
+}
+
+@media print {
+    div.section {
+        page-break-after: always;
+    }
+}
