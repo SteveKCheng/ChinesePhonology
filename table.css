@@ -246,10 +246,11 @@ span.toc-number {
 @media screen {
     div#toc-sidebar {
         display: none;
+        background: white;
     }
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 40em) {
     div#toc-sidebar {
         display: block;
         position: fixed;
