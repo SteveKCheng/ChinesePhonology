@@ -2,7 +2,9 @@
  * Web fonts
  */
 
-/* 
+ @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+SC:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+ /* 
     The following two fonts are made for "Simplified Chinese (SC)", but traditional
     characters display fine, and so do Japanese- and Cantonese-specific characters,
     without any jarring misalignment or change of style.
@@ -46,8 +48,6 @@
     font-family: "Noto Sans";
     src: url("fonts/NotoSans-Variable.ttf") format("opentype");
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+SC:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*
  * Defaults 
