@@ -1,10 +1,6 @@
 /*
  * Web fonts
  */
-@font-face {
-    font-family: "Frank Ruhl Libre";
-    src: url("fonts/FrankRuhlLibre-Variable.ttf") format("truetype");    
-}
 
 /* 
     The following two fonts are made for "Simplified Chinese (SC)", but traditional
@@ -20,25 +16,44 @@
    
     Also Noto is simply a very-well engineered font with Google backing it.
     Some lesser-used fonts show undesirable artifacts at small sizes, when bolded, 
-    etc.
+    etc.  
+
+    Note that even though the Latin letters are fairly well-styled for a Chinese font,
+    we do not use the SC fonts for the main text because their letters are too big.
 */
 
 @font-face {
     font-family: "Noto Serif SC";
-    src: url("fonts/NotoSerifSC-Variable.ttf") format("truetype");
+    src: url("fonts/NotoSerifSC-Variable.ttf") format("opentype");
 }
 
 @font-face {
     font-family: "Noto Sans SC";
-    src: url("fonts/NotoSansSC-Variable.ttf") format("truetype");
+    src: url("fonts/NotoSansSC-Variable.ttf") format("opentype");
 }
+
+/*
+    Use the Noto fonts for the main body (English, IPA, etc.) too
+    as their font metrics should match better with Noto SC than most
+    other fonts.  
+ */
+@font-face {
+    font-family: "Noto Serif";
+    src: url("fonts/NotoSerif-Variable.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("fonts/NotoSans-Variable.ttf") format("opentype");
+}
+
 
 /*
  * Defaults 
  */
 html {
     background-color: white;
-    font-family: "Frank Ruhl Libre", serif;
+    font-family: "Noto Serif", serif;
     color: black;
 }
 
@@ -63,7 +78,7 @@ a:hover {
 }
 
 .ipa {
-    font-family: sans-serif;
+    font-family: "Noto Sans SC", sans-serif;
 }
 
 sup.footnote a:any-link {

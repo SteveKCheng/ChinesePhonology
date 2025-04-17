@@ -9,6 +9,10 @@
       lang="en">
 
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&amp;family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;family=Noto+Serif+SC:wght@200..900&amp;family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;display=swap" />
+
   <link rel="stylesheet" type="text/css" href="table.css" />
 
   <p:link-group id="initials38">
