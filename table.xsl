@@ -579,16 +579,22 @@
        Generate a block of information about a character for a table incorporating 
        sound comparisons between our three languages.  It looks like:
 
-       ┌───────┬────────┬──────┬─────┐
-       │       │        │ @m   │ @g  │
-       │ @char │ @gloss ├──────┼─────┤
-       │       │        │ @c   │ @k  │
-       └───────┴────────┴──────┴─────┘
+       ┌───────────┬────────┬──────┬─────┐
+       │ @char     │        │ @p   │ @g  │
+       │           │ @gloss ├──────┼─────┤
+       │ (@char-j) │        │ @c   │ @k  │
+       └───────────┴────────┴──────┴─────┘
        
        with appropriate inline markup for the attribute text.  The cells for
        @g and @k may be combined in a row span if @k is missing.
+
+       @p: 普通話拼音
+       @c: 粤語拼音
+       @g: 音読み・呉音
+       @k: 音読み・漢音
+
   -->
-  <xsl:template match="p:mcgk-comparison-table-block">
+  <xsl:template match="p:pcgk-comparison-table-block">
     <xsl:variable name="content">
       <tr>
         <th rowspan="2">
@@ -599,7 +605,7 @@
           </xsl:if>
         </th>
         <td rowspan="2"><xsl:value-of select="@gloss" /></td>
-        <td><p:py><xsl:value-of select="@m" /></p:py></td><!-- pinyin -->
+        <td><p:py><xsl:value-of select="@p" /></p:py></td><!-- pinyin -->
         <td>
           <xsl:if test="not(@k)">
             <xsl:attribute name="rowspan" select="'2'" />

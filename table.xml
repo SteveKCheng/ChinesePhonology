@@ -110,67 +110,67 @@
     <tbody>
       <s:merge-table-rows>
         <s:fragment><tr><th rowspan="2">①</th></tr></s:fragment>
-        <p:mcgk-comparison-table-block 
+        <p:pcgk-comparison-table-block 
           char="痕" gloss="scar; trace"
-          m="hén" c="han4" g="gon" k="kon" />
-        <p:mcgk-comparison-table-block
+          p="hén" c="han4" g="gon" k="kon" />
+        <p:pcgk-comparison-table-block
           char="恨" gloss="resent, hate"
-          m="hèn" c="han6" g="gon" k="kon" />
-        <p:mcgk-comparison-table-block
+          p="hèn" c="han6" g="gon" k="kon" />
+        <p:pcgk-comparison-table-block
           char="根" gloss="root"
-          m="gēn" c="gan1" g="kon" />
+          p="gēn" c="gan1" g="kon" />
       </s:merge-table-rows>
 
       <s:merge-table-rows>
         <s:fragment><tr><th rowspan="2">②</th></tr></s:fragment>
-        <p:mcgk-comparison-table-block 
+        <p:pcgk-comparison-table-block 
           char="陽" gloss="sun; positive"
-          m="yáng" c="joeng4" g="yau" />
-        <p:mcgk-comparison-table-block 
+          p="yáng" c="joeng4" g="yau" />
+        <p:pcgk-comparison-table-block 
           char="傷" gloss="wound, injury"
-          m="shāng" c="shoeng1" g="syau" />
-        <p:mcgk-comparison-table-block 
+          p="shāng" c="shoeng1" g="syau" />
+        <p:pcgk-comparison-table-block 
           char="湯" gloss="soup; hot water"
-          m="tāng" c="tong1" g="tau" />
+          p="tāng" c="tong1" g="tau" />
       </s:merge-table-rows>
 
       <s:merge-table-rows>
         <s:fragment><tr><th rowspan="2">③</th></tr></s:fragment>
-        <p:mcgk-comparison-table-block 
+        <p:pcgk-comparison-table-block 
           char="者" gloss="person"
-          m="zhě" c="ze2" g="sya" />
-        <p:mcgk-comparison-table-block 
+          p="zhě" c="ze2" g="sya" />
+        <p:pcgk-comparison-table-block 
           char="豬" char-j="猪" gloss="pig; boar"
-          m="zhū" c="zyu1" g="tyo" />
-        <p:mcgk-comparison-table-block 
+          p="zhū" c="zyu1" g="tyo" />
+        <p:pcgk-comparison-table-block 
           char="都" gloss="city; capital"
-          m="dū" c="dou1" g="tu" k="to" />
+          p="dū" c="dou1" g="tu" k="to" />
       </s:merge-table-rows>
 
       <s:merge-table-rows>
         <s:fragment><tr><th rowspan="2">④</th></tr></s:fragment>
-        <p:mcgk-comparison-table-block 
+        <p:pcgk-comparison-table-block 
           char="樂" gloss="enjoy; happy"
-          m="lé" c="lok9" g="raku" />
-        <p:mcgk-comparison-table-block 
+          p="lé" c="lok9" g="raku" />
+        <p:pcgk-comparison-table-block 
           char="礫" gloss="pebble; rubble"
-          m="lì" c="lik7" g="ryaku" k="reki" />
-        <p:mcgk-comparison-table-block 
+          p="lì" c="lik7" g="ryaku" k="reki" />
+        <p:pcgk-comparison-table-block 
           char="藥" gloss="medicine; drug"
-          m="yào" c="joek9" g="yaku" />
+          p="yào" c="joek9" g="yaku" />
       </s:merge-table-rows>
 
       <s:merge-table-rows>
         <s:fragment><tr><th rowspan="2">⑤</th></tr></s:fragment>
-        <p:mcgk-comparison-table-block 
+        <p:pcgk-comparison-table-block 
           char="譯" char-j="訳" gloss="translate; explain"
-          m="yì" c="yik9" g="yaku" k="eki" />
-        <p:mcgk-comparison-table-block 
+          p="yì" c="yik9" g="yaku" k="eki" />
+        <p:pcgk-comparison-table-block 
           char="驛" char-j="駅" gloss="station, stop"
-          m="yì" c="yik9" g="yaku" k="eki" />
-        <p:mcgk-comparison-table-block 
+          p="yì" c="yik9" g="yaku" k="eki" />
+        <p:pcgk-comparison-table-block 
           char="擇" char-j="択" gloss="select, choose"
-          m="zé" c="zaak9" g="dyaku" k="taku" />
+          p="zé" c="zaak9" g="dyaku" k="taku" />
       </s:merge-table-rows>
     </tbody>
   </table>
