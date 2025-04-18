@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <s:section xmlns:s="http://www.gold-saucer.org/xmlns/structured-html"
+           xmlns:p="http://www.gold-saucer.org/xmlns/chinese-phonology"
            xmlns:h="http://www.w3.org/1999/xhtml"
            xmlns="http://www.w3.org/1999/xhtml">
 
@@ -237,6 +238,20 @@
         </trans>
       </book>
 
+      <book xml:lang="zh" key="Táng 2016">
+        <author>唐作藩</author>
+        <title>音韻學教程</title>
+        <edition>第五版</edition>
+        <publisher>北京大學出版社</publisher>
+        <year>2016</year>
+        <trans xml:lang="en">
+          <author>Táng, Zuòfān</author>
+          <title>A Course in Phonology</title>
+        </trans>
+        <note>Despite the bland unassuming title, this coursebook goes into amazing
+              depth on the <p:ac>反切</p:ac> system, while remaining easy to read. </note> 
+      </book>        
+
       <book xml:lang="zh" key="Wáng 2013">
         <author>王力</author>
         <title>漢語史稿</title>
@@ -244,7 +259,7 @@
         <year>2013</year>
         <trans xml:lang="en">
           <author>Wáng, Lì</author>
-          <title>Draft to a History of the Chinese Language</title>
+          <title>A Manuscript for the History of the Chinese Language</title>
         </trans>
       </book>
 
