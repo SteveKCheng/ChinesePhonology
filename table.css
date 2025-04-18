@@ -240,7 +240,7 @@ ol.toc-1 > li > a.toc-title {
 
 span.toc-number {
     float: left;    /* needed to fix the width of this inline element */
-    width: 2em;     /* fixed width so all entries in TOC align */
+    width: 2.5em;   /* fixed width so all entries in TOC align */
 }
 
 @media screen {
