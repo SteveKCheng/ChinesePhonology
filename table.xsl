@@ -1,3 +1,7 @@
+<!DOCTYPE xsl:stylesheet [
+  <!ENTITY nnbsp "&#x202f;"><!-- narrow no-break space -->
+]>
+
 <xsl:stylesheet 
   version="2.0" 
   xmlns="http://www.w3.org/1999/xhtml"
@@ -95,9 +99,9 @@
   <!-- Phonetic description in the standard International Phonetic Alphabet -->
   <xsl:template match="p:i">
     <span class="ipa">
-      <xsl:text>/</xsl:text>
+      <xsl:text>/&nnbsp;</xsl:text>
       <xsl:apply-templates select="node()|@*" />
-      <xsl:text>/</xsl:text>
+      <xsl:text>&nnbsp;/</xsl:text>
     </span>
   </xsl:template>
 
