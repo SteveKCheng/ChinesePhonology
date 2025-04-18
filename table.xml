@@ -935,6 +935,38 @@
   </s:section>
 </s:section>
 
+<s:section>
+  <s:heading>Glossary</s:heading>
+
+  <table>
+    <thead>
+      <tr>
+        <th>English</th>
+        <th>Chinese</th>
+        <th>Japanese</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Place of articulation</th>
+        <td><p:mc>發音部位</p:mc></td>
+        <td><p:j>調音点</p:j></td>
+      </tr>
+      <tr>
+        <th>Manner of articulation</th>
+        <td><p:mc>發音方法</p:mc></td>
+        <td><p:j>調音法</p:j></td>
+      </tr>
+      <tr>
+        <th>Bilabial</th>
+        <td><p:mc>雙唇音</p:mc></td>
+        <td><p:j><ruby>両<rt>りょう</rt></ruby><ruby>唇<rt>しん</rt></ruby>音</p:j></td>
+      </tr>
+    </tbody>
+  </table>
+
+</s:section>
+
 &bibliography;
 
 </body>
