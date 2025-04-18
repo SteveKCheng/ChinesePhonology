@@ -958,9 +958,42 @@
         <td><p:j>調音法</p:j></td>
       </tr>
       <tr>
-        <th>Bilabial</th>
+        <th>Bilabial (sound)</th>
         <td><p:mc>雙唇音</p:mc></td>
         <td><p:j><ruby>両<rt>りょう</rt></ruby><ruby>唇<rt>しん</rt></ruby>音</p:j></td>
+      </tr>
+      <tr>
+        <th>Plosive (stop)</th>
+        <td><p:mc>塞音</p:mc>, <p:mc>破音</p:mc></td>
+        <td><p:j>破裂音</p:j></td>
+      </tr>
+      <tr>
+        <th>Nasal (consonant)</th>
+        <td><p:mc>鼻音</p:mc></td>
+        <td><p:j><ruby>鼻<rt>び</rt></ruby>音</p:j></td>
+      </tr>
+      <tr>
+        <th>Affricate</th>
+        <td><p:mc>塞擦音</p:mc></td>
+      </tr>
+      <tr>
+        <th>Fricative</th>
+        <td><p:mc>擦音</p:mc></td>
+      </tr>
+      <tr>
+        <th>Consonant</th>
+        <td><p:mc>輔音</p:mc></td>
+        <td><p:j><ruby>子<rt>し</rt></ruby>音</p:j></td>
+      </tr>
+      <tr>
+        <th>Vowel</th>
+        <td><p:mc>元音</p:mc></td>
+        <td><p:j><ruby>母<rt>ぼ</rt></ruby>音</p:j></td>
+      </tr>
+      <tr>
+        <th>Allophone</th>
+        <td></td>
+        <td><p:j>異音</p:j></td>
       </tr>
     </tbody>
   </table>
