@@ -25,12 +25,12 @@
   <p:link-item key="俟" href="https://ytenx.org/kyonh/cjeng/俟/" />
   <p:link-item key="章" href="https://ytenx.org/kyonh/cjeng/章/" /> 
   <p:link-item key="昌" href="https://ytenx.org/kyonh/cjeng/昌/" /> 
-  <p:link-item key="常" href="https://ytenx.org/kyonh/cjeng/常/" /> 
+  <p:link-item key="禪" href="https://ytenx.org/kyonh/cjeng/常/" /><!-- jtenx.org uses a different character --> 
   <p:link-item key="書" href="https://ytenx.org/kyonh/cjeng/書/" /> 
   <p:link-item key="船" href="https://ytenx.org/kyonh/cjeng/船/" />
   <p:link-item key="見" href="https://ytenx.org/kyonh/cjeng/見/" /> 
   <p:link-item key="溪" href="https://ytenx.org/kyonh/cjeng/溪/" /> 
-  <p:link-item key="羣" href="https://ytenx.org/kyonh/cjeng/羣/" /> 
+  <p:link-item key="群" href="https://ytenx.org/kyonh/cjeng/羣/" /> 
   <p:link-item key="疑" href="https://ytenx.org/kyonh/cjeng/疑/" />
   <p:link-item key="曉" href="https://ytenx.org/kyonh/cjeng/曉/" /> 
   <p:link-item key="匣" href="https://ytenx.org/kyonh/cjeng/匣/" /> 
