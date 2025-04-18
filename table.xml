@@ -485,11 +485,11 @@
         <th />
         <th><p:ac>全清</p:ac></th>
         <th><p:ac>次清</p:ac></th>
-        <th><p:ac>濁</p:ac></th>
+        <th><p:ac>全濁</p:ac></th>
         <th><p:ac>清</p:ac></th>
         <th><p:ac>濁</p:ac></th>
-        <th><p:ac>清濁</p:ac></th>
-        <th><p:ac>清濁</p:ac></th>
+        <th><p:ac>次濁</p:ac></th>
+        <th><p:ac>次濁</p:ac></th>
       </tr>
     </thead>
     <tbody>
