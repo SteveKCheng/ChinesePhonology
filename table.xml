@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html [
   <!ENTITY syllable SYSTEM "syllable.xml">
+  <!ENTITY reflexes SYSTEM "reflexes.xml">
   <!ENTITY bibliography SYSTEM "bibliography.xml">
   <!ENTITY term-links SYSTEM "term-links.xml">
 ]>
@@ -448,24 +449,7 @@
 </s:section>
 
 &syllable;
-
-<s:section>
-  <s:heading>Reflexes in the modern languages</s:heading>
-
-  <s:section>
-    <s:heading>Japanese</s:heading>
-
-    <s:section>
-      <s:heading>Kan-on</s:heading>
-
-      <p>
-        No nasals.  See <s:cite key="Tōdō 1980" pages="169–170" />        
-        Similar to Southern Min dialects: <s:cite key="Dǒng 1996" pages="52–53" />.
-      </p>
-
-    </s:section>
-  </s:section>
-</s:section>
+&reflexes;
 
 <s:section>
   <s:heading>Glossary</s:heading>
