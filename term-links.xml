@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+
+<p:link-data xmlns:p="http://www.gold-saucer.org/xmlns/chinese-phonology">
 
 <p:link-group id="initials38">
   <p:link-item key="幫" href="https://ytenx.org/kyonh/cjeng/幫/" /> 
@@ -40,3 +42,7 @@
   <p:link-item key="來" href="https://ytenx.org/kyonh/cjeng/來/" />
   <p:link-item key="日" href="https://ytenx.org/kyonh/cjeng/日/" />
 </p:link-group>
+
+<p:link-group id="wikihan" prefix="https://en.wiktionary.org/wiki/" />
+
+</p:link-data>

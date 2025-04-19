@@ -20,8 +20,10 @@
 
   <xsl:include href="bibliography.xsl" />
 
+  <xsl:variable name="term-links-xml" select="document('term-links.xml')" />
+
   <xsl:key 
-    name="link-groups" 
+    name="link-items" 
     match="p:link-item"
     use="concat(parent::p:link-group/@id, ':', @key)" />
 
@@ -116,10 +118,17 @@
     <xsl:choose>
       <!-- "h" stands for hypertext link -->
       <xsl:when test="@h">
-        <xsl:variable name="result" select="key('link-groups', concat(@h, ':', text()))" />
+        <xsl:variable name="key" select="text()" />
+        <xsl:variable name="item" select="key('link-items', concat(@h, ':', $key), $term-links-xml)" />
+        <xsl:variable name="group" select="key('id', @h, $term-links-xml)/self::p:link-group" />
         <xsl:choose>
-          <xsl:when test="count($result) = 1">
-            <a href="{$result/@href}">
+          <xsl:when test="count($item) = 1">
+            <a href="{$item/@href}">
+              <xsl:apply-templates select="node()|@*" />
+            </a>
+          </xsl:when>
+          <xsl:when test="count($group/@prefix) = 1">
+            <a href="{$group/@prefix}{$key}">
               <xsl:apply-templates select="node()|@*" />
             </a>
           </xsl:when>
@@ -636,7 +645,7 @@
   <xsl:template match="p:all-comparison-table-row">
     <xsl:variable name="content">
       <tr>
-        <th><p:mc><xsl:value-of select="@char" /></p:mc></th>
+        <th><p:ac h="wikihan"><xsl:value-of select="@char" /></p:ac></th>
         <td><p:ac><xsl:value-of select="@fq" /></p:ac></td>
         <td>
           <p:ac><xsl:value-of select="@if" /></p:ac>

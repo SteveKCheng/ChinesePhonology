@@ -3,7 +3,6 @@
   <!ENTITY syllable SYSTEM "syllable.xml">
   <!ENTITY reflexes SYSTEM "reflexes.xml">
   <!ENTITY bibliography SYSTEM "bibliography.xml">
-  <!ENTITY term-links SYSTEM "term-links.xml">
 ]>
 
 <html xmlns="http://www.w3.org/1999/xhtml" 
@@ -13,8 +12,6 @@
 
 <head>
   <link rel="stylesheet" type="text/css" href="table.css" />
-
-  &term-links;
 </head>
 
 <body>
@@ -510,6 +507,11 @@
         <th>Allophone</th>
         <td></td>
         <td><p:j>異音</p:j></td>
+      </tr>
+      <tr>
+        <th>Complementary distribution</th>
+        <td><p:mc>互補</p:mc></td>
+        <td><p:j>補い合う分布</p:j></td>
       </tr>
     </tbody>
   </table>
