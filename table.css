@@ -232,6 +232,7 @@ ol.toc {
 
 ol.toc-1 {
     padding-bottom: 1em;
+    padding-left: 2.5em;    /* "gutter" allocated for section number */
 }
 
 ol.toc-1 > li > a.toc-title {
@@ -239,8 +240,9 @@ ol.toc-1 > li > a.toc-title {
 }
 
 span.toc-number {
-    float: left;    /* needed to fix the width of this inline element */
-    width: 2em;     /* fixed width so all entries in TOC align */
+    float: left;          /* needed to fix the width of this inline element */
+    width: 2.5em;         /* fixed width so all entries in TOC align */
+    margin-left: -2.5em;  /* move the section number into the "gutter" */
 }
 
 @media screen {
