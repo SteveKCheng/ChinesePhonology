@@ -195,7 +195,7 @@
   </xsl:template>
 
   <xsl:template name="display-biblio-author">
-    <xsl:for-each select="bib:author">
+    <xsl:for-each select="bib:author|bib:editor">
       <xsl:if test="position()>1">
         <xsl:text>; </xsl:text>
       </xsl:if>
@@ -211,6 +211,11 @@
         <xsl:with-param name="original" select="." />
         <xsl:with-param name="position" select="position()" />
       </xsl:call-template>
+
+      <xsl:if test="self::bib:editor">
+        <xsl:text> [editor]</xsl:text>
+      </xsl:if>
+
       <xsl:if test="position()=last()">
         <xsl:text>. </xsl:text>
       </xsl:if>

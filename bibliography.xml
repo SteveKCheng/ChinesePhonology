@@ -340,6 +340,18 @@
         </link>
       </article>
 
+      <book xml:lang="ja" key="Satō 1987">
+        <editor>佐藤 喜代</editor>
+        <title>漢字と日本語</title>
+        <publisher>明治書院</publisher>
+        <year>1987</year>
+        <trans xml:lang="en">
+          <editor>Satō, Kiyoji</editor>
+          <title>Kanji and Japanese</title>
+        </trans>
+        <link class="meta" url="https://ci.nii.ac.jp/ncid/BN01549400" />
+      </book>
+
       <book xml:lang="ja" key="Tōdō 1980">
         <author>藤堂 明保</author>
         <title>中国語音韻論: その歴史的研究</title>
@@ -350,6 +362,7 @@
           <title>Chinese Phonology: A Historical Study</title>
         </trans>
         <link class="meta" url="https://cir.nii.ac.jp/crid/1130000797864209664" />
+        <link class="ad" url="https://www.meijishoin.co.jp/book/b97390.html" />
       </book>
 
       <article xml:lang="ja" key="Mineya 1953">
