@@ -114,9 +114,9 @@
 
   <xsl:template name="look-up-link">
     <xsl:choose>
-      <!-- "lg" stands for link group -->
-      <xsl:when test="@p:lg">
-        <xsl:variable name="result" select="key('link-groups', concat(@p:lg, ':', text()))" />
+      <!-- "h" stands for hypertext link -->
+      <xsl:when test="@h">
+        <xsl:variable name="result" select="key('link-groups', concat(@h, ':', text()))" />
         <xsl:choose>
           <xsl:when test="count($result) = 1">
             <a href="{$result/@href}">

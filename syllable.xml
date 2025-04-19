@@ -74,17 +74,17 @@
             Labials <p:ac>唇音</p:ac>
           </th>
           <td>
-            <p:ac p:lg="initials38">幫</p:ac>
+            <p:ac h="initials38">幫</p:ac>
             <p:in
               title="Voiceless bilabial plosive (Wikipedia)"
               href="https://en.wikipedia.org/wiki/Voiceless_bilabial_plosive">p</p:in>
           </td>
           <td>
-            <p:ac p:lg="initials38">滂</p:ac>
+            <p:ac h="initials38">滂</p:ac>
             <p:i>pʰ</p:i>
           </td>
           <td>
-            <p:ac p:lg="initials38">並</p:ac>
+            <p:ac h="initials38">並</p:ac>
             <p:in
               title="Voiced bilabial plosive (Wikipedia)"
               href="https://en.wikipedia.org/wiki/Voiced_bilabial_plosive">b</p:in>
@@ -92,7 +92,7 @@
           <td />
           <td />
           <td>
-            <p:ac p:lg="initials38">明</p:ac>
+            <p:ac h="initials38">明</p:ac>
             <p:in
               title="Voiced bilabial nasal (Wikipedia)" 
               href="https://en.wikipedia.org/wiki/Voiced_bilabial_nasal">m</p:in>
@@ -103,21 +103,21 @@
             Alveolar <p:ac>舌頭音</p:ac>
           </th>
           <td>
-            <p:ac p:lg="initials38">端</p:ac>
+            <p:ac h="initials38">端</p:ac>
             <p:i>t</p:i>
           </td>
           <td>
-            <p:ac p:lg="initials38">透</p:ac>
+            <p:ac h="initials38">透</p:ac>
             <p:i>tʰ</p:i>
           </td>
           <td>
-            <p:ac p:lg="initials38">定</p:ac>
+            <p:ac h="initials38">定</p:ac>
             <p:i>d</p:i>
           </td>
           <td />
           <td />
           <td>
-            <p:ac p:lg="initials38">泥</p:ac>
+            <p:ac h="initials38">泥</p:ac>
             <p:i>n</p:i>
           </td>
         </tr>
@@ -126,21 +126,21 @@
             Retroflex <p:ac>舌上音</p:ac><p:fn idref="舌上音" />
           </th>
           <td>
-            <p:ac p:lg="initials38">知</p:ac>
+            <p:ac h="initials38">知</p:ac>
             <p:i>ʈ</p:i>
           </td>
           <td>
-            <p:ac p:lg="initials38">徹</p:ac>
+            <p:ac h="initials38">徹</p:ac>
             <p:i>ʈʰ</p:i>
           </td>
           <td>
-            <p:ac p:lg="initials38">澄</p:ac>
+            <p:ac h="initials38">澄</p:ac>
             <p:i>ɖ</p:i>
           </td>
           <td />
           <td />
           <td>
-            <p:ac p:lg="initials38">娘</p:ac>
+            <p:ac h="initials38">娘</p:ac>
             <p:i>ɳ</p:i>
             <p:fn idref="泥-vs-娘" />
           </td>
@@ -150,23 +150,23 @@
             Alveolar sibilants <p:ac>齒頭音</p:ac>
           </th>
           <td>
-            <p:ac p:lg="initials38">精</p:ac>
+            <p:ac h="initials38">精</p:ac>
             <p:i>ts</p:i>
           </td>
           <td>
-            <p:ac p:lg="initials38">清</p:ac>
+            <p:ac h="initials38">清</p:ac>
             <p:i>tsʰ</p:i>
           </td>
           <td>
-            <p:ac p:lg="initials38">從</p:ac>
+            <p:ac h="initials38">從</p:ac>
             <p:i>dz</p:i>
           </td>
           <td>
-            <p:ac p:lg="initials38">心</p:ac>
+            <p:ac h="initials38">心</p:ac>
             <p:i>s</p:i>
           </td>
           <td>
-            <p:ac p:lg="initials38">邪</p:ac>
+            <p:ac h="initials38">邪</p:ac>
             <p:i>z</p:i>
           </td>
         </tr>      
@@ -175,23 +175,23 @@
             Retroflex sibilants <p:ac>齒上音</p:ac><p:fn idref="齒上音" />
           </th>
           <td>
-            <p:ac p:lg="initials38">莊</p:ac>
+            <p:ac h="initials38">莊</p:ac>
             <p:i>tʂ</p:i>
           </td>
           <td>
-            <p:ac p:lg="initials38">初</p:ac>
+            <p:ac h="initials38">初</p:ac>
             <p:i>tʂʰ</p:i>
           </td>
           <td>
-            <p:ac p:lg="initials38">崇</p:ac>
+            <p:ac h="initials38">崇</p:ac>
             <p:i>dʐ</p:i>
           </td>
           <td>
-            <p:ac p:lg="initials38">生</p:ac>
+            <p:ac h="initials38">生</p:ac>
             <p:i>ʂ</p:i>
           </td>
           <td>
-            <p:ac p:lg="initials38">俟</p:ac>
+            <p:ac h="initials38">俟</p:ac>
             <p:i>ʐ</p:i>
           </td>
         </tr>
@@ -200,23 +200,23 @@
             Alveolo-palatal sibilants <p:ac>正齒音</p:ac>
           </th>
           <td>
-            <p:ac p:lg="initials38">章</p:ac>
+            <p:ac h="initials38">章</p:ac>
             <p:i>tɕ</p:i>
           </td>
           <td>
-            <p:ac p:lg="initials38">昌</p:ac>
+            <p:ac h="initials38">昌</p:ac>
             <p:i>tɕ</p:i>
           </td>
           <td>
-            <p:ac p:lg="initials38">船</p:ac>
+            <p:ac h="initials38">船</p:ac>
             <p:i>dʑ</p:i>
           </td>
           <td>
-            <p:ac p:lg="initials38">書</p:ac>
+            <p:ac h="initials38">書</p:ac>
             <p:i>ɕ</p:i>
           </td>
           <td>
-            <p:ac p:lg="initials38">禪</p:ac>
+            <p:ac h="initials38">禪</p:ac>
             <p:i>ʑ</p:i>
           </td>
           <td />
@@ -231,11 +231,11 @@
           <td />
           <td />
           <td>
-            <p:ac p:lg="initials38">日</p:ac>
+            <p:ac h="initials38">日</p:ac>
             <p:i>ɲ</p:i>
           </td>
           <td>
-            <p:ac p:lg="initials38">來</p:ac>
+            <p:ac h="initials38">來</p:ac>
             <p:i>l</p:i>
           </td>
         </tr>      
@@ -244,21 +244,21 @@
             Velars <p:ac>牙音</p:ac>
           </th>
           <td>
-            <p:ac p:lg="initials38">見</p:ac>
+            <p:ac h="initials38">見</p:ac>
             <p:i>k</p:i>
           </td>
           <td>
-            <p:ac p:lg="initials38">溪</p:ac>
+            <p:ac h="initials38">溪</p:ac>
             <p:i>kʰ</p:i>
           </td>
           <td>
-            <p:ac p:lg="initials38">群</p:ac>
+            <p:ac h="initials38">群</p:ac>
             <p:i>g</p:i>
           </td>
           <td />
           <td />
           <td>
-            <p:ac p:lg="initials38">疑</p:ac>
+            <p:ac h="initials38">疑</p:ac>
             <p:i>ŋ</p:i>
           </td>
         </tr>
@@ -267,17 +267,17 @@
             Laryngeals <p:ac>喉音</p:ac><p:fn idref="laryngeals" />
           </th>
           <td>
-            <p:ac p:lg="initials38">影</p:ac>
+            <p:ac h="initials38">影</p:ac>
             <p:i>ʔ</p:i>
           </td>
           <td />
           <td />
           <td>
-            <p:ac p:lg="initials38">曉</p:ac>
+            <p:ac h="initials38">曉</p:ac>
             <p:i>x</p:i>
           </td>
           <td>
-            <p:ac p:lg="initials38">匣</p:ac>
+            <p:ac h="initials38">匣</p:ac>
             <p:i>ɣ</p:i>
           </td>
         </tr>
@@ -287,12 +287,12 @@
           <td />
           <td />
           <td>
-            <p:ac p:lg="initials38">云</p:ac>
+            <p:ac h="initials38">云</p:ac>
             <p:i>ɣʲ</p:i>
           </td>
           <td />
           <td>
-            <p:ac p:lg="initials38">以</p:ac>
+            <p:ac h="initials38">以</p:ac>
             <p:i>j</p:i>
           </td>
         </tr>
@@ -302,8 +302,8 @@
     <p:notes-list>
       <li id="泥-vs-娘">
         <p>
-          Some authors merge <p:ac p:lg="initials38">娘</p:ac> into 
-          <p:ac p:lg="initials38">泥</p:ac>, on the belief that
+          Some authors merge <p:ac h="initials38">娘</p:ac> into 
+          <p:ac h="initials38">泥</p:ac>, on the belief that
           they were not pronounced any differently, at least
           by the time the <p:ac>廣韻</p:ac> was written. Nevertheless
           it can be confirmed in the present day there 
@@ -352,9 +352,9 @@
           means "throat sounds".)
           The details are too complicated to get into here, but
           initials referred to by
-          <p:ac p:lg="initials38">匣</p:ac>, 
-          <p:ac p:lg="initials38">云</p:ac>,
-          <p:ac p:lg="initials38">以</p:ac> had gotten mixed up historically
+          <p:ac h="initials38">匣</p:ac>, 
+          <p:ac h="initials38">云</p:ac>,
+          <p:ac h="initials38">以</p:ac> had gotten mixed up historically
           because of sound mergers, explaining why they all ended up
           being categorized as <p:ac>喉音</p:ac>. However, they are
           distinguishable as (three) equivalent classes in
@@ -366,7 +366,7 @@
       </li>
       <li id="半齒音">
         <p>
-          <p:ac p:lg="initials38">日</p:ac> is often categorized into the 
+          <p:ac h="initials38">日</p:ac> is often categorized into the 
           row for <p:ac>正齒音</p:ac>, as those initials there
           were also articulated with the palate.
         </p>
@@ -395,7 +395,7 @@
       </li>
       <li id="半舌音">
         <p>
-          <p:ac p:lg="initials38">來</p:ac> is often categorized into the 
+          <p:ac h="initials38">來</p:ac> is often categorized into the 
           row for <p:ac>舌頭音</p:ac>.
         </p>
       </li>
