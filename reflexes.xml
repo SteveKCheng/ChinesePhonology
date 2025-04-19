@@ -4,6 +4,59 @@
   <s:heading>Reflexes in the modern languages</s:heading>
 
   <s:section>
+    <s:heading>Cantonese</s:heading>
+
+    <s:section>
+      <s:heading>Changes in consonant codas</s:heading>
+
+      <ol>
+        <li>Labial initial + labial coda: coda becomes alveolar</li>
+        <li>Voiced velar initial + low vowel + velar coda: coda becomes alveolar</li>
+      </ol>
+
+      <table>
+        <thead>
+          <tr>
+            <th><p:mc>字</p:mc></th>
+            <th><p:mc>反切</p:mc></th>
+            <th><p:mc>聲韻等呼</p:mc></th>
+            <th><p:mc>中古擬音</p:mc></th>
+            <th><p:mc>普通話</p:mc></th>
+            <th><p:mc>廣洲話</p:mc></th>
+            <th><p:j>呉音読み</p:j></th>
+            <th><p:j>漢音読み</p:j></th>
+            <th>Comment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <p:all-comparison-table-row
+            char="凡"
+            m="biɐm" fq="符咸" if="並凡" d="3A"
+            p="fán" c="faan4" g="bomu" k="hamu" /> 
+          <p:all-comparison-table-row
+            char="合"
+            m="ɣɒp" fq="侯閤" if="匣合" d="1"
+            p="hé" c="hap9" g="gahu" k="kahu" /> 
+          <p:all-comparison-table-row
+            char="法"
+            m="piɐp" fq="方乏" if="幫乏" d="3A"
+            p="fǎ" c="faat8" g="hohu" k="hahu" /> 
+          <p:all-comparison-table-row
+            char="核"
+            m="ɣɐk" fq="下革" if="匣麥" d="2" u="開"
+            p="hé" c="hat9" g="gyaku" k="kaku" /> 
+          <p:all-comparison-table-row
+            char="黑"
+            m="xək" fq="呼北" if="曉德" d="1" u="開"
+            p="hēi" c="haak7" g="koku" k="koku"
+            comment="not an example of rule 2" />
+        </tbody>
+      </table>
+
+    </s:section>
+  </s:section>
+
+  <s:section>
     <s:heading>Japanese</s:heading>
 
     <s:section>

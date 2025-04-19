@@ -633,4 +633,28 @@
     </s:fragment>
   </xsl:template>
 
+  <xsl:template match="p:all-comparison-table-row">
+    <xsl:variable name="content">
+      <tr>
+        <th><p:mc><xsl:value-of select="@char" /></p:mc></th>
+        <td><p:ac><xsl:value-of select="@fq" /></p:ac></td>
+        <td>
+          <p:ac><xsl:value-of select="@if" /></p:ac>
+          <span class="division"><xsl:value-of select="@d" /></span>
+          <xsl:if test="@u">
+            <p:ac><xsl:value-of select="@u" /></p:ac>
+          </xsl:if>
+        </td>
+        <td><p:i><xsl:value-of select="@m" /></p:i></td>
+        <td><p:py><xsl:value-of select="@p" /></p:py></td>
+        <td><p:yp><xsl:value-of select="@c" /></p:yp></td>
+        <td><p:jr><xsl:value-of select="@g" /></p:jr></td>
+        <td><p:jr><xsl:value-of select="@k" /></p:jr></td>
+        <td><xsl:value-of select="@comment" /></td>
+      </tr>
+    </xsl:variable>
+
+    <xsl:apply-templates select="$content" />
+  </xsl:template>
+
 </xsl:stylesheet>
