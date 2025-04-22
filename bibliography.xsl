@@ -233,7 +233,7 @@
 
       <xsl:call-template name="display-biblio-part">
         <xsl:with-param name="part" select="../bib:edition" />
-        <xsl:with-param name="delimiter">; </xsl:with-param>
+        <xsl:with-param name="prefix">; </xsl:with-param>
         <xsl:with-param name="target-language" select="true()" />
       </xsl:call-template>
 
@@ -256,7 +256,7 @@
 
       <xsl:call-template name="display-biblio-part">
         <xsl:with-param name="part" select="../bib:year" />
-        <xsl:with-param name="delimiter">, </xsl:with-param>
+        <xsl:with-param name="prefix">, </xsl:with-param>
       </xsl:call-template>
 
       <xsl:text>. </xsl:text>
@@ -278,12 +278,12 @@
 
       <xsl:call-template name="display-biblio-part">
         <xsl:with-param name="part" select="../bib:volume" />
-        <xsl:with-param name="delimiter">, volume </xsl:with-param>
+        <xsl:with-param name="prefix">, volume </xsl:with-param>
       </xsl:call-template>
 
       <xsl:call-template name="display-biblio-part">
         <xsl:with-param name="part" select="../bib:issue" />
-        <xsl:with-param name="delimiter">, issue </xsl:with-param>
+        <xsl:with-param name="prefix">, issue </xsl:with-param>
       </xsl:call-template>
 
       <xsl:call-template name="display-biblio-year-month">
@@ -292,21 +292,22 @@
 
       <xsl:call-template name="display-biblio-part">
         <xsl:with-param name="part" select="../bib:pages" />
-        <xsl:with-param name="delimiter">, pages </xsl:with-param>
+        <xsl:with-param name="prefix">, pages </xsl:with-param>
       </xsl:call-template>
 
       <xsl:text>. </xsl:text>
     </xsl:for-each>
   </xsl:template>
 
-  <!-- Display a part of a bibliographical entry that may be optional, preceded by a delimiter. -->
+  <!-- Display a part of a bibliographical entry that may be optional, preceded by a prefix. -->
   <xsl:template name="display-biblio-part">
     <xsl:param name="part" required="yes" />
-    <xsl:param name="delimiter" required="yes" />
+    <xsl:param name="prefix" required="yes" />
+    <xsl:param name="suffix" select="''" />
     <xsl:param name="target-language" select="false()" as="xs:boolean" />
 
     <xsl:for-each select="$part[1]">
-      <xsl:value-of select="$delimiter" />
+      <xsl:value-of select="$prefix" />
 
       <span>
         <xsl:if test="$target-language">
@@ -318,6 +319,8 @@
       <xsl:call-template name="display-biblio-trans">
         <xsl:with-param name="original" select="." />
       </xsl:call-template>
+
+      <xsl:value-of select="$suffix" />
     </xsl:for-each>
   </xsl:template>
 
