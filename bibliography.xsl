@@ -76,6 +76,7 @@
     <xsl:call-template name="display-biblio-author" />
     <xsl:call-template name="display-biblio-title" />
     <xsl:call-template name="display-biblio-publisher" />
+    <xsl:call-template name="display-biblio-contrib" />
     <xsl:call-template name="display-biblio-note" />
     <xsl:call-template name="display-biblio-link" />
   </xsl:template>
@@ -362,6 +363,26 @@
         <xsl:text>⦆</xsl:text>
       </span>
     </xsl:for-each>
+  </xsl:template>
+
+  <!-- Call out independent sections or articles when collected in a book -->
+  <xsl:template name="display-biblio-contrib">
+    <xsl:if test="bib:contrib">
+      <ul class="contrib">
+        <xsl:for-each select="bib:contrib">
+          <li>
+            <xsl:call-template name="display-biblio-part">
+              <xsl:with-param name="part" select="bib:section" />
+              <xsl:with-param name="prefix" select="'§'" />
+              <xsl:with-param name="suffix" select="'. '" />
+            </xsl:call-template>
+
+            <xsl:call-template name="display-biblio-author" />
+            <xsl:call-template name="display-biblio-title" />
+          </li>
+        </xsl:for-each>
+      </ul>
+    </xsl:if>
   </xsl:template>
 
 </xsl:stylesheet>

@@ -215,6 +215,10 @@ img.page {
     max-width: 100%
 }
 
+.bibliography ul.contrib {
+    list-style: none;
+}
+
 div#toc-sidebar {
     padding-left: 1em;
     padding-right: 1em;
