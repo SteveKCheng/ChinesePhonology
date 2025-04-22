@@ -75,6 +75,7 @@
   <xsl:template mode="biblio" match="bib:book">
     <xsl:call-template name="display-biblio-author" />
     <xsl:call-template name="display-biblio-title" />
+    <xsl:call-template name="display-biblio-series" />
     <xsl:call-template name="display-biblio-publisher" />
     <xsl:call-template name="display-biblio-contrib" />
     <xsl:call-template name="display-biblio-note" />
@@ -85,6 +86,7 @@
     <xsl:call-template name="display-biblio-author" />
     <xsl:call-template name="display-biblio-title" />
     <xsl:call-template name="display-biblio-journal" />
+    <xsl:call-template name="display-biblio-series" />
     <xsl:call-template name="display-biblio-note" />
     <xsl:call-template name="display-biblio-link" />
   </xsl:template>
@@ -97,6 +99,7 @@
       <xsl:with-param name="prefix">Last update: </xsl:with-param>
       <xsl:with-param name="suffix">. </xsl:with-param>
     </xsl:call-template>
+    <xsl:call-template name="display-biblio-series" />
     <xsl:call-template name="display-biblio-note" />
     <xsl:call-template name="display-biblio-link" />
   </xsl:template>
@@ -236,6 +239,23 @@
         <xsl:with-param name="part" select="../bib:edition" />
         <xsl:with-param name="prefix">; </xsl:with-param>
         <xsl:with-param name="target-language" select="true()" />
+      </xsl:call-template>
+
+      <xsl:text>. </xsl:text>
+    </xsl:for-each>
+  </xsl:template>  
+
+  <xsl:template name="display-biblio-series">
+    <xsl:for-each select="bib:series[1]">
+      <xsl:text>Series: </xsl:text>
+      
+      <span class="series">
+        <xsl:call-template name="copy-xml-lang" />
+        <xsl:apply-templates />
+      </span>
+
+      <xsl:call-template name="display-biblio-trans">
+        <xsl:with-param name="original" select="." />
       </xsl:call-template>
 
       <xsl:text>. </xsl:text>
