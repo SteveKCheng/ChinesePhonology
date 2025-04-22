@@ -298,6 +298,68 @@
         </trans>
       </book>
 
+      <article xml:lang="zh" key="Wáng 2016">
+        <author>王弘治</author>
+        <title>北京話清入字歸調的內部演化視角</title>
+        <journal>中國語言學集刊</journal>
+        <pages>26–41</pages>
+        <volume>9</volume>
+        <issue>1</issue>
+        <year>2016</year>
+        <trans xml:lang="en">
+          <author>Wáng, Hóngzhì</author>
+          <title>The Internal Development Perspective on the Tonal Re-Classification of the Ru Tone with Voiceless Initials in Beijing Dialect</title>
+          <journal>Bulletin of Chinese Linguistics</journal>
+        </trans>
+        <link class="doi" url="https://doi.org/10.1163/2405478X-00901004" />
+      </article>
+
+      <book xml:lang="zh" key="Hirayama 2005">
+        <author>平山 久雄</author>
+        <title>平山久雄語言學論文集</title>
+        <publisher>商務印書館</publisher>
+        <year>2005</year>
+        <trans xml:lang="en">
+          <author>Hirayama, Hisao</author>
+          <title>Collected Works of Hisao Hirayama on Linguistics</title>
+        </trans>
+      </book>
+
+      <book xml:lang="zh" key="Hirayama 2005">
+        <author>平山 久雄</author>
+        <title>平山久雄語言學論文集</title>
+        <publisher>商務印書館</publisher>
+        <year>2005</year>
+        <trans xml:lang="en">
+          <author>Hirayama, Hisao</author>
+          <title>Collected Works of Hisao Hirayama on Linguistics</title>
+        </trans>
+      </book>
+
+      <book xml:lang="zh" key="Hirayama 2012">
+        <author>平山 久雄</author>
+        <title>漢語語音史探索</title>
+        <publisher>北京大學出版社</publisher>
+        <year>2012</year>
+        <trans xml:lang="en">
+          <author>Hirayama, Hisao</author>
+          <title>Investigations on Chinese Historical Phonology</title>
+        </trans>
+      </book>
+
+      <book xml:lang="zh" key="Dīng 2010">
+        <author>丁聲樹</author>
+        <author>李榮</author>
+        <title>漢語音韻講義</title>
+        <publisher>上海教育出版社</publisher>
+        <year>2010</year>
+        <trans xml:lang="en">
+          <author>Dīng, Shēngshù</author>
+          <author>Lǐ, Róng</author>
+          <title>Compendium on the Phonology of (Modern Standard) Chinese</title>
+        </trans>
+      </book>
+
     </bibliography>
   </s:section>
 
