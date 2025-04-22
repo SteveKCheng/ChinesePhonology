@@ -13,10 +13,19 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   exclude-result-prefixes="p s data html xs">
 
+  <!-- Output a DOCTYPE declaration to avoid certain Web browsers
+       going into "quirks" mode. XSLT requires us to specify a DTD,
+       so use XHTML 1.1, even that is supposedly "superseded" by HTML 5
+       (which treats XML as a second-class citizen and gives it no DTD).
+       Since we use ruby (Japanese furigana), we cannot use XHTML 1.0. 
+  -->
   <xsl:output method="xhtml" 
               omit-xml-declaration="no" 
               encoding="utf-8"
-              indent="no" />
+              standalone="yes"
+              indent="no"
+              doctype-public="-//W3C//DTD XHTML 1.1//EN"
+              doctype-system="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd" />
 
   <xsl:include href="bibliography.xsl" />
 
