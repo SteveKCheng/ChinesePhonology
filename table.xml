@@ -473,7 +473,7 @@
       <tr>
         <th>Bilabial (sound)</th>
         <td><p:mc>雙唇音</p:mc></td>
-        <td><p:j><ruby>両<rt>りょう</rt></ruby><ruby>唇<rt>しん</rt></ruby>音</p:j></td>
+        <td><p:j><s:ruby>両【りょう】唇【しん】音</s:ruby></p:j></td>
       </tr>
       <tr>
         <th>Plosive (stop)</th>
@@ -483,7 +483,7 @@
       <tr>
         <th>Nasal (consonant)</th>
         <td><p:mc>鼻音</p:mc></td>
-        <td><p:j><ruby>鼻<rt>び</rt></ruby>音</p:j></td>
+        <td><p:j><s:ruby>鼻【び】音【おん】</s:ruby></p:j></td>
       </tr>
       <tr>
         <th>Affricate</th>
@@ -496,12 +496,12 @@
       <tr>
         <th>Consonant</th>
         <td><p:mc>輔音</p:mc></td>
-        <td><p:j><ruby>子<rt>し</rt></ruby>音</p:j></td>
+        <td><p:j><s:ruby>子【し】音【おん】</s:ruby></p:j></td>
       </tr>
       <tr>
         <th>Vowel</th>
         <td><p:mc>元音</p:mc></td>
-        <td><p:j><ruby>母<rt>ぼ</rt></ruby>音</p:j></td>
+        <td><p:j><s:ruby>母【ぼ】音【おん】</s:ruby></p:j></td>
       </tr>
       <tr>
         <th>Allophone</th>

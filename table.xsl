@@ -666,4 +666,33 @@
     <xsl:apply-templates select="$content" />
   </xsl:template>
 
+  <!-- HTML ruby syntax is really inconvenient to type by hand. 
+       We adopt a special text-only syntax, assuming Japanese only:
+
+        漢字+【ふりがな】
+
+       that we translate to HTML ruby syntax. 
+       
+       The regular expression below is supposed to be:
+
+       ([\p{IsBasicLatin}\p{IsCJKCompatibilityIdeographs}]+)【([\p{IsHiragana}\p{IsKatakana}]+)】
+
+       but Saxon does not support this syntax despite it being part 
+       of the XML Schema specification.  So we expand the blocks manually
+       into Unicode character ranges.
+       -->
+  <xsl:template match="s:ruby">
+    <xsl:analyze-string 
+      select="string(.)" 
+      regex="([&#x4E00;-&#x9FFF;&#x4E00;-&#x9FFF;]+)【([&#x3040;-&#x309F;&#x30A0;-&#x30FF;]+)】">
+      <xsl:matching-substring>
+        <ruby>
+          <rb><xsl:value-of select="regex-group(1)" /></rb>
+          <rt><xsl:value-of select="regex-group(2)" /></rt>
+        </ruby>
+      </xsl:matching-substring>
+      <xsl:non-matching-substring><xsl:value-of select="." /></xsl:non-matching-substring>
+    </xsl:analyze-string>
+  </xsl:template>
+
 </xsl:stylesheet>
