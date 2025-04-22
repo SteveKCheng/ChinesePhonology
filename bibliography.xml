@@ -325,17 +325,6 @@
         </trans>
       </book>
 
-      <book xml:lang="zh" key="Hirayama 2005">
-        <author>平山 久雄</author>
-        <title>平山久雄語言學論文集</title>
-        <publisher>商務印書館</publisher>
-        <year>2005</year>
-        <trans xml:lang="en">
-          <author>Hirayama, Hisao</author>
-          <title>Collected Works of Hisao Hirayama on Linguistics</title>
-        </trans>
-      </book>
-
       <book xml:lang="zh" key="Hirayama 2012">
         <author>平山 久雄</author>
         <title>漢語語音史探索</title>
@@ -518,6 +507,20 @@
 
   <s:section>
     <s:heading>General explanatory articles in English</s:heading>
+
+  </s:section>
+
+  <s:section>
+    <s:heading>General explanatory articles in Chinese</s:heading>
+
+    <!-- https://kknews.cc/culture/3yze2go.html 
+    《說文解字》第322課：「牙」和「齒」的區別
+
+原文網址：https://kknews.cc/culture/3yze2go.html
+    
+https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=%E7%89%99
+
+    -->
 
   </s:section>
 
