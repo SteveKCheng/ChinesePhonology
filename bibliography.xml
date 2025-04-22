@@ -323,6 +323,10 @@
           <author>Hirayama, Hisao</author>
           <title>Collected Essays of Hisao Hirayama on Linguistics</title>
         </trans>
+        <contrib>
+          <section>8</section>
+          <title>中古漢語的清入聲與北京話聲調的對應規律</title>
+        </contrib>
       </book>
 
       <book xml:lang="zh" key="Hirayama 2012">
@@ -349,6 +353,28 @@
         </trans>
       </book>
 
+      <book xml:lang="zh" key="Sinica 1992">
+        <editor>中央研究院歷史語言研究所出版品編輯委員會</editor>
+        <title>中國境內語言暨語言學 第一輯: 漢語方言</title>
+        <series>中央研究院歷史語言研究所會議論文集之2</series>
+        <publisher>文匯</publisher>
+        <year>1992</year>
+        <link class="ad" url="https://www.ling.sinica.edu.tw/item/zh-tw?act=publish_book&amp;code=view&amp;bookID=118" />
+        <link class="source" url="https://www.ling.sinica.edu.tw/item/zh-tw?act=publish_book&amp;code=download&amp;article_id=393&amp;type=article">Full-text scanned PDF</link>
+        <trans xml:lang="en">
+          <editor>Editorial Board of Academia Sinica</editor>
+          <title>Chinese Languages and Linguistics I: Chinese Dialects</title>
+          <series>Symposium Series of the Institute of History and Philology from Academia Sinica, volume 2</series>
+        </trans>
+        <contrib xml:lang="en">
+          <section>21</section>
+          <author>Margaret M. Y. Sung</author>
+          <title>Chinese Dialects and Sino-Japanese</title>
+          <trans xml:lang="zh">
+            <author>嚴棉</author>
+          </trans>
+        </contrib>
+      </book>
     </bibliography>
   </s:section>
 
