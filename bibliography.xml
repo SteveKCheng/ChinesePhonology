@@ -528,6 +528,20 @@
         <link class="ad" url="https://hon.gakken.jp/book/1230461900" />
       </book>
 
+      <article xml:lang="ja" key="Yano 2008">
+        <author>矢野 光治</author>
+        <title>中国漢字音と呉音・漢音: 中国漢字文化の奈良時代古典作品への影響</title>
+        <journal>立正大学人文科学研究所年報</journal>
+        <year>2008</year>
+        <issue>46</issue>
+        <pages>37–58</pages>
+        <trans xml:lang="en">
+          <author>Yano, Mitsuji</author>
+          <journal>Annual bulletin of the Institute of Humanistic Sciences, Risshō University</journal>
+        </trans>
+        <link class="meta" url="https://cir.nii.ac.jp/crid/1520853832129421312" />
+        <link class="source" url="https://rissho.repo.nii.ac.jp/record/8085/files/jbknp_46_103_yano.pdf">Full-text PDF</link>
+      </article>
     </bibliography>
   </s:section>
 
