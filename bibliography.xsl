@@ -275,9 +275,8 @@
         <xsl:with-param name="original" select="." />
       </xsl:call-template>
 
-      <xsl:call-template name="display-biblio-part">
-        <xsl:with-param name="part" select="../bib:year" />
-        <xsl:with-param name="prefix">, </xsl:with-param>
+      <xsl:call-template name="display-biblio-year-month">
+        <xsl:with-param name="context" select=".." />
       </xsl:call-template>
 
       <xsl:text>. </xsl:text>
@@ -363,6 +362,19 @@
           <xsl:value-of select="$year" />
         </xsl:otherwise>
       </xsl:choose>
+
+      <!-- Used to record the date of the original work if 
+           bibliography entry refers to re-printing or new edition.
+           Sometimes the reader may want to know if the work is "too old".
+           We use a <original> container element to allow for future
+           extension to add more information. -->
+      <xsl:variable name="orig-year" select="$context/bib:original/bib:year[1]" />
+      <xsl:if test="$orig-year">
+        <xsl:text> (originally from </xsl:text>
+        <xsl:value-of select="$orig-year" />
+        <xsl:text>)</xsl:text>
+      </xsl:if>
+
       <xsl:copy-of select="$suffix" />
     </xsl:if>
   </xsl:template>
