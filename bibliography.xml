@@ -228,6 +228,18 @@
         <link class="home" url="https://ile1992.jyut.net/" />
       </book>
 
+      <book xml:lang="zh" key="Wong 2001">
+        <author>黃錫凌</author>
+        <title>粵音韻彙</title>
+        <publisher>中華書局</publisher>
+        <year>2001</year>
+        <trans xml:lang="en">
+          <author>Wong, Shik Ling</author>
+          <title>A Chinese Syllabary Pronounced Accordin to the Dialect of Canton</title>
+        </trans>
+        <original><year>1941</year></original>
+      </book>
+
       <book xml:lang="zh" key="Dǒng 1996">
         <author>董同龢</author>
         <title>漢語音韻學</title>
@@ -379,6 +391,19 @@
           </trans>
         </contrib>
       </book>
+
+      <book xml:lang="zh" key="Lǐ 2001">
+        <author>李思敬</author>
+        <title>音韻</title>
+        <publisher>商務印書館</publisher>
+        <year>2001</year>
+        <trans xml:lang="en">
+          <author>Lǐ, Sījìng</author>
+          <title>(Chinese Character) Phonology</title>
+        </trans>
+        <original><year>1985</year></original>
+      </book>
+
     </bibliography>
   </s:section>
 
@@ -546,6 +571,18 @@
         <link class="meta" url="https://cir.nii.ac.jp/crid/1520853832129421312" />
         <link class="source" url="https://rissho.repo.nii.ac.jp/record/8085/files/jbknp_46_103_yano.pdf">Full-text PDF</link>
       </article>
+
+      <misc xml:lang="ja" key="Nakamura 2005">
+        <author>中村 雅之</author>
+        <title>音韻学入門: 中古音篇</title>
+        <year>2005</year>
+        <trans xml:lang="en">
+          <author>Nakamura, Masayuki</author>
+          <title>Introduction to (Chinese Character) Phonology: Middle Chinese</title>
+        </trans>
+        <link class="source" url="https://kodaimoji.chowder.jp/chinese-phonology/pdf/oningaku.pdf">Full-text PDF</link>
+        <link class="home" url="https://kodaimoji.chowder.jp/chinese-phonology/nyumonkouza.html">Author's lecture notes</link>
+      </misc>
     </bibliography>
   </s:section>
 
