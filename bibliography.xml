@@ -68,9 +68,9 @@
   </p>
 
   <p>
-    Some works here, particularly dictionaries, overlap greatly.  I have listed them all
-    as authors on this article's topics do occasionally disagree, if not in opinion then in 
-    terminology and notation, and so had to be cross-checked.
+    Some works here, particularly dictionaries, overlap greatly.  Nevertheless, I have listed them all
+    as authors on this article's topics do occasionally disagree, if not in opinion or perspective, 
+    then in terminology and notation, and so had to be cross-checked.
   </p>
 
   <s:section>
@@ -98,7 +98,7 @@
 
       <book xml:lang="en" key="Baxter 1992">
         <author>Baxter, William H</author>
-        <title>A Handbook of Old Chinese Phonology</title>
+        <title>A Handbook of Old Chinese Phonology, Part I</title>
         <publisher>Mouton De Gruyter</publisher>
         <year>1992</year>
         <link class="ad" url="https://www.degruyterbrill.com/document/doi/10.1515/9783110857085/html" />
@@ -210,6 +210,7 @@
           <author>Chao, Yuen Ren</author>
           <title>A Project for General Chinese</title>
         </trans>
+        <original><year>1967</year></original>
       </book>
 
       <book xml:lang="zh" key="Ho 1992">
@@ -261,6 +262,7 @@
           <author>Wáng, Lì</author>
           <title>A Manuscript for the History of the Chinese Language</title>
         </trans>
+        <original><year>1956</year></original>
       </book>
 
       <book xml:lang="zh" key="Wáng 2014">
@@ -272,6 +274,7 @@
           <author>Wáng, Lì</author>
           <title>Phonological History of the Chinese Language</title>
         </trans>
+        <original><year>1985</year></original>
       </book>
 
       <book xml:lang="zh" key="Shào 2008">
@@ -285,6 +288,7 @@
           <title>Studies on the Qièyùn</title>
           <edition>Revised Edition</edition>
         </trans>
+        <original><year>1980</year></original>
       </book>
 
       <book xml:lang="zh" key="Ho 1999">
