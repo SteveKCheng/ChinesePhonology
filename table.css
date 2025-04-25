@@ -261,6 +261,13 @@ dl.bibliography > dt {
     background-color:floralwhite;
 }
 
+span.biblio-translation {
+    quotes: "⦅" "⦆"
+}
+
+span.biblio-translation:before { content: open-quote; }
+span.biblio-translation:after { content: close-quote; }
+
 div#toc-sidebar {
     padding-left: 1em;
     padding-right: 1em;

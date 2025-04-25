@@ -408,11 +408,10 @@
     <xsl:variable name="t" select="($c/bib:*[local-name()=$n])[position()=$position]" />
 
     <xsl:for-each select="$t">
+      <xsl:text> </xsl:text>
       <span class="biblio-translation">
         <xsl:call-template name="copy-xml-lang" />
-        <xsl:text> ⦅</xsl:text>
         <xsl:apply-templates />
-        <xsl:text>⦆</xsl:text>
       </span>
     </xsl:for-each>
   </xsl:template>
