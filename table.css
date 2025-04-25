@@ -215,8 +215,38 @@ img.page {
     max-width: 100%
 }
 
-.bibliography ul.contrib {
+ul.biblio-contrib {
     list-style: none;
+}
+
+span.biblio-book-name:lang(en) {
+    font-style: italic;
+    quotes: none;
+}
+
+span.biblio-book-name:lang(zh, ja) {
+    quotes: "『" "』";
+}
+
+span.biblio-article-name:lang(en) {
+    quotes: "“" "”";
+}
+
+span.biblio-article-name:lang(zh, ja) {
+    quotes: "「" "」";
+}
+
+span.biblio-book-name:before, span.biblio-article-name:before {
+    content: open-quote;
+}
+
+span.biblio-book-name:after, span.biblio-article-name:after {
+    content: close-quote;
+}
+
+.bibliography p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 div#toc-sidebar {

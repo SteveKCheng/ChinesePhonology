@@ -59,7 +59,7 @@
         <dt id="{generate-id()}">
           <xsl:call-template name="get-biblio-key" />
         </dt>
-        <dd>
+        <dd class="biblio-{local-name()}">
           <!-- Note: the language of the bibliographic entry is not propagated here
                as the generated formatting (e.g. the words "volume", "issue") 
                are in the language/style of the main text. -->
@@ -74,7 +74,9 @@
 
   <xsl:template mode="biblio" match="bib:book">
     <xsl:call-template name="display-biblio-author" />
-    <xsl:call-template name="display-biblio-title" />
+    <xsl:call-template name="display-biblio-title">
+      <xsl:with-param name="is-book" select="true()" />
+    </xsl:call-template>
     <xsl:call-template name="display-biblio-series" />
     <xsl:call-template name="display-biblio-publisher" />
     <xsl:call-template name="display-biblio-contrib" />
@@ -106,18 +108,18 @@
 
   <xsl:template name="display-biblio-note">
     <xsl:for-each select="bib:note">
-      <br />
+      <p class="biblio-note">
+        <xsl:text>[</xsl:text>
+        <xsl:choose>
+          <xsl:when test="@category">
+            <xsl:value-of select="@category" />
+          </xsl:when>
+          <xsl:otherwise>note</xsl:otherwise>
+        </xsl:choose>
+        <xsl:text>] </xsl:text>
 
-      <xsl:text>[</xsl:text>
-      <xsl:choose>
-        <xsl:when test="@category">
-          <xsl:value-of select="@category" />
-        </xsl:when>
-        <xsl:otherwise>note</xsl:otherwise>
-      </xsl:choose>
-      <xsl:text>] </xsl:text>
-
-      <xsl:apply-templates />
+        <xsl:apply-templates />
+      </p>
     </xsl:for-each>
   </xsl:template>
 
@@ -125,60 +127,60 @@
     <xsl:param name="title" select="bib:title[1]" />
     
     <xsl:for-each select="bib:link">
-      <br />
+      <p class="biblio-link">
+        <xsl:variable name="class">
+          <xsl:choose>
+            <xsl:when test="@class = 'ad'">advertisement</xsl:when>
+            <xsl:when test="@class = 'meta'">metadata</xsl:when>
+            <xsl:when test="@class = 'doi'">DOI</xsl:when>
+            <xsl:when test="@class = 'archive'">archive</xsl:when>
+            <xsl:when test="@class = 'source'">source</xsl:when>
+            <xsl:when test="@class = 'home'">home</xsl:when>
+          </xsl:choose>
+        </xsl:variable>
 
-      <xsl:variable name="class">
-        <xsl:choose>
-          <xsl:when test="@class = 'ad'">advertisement</xsl:when>
-          <xsl:when test="@class = 'meta'">metadata</xsl:when>
-          <xsl:when test="@class = 'doi'">DOI</xsl:when>
-          <xsl:when test="@class = 'archive'">archive</xsl:when>
-          <xsl:when test="@class = 'source'">source</xsl:when>
-          <xsl:when test="@class = 'home'">home</xsl:when>
-        </xsl:choose>
-      </xsl:variable>
+        <xsl:if test="$class != ''">
+          <xsl:text>[</xsl:text>
+          <xsl:value-of select="$class" />
+          <xsl:text>] </xsl:text>
+        </xsl:if>
 
-      <xsl:if test="$class != ''">
-        <xsl:text>[</xsl:text>
-        <xsl:value-of select="$class" />
-        <xsl:text>] </xsl:text>
-      </xsl:if>
+        <xsl:variable name="url" select="@url" />
 
-      <xsl:variable name="url" select="@url" />
-
-      <a href="{$url}">
-        <xsl:attribute name="title">
-          <xsl:value-of select="$title" />
-          <xsl:if test="$class != ''">
-            <xsl:text> [</xsl:text>
-            <xsl:value-of select="$class" />
-            <xsl:text>] </xsl:text>
-          </xsl:if>
-        </xsl:attribute>
-        <xsl:choose>
-          <xsl:when test="node()">
-            <!-- Let source XML override the displayed text for the hyperlink.
-                 Can replace long complicated URLs that are not useful to display
-                 neither in print nor online. -->
-            <xsl:apply-templates select="node()" />
-          </xsl:when>
-          <xsl:when test="@class = 'doi'">
-            <!-- Parse out the DOI (Digital Object Identifier) -->
-            <xsl:analyze-string select="$url" regex="^https://doi.org/([^/]+/[^/]+)$">
-              <xsl:matching-substring>
-                <xsl:value-of select="regex-group(1)" />
-              </xsl:matching-substring>
-              <xsl:non-matching-substring>
-                <xsl:message>warning: DOI identifier is incorrect</xsl:message>
-                <xsl:value-of select="$url" />
-              </xsl:non-matching-substring>
-            </xsl:analyze-string>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:value-of select="$url" />
-          </xsl:otherwise>
-        </xsl:choose>
-      </a>
+        <a href="{$url}">
+          <xsl:attribute name="title">
+            <xsl:value-of select="$title" />
+            <xsl:if test="$class != ''">
+              <xsl:text> [</xsl:text>
+              <xsl:value-of select="$class" />
+              <xsl:text>] </xsl:text>
+            </xsl:if>
+          </xsl:attribute>
+          <xsl:choose>
+            <xsl:when test="node()">
+              <!-- Let source XML override the displayed text for the hyperlink.
+                  Can replace long complicated URLs that are not useful to display
+                  neither in print nor online. -->
+              <xsl:apply-templates select="node()" />
+            </xsl:when>
+            <xsl:when test="@class = 'doi'">
+              <!-- Parse out the DOI (Digital Object Identifier) -->
+              <xsl:analyze-string select="$url" regex="^https://doi.org/([^/]+/[^/]+)$">
+                <xsl:matching-substring>
+                  <xsl:value-of select="regex-group(1)" />
+                </xsl:matching-substring>
+                <xsl:non-matching-substring>
+                  <xsl:message>warning: DOI identifier is incorrect</xsl:message>
+                  <xsl:value-of select="$url" />
+                </xsl:non-matching-substring>
+              </xsl:analyze-string>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="$url" />
+            </xsl:otherwise>
+          </xsl:choose>
+        </a>
+      </p>
     </xsl:for-each>
 
   </xsl:template>
@@ -199,6 +201,12 @@
   </xsl:template>
 
   <xsl:template name="display-biblio-author">
+    <p class="biblio-author">
+      <xsl:call-template name="display-biblio-author-text" />
+    </p>
+  </xsl:template>
+
+  <xsl:template name="display-biblio-author-text">
     <xsl:for-each select="bib:author|bib:editor">
       <xsl:if test="position()>1">
         <xsl:text>; </xsl:text>
@@ -225,12 +233,22 @@
   </xsl:template>
 
   <xsl:template name="display-biblio-title">
+    <xsl:param name="is-book" as="xs:boolean" select="false()" />
+    <p class="biblio-title">
+      <xsl:call-template name="display-biblio-title-text">
+        <xsl:with-param name="is-book" select="$is-book" />
+      </xsl:call-template>
+    </p>
+  </xsl:template>
+
+  <xsl:template name="display-biblio-title-text">
+    <xsl:param name="is-book" as="xs:boolean" select="false()" />
     <xsl:for-each select="bib:title[1]">
-      <span>
+      <span class="{if ($is-book) then 'biblio-book-name' else 'biblio-article-name'}">
         <xsl:call-template name="copy-xml-lang" />
         <xsl:apply-templates />
       </span>
- 
+
       <xsl:call-template name="display-biblio-trans">
         <xsl:with-param name="original" select="." />
       </xsl:call-template>
@@ -247,75 +265,77 @@
 
   <xsl:template name="display-biblio-series">
     <xsl:for-each select="bib:series[1]">
-      <xsl:text>Series: </xsl:text>
-      
-      <span class="series">
-        <xsl:call-template name="copy-xml-lang" />
-        <xsl:apply-templates />
-      </span>
+      <p class="biblio-series">
+        <xsl:text>Series: </xsl:text>
+        
+        <span class="biblio-series">
+          <xsl:call-template name="copy-xml-lang" />
+          <xsl:apply-templates />
+        </span>
 
-      <xsl:call-template name="display-biblio-trans">
-        <xsl:with-param name="original" select="." />
-      </xsl:call-template>
+        <xsl:call-template name="display-biblio-trans">
+          <xsl:with-param name="original" select="." />
+        </xsl:call-template>
 
-      <xsl:text>. </xsl:text>
+        <xsl:text>. </xsl:text>
+      </p>
     </xsl:for-each>
   </xsl:template>
 
   <xsl:template name="display-biblio-publisher">
     <xsl:for-each select="bib:publisher[1]">
-      <br />
- 
-      <span>
-        <xsl:call-template name="copy-xml-lang" />
-        <xsl:apply-templates />
-      </span>
- 
-      <xsl:call-template name="display-biblio-trans">
-        <xsl:with-param name="original" select="." />
-      </xsl:call-template>
+      <p class="biblio-publisher">
+        <span>
+          <xsl:call-template name="copy-xml-lang" />
+          <xsl:apply-templates />
+        </span>
+  
+        <xsl:call-template name="display-biblio-trans">
+          <xsl:with-param name="original" select="." />
+        </xsl:call-template>
 
-      <xsl:call-template name="display-biblio-year-month">
-        <xsl:with-param name="context" select=".." />
-      </xsl:call-template>
+        <xsl:call-template name="display-biblio-year-month">
+          <xsl:with-param name="context" select=".." />
+        </xsl:call-template>
 
-      <xsl:text>. </xsl:text>
+        <xsl:text>. </xsl:text>
+      </p>
     </xsl:for-each>
   </xsl:template>
 
   <xsl:template name="display-biblio-journal">
     <xsl:for-each select="bib:journal[1]">
-      <br />
- 
-      <span>
-        <xsl:call-template name="copy-xml-lang" />
-        <xsl:apply-templates />
-      </span>
- 
-      <xsl:call-template name="display-biblio-trans">
-        <xsl:with-param name="original" select="." />
-      </xsl:call-template>
+      <p class="biblio-journal">
+        <span class="biblio-book-name">
+          <xsl:call-template name="copy-xml-lang" />
+          <xsl:apply-templates />
+        </span>
+  
+        <xsl:call-template name="display-biblio-trans">
+          <xsl:with-param name="original" select="." />
+        </xsl:call-template>
 
-      <xsl:call-template name="display-biblio-part">
-        <xsl:with-param name="part" select="../bib:volume" />
-        <xsl:with-param name="prefix">, volume </xsl:with-param>
-      </xsl:call-template>
+        <xsl:call-template name="display-biblio-part">
+          <xsl:with-param name="part" select="../bib:volume" />
+          <xsl:with-param name="prefix">, volume </xsl:with-param>
+        </xsl:call-template>
 
-      <xsl:call-template name="display-biblio-part">
-        <xsl:with-param name="part" select="../bib:issue" />
-        <xsl:with-param name="prefix">, issue </xsl:with-param>
-      </xsl:call-template>
+        <xsl:call-template name="display-biblio-part">
+          <xsl:with-param name="part" select="../bib:issue" />
+          <xsl:with-param name="prefix">, issue </xsl:with-param>
+        </xsl:call-template>
 
-      <xsl:call-template name="display-biblio-year-month">
-        <xsl:with-param name="context" select=".." />
-      </xsl:call-template>
+        <xsl:call-template name="display-biblio-year-month">
+          <xsl:with-param name="context" select=".." />
+        </xsl:call-template>
 
-      <xsl:call-template name="display-biblio-part">
-        <xsl:with-param name="part" select="../bib:pages" />
-        <xsl:with-param name="prefix">, pages </xsl:with-param>
-      </xsl:call-template>
+        <xsl:call-template name="display-biblio-part">
+          <xsl:with-param name="part" select="../bib:pages" />
+          <xsl:with-param name="prefix">, pages </xsl:with-param>
+        </xsl:call-template>
 
-      <xsl:text>. </xsl:text>
+        <xsl:text>. </xsl:text>
+      </p>
     </xsl:for-each>
   </xsl:template>
 
@@ -388,7 +408,7 @@
     <xsl:variable name="t" select="($c/bib:*[local-name()=$n])[position()=$position]" />
 
     <xsl:for-each select="$t">
-      <span class="translation">
+      <span class="biblio-translation">
         <xsl:call-template name="copy-xml-lang" />
         <xsl:text> ⦅</xsl:text>
         <xsl:apply-templates />
@@ -400,7 +420,7 @@
   <!-- Call out independent sections or articles when collected in a book -->
   <xsl:template name="display-biblio-contrib">
     <xsl:if test="bib:contrib">
-      <ul class="contrib">
+      <ul class="biblio-contrib">
         <xsl:for-each select="bib:contrib">
           <li>
             <xsl:call-template name="display-biblio-part">
@@ -409,8 +429,8 @@
               <xsl:with-param name="suffix" select="'. '" />
             </xsl:call-template>
 
-            <xsl:call-template name="display-biblio-author" />
-            <xsl:call-template name="display-biblio-title" />
+            <xsl:call-template name="display-biblio-author-text" />
+            <xsl:call-template name="display-biblio-title-text" />
           </li>
         </xsl:for-each>
       </ul>
