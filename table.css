@@ -249,6 +249,18 @@ span.biblio-book-name:after, span.biblio-article-name:after {
     margin-bottom: 0;
 }
 
+dl.bibliography > dd {
+    margin-top: 0.20em;
+    margin-bottom: 0.75em;
+}
+
+dl.bibliography > dt {
+    border: thin dashed gray;
+    width: fit-content;
+    padding: 0.2em;
+    background-color:floralwhite;
+}
+
 div#toc-sidebar {
     padding-left: 1em;
     padding-right: 1em;
