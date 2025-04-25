@@ -48,9 +48,10 @@
         Then, we have works in Japanese authors. Naturally, they excel at connecting Chinese phonology with
         concurrent and subsequent changes in the Japanese language.  While Chinese and English writers
         all acknowledge the role played by sino-xenic readings in Chinese linguistics, the information
-        they offer on Japanese tends to be superficial — nothing that advanced learners of Japanese could
+        they offer on Japanese tends to be superficial — nothing that advanced students of Japanese could
         not deduce themselves after learning a bit about Middle Chinese.  Understandably, Japanese is a
-        difficult enough language that few non-Japanese could be expected to analyze at a high academic level.
+        difficult enough language that few non-Japanese could be expected to analyze it
+        at a high academic level.
       </p>
       <p>
         On the other hand, a good number of Japanese sinologists are world-renowned in their own right.
@@ -77,25 +78,6 @@
     <s:heading>Works in, or translated to, English</s:heading>
     <bibliography xmlns="http://www.gold-saucer.org/xmlns/bibliography">
 
-
-      <book xml:lang="en" key="Williams 1856">
-        <author>Williams, Samuel Wells</author>
-        <title>A Tonic Dictionary of the Chinese Language in the Canton Dialect</title>
-        <publisher>Canton, printed at the Office of the Chinese Repository</publisher>
-        <year>1856</year>
-      </book>
-
-      <book xml:lang="en" key="Dǒng 2008">
-        <author>Dǒng, Hóngyuán</author>
-        <title>A History of the Chinese Language</title>
-        <edition>Second Edition</edition>
-        <publisher>Routledge</publisher>
-        <year>2008</year>
-        <trans xml:lang="zh">
-          <author>董紅源</author>
-        </trans>
-      </book>
-
       <book xml:lang="en" key="Baxter 1992">
         <author>Baxter, William H</author>
         <title>A Handbook of Old Chinese Phonology, Part I</title>
@@ -118,6 +100,24 @@
         <link class="source" url="https://aclanthology.org/2022.coling-1.314.pdf">full-text PDF</link>
         <link class="home" url="https://github.com/cmu-llab/wikihan">WikiHan project on GitHub</link>
       </article>
+
+      <book xml:lang="en" key="Dǒng 2008">
+        <author>Dǒng, Hóngyuán</author>
+        <title>A History of the Chinese Language</title>
+        <edition>Second Edition</edition>
+        <publisher>Routledge</publisher>
+        <year>2008</year>
+        <trans xml:lang="zh">
+          <author>董紅源</author>
+        </trans>
+      </book>
+
+      <book xml:lang="en" key="Williams 1856">
+        <author>Williams, Samuel Wells</author>
+        <title>A Tonic Dictionary of the Chinese Language in the Canton Dialect</title>
+        <publisher>Canton, printed at the Office of the Chinese Repository</publisher>
+        <year>1856</year>
+      </book>
 
       <book xml:lang="en" key="Xiàng 2023 Ⅰ">
         <author>Xiàng, Xī</author>
@@ -160,6 +160,7 @@
         <link class="ad" url="https://www.taylorfrancis.com/books/mono/10.4324/9781003365556/brief-history-chinese-language-iv-xi-xiang" />
         <link class="doi" url="https://doi.org/10.4324/9781003365556" />
       </book>
+
     </bibliography>
   </s:section>
 
@@ -187,19 +188,6 @@
         </trans>
       </misc>
 
-      <misc xml:lang="zh" key="Pīnyīn 2008">
-        <title>漢語拼音方案</title>
-        <trans xml:lang="en">
-          <title>Chart of the Chinese Pīnyīn System</title>
-        </trans>
-        <link class="source" url="https://www.laws.taipei.gov.tw/lawatt/Law/A040030001010900-20081218-0000-001.pdf" />
-        <note><p:mc>《漢語拼音方案》</p:mc> is a well-known document whose first version appeared in 1957, 
-        and reproduced everywhere since. This version I have found randomly on the Internet is convenient in that it includes
-        the equivalent notations under both IPA and 
-        <h:a href="https://en.wikipedia.org/wiki/Bopomofo" title="Wikipedia: Bopomofo">Bopomofo</h:a> (phonetic symbols used in Taiwan; <p:mc>國語注音符號</p:mc>).
-        </note>
-      </misc>
-
       <book xml:lang="zh" key="Chao 1983">
         <author>趙元任</author>
         <title>通字方案</title>
@@ -211,6 +199,56 @@
           <title>A Project for General Chinese</title>
         </trans>
         <original><year>1967</year></original>
+      </book>
+
+      <book xml:lang="zh" key="Dīng 2010">
+        <author>丁聲樹</author>
+        <author>李榮</author>
+        <title>漢語音韻講義</title>
+        <publisher>上海教育出版社</publisher>
+        <year>2010</year>
+        <trans xml:lang="en">
+          <author>Dīng, Shēngshù</author>
+          <author>Lǐ, Róng</author>
+          <title>Notes on the Phonology of (Modern Standard) Chinese</title>
+        </trans>
+      </book>
+
+      <book xml:lang="zh" key="Dǒng 1996">
+        <author>董同龢</author>
+        <title>漢語音韻學</title>
+        <publisher>文史哲出版社</publisher>
+        <year>1996</year>
+        <trans xml:lang="en">
+          <author>Dǒng, Tónghé</author>
+          <title>Chinese Phonology</title>
+        </trans>
+      </book>
+
+      <book xml:lang="zh" key="Hirayama 2005">
+        <author>平山 久雄</author>
+        <title>平山久雄語言學論文集</title>
+        <publisher>商務印書館</publisher>
+        <year>2005</year>
+        <trans xml:lang="en">
+          <author>Hirayama, Hisao</author>
+          <title>Collected Essays of Hisao Hirayama on Linguistics</title>
+        </trans>
+        <contrib>
+          <section>8</section>
+          <title>中古漢語的清入聲與北京話聲調的對應規律</title>
+        </contrib>
+      </book>
+
+      <book xml:lang="zh" key="Hirayama 2012">
+        <author>平山 久雄</author>
+        <title>漢語語音史探索</title>
+        <publisher>北京大學出版社</publisher>
+        <year>2012</year>
+        <trans xml:lang="en">
+          <author>Hirayama, Hisao</author>
+          <title>Investigations on Chinese Historical Phonology</title>
+        </trans>
       </book>
 
       <book xml:lang="zh" key="Ho 1992">
@@ -228,27 +266,77 @@
         <link class="home" url="https://ile1992.jyut.net/" />
       </book>
 
-      <book xml:lang="zh" key="Wong 2001">
-        <author>黃錫凌</author>
-        <title>粵音韻彙</title>
-        <publisher>中華書局</publisher>
-        <year>2001</year>
+      <book xml:lang="zh" key="Ho 1999">
+        <author>何文匯</author>
+        <author>朱國藩</author>
+        <title>粵音正讀字彙</title>
+        <publisher>香港教育圖書公司</publisher>
+        <year>1999</year>
         <trans xml:lang="en">
-          <author>Wong, Shik Ling</author>
-          <title>A Chinese Syllabary Pronounced Accordin to the Dialect of Canton</title>
+          <title>Correct Cantonese Pronunciations of Characters</title>
         </trans>
-        <original><year>1941</year></original>
       </book>
 
-      <book xml:lang="zh" key="Dǒng 1996">
-        <author>董同龢</author>
-        <title>漢語音韻學</title>
-        <publisher>文史哲出版社</publisher>
-        <year>1996</year>
+      <book xml:lang="zh" key="Lǐ 2001">
+        <author>李思敬</author>
+        <title>音韻</title>
+        <publisher>商務印書館</publisher>
+        <year>2001</year>
         <trans xml:lang="en">
-          <author>Dǒng, Tónghé</author>
-          <title>Chinese Phonology</title>
+          <author>Lǐ, Sījìng</author>
+          <title>(Chinese Character) Phonology</title>
         </trans>
+        <original><year>1985</year></original>
+      </book>
+
+      <misc xml:lang="zh" key="Pīnyīn 2008">
+        <title>漢語拼音方案</title>
+        <trans xml:lang="en">
+          <title>Chart of the Chinese Pīnyīn System</title>
+        </trans>
+        <link class="source" url="https://www.laws.taipei.gov.tw/lawatt/Law/A040030001010900-20081218-0000-001.pdf" />
+        <note><p:mc>《漢語拼音方案》</p:mc> is a well-known document whose first version appeared in 1957, 
+        and reproduced everywhere since. This version I have found randomly on the Internet is convenient in that it includes
+        the equivalent notations under both IPA and 
+        <h:a href="https://en.wikipedia.org/wiki/Bopomofo" title="Wikipedia: Bopomofo">Bopomofo</h:a> (phonetic symbols used in Taiwan; <p:mc>國語注音符號</p:mc>).
+        </note>
+      </misc>
+
+      <book xml:lang="zh" key="Shào 2008">
+        <author>邵榮芬</author>
+        <title>切韻研究</title>
+        <edition>校訂本</edition>
+        <publisher>中華書局</publisher>
+        <year>2008</year>
+        <trans xml:lang="en">
+          <author>Shào, Róngfēn</author>
+          <title>Studies on the Qièyùn</title>
+          <edition>Revised Edition</edition>
+        </trans>
+        <original><year>1980</year></original>
+      </book>
+
+      <book xml:lang="zh" key="Sinica 1992">
+        <editor>中央研究院歷史語言研究所出版品編輯委員會</editor>
+        <title>中國境內語言暨語言學 第一輯: 漢語方言</title>
+        <series>中央研究院歷史語言研究所會議論文集之2</series>
+        <publisher>文匯</publisher>
+        <year>1992</year>
+        <link class="ad" url="https://www.ling.sinica.edu.tw/item/zh-tw?act=publish_book&amp;code=view&amp;bookID=118" />
+        <link class="source" url="https://www.ling.sinica.edu.tw/item/zh-tw?act=publish_book&amp;code=download&amp;article_id=393&amp;type=article">Full-text scanned PDF</link>
+        <trans xml:lang="en">
+          <editor>Editorial Board of Academia Sinica</editor>
+          <title>Chinese Languages and Linguistics I: Chinese Dialects</title>
+          <series>Symposium Series of the Institute of History and Philology from Academia Sinica, volume 2</series>
+        </trans>
+        <contrib xml:lang="en">
+          <section>21</section>
+          <author>Margaret M. Y. Sung</author>
+          <title>Chinese Dialects and Sino-Japanese</title>
+          <trans xml:lang="zh">
+            <author>嚴棉</author>
+          </trans>
+        </contrib>
       </book>
 
       <book xml:lang="zh" key="Táng 2016">
@@ -289,31 +377,6 @@
         <original><year>1985</year></original>
       </book>
 
-      <book xml:lang="zh" key="Shào 2008">
-        <author>邵榮芬</author>
-        <title>切韻研究</title>
-        <edition>校訂本</edition>
-        <publisher>中華書局</publisher>
-        <year>2008</year>
-        <trans xml:lang="en">
-          <author>Shào, Róngfēn</author>
-          <title>Studies on the Qièyùn</title>
-          <edition>Revised Edition</edition>
-        </trans>
-        <original><year>1980</year></original>
-      </book>
-
-      <book xml:lang="zh" key="Ho 1999">
-        <author>何文匯</author>
-        <author>朱國藩</author>
-        <title>粵音正讀字彙</title>
-        <publisher>香港教育圖書公司</publisher>
-        <year>1999</year>
-        <trans xml:lang="en">
-          <title>Correct Cantonese Pronunciations of Characters</title>
-        </trans>
-      </book>
-
       <article xml:lang="zh" key="Wáng 2016">
         <author>王弘治</author>
         <title>北京話清入字歸調的內部演化視角</title>
@@ -330,78 +393,16 @@
         <link class="doi" url="https://doi.org/10.1163/2405478X-00901004" />
       </article>
 
-      <book xml:lang="zh" key="Hirayama 2005">
-        <author>平山 久雄</author>
-        <title>平山久雄語言學論文集</title>
-        <publisher>商務印書館</publisher>
-        <year>2005</year>
-        <trans xml:lang="en">
-          <author>Hirayama, Hisao</author>
-          <title>Collected Essays of Hisao Hirayama on Linguistics</title>
-        </trans>
-        <contrib>
-          <section>8</section>
-          <title>中古漢語的清入聲與北京話聲調的對應規律</title>
-        </contrib>
-      </book>
-
-      <book xml:lang="zh" key="Hirayama 2012">
-        <author>平山 久雄</author>
-        <title>漢語語音史探索</title>
-        <publisher>北京大學出版社</publisher>
-        <year>2012</year>
-        <trans xml:lang="en">
-          <author>Hirayama, Hisao</author>
-          <title>Investigations on Chinese Historical Phonology</title>
-        </trans>
-      </book>
-
-      <book xml:lang="zh" key="Dīng 2010">
-        <author>丁聲樹</author>
-        <author>李榮</author>
-        <title>漢語音韻講義</title>
-        <publisher>上海教育出版社</publisher>
-        <year>2010</year>
-        <trans xml:lang="en">
-          <author>Dīng, Shēngshù</author>
-          <author>Lǐ, Róng</author>
-          <title>Notes on the Phonology of (Modern Standard) Chinese</title>
-        </trans>
-      </book>
-
-      <book xml:lang="zh" key="Sinica 1992">
-        <editor>中央研究院歷史語言研究所出版品編輯委員會</editor>
-        <title>中國境內語言暨語言學 第一輯: 漢語方言</title>
-        <series>中央研究院歷史語言研究所會議論文集之2</series>
-        <publisher>文匯</publisher>
-        <year>1992</year>
-        <link class="ad" url="https://www.ling.sinica.edu.tw/item/zh-tw?act=publish_book&amp;code=view&amp;bookID=118" />
-        <link class="source" url="https://www.ling.sinica.edu.tw/item/zh-tw?act=publish_book&amp;code=download&amp;article_id=393&amp;type=article">Full-text scanned PDF</link>
-        <trans xml:lang="en">
-          <editor>Editorial Board of Academia Sinica</editor>
-          <title>Chinese Languages and Linguistics I: Chinese Dialects</title>
-          <series>Symposium Series of the Institute of History and Philology from Academia Sinica, volume 2</series>
-        </trans>
-        <contrib xml:lang="en">
-          <section>21</section>
-          <author>Margaret M. Y. Sung</author>
-          <title>Chinese Dialects and Sino-Japanese</title>
-          <trans xml:lang="zh">
-            <author>嚴棉</author>
-          </trans>
-        </contrib>
-      </book>
-
-      <book xml:lang="zh" key="Lǐ 2001">
-        <author>李思敬</author>
-        <title>音韻</title>
-        <publisher>商務印書館</publisher>
+      <book xml:lang="zh" key="Wong 2001">
+        <author>黃錫凌</author>
+        <title>粵音韻彙</title>
+        <publisher>中華書局</publisher>
         <year>2001</year>
         <trans xml:lang="en">
-          <author>Lǐ, Sījìng</author>
-          <title>(Chinese Character) Phonology</title>
+          <author>Wong, Shik Ling</author>
+          <title>A Chinese Syllabary Pronounced Accordin to the Dialect of Canton</title>
         </trans>
-        <original><year>1985</year></original>
+        <original><year>1941</year></original>
       </book>
 
     </bibliography>
@@ -446,43 +447,6 @@
         </link>
       </article>
 
-      <book xml:lang="ja" key="Satō 1987">
-        <editor>佐藤 喜代</editor>
-        <title>漢字と日本語</title>
-        <publisher>明治書院</publisher>
-        <year>1987</year>
-        <trans xml:lang="en">
-          <editor>Satō, Kiyoji</editor>
-          <title>Kanji and Japanese</title>
-        </trans>
-        <link class="meta" url="https://ci.nii.ac.jp/ncid/BN01549400" />
-      </book>
-
-      <book xml:lang="ja" key="Tōdō 1980">
-        <author>藤堂 明保</author>
-        <title>中国語音韻論: その歴史的研究</title>
-        <publisher>光生館</publisher>
-        <year>1980</year>
-        <trans xml:lang="en">
-          <author>Tōdō, Akiyasu</author>
-          <title>Chinese Phonology: A Historical Study</title>
-        </trans>
-        <link class="meta" url="https://cir.nii.ac.jp/crid/1130000797864209664" />
-        <link class="ad" url="https://www.meijishoin.co.jp/book/b97390.html" />
-      </book>
-
-      <book xml:lang="ja" key="Takamatsu 1986">
-        <author>高松 政雄</author>
-        <title>日本漢字音概論</title>
-        <publisher>風間書房</publisher>
-        <year>1986</year>
-        <trans xml:lang="en">
-          <author>Takamatsu, Masao</author>
-          <title>Overview of Japanese Kanji Pronunciation</title>
-        </trans>
-        <link class="meta" url="https://cir.nii.ac.jp/crid/1520853833132774912" />
-      </book>
-
       <article xml:lang="ja" key="Mineya 1953">
         <author>三根谷 徹</author>
         <title><s:ruby>韻【いん】鏡【きょう】の三・四​等【とう】について</s:ruby></title>
@@ -498,36 +462,6 @@
         </trans>
         <link class="meta" url="https://cir.nii.ac.jp/crid/1520572360057837696" />
       </article>
-
-      <book xml:lang="ja" key="Nitta 2009">
-        <author>仁田 義雄</author>
-        <author>and others</author>
-        <title>日本語要説</title>
-        <edition>改訂版</edition>
-        <publisher>ひつじ書房</publisher>
-        <year>2009</year>
-        <trans xml:lang="en">
-          <author>Nitta, Yoshio</author>
-          <title>A Compendium of the Japanese Language</title>
-          <edition>Revised Edition</edition>
-        </trans>
-        <link class="meta" url="https://cir.nii.ac.jp/crid/1020282257440598528" />
-        <link class="ad" url="https://www.hituzi.co.jp/books/468.html" />
-      </book>
-
-      <book xml:lang="ja" key="Yuzawa 2004">
-        <author>湯澤 質幸</author>
-        <author>松崎 寛</author>
-        <title>音声·音韻探求法: 日本語音声へのいざない</title>
-        <publisher>朝倉書店</publisher>
-        <year>2004</year>
-        <trans xml:lang="en">
-          <author>Yuzawa, Tadayuki</author>
-          <author>Matsuzaki, Hiroshi</author>
-          <title>Methods in Phonetics &amp; Phonemics: An Invitation to Japanese Phonology</title>
-        </trans>
-        <link class="ad" url="https://www.asakura.co.jp/detail.php?book_code=51503" />
-      </book>
 
       <book xml:lang="ja" key="Morohashi 2000">
         <author>諸橋 轍次</author>
@@ -551,6 +485,71 @@
         is famous for being one of the reference sources for 
         the <h:a href="https://en.wikipedia.org/wiki/Unicode" title="Wikipedia: Unicode">Unicode</h:a> standard.
          </note>
+      </book>
+
+      <misc xml:lang="ja" key="Nakamura 2005">
+        <author>中村 雅之</author>
+        <title>音韻学入門: 中古音篇</title>
+        <year>2005</year>
+        <trans xml:lang="en">
+          <author>Nakamura, Masayuki</author>
+          <title>Introduction to (Chinese Character) Phonology: Middle Chinese</title>
+        </trans>
+        <link class="source" url="https://kodaimoji.chowder.jp/chinese-phonology/pdf/oningaku.pdf">Full-text PDF</link>
+        <link class="home" url="https://kodaimoji.chowder.jp/chinese-phonology/nyumonkouza.html">Author's lecture notes</link>
+      </misc>
+
+      <book xml:lang="ja" key="Nitta 2009">
+        <author>仁田 義雄</author>
+        <author>and others</author>
+        <title>日本語要説</title>
+        <edition>改訂版</edition>
+        <publisher>ひつじ書房</publisher>
+        <year>2009</year>
+        <trans xml:lang="en">
+          <author>Nitta, Yoshio</author>
+          <title>A Compendium of the Japanese Language</title>
+          <edition>Revised Edition</edition>
+        </trans>
+        <link class="meta" url="https://cir.nii.ac.jp/crid/1020282257440598528" />
+        <link class="ad" url="https://www.hituzi.co.jp/books/468.html" />
+      </book>
+
+      <book xml:lang="ja" key="Satō 1987">
+        <editor>佐藤 喜代</editor>
+        <title>漢字と日本語</title>
+        <publisher>明治書院</publisher>
+        <year>1987</year>
+        <trans xml:lang="en">
+          <editor>Satō, Kiyoji</editor>
+          <title>Kanji and Japanese</title>
+        </trans>
+        <link class="meta" url="https://ci.nii.ac.jp/ncid/BN01549400" />
+      </book>
+
+      <book xml:lang="ja" key="Takamatsu 1986">
+        <author>高松 政雄</author>
+        <title>日本漢字音概論</title>
+        <publisher>風間書房</publisher>
+        <year>1986</year>
+        <trans xml:lang="en">
+          <author>Takamatsu, Masao</author>
+          <title>Overview of Japanese Kanji Pronunciation</title>
+        </trans>
+        <link class="meta" url="https://cir.nii.ac.jp/crid/1520853833132774912" />
+      </book>
+
+      <book xml:lang="ja" key="Tōdō 1980">
+        <author>藤堂 明保</author>
+        <title>中国語音韻論: その歴史的研究</title>
+        <publisher>光生館</publisher>
+        <year>1980</year>
+        <trans xml:lang="en">
+          <author>Tōdō, Akiyasu</author>
+          <title>Chinese Phonology: A Historical Study</title>
+        </trans>
+        <link class="meta" url="https://cir.nii.ac.jp/crid/1130000797864209664" />
+        <link class="ad" url="https://www.meijishoin.co.jp/book/b97390.html" />
       </book>
 
       <book xml:lang="ja" key="Tōdō 2018">
@@ -584,17 +583,20 @@
         <link class="source" url="https://rissho.repo.nii.ac.jp/record/8085/files/jbknp_46_103_yano.pdf">Full-text PDF</link>
       </article>
 
-      <misc xml:lang="ja" key="Nakamura 2005">
-        <author>中村 雅之</author>
-        <title>音韻学入門: 中古音篇</title>
-        <year>2005</year>
+      <book xml:lang="ja" key="Yuzawa 2004">
+        <author>湯澤 質幸</author>
+        <author>松崎 寛</author>
+        <title>音声·音韻探求法: 日本語音声へのいざない</title>
+        <publisher>朝倉書店</publisher>
+        <year>2004</year>
         <trans xml:lang="en">
-          <author>Nakamura, Masayuki</author>
-          <title>Introduction to (Chinese Character) Phonology: Middle Chinese</title>
+          <author>Yuzawa, Tadayuki</author>
+          <author>Matsuzaki, Hiroshi</author>
+          <title>Methods in Phonetics &amp; Phonemics: An Invitation to Japanese Phonology</title>
         </trans>
-        <link class="source" url="https://kodaimoji.chowder.jp/chinese-phonology/pdf/oningaku.pdf">Full-text PDF</link>
-        <link class="home" url="https://kodaimoji.chowder.jp/chinese-phonology/nyumonkouza.html">Author's lecture notes</link>
-      </misc>
+        <link class="ad" url="https://www.asakura.co.jp/detail.php?book_code=51503" />
+      </book>
+
     </bibliography>
   </s:section>
 
