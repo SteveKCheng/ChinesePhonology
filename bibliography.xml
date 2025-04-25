@@ -471,6 +471,18 @@
         <link class="ad" url="https://www.meijishoin.co.jp/book/b97390.html" />
       </book>
 
+      <book xml:lang="ja" key="Takamatsu 1986">
+        <author>高松 政雄</author>
+        <title>日本漢字音概論</title>
+        <publisher>風間書房</publisher>
+        <year>1986</year>
+        <trans xml:lang="en">
+          <author>Takamatsu, Masao</author>
+          <title>Overview of Japanese Kanji Pronunciation</title>
+        </trans>
+        <link class="meta" url="https://cir.nii.ac.jp/crid/1520853833132774912" />
+      </book>
+
       <article xml:lang="ja" key="Mineya 1953">
         <author>三根谷 徹</author>
         <title><s:ruby>韻【いん】鏡【きょう】の三・四​等【とう】について</s:ruby></title>
