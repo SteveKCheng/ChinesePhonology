@@ -507,5 +507,227 @@
 
   </s:section>
 
+  <s:section>
+    <s:heading>Are all these sounds distinguishable?</s:heading>
+
+    <p>
+      Looking at the above charts, we might all be wondering if all the sounds
+      written in these weird IPA letters could possibly be distinguishable.
+    </p>
+
+    <p>
+      Surprisingly I think the answer is yes.
+      Starting with the vowels, nearly all of them 
+      from <p:mc>邵榮芬</p:mc>'s re-construction happen to be articulated
+      in <a href="https://en.wikipedia.org/wiki/General_American_English"
+      title="Wikipedia: General American English">American English</a>.  Below is a chart of those vowels
+      with examples from words in English. 
+      The definitions and audio have 
+      been helpfully supplied by Wiktionary.
+    </p>
+
+    <table>
+      <tr><!-- Row 1 -->
+        <td>
+          <p:i>i</p:i>
+          <p:english-analogy word="t_ea_m" ipa="tʰiːm"
+            def="https://en.wiktionary.org/wiki/team"
+            audio="https://upload.wikimedia.org/wikipedia/commons/f/fc/En-us-team.ogg" />
+        </td>
+        <td />
+        <td />
+        <td />
+        <td />
+        <td />
+        <td>
+          <p:i>u</p:i>
+          <p:english-analogy word="t_o_mb" ipa="tʰum"
+            def="https://en.wiktionary.org/wiki/tomb"
+            audio="https://upload.wikimedia.org/wikipedia/commons/8/88/En-us-tomb.ogg" />
+        </td>
+      </tr>
+      <tr><!-- Row 2 -->
+        <td />
+        <td />
+        <td>
+          <p:i>ɪ</p:i>
+          <p:english-analogy word="t_i_p" ipa="tʰɪp"
+            def="https://en.wiktionary.org/wiki/tip"
+            audio="https://upload.wikimedia.org/wikipedia/commons/f/f8/En-us-tip.ogg" />
+        </td>
+        <td />
+        <td />
+        <td />
+        <td />
+      </tr>
+      <tr><!-- Row 3 -->
+        <td />
+        <td>
+          <p:i>e</p:i>
+          <p:english-analogy word="t_a_ke" ipa="tʰeɪk"
+            def="https://en.wiktionary.org/wiki/take"
+            audio="https://upload.wikimedia.org/wikipedia/commons/9/9b/En-us-take.ogg" />
+        </td>
+        <td />
+        <td />
+        <td />
+        <td />
+        <td>
+          <p:i>o</p:i>
+          <p:english-analogy word="t_o_me" ipa="tʰoʊm"
+            def="https://en.wiktionary.org/wiki/tomb"
+            audio="https://upload.wikimedia.org/wikipedia/commons/9/98/LL-Q1860_%28eng%29-Vealhurl-tome.wav" />
+        </td>
+      </tr>
+      <tr><!-- Row 4 -->
+        <td />
+        <td />
+        <td />
+        <td />
+        <td />
+        <td>
+          <p:i>ə</p:i>
+          <p:english-analogy word="tok_e_n" ipa="ˈtʰoʊkən"
+            def="https://en.wiktionary.org/wiki/token"
+            audio="https://upload.wikimedia.org/wikipedia/commons/5/50/En-us-token.ogg" />
+        </td>
+        <td />
+      </tr>
+      <tr><!-- Row 5 -->
+        <td />
+        <td />
+        <td>
+          <p:i>ɛ</p:i>
+          <p:english-analogy word="t_e_ch" ipa="tʰɛk" 
+            def="https://en.wiktionary.org/wiki/tech"
+            audio="https://upload.wikimedia.org/wikipedia/commons/9/9a/LL-Q1860_%28eng%29-Vealhurl-tech.wav" />
+        </td>
+        <td />
+        <td />
+        <td />
+        <td>
+          <p:i>ɔ</p:i>
+          <p:english-analogy word="t_a_lk" ipa="tʰɔk"
+             def="https://en.wiktionary.org/wiki/talk"
+           audio="https://upload.wikimedia.org/wikipedia/commons/1/16/En-uk-to_talk.ogg" />
+          <p:fn idref="vowel-ɔ" />
+        </td>
+      </tr>
+      <tr><!-- Row 6 -->
+        <td />
+        <td />
+        <td />
+        <td>
+          <p:i>æ</p:i>
+          <p:english-analogy word="t_a_ck" ipa="tʰæk"
+            def="https://en.wiktionary.org/wiki/tack"
+            audio="https://upload.wikimedia.org/wikipedia/commons/b/b0/En-us-tack.ogg" />
+        </td>
+        <td />
+        <td>
+          <p:i>ɐ</p:i>
+          <p:english-analogy word="t_u_ck" ipa="tʰɐk"
+            def="https://en.wiktionary.org/wiki/tuck"
+            audio="https://upload.wikimedia.org/wikipedia/commons/8/85/En-us-tuck.ogg" />
+          <p:fn idref="vowel-ɐ" />
+        </td>
+        <td />
+      </tr>
+      <tr><!-- Row 7 -->
+        <td />
+        <td />
+        <td />
+        <td />
+        <td>
+          <p:i>a</p:i>
+          <p:english-analogy word="t_a_co" ipa="ˈtʰako(ː)"
+             def="https://en.wiktionary.org/wiki/taco"
+           audio="https://upload.wikimedia.org/wikipedia/commons/1/1b/En-ca-taco.oga" />
+          <p:fn idref="vowel-a" />
+        </td>
+        <td />
+        <td>
+          <p:i>ɑ</p:i>
+          <p:english-analogy word="t_o_p" ipa="tʰɑp"
+            def="https://en.wiktionary.org/wiki/top"
+            audio="https://upload.wikimedia.org/wikipedia/commons/3/32/En-us-top.ogg" />
+          <p:fn idref="vowel-ɑ" />
+        </td>
+      </tr>
+    </table>
+
+    <p:notes-list>
+      <li id="vowel-a">
+        <p>
+          American English does not 
+          use the vowel <p:i-narrow>a</p:i-narrow> in native words,
+          so a (Mexican) Spanish loanword had to be selected here.
+          The pronunciation <p:i-narrow>ˈtʰako(ː)</p:i-narrow> is, 
+          according to Wiktionary,
+          Canadian English, while American English has
+          <p:i-narrow>ˈtʰɑkoʊ</p:i-narrow>.  
+        </p>
+        <p>
+          (Personally I use the Canadian variant
+          with the vowel being short at the end; to me this word
+          remains un-nativized, in the same way I always pronounce the word
+          <em class="word" lang="fr">croissant</em> in the French way.
+          Though strictly speaking <em class="spell" lang="es">t</em> 
+          in Spanish is unaspirated,
+          so I am still not entirely faithful to the source language.)
+        </p>
+      </li>
+      <li id="vowel-ɑ">
+        <p>
+          <em class="word">top</em> would not be a good example
+          for <p:i-narrow>ɑ</p:i-narrow>, if you
+          <a href="https://en.wikipedia.org/wiki/Cot%E2%80%93caught_merger"
+            title="Wikipedia: Cot–caught merger">pronounce the vowel in 
+          <em class="word">lot</em> the same as in <em class="word">thought</em></a> 
+          <p:i-narrow>ɔ</p:i-narrow>,
+          or with lip-rounding <p:i-narrow>ɒ</p:i-narrow>.
+          A better example, in both American and 
+          <a href="https://en.wikipedia.org/wiki/Received_Pronunciation"
+             title="Wikipedia: Received Pronunciation">British 
+          pronunciation</a>,
+          might be words like <em class="word">father</em>
+          and <em class="word">spa</em> that have ‘short’ <em class="spell">a</em>.
+        </p>
+      </li>
+      <li id="vowel-ɐ">
+        <p>
+          English ‘short’ <em class="spell">u</em> is usually transcribed as 
+          <p:i>ʌ</p:i>.  But <a href="https://en.wikipedia.org/wiki/Near-open_central_vowel"
+            title="Wikpedia: https://en.wikipedia.org/wiki/Near-open_central_vowel">
+          according to Wikipedia, some speakers pronounce
+          this <p:i>ʌ</p:i> as <p:i-narrow>ɐ</p:i-narrow></a>, i.e. with the tongue
+          positioned towards the centre of the mouth, and lower 
+          like for ‘short’ <em class="spell">a</em>.   
+        </p>
+        <p>
+          (I myself probably pronounce it both ways randomly, 
+          although I find it difficult
+          to tell the difference aurally either way.) 
+        </p>
+      </li>
+      <li id="vowel-ɔ">
+        <p>
+          <p:i-narrow>ɔ</p:i-narrow> and <p:i-narrow>ɒ</p:i-narrow> are
+          the lip-rounded versions of  
+          from <p:i-narrow>ʌ</p:i-narrow> and <p:i-narrow>ɑ</p:i-narrow>
+          respectively. <p:mc>邵榮芬</p:mc> uses 
+          <p:i-narrow>ɔ</p:i-narrow> and <p:i-narrow>ɒ</p:i-narrow>
+          only in the few places: <p:ac>魚</p:ac>&nbsp;<p:i>iɔ</p:i>, 
+          versus <p:ac>覃</p:ac>&nbsp;<p:i>ɒm</p:i> and <p:ac>合</p:ac>&nbsp;<p:i>ɒp</p:i>.
+        </p>
+        <p>
+          Either the medial or the coda is sufficient to distinguish these phonemes, 
+          fortunately 
+          (for otherwise I would struggle to tell the difference in the main vowel!). 
+        </p>
+      </li>
+    </p:notes-list>
+
+  </s:section>
 
 </s:section>

@@ -116,6 +116,12 @@
     </span>
   </xsl:template>
 
+  <xsl:template match="p:i-narrow">
+    <span class="ipa-narrow">
+      <xsl:apply-templates select="node()|@*" />
+    </span>
+  </xsl:template>
+
   <xsl:template name="display-ipa">
     <xsl:param name="content" />
     <span class="ipa">
@@ -673,6 +679,45 @@
     </xsl:variable>
 
     <xsl:apply-templates select="$content" />
+  </xsl:template>
+
+  <xsl:template match="p:english-analogy">
+    <em class="word">
+      <a href="{@def}">
+        <xsl:call-template name="emphasize-underlined">
+          <xsl:with-param name="text" select="@word" />
+        </xsl:call-template>
+      </a>
+    </em>
+    <xsl:text> </xsl:text>
+    <span class="ipa-narrow">
+      <xsl:variable name="ipa">
+        <xsl:call-template name="emphasize-underlined">
+          <xsl:with-param name="text" select="@ipa" />
+        </xsl:call-template>
+      </xsl:variable>
+      <xsl:choose>
+        <xsl:when test="@audio">
+          <a class="audio" href="{@audio}"><xsl:value-of select="$ipa" /></a>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$ipa" />
+        </xsl:otherwise>
+      </xsl:choose>
+    </span>
+  </xsl:template>
+
+  <!-- Display plain text, but with words like _this_ replaced by <strong> emphasis -->
+  <xsl:template name="emphasize-underlined">
+    <xsl:param name="text" as="xs:string" select="string(.)" />
+    <xsl:analyze-string select="$text" regex="_([^_]+)_">
+      <xsl:matching-substring>
+        <strong>
+          <xsl:value-of select="regex-group(1)" />
+        </strong>
+      </xsl:matching-substring>
+      <xsl:non-matching-substring><xsl:value-of select="." /></xsl:non-matching-substring>
+    </xsl:analyze-string>
   </xsl:template>
 
   <!-- HTML ruby syntax is really inconvenient to type by hand. 
