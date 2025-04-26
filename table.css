@@ -87,6 +87,14 @@ a:hover {
     font-family: "Noto Sans SC", sans-serif;
 }
 
+span.ipa-narrow {
+    font-family: "Noto Sans SC", sans-serif;
+    quotes: "[" "]"
+}
+
+span.ipa-narrow:before { content: open-quote; }
+span.ipa-narrow:after { content: close-quote; }
+
 sup.footnote a:any-link {
     color: blue;    
 }
