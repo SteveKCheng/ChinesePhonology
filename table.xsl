@@ -226,11 +226,18 @@
     </p>
   </xsl:template>
 
-  <!-- Footnote reference -->
-  <xsl:template match="p:fn">
-    <xsl:variable name="idref" select="@idref" />
+  <!-- Footnote reference.
+
+       This template is also explicitly callable so that 
+       other templates can generate footnotes without re-processing
+       intermediate output trees.  Note: this functionality is broken
+       right now because the generation of the footnote content
+       cannot see where it is referenced.
+       -->
+  <xsl:template match="p:fn" name="make-footnote">
+    <xsl:param name="here" select="generate-id()" as="xs:string" />
+    <xsl:param name="idref" select="@idref" as="xs:string" />
     <xsl:variable name="target" select="key('id', $idref)" />
-    <xsl:variable name="here" select="generate-id()" />
     <xsl:choose>
       <xsl:when test="$target">
         <xsl:for-each select="$target">
@@ -682,29 +689,45 @@
   </xsl:template>
 
   <xsl:template match="p:english-analogy">
-    <em class="word">
-      <a href="{@def}">
-        <xsl:call-template name="emphasize-underlined">
-          <xsl:with-param name="text" select="@word" />
-        </xsl:call-template>
-      </a>
-    </em>
-    <xsl:text> </xsl:text>
-    <span class="ipa-narrow">
-      <xsl:variable name="ipa">
-        <xsl:call-template name="emphasize-underlined">
-          <xsl:with-param name="text" select="@ipa" />
-        </xsl:call-template>
-      </xsl:variable>
-      <xsl:choose>
-        <xsl:when test="@audio">
-          <a class="audio" href="{@audio}"><xsl:value-of select="$ipa" /></a>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of select="$ipa" />
-        </xsl:otherwise>
-      </xsl:choose>
-    </span>
+    <div class="sound-word">
+      <span class="ipa">
+        <xsl:value-of select="@head-ipa" />
+      </span>
+
+      <span class="english-analogy">
+        <em class="word">
+          <a href="{@def}">
+            <xsl:call-template name="emphasize-underlined">
+              <xsl:with-param name="text" select="@word" />
+            </xsl:call-template>
+          </a>
+        </em>
+        <br />
+        <span class="ipa-narrow">
+          <xsl:variable name="ipa">
+            <xsl:call-template name="emphasize-underlined">
+              <xsl:with-param name="text" select="@word-ipa" />
+            </xsl:call-template>
+          </xsl:variable>
+          <xsl:choose>
+            <xsl:when test="@audio">
+              <a class="audio" href="{@audio}"><xsl:value-of select="$ipa" /></a>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="$ipa" />
+            </xsl:otherwise>
+          </xsl:choose>
+        </span>
+      </span>
+
+      <!-- any additional note or comment -->
+      <xsl:if test="node()">
+        <span>
+          <xsl:apply-templates />
+        </span>
+      </xsl:if>
+
+    </div>
   </xsl:template>
 
   <!-- Display plain text, but with words like _this_ replaced by <strong> emphasis -->

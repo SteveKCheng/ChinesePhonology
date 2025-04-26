@@ -3,6 +3,7 @@
   <!ENTITY syllable SYSTEM "syllable.xml">
   <!ENTITY reflexes SYSTEM "reflexes.xml">
   <!ENTITY bibliography SYSTEM "bibliography.xml">
+  <!ENTITY nbsp "&#x00a0;"><!-- no-break space -->
 ]>
 
 <html xmlns="http://www.w3.org/1999/xhtml" 
@@ -12,6 +13,7 @@
 
 <head>
   <link rel="stylesheet" type="text/css" href="table.css" />
+  <script src="main.js" type="text/javascript" />
 </head>
 
 <body>

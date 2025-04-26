@@ -113,6 +113,8 @@ td {
 
 table {
     border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 colgroup.mc-initials col.sounds-group-1 {
@@ -197,6 +199,21 @@ table.sound-comparison th {
 
 table.sound-comparison col.highlight {
     background-color:rgb(96%, 96%, 96%);
+}
+
+div.sound-word {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+div.sound-word > span.ipa {
+    display: inline-block;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    width: 1em;
+    background-color: beige; 
+    margin: 0;
 }
 
 span.pinyin {

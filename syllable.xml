@@ -529,8 +529,8 @@
     <table>
       <tr><!-- Row 1 -->
         <td>
-          <p:i>i</p:i>
-          <p:english-analogy word="t_ea_m" ipa="tʰiːm"
+          <p:english-analogy head-ipa="i" 
+            word="t_ea_m" word-ipa="tʰiːm"
             def="https://en.wiktionary.org/wiki/team"
             audio="https://upload.wikimedia.org/wikipedia/commons/f/fc/En-us-team.ogg" />
         </td>
@@ -540,8 +540,8 @@
         <td />
         <td />
         <td>
-          <p:i>u</p:i>
-          <p:english-analogy word="t_o_mb" ipa="tʰum"
+          <p:english-analogy head-ipa="u" 
+            word="t_o_mb" word-ipa="tʰum"
             def="https://en.wiktionary.org/wiki/tomb"
             audio="https://upload.wikimedia.org/wikipedia/commons/8/88/En-us-tomb.ogg" />
         </td>
@@ -550,8 +550,8 @@
         <td />
         <td />
         <td>
-          <p:i>ɪ</p:i>
-          <p:english-analogy word="t_i_p" ipa="tʰɪp"
+          <p:english-analogy head-ipa="ɪ" 
+            word="t_i_p" word-ipa="tʰɪp"
             def="https://en.wiktionary.org/wiki/tip"
             audio="https://upload.wikimedia.org/wikipedia/commons/f/f8/En-us-tip.ogg" />
         </td>
@@ -563,8 +563,8 @@
       <tr><!-- Row 3 -->
         <td />
         <td>
-          <p:i>e</p:i>
-          <p:english-analogy word="t_a_ke" ipa="tʰeɪk"
+          <p:english-analogy head-ipa="e" 
+            word="t_a_ke" word-ipa="tʰeɪk"
             def="https://en.wiktionary.org/wiki/take"
             audio="https://upload.wikimedia.org/wikipedia/commons/9/9b/En-us-take.ogg" />
         </td>
@@ -573,8 +573,8 @@
         <td />
         <td />
         <td>
-          <p:i>o</p:i>
-          <p:english-analogy word="t_o_me" ipa="tʰoʊm"
+          <p:english-analogy head-ipa="o" 
+            word="t_o_me" word-ipa="tʰoʊm"
             def="https://en.wiktionary.org/wiki/tomb"
             audio="https://upload.wikimedia.org/wikipedia/commons/9/98/LL-Q1860_%28eng%29-Vealhurl-tome.wav" />
         </td>
@@ -586,8 +586,8 @@
         <td />
         <td />
         <td>
-          <p:i>ə</p:i>
-          <p:english-analogy word="tok_e_n" ipa="ˈtʰoʊkən"
+          <p:english-analogy head-ipa="ə" 
+            word="tok_e_n" word-ipa="ˈtʰoʊkən"
             def="https://en.wiktionary.org/wiki/token"
             audio="https://upload.wikimedia.org/wikipedia/commons/5/50/En-us-token.ogg" />
         </td>
@@ -597,8 +597,8 @@
         <td />
         <td />
         <td>
-          <p:i>ɛ</p:i>
-          <p:english-analogy word="t_e_ch" ipa="tʰɛk" 
+          <p:english-analogy head-ipa="ɛ" 
+            word="t_e_ch" word-ipa="tʰɛk" 
             def="https://en.wiktionary.org/wiki/tech"
             audio="https://upload.wikimedia.org/wikipedia/commons/9/9a/LL-Q1860_%28eng%29-Vealhurl-tech.wav" />
         </td>
@@ -606,11 +606,12 @@
         <td />
         <td />
         <td>
-          <p:i>ɔ</p:i>
-          <p:english-analogy word="t_a_lk" ipa="tʰɔk"
-             def="https://en.wiktionary.org/wiki/talk"
-           audio="https://upload.wikimedia.org/wikipedia/commons/1/16/En-uk-to_talk.ogg" />
-          <p:fn idref="vowel-ɔ" />
+          <p:english-analogy head-ipa="ɔ"  
+            word="t_a_lk" word-ipa="tʰɔk"
+            def="https://en.wiktionary.org/wiki/talk"
+            audio="https://upload.wikimedia.org/wikipedia/commons/1/16/En-uk-to_talk.ogg">
+            <p:fn idref="vowel-ɔ" />
+          </p:english-analogy>
         </td>
       </tr>
       <tr><!-- Row 6 -->
@@ -618,18 +619,19 @@
         <td />
         <td />
         <td>
-          <p:i>æ</p:i>
-          <p:english-analogy word="t_a_ck" ipa="tʰæk"
+          <p:english-analogy head-ipa="æ" 
+            word="t_a_ck" word-ipa="tʰæk"
             def="https://en.wiktionary.org/wiki/tack"
             audio="https://upload.wikimedia.org/wikipedia/commons/b/b0/En-us-tack.ogg" />
         </td>
         <td />
         <td>
-          <p:i>ɐ</p:i>
-          <p:english-analogy word="t_u_ck" ipa="tʰɐk"
+          <p:english-analogy head-ipa="ɐ"
+            word="t_u_ck" word-ipa="tʰɐk"
             def="https://en.wiktionary.org/wiki/tuck"
-            audio="https://upload.wikimedia.org/wikipedia/commons/8/85/En-us-tuck.ogg" />
-          <p:fn idref="vowel-ɐ" />
+            audio="https://upload.wikimedia.org/wikipedia/commons/8/85/En-us-tuck.ogg">
+            <p:fn idref="vowel-ɐ" />
+          </p:english-analogy>
         </td>
         <td />
       </tr>
@@ -639,19 +641,21 @@
         <td />
         <td />
         <td>
-          <p:i>a</p:i>
-          <p:english-analogy word="t_a_co" ipa="ˈtʰako(ː)"
-             def="https://en.wiktionary.org/wiki/taco"
-           audio="https://upload.wikimedia.org/wikipedia/commons/1/1b/En-ca-taco.oga" />
-          <p:fn idref="vowel-a" />
+          <p:english-analogy head-ipa="a"
+            word="t_a_co" word-ipa="ˈtʰako(ː)"
+            def="https://en.wiktionary.org/wiki/taco"
+            audio="https://upload.wikimedia.org/wikipedia/commons/1/1b/En-ca-taco.oga">
+            <p:fn idref="vowel-a" />
+          </p:english-analogy>
         </td>
         <td />
         <td>
-          <p:i>ɑ</p:i>
-          <p:english-analogy word="t_o_p" ipa="tʰɑp"
+          <p:english-analogy head-ipa="ɑ"
+            word="t_o_p" word-ipa="tʰɑp"
             def="https://en.wiktionary.org/wiki/top"
-            audio="https://upload.wikimedia.org/wikipedia/commons/3/32/En-us-top.ogg" />
-          <p:fn idref="vowel-ɑ" />
+            audio="https://upload.wikimedia.org/wikipedia/commons/3/32/En-us-top.ogg">
+            <p:fn idref="vowel-ɑ" />
+          </p:english-analogy>
         </td>
       </tr>
     </table>
