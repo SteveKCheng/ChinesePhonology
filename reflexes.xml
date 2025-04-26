@@ -60,6 +60,118 @@
     <s:heading>Japanese</s:heading>
 
     <s:section>
+      <s:heading>Go-on</s:heading>
+
+      <p>
+        From the name <p:j>呉音</p:j>, many are tempted to think that the pronunciations
+        are based on the Wú <p:mc>吳</p:mc> dialects, i.e. the dialect group that includes Shanghaiese.  
+        That statement is not
+        accurate according to Japanese scholars 
+        <s:cite-group>
+          <s:cite key="Tōdō 1980" pages="166" />
+          <s:cite key="Yano 2008" />
+        </s:cite-group>. 
+      </p>  
+      <p>
+        Although the appellation of <p:mc>吳</p:mc> did indeed refer to the geographical 
+        region south of the Yangzi River <p:mc>長江</p:mc> — in modern 
+        times usually called <p:mc>江南</p:mc> Jiāngnán — 
+        in ancient times, the Chinese term <p:mc>吳音</p:mc> could generally mean 
+        “a local dialect” in opposition to whatever the official standard of speech
+        <p:mc>標準音</p:mc> was at that time
+        <s:cite key="Satō 1987" pages="61" />.
+      </p>
+
+      <p>  
+        <p:mc>吳</p:mc> just happened to be
+        the most well-known area in China that ‘non-standard dialects’ were widely
+        spoken: the result of mixing with indigenous languages, after this prosperous
+        population centre was settled/conquered by those who spoke the ‘original’
+        version of ancient Chinese.
+      </p>
+
+      <p>
+        Not surprisingly, such local dialects were, in the eyes of 
+        ancient Chinese officials, 
+        inferior to their
+        ‘elegant speech’ <p:ac>雅言</p:ac>.
+        It is possible that when the Japanese language first acquired the readings of
+        Go-on <p:j>呉音</p:j>, they were not called by that name.
+        Indeed an older alternative name for the readings was <p:j>和音</p:j>
+        <s:cite-group>
+          <s:cite key="Satō 1987" pages="60" />
+          <s:cite key="Yano 2008" pages="38" />
+        </s:cite-group>.
+        Only after Japanese ambassadors to the Táng Dynasty returned to Japan, 
+        carrying their
+        own knowledge of Chinese character readings,
+        based on the official speech 
+        from the capital,
+        that they retroactively labelled the 
+        pronunciations of old as 
+        <p:j>呉音</p:j>, borrowing the Chinese terminology.
+      </p>  
+
+      <p>
+        Furthermore, historical evidence indicates that the readings of
+        <p:j>呉音</p:j> were passed to Japan from Korea, over a fairly long
+        period.  That is, there may well not have been a single dialect, 
+        spoken at a particular point in time, that solely contributes
+        to the readings of <p:j>呉音</p:j> 
+        <s:cite-group>
+          <s:cite key="Sinica 1992" pages="568–569" />
+          <s:cite key="Yano 2008" pages="41 54" />
+        </s:cite-group>.
+        To this day, 
+        inconsistencies in how Middle Chinese sounds are represented 
+        can be seen in <p:j>呉音</p:j>.
+      </p>
+
+      <p>
+        Many authors, particularly Chinese authors, remark that
+        Japanese kanji readings most closely resemble the Southern Min dialects 
+        <p:mc>閩南話</p:mc> today <s:cite key="Sinica 1992" sec="21" />,
+        perhaps implying that the former is based on the latter.
+        Certainly the similarities are obvious and cannot be denied,
+        such as that 
+        <p:ac>知</p:ac> has a <em>t-</em>
+        initial in 
+        Japanese and Southern Min, 
+        not having merged with <p:ac>正齒音</p:ac> as in most other
+        Chinese dialects.  
+      </p>
+
+      <p>
+        However, some similarities may have been the result
+        of convergent evolution.  For example, 
+        <s:cite key="Sinica 1992" sec="21" /> says these
+        sound changes:
+        
+        <ol>
+          <li><p:i>p</p:i> to <p:i>h</p:i></li>
+          <li><p:i>ɣ</p:i> to <p:i>k</p:i></li>
+          <li><p:i>tsʰ</p:i>, <p:i>tʂʰ</p:i>,  <p:i>tɕ</p:i> to <p:i>s</p:i></li>
+        </ol>
+
+        had occurred in both
+        Japanese and Southern Min, but they might have had arisen independently
+        in Japanese, either at the time it 
+        adapted Middle Chinese pronunciations to its
+        far simpler sound system, or as part of general 
+        phonological changes years after.
+        For instance, item ① is widely-known change in Japanese that 
+        had started occurring sometime in the 16<sup>th</sup> 
+        century (with <p:i>p</p:i> firstly changing to <p:i>ɸ</p:i>), 
+        and applies not only to Sino-Japanese but also native vocabulary
+        <s:cite-group>
+          <s:cite key="Nitta 2009" sec="6.4" />
+          <s:cite key="Yusawa 2004" sec="7 9" />
+        </s:cite-group>.
+      </p>
+
+    </s:section>
+
+    <s:section>
       <s:heading>Kan-on</s:heading>
 
       <p>
@@ -68,6 +180,7 @@
       </p>
 
     </s:section>
+
   </s:section>
 </s:section>
 
