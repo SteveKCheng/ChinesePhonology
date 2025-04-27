@@ -65,7 +65,31 @@ html {
 
 :lang(zh), :lang(ja) {
     font-family: "Noto Serif SC", "NSimSun", "MS PMincho", "MingLiU" !important;
+
+    /* Chinese characters should be a bit bigger to look nicer, even
+       at the expense of uneven heights of lines. But not too big, and
+       there is no need to enlarge if the current font size 
+       is already big enough, e.g. in a heading.  
+       
+       Since our <html> container has lang="en", "rem" units scale to 
+       the user's preferred font-size of English text, presumably set 
+       to the minimum thavthe user is comfortable reading with: so we 
+       assume 120% of that size,vi.e. 1.2em, is a comfortable size 
+       for Chinese characters.
+
+       On the other hand, if the current font size is being shrunk, e.g.
+       for de-emphasis, the 120% scaling should be relative to the
+       current font size not the root font size.  Thus we need both
+       the min and max expressions here. */
+    font-size: max(min(1.2em, 1.2rem), 1.0em);
 }
+
+rt {
+    /* scale down ruby text ignoring the font-size setting above */
+    font-size: 50% !important;
+}
+
+
 
 a:any-link {
     text-decoration: none;
