@@ -273,7 +273,7 @@ span.biblio-book-name:lang(en) {
     quotes: none;
 }
 
-span.biblio-book-name:lang(zh, ja) {
+span.biblio-book-name:lang(zh), span.biblio-book-name:lang(ja) {
     quotes: "『" "』";
 }
 
@@ -281,7 +281,7 @@ span.biblio-article-name:lang(en) {
     quotes: "“" "”";
 }
 
-span.biblio-article-name:lang(zh, ja) {
+span.biblio-article-name:lang(zh), span.biblio-article-name:lang(ja) {
     quotes: "「" "」";
 }
 
