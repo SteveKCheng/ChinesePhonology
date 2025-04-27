@@ -529,7 +529,12 @@
     <table>
       <thead>
         <tr>
-          <th />
+          <th>
+            <div class="corner">
+              <span class="lower">Height</span>
+              <span class="upper">Backness</span>
+            </div>
+          </th>
           <th colspan="5">Front</th>
           <th>Central</th>
           <th>Back</th>

@@ -135,6 +135,37 @@ td {
     border: 1px solid;
 }
 
+div.corner, th.corner > div {
+    position: relative;
+    width: 5em;
+    height: 2em;
+    padding: 0;
+}
+
+div.corner > span.upper {
+    display: inline-block;
+    position: absolute; 
+    top: 0;
+    right: 0;
+    font-size: 75%;
+}
+
+div.corner > span.lower:before {
+    content: "↓ ";
+}
+
+div.corner > span.upper:after {
+    content: " →";
+}
+
+div.corner > span.lower {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 75%;
+}
+
 table {
     border-collapse: collapse;
     margin-left: auto;
