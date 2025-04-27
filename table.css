@@ -65,7 +65,31 @@ html {
 
 :lang(zh), :lang(ja) {
     font-family: "Noto Serif SC", "NSimSun", "MS PMincho", "MingLiU" !important;
+
+    /* Chinese characters should be a bit bigger to look nicer, even
+       at the expense of uneven heights of lines. But not too big, and
+       there is no need to enlarge if the current font size 
+       is already big enough, e.g. in a heading.  
+       
+       Since our <html> container has lang="en", "rem" units scale to 
+       the user's preferred font-size of English text, presumably set 
+       to the minimum thavthe user is comfortable reading with: so we 
+       assume 120% of that size,vi.e. 1.2em, is a comfortable size 
+       for Chinese characters.
+
+       On the other hand, if the current font size is being shrunk, e.g.
+       for de-emphasis, the 120% scaling should be relative to the
+       current font size not the root font size.  Thus we need both
+       the min and max expressions here. */
+    font-size: max(min(1.2em, 1.2rem), 1.0em);
 }
+
+rt {
+    /* scale down ruby text ignoring the font-size setting above */
+    font-size: 50% !important;
+}
+
+
 
 a:any-link {
     text-decoration: none;
@@ -111,8 +135,41 @@ td {
     border: 1px solid;
 }
 
+div.corner, th.corner > div {
+    position: relative;
+    width: 5em;
+    height: 2em;
+    padding: 0;
+}
+
+div.corner > span.upper {
+    display: inline-block;
+    position: absolute; 
+    top: 0;
+    right: 0;
+    font-size: 75%;
+}
+
+div.corner > span.lower:before {
+    content: "↓ ";
+}
+
+div.corner > span.upper:after {
+    content: " →";
+}
+
+div.corner > span.lower {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 75%;
+}
+
 table {
     border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 colgroup.mc-initials col.sounds-group-1 {
@@ -199,6 +256,21 @@ table.sound-comparison col.highlight {
     background-color:rgb(96%, 96%, 96%);
 }
 
+div.sound-word {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+div.sound-word > span.ipa {
+    display: inline-block;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    width: 1em;
+    background-color: beige; 
+    margin: 0;
+}
+
 span.pinyin {
     font-style: italic;
 }
@@ -232,7 +304,7 @@ span.biblio-book-name:lang(en) {
     quotes: none;
 }
 
-span.biblio-book-name:lang(zh, ja) {
+span.biblio-book-name:lang(zh), span.biblio-book-name:lang(ja) {
     quotes: "『" "』";
 }
 
@@ -240,7 +312,7 @@ span.biblio-article-name:lang(en) {
     quotes: "“" "”";
 }
 
-span.biblio-article-name:lang(zh, ja) {
+span.biblio-article-name:lang(zh), span.biblio-article-name:lang(ja) {
     quotes: "「" "」";
 }
 
