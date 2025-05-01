@@ -166,6 +166,16 @@ div.corner > span.lower {
     font-size: 75%;
 }
 
+div.figure {
+    overflow-x: auto;
+}
+
+caption {
+    caption-side: bottom;
+    padding-top: 0.5em;
+    font-size: 90%;
+}
+
 table {
     border-collapse: collapse;
     margin-left: auto;
@@ -289,7 +299,7 @@ p.heading {
 
 div.section-1 p.heading {
     font-size: 120%;
-}
+}   
 
 img.page {
     max-width: 100%

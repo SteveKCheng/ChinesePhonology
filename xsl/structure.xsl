@@ -9,7 +9,7 @@
 
   <!-- Copy HTML elements from input to output, but force the XHTML namespace
        to be the default namespace to accomodate Web browsers. -->
-  <xsl:template match="html:*">
+  <xsl:template match="html:*" name="process-html">
     <xsl:element name="{local-name()}" namespace="{namespace-uri()}">
       <xsl:apply-templates select="node()|@*"/>
     </xsl:element>
@@ -55,6 +55,21 @@
     <xsl:param name="target" as="element()" />
     <xsl:number level="multiple" select="$target" count="s:section" format="1.1" />
   </xsl:function>
+
+  <!-- Formal wrapper surrounding tables and images.  
+       Creates a "div" for styling purposes, plus possibly a generated index of figures -->
+  <xsl:template match="s:figure">
+    <div class="figure">
+      <xsl:apply-templates />
+    </div>
+  </xsl:template>
+
+  <!-- For convenience, a HTML table with a caption automatically creates a "figure" -->
+  <xsl:template match="html:table[html:caption]">
+    <div class="figure">
+      <xsl:call-template name="process-html" />
+    </div>
+  </xsl:template>
 
   <!-- Wrapper element that falls away, for the purpose of grouping multiple elements
        to be referred to by s:copy-of -->
