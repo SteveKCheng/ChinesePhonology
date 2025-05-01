@@ -1,7 +1,3 @@
-<!DOCTYPE xsl:stylesheet [
-  <!ENTITY nnbsp "&#x202f;"><!-- narrow no-break space -->
-]>
-
 <xsl:stylesheet 
   version="2.0" 
   xmlns="http://www.w3.org/1999/xhtml"
@@ -27,7 +23,9 @@
               doctype-public="-//W3C//DTD XHTML 1.1//EN"
               doctype-system="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd" />
 
+  <xsl:include href="structure.xsl" />
   <xsl:include href="bibliography.xsl" />
+  <xsl:include href="phonology.xsl" />
 
   <xsl:variable name="term-links-xml" select="document('../term-links.xml')" />
 
@@ -50,84 +48,6 @@
     name="section-number"
     match="s:section"
     use="s:make-section-number(.)" />
-
-  <!-- Copy HTML elements from input to output, but force the XHTML namespace
-       to be the default namespace to accomodate Web browsers. -->
-  <xsl:template match="html:*">
-    <xsl:element name="{local-name()}" namespace="{namespace-uri()}">
-      <xsl:apply-templates select="node()|@*"/>
-    </xsl:element>
-  </xsl:template>
-
-  <xsl:template match="text()|@*">
-    <xsl:copy>
-      <xsl:apply-templates select="node()|@*" />
-    </xsl:copy>
-  </xsl:template>
-
-  <xsl:template match="@id">
-    <!-- id attributes from the source XML are not copied to the output if strip-id is set -->
-    <xsl:param name="strip-id" tunnel="yes" select="false()" />
-    <xsl:if test="not($strip-id)">
-      <xsl:apply-templates select="node()" />
-    </xsl:if>
-  </xsl:template>       
-
-  <!-- "mc" stands for terminology in Modern Chinese -->
-  <xsl:template match="p:mc">
-    <span lang="zh">
-      <xsl:apply-templates select="node()|@*" />
-    </span>
-  </xsl:template>
-
-  <!-- "ac" stands for terminology in Chinese from 'ancient' times -->
-  <xsl:template match="p:ac">
-    <span lang="zh">
-      <xsl:call-template name="look-up-link" />
-    </span>
-  </xsl:template>
-
-  <!-- Japanese term.  Could also be used to display 
-       Japanese variant of kanji in case the reader might not be familiar
-       with the traditional form. -->
-  <xsl:template match="p:j">
-    <span lang="ja">
-      <xsl:apply-templates select="node()|@*" />
-    </span>
-  </xsl:template>
-
-  <!-- Mark up 聲母, 韻母 given in Chinese characters. 
-       This template is called when generating tables of Middle Chinese 
-       phonological data.  The effect is as if the text is written
-       inside a p:ac element. -->
-  <xsl:template name="display-ac-phono-element">
-    <xsl:param name="content" />
-    <span lang="zh">
-      <xsl:copy-of select="$content" />
-    </span>
-  </xsl:template>
-
-  <!-- Phonetic description in the standard International Phonetic Alphabet -->
-  <xsl:template match="p:i">
-    <span class="ipa">
-      <xsl:text>/&nnbsp;</xsl:text>
-      <xsl:apply-templates select="node()|@*" />
-      <xsl:text>&nnbsp;/</xsl:text>
-    </span>
-  </xsl:template>
-
-  <xsl:template match="p:i-narrow">
-    <span class="ipa-narrow">
-      <xsl:apply-templates select="node()|@*" />
-    </span>
-  </xsl:template>
-
-  <xsl:template name="display-ipa">
-    <xsl:param name="content" />
-    <span class="ipa">
-      <xsl:copy-of select="$content" />
-    </span>
-  </xsl:template>
 
   <xsl:template name="look-up-link">
     <xsl:choose>
@@ -156,51 +76,6 @@
         <xsl:apply-templates select="node()|@*" />
       </xsl:otherwise>
     </xsl:choose>
-  </xsl:template>
-
-  <!-- Phonetic description in the standard IPA with explanatory "note" -->
-  <xsl:template match="p:in">
-    <span class="ipa">
-      <xsl:choose>
-        <xsl:when test="@href">
-          <a href="@href">
-            <xsl:apply-templates select="node()|@*" />
-          </a>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:apply-templates select="node()|@*" />
-        </xsl:otherwise>
-      </xsl:choose>
-    </span>
-  </xsl:template>
-
-  <!-- Pinyin transcription -->
-  <xsl:template match="p:py">
-    <span class="pinyin">
-      <xsl:apply-templates select="node()|@*" />
-    </span>
-  </xsl:template>
-
-  <!-- Japanese romaji transcription -->
-  <xsl:template match="p:jr">
-    <span class="romaji">
-      <xsl:apply-templates select="node()|@*" />
-    </span>
-  </xsl:template>
-
-  <!-- Jyutping transcription -->
-  <xsl:template match="p:yp">
-    <span class="jyutping">
-      <xsl:apply-templates select="node()|@*" />
-    </span>
-  </xsl:template>
-
-  <!-- Make tone numbers expressed as ASCII digits into superscripts -->
-  <xsl:template match="p:yp/text()">
-    <xsl:analyze-string select="." regex="[0-9]+">
-      <xsl:matching-substring><sup><xsl:value-of select="." /></sup></xsl:matching-substring>
-      <xsl:non-matching-substring><xsl:value-of select="." /></xsl:non-matching-substring>
-    </xsl:analyze-string>
   </xsl:template>
 
   <xsl:template match="html:head/p:*">
@@ -250,60 +125,6 @@
         </xsl:for-each>
       </xsl:when>
     </xsl:choose>
-  </xsl:template>
-
-  <xsl:template match="s:term">
-    <em class="term">
-      <!-- Copy attriubtes ?? -->
-      <xsl:apply-templates />
-    </em>
-  </xsl:template>
-
-  <xsl:template match="s:section">
-    <xsl:variable name="depth" select="count(ancestor-or-self::s:section)" />
-    <div class="section section-{$depth}" id="sec-{s:make-section-number(.)}">
-      <xsl:apply-templates select="node()|@*" />
-    </div>
-  </xsl:template>
-
-  <xsl:template match="s:heading">
-    <p class="heading">
-      <xsl:value-of select="s:make-section-number(.)" />
-      <xsl:text>. </xsl:text>
-      <xsl:apply-templates select="node()" />
-    </p>
-  </xsl:template>
-
-  <xsl:function name="s:make-section-number">
-    <xsl:param name="target" as="element()" />
-    <xsl:number level="multiple" select="$target" count="s:section" format="1.1" />
-  </xsl:function>
-
-  <!-- Wrapper element that falls away, for the purpose of grouping multiple elements
-       to be referred to by s:copy-of -->
-  <xsl:template match="s:fragment">
-    <xsl:apply-templates />
-  </xsl:template>
-
-  <xsl:template match="s:fragment" mode="retain-outer-fragment">
-    <xsl:copy>
-      <xsl:apply-templates />
-    </xsl:copy>
-  </xsl:template>
-
-  <xsl:template match="node()" mode="retain-outer-fragment">
-    <xsl:apply-templates select="." />
-  </xsl:template>
-
-  <!-- Repeat content in the source XML to avoid source-level duplication -->
-  <xsl:template match="s:copy-of">
-    <xsl:variable name="source" select="key('id', @idref)" />
-    <xsl:if test="count($source) != 1">
-      <xsl:message>warning: <xsl:value-of select="@idref" /> does not refer to a unique element in the source XML</xsl:message>
-    </xsl:if>
-    <xsl:apply-templates select="$source[position()=1]">
-      <xsl:with-param name="strip-id" tunnel="yes" select="true()" />
-    </xsl:apply-templates>
   </xsl:template>
 
   <xsl:template match="p:middle-chinese-finals-rows">
@@ -535,48 +356,6 @@
     </xsl:if>
   </xsl:template>  
 
-  <!-- Create table of contents -->
-  <xsl:template match="html:body">
-    <xsl:call-template name="table-of-contents" />
-    <div id="body">
-      <xsl:apply-templates />
-    </div>
-  </xsl:template>
-
-  <xsl:template name="table-of-contents">
-    <div id="toc-sidebar">
-      <xsl:call-template name="table-of-contents-subtree" />
-    </div>
-  </xsl:template>
-
-  <xsl:template name="table-of-contents-subtree">
-    <xsl:param name="depth" as="xs:integer" select="1" />
-    <ol class="toc toc-{$depth}">
-      <xsl:for-each select="s:section">
-        <li>
-          <xsl:variable name="section-number" select="s:make-section-number(.)" />
-          <span class="toc-number">
-            <xsl:value-of select="$section-number" />
-          </span>
-          <xsl:text> </xsl:text>
-          <a class="toc-title" href="#sec-{$section-number}">            
-            <xsl:apply-templates select="s:heading/node()|s:heading/@*" />
-          </a>
-
-          <!-- Recursively generate entries at deeper levels. 
-               But do not generate even the html:ol container if there
-               are no entries at all. -->
-          <xsl:if test="s:section">
-            <xsl:call-template name="table-of-contents-subtree">
-              <xsl:with-param name="depth" select="$depth + 1" />
-            </xsl:call-template>
-          </xsl:if>
-        </li>
-      </xsl:for-each>
-    </ol>
-  </xsl:template>
-
-
   <!-- Helper to let parts of an HTML table be written independent as sub-blocks.
        The content inside s:merge-table-rows is evaluated and is expected to result
        in zero or more s:fragment elements. 
@@ -738,35 +517,6 @@
         <strong>
           <xsl:value-of select="regex-group(1)" />
         </strong>
-      </xsl:matching-substring>
-      <xsl:non-matching-substring><xsl:value-of select="." /></xsl:non-matching-substring>
-    </xsl:analyze-string>
-  </xsl:template>
-
-  <!-- HTML ruby syntax is really inconvenient to type by hand. 
-       We adopt a special text-only syntax, assuming Japanese only:
-
-        漢字+【ふりがな】
-
-       that we translate to HTML ruby syntax. 
-       
-       The regular expression below is supposed to be:
-
-       ([\p{IsBasicLatin}\p{IsCJKCompatibilityIdeographs}]+)【([\p{IsHiragana}\p{IsKatakana}]+)】
-
-       but Saxon does not support this syntax despite it being part 
-       of the XML Schema specification.  So we expand the blocks manually
-       into Unicode character ranges.
-       -->
-  <xsl:template match="s:ruby">
-    <xsl:analyze-string 
-      select="string(.)" 
-      regex="([&#x4E00;-&#x9FFF;&#x4E00;-&#x9FFF;]+)【([&#x3040;-&#x309F;&#x30A0;-&#x30FF;]+)】">
-      <xsl:matching-substring>
-        <ruby>
-          <rb><xsl:value-of select="regex-group(1)" /></rb>
-          <rt><xsl:value-of select="regex-group(2)" /></rt>
-        </ruby>
       </xsl:matching-substring>
       <xsl:non-matching-substring><xsl:value-of select="." /></xsl:non-matching-substring>
     </xsl:analyze-string>
