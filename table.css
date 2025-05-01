@@ -341,6 +341,22 @@ dl.bibliography > dt {
     background-color:floralwhite;
 }
 
+/* Conserve vertical space in bibliography if medium is wide enough */
+@media print, (min-width: 60em)
+{
+    dl.bibliography > dd {
+        margin-left: 9em;
+        margin-top: 0.2em; 
+        border-top: thin dashed;
+    }
+
+    dl.bibliography > dt {
+        margin-top: 0.2em;
+        float: left;
+        max-width: 8em;
+    }
+}
+
 span.biblio-translation {
     quotes: "⦅" "⦆"
 }
