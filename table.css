@@ -123,6 +123,25 @@ sup.footnote a:any-link {
     color: blue;    
 }
 
+span.ordinal {
+    display: inline-block;
+    line-height: 0;
+    border-radius: 50%;
+    border: 2px solid gray;
+    font-family: "Noto Sans SC", sans-serif;
+    background-color: aliceblue;
+    font-weight: normal;
+    font-size: 90%;
+}
+
+span.ordinal > span {
+    display: inline-block;
+    padding-top: 0.5rem;
+    padding-bottom: 0.6rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+}
+
 th {
     text-align: center;
 }
@@ -164,6 +183,16 @@ div.corner > span.lower {
     left: 0;
     bottom: 0;
     font-size: 75%;
+}
+
+div.figure {
+    overflow-x: auto;
+}
+
+caption {
+    caption-side: bottom;
+    padding-top: 0.5em;
+    font-size: 90%;
 }
 
 table {
@@ -289,7 +318,7 @@ p.heading {
 
 div.section-1 p.heading {
     font-size: 120%;
-}
+}   
 
 img.page {
     max-width: 100%
@@ -339,6 +368,22 @@ dl.bibliography > dt {
     width: fit-content;
     padding: 0.2em;
     background-color:floralwhite;
+}
+
+/* Conserve vertical space in bibliography if medium is wide enough */
+@media print, (min-width: 60em)
+{
+    dl.bibliography > dd {
+        margin-left: 9em;
+        margin-top: 0.2em; 
+        border-top: thin dashed;
+    }
+
+    dl.bibliography > dt {
+        margin-top: 0.2em;
+        float: left;
+        max-width: 8em;
+    }
 }
 
 span.biblio-translation {
