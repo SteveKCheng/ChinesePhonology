@@ -178,4 +178,11 @@
     </span>
   </xsl:template>
 
+  <!-- Insert the current date/time, usually to inform the reader
+       when the document was updated -->
+  <xsl:template match="s:current-date-time">
+    <xsl:variable name="lang" select="(ancestor-or-self::*/@xml:lang)[last()]" />
+    <xsl:value-of select="format-dateTime(current-dateTime(), @format, $lang, @calendar, @country)" />
+  </xsl:template>
+
 </xsl:stylesheet>
