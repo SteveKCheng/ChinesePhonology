@@ -13,9 +13,9 @@
     use="@key" />
 
   <xsl:template match="s:cite">
-    <xsl:text>[</xsl:text>
-    <xsl:call-template name="cite-biblio" />
-    <xsl:text>]</xsl:text>
+    <cite class="biblio">
+      <xsl:call-template name="cite-biblio" />
+    </cite>
   </xsl:template>
 
   <xsl:template name="cite-biblio">
@@ -35,14 +35,14 @@
   <!-- Groups multiple s:cite children together so only one set
        of brackets surrounds all the items -->
   <xsl:template match="s:cite-group">
-    <xsl:text>[</xsl:text>
-    <xsl:for-each select="s:cite">
-      <xsl:if test="position() > 1">
-        <xsl:text>; </xsl:text>
-      </xsl:if>
-      <xsl:call-template name="cite-biblio" />
-    </xsl:for-each>
-    <xsl:text>]</xsl:text>
+    <cite class="biblio">
+      <xsl:for-each select="s:cite">
+        <xsl:if test="position() > 1">
+          <xsl:text>; </xsl:text>
+        </xsl:if>
+        <xsl:call-template name="cite-biblio" />
+      </xsl:for-each>
+    </cite>
   </xsl:template>
 
   <!-- Copy xml:lang attribute as HTML lang attribute -->

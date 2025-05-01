@@ -142,6 +142,16 @@ span.ordinal > span {
     margin-right: 0.3rem;
 }
 
+@media screen, print {
+    cite.biblio {
+        background-color: floralwhite;
+        padding: 0.1em;
+        border: thin dashed currentColor;
+        font-style: normal;
+    }    
+}
+
+
 th {
     text-align: center;
 }
