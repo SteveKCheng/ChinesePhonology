@@ -29,7 +29,7 @@
 
   <xsl:include href="bibliography.xsl" />
 
-  <xsl:variable name="term-links-xml" select="document('term-links.xml')" />
+  <xsl:variable name="term-links-xml" select="document('../term-links.xml')" />
 
   <xsl:key 
     name="link-items" 
@@ -359,7 +359,7 @@
     <xsl:param name="coda" select="@coda" />
     <xsl:param name="tone" select="@tone" />
 
-    <xsl:for-each select="document('rhyme-groups.xml')/data/item">
+    <xsl:for-each select="document('../rhyme-groups.xml')/data/item">
       <!-- Explicitly sort so the order of rows in the HTML output is independent
            of the order in the input TSV/XML data -->
       <xsl:sort select="@n" data-type="number" /><!-- more logical order of 攝韻 used in 《切韻研究》 by 邵榮芬 -->
