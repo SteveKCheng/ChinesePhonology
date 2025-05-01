@@ -123,6 +123,25 @@ sup.footnote a:any-link {
     color: blue;    
 }
 
+span.ordinal {
+    display: inline-block;
+    line-height: 0;
+    border-radius: 50%;
+    border: 2px solid gray;
+    font-family: "Noto Sans SC", sans-serif;
+    background-color: aliceblue;
+    font-weight: normal;
+    font-size: 90%;
+}
+
+span.ordinal > span {
+    display: inline-block;
+    padding-top: 0.5rem;
+    padding-bottom: 0.6rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+}
+
 th {
     text-align: center;
 }

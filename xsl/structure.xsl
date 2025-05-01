@@ -167,4 +167,15 @@
       <xsl:non-matching-substring><xsl:value-of select="." /></xsl:non-matching-substring>
     </xsl:analyze-string>
   </xsl:template>
+
+  <!-- Create a circled number with styling to make it visually distinct and appealing.
+       Limited from 0 to 20. -->
+  <xsl:template match="s:ordinal">
+    <span class="ordinal">
+      <span>
+        <xsl:value-of select="number(@value)" />
+      </span>
+    </span>
+  </xsl:template>
+
 </xsl:stylesheet>

@@ -74,7 +74,7 @@
     </thead>
     <tbody>
       <s:merge-table-rows>
-        <s:fragment><tr><th rowspan="2">①</th></tr></s:fragment>
+        <s:fragment><tr><th rowspan="2"><s:ordinal value="1" /></th></tr></s:fragment>
         <p:pcgk-comparison-table-block 
           char="痕" gloss="scar; trace"
           p="hén" c="han4" g="gon" k="kon" />
@@ -87,7 +87,7 @@
       </s:merge-table-rows>
 
       <s:merge-table-rows>
-        <s:fragment><tr><th rowspan="2">②</th></tr></s:fragment>
+        <s:fragment><tr><th rowspan="2"><s:ordinal value="2" /></th></tr></s:fragment>
         <p:pcgk-comparison-table-block 
           char="陽" gloss="sun; positive"
           p="yáng" c="joeng4" g="yau" />
@@ -100,7 +100,7 @@
       </s:merge-table-rows>
 
       <s:merge-table-rows>
-        <s:fragment><tr><th rowspan="2">③</th></tr></s:fragment>
+        <s:fragment><tr><th rowspan="2"><s:ordinal value="3" /></th></tr></s:fragment>
         <p:pcgk-comparison-table-block 
           char="者" gloss="person"
           p="zhě" c="ze2" g="sya" />
@@ -113,7 +113,7 @@
       </s:merge-table-rows>
 
       <s:merge-table-rows>
-        <s:fragment><tr><th rowspan="2">④</th></tr></s:fragment>
+        <s:fragment><tr><th rowspan="2"><s:ordinal value="4" /></th></tr></s:fragment>
         <p:pcgk-comparison-table-block 
           char="樂" gloss="enjoy; happy"
           p="lé" c="lok9" g="raku" />
@@ -126,7 +126,7 @@
       </s:merge-table-rows>
 
       <s:merge-table-rows>
-        <s:fragment><tr><th rowspan="2">⑤</th></tr></s:fragment>
+        <s:fragment><tr><th rowspan="2"><s:ordinal value="5" /></th></tr></s:fragment>
         <p:pcgk-comparison-table-block 
           char="譯" char-j="訳" gloss="translate; explain"
           p="yì" c="yik9" g="yaku" k="eki" />
@@ -145,7 +145,8 @@
 
     <ul>
       <li>
-        Each major row in the table (labeled 1 to 5) contains three characters sharing the same
+        Each major row in the table (labeled <s:ordinal value="1" /> to <s:ordinal value="5" />) 
+        contains three characters sharing the same
         phonetic component.  
       </li>
       <li>
@@ -193,12 +194,12 @@
     Furthermore, we can spot the following:
     <ul>
       <li>
-        In row 1, that the Japanese Go-on has a voiced consonant <em>g</em> in columns A and B
+        In row <s:ordinal value="1" />, that the Japanese Go-on has a voiced consonant <em>g</em> in columns A and B
         but not in column C, so whatever difference the pronuncation turns out to be in ancient times
         might just have something to do with voicing and de-voicing. 
       </li>
       <li>
-        In row 2, the pronunciation of all three characters seems ‘regular’ enough in Mandarin, 
+        In row <s:ordinal value="2" />, the pronunciation of all three characters seems ‘regular’ enough in Mandarin, 
         all having vowel <em>a</em>; and so does the Japanese.  Cantonese is the odd one out
         in that we have the contrasting vowels <em>oe</em> and <em>o</em>.  Yet, if we look at the
         Japanese, what is distinct about character C is that it is spelled with no <em>y</em>
@@ -207,7 +208,7 @@
       </li>
       <li>
         <p>
-          The same thing happens in row 3, where column A and column B sound different enough
+          The same thing happens in row <s:ordinal value="3" />, where column A and column B sound different enough
           already — with Japanese taking two different consonants <em>s</em> and <em>t</em> even. 
           Most native-language speakers (in any of the three languages) 
           probably do not realize the graphical component <p:mc>者</p:mc> occurring in 
@@ -221,14 +222,14 @@
         </p>
       </li>
       <li>
-        In row 4, Japanese has consonant <em>r</em> corresponding to <em>l</em> in Chinese, naturally. 
+        In row <s:ordinal value="4" />, Japanese has consonant <em>r</em> corresponding to <em>l</em> in Chinese, naturally. 
         Both the Japanese <em>r</em> and the Chinese <em>l</em> disappear at the same time for
         the exceptional character.  But the vowel in Japanese does not really differ between
         the three characters, suggesting that <p:mc>藥</p:mc> has phonetic component <p:mc>樂</p:mc> because
         the two characters sounded closer than in modern Chinese dialects.
       </li>
       <li>
-        In row 5, Japanese gains a consonant <em>d</em> or <em>t</em> to distinguish the character 
+        In row <s:ordinal value="5" />, Japanese gains a consonant <em>d</em> or <em>t</em> to distinguish the character 
         from column C.  Under Go-on the vowel is <em>a</em> on all three characters, but changes
         under Kan-on except for character C, suggesting characters A and B were diverging further from C
         (particularly, with respect to the vowel) in the 
