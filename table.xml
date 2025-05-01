@@ -13,14 +13,21 @@
       lang="en">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="table.css" />
+  <link rel="stylesheet" type="text/css">
+    <!-- Add a dummy parameter updated with time to force browser/server to invalidate cache
+         when we post updates to the web site. -->
+    <s:current-date-time 
+      attr="href" 
+      format="table.css?datetime=[Y0001][M01][D01][H01][m01]" />
+  </link>
   <script src="main.js" type="text/javascript" />
 </head>
 
 <body>
 
 <p>
-  This document was last updated: <s:current-date-time format="[H01]:[m01] [z] on [FNn], [D] [MNn] [Y]" />.
+  This document was last updated: 
+  <s:current-date-time format="[H01]:[m01] [z] on [FNn], [D] [MNn] [Y]" />.
 </p>
 
 <s:section>

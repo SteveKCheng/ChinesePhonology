@@ -7,6 +7,8 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   exclude-result-prefixes="s html xs">
 
+  <xsl:strip-space elements="html:link" />
+
   <!-- Copy HTML elements from input to output, but force the XHTML namespace
        to be the default namespace to accomodate Web browsers. -->
   <xsl:template match="html:*" name="process-html">
@@ -182,7 +184,17 @@
        when the document was updated -->
   <xsl:template match="s:current-date-time">
     <xsl:variable name="lang" select="(ancestor-or-self::*/@xml:lang)[last()]" />
-    <xsl:value-of select="format-dateTime(current-dateTime(), @format, $lang, @calendar, @country)" />
+    <xsl:variable 
+      name="content" 
+      select="format-dateTime(current-dateTime(), @format, $lang, @calendar, @country)" />
+    <xsl:choose>
+      <xsl:when test="@attr">
+        <xsl:attribute name="{@attr}"><xsl:value-of select="$content" /></xsl:attribute>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="$content" />
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
 </xsl:stylesheet>
