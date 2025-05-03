@@ -12,7 +12,6 @@ parser = argparse.ArgumentParser(
     description="Show the glyphs of an TrueType/OpenType font in an HTML page")
 parser.add_argument("file", metavar="font-file", help="path to TrueType/OpenType font file")
 parser.add_argument("-o", "--output", metavar="file", help="path to HTML output file")
-parser.add_argument("-c", "--columns", metavar="n", type=int, default=10, help="number of columns in output table")
 args = parser.parse_args()
 
 font = ttLib.TTFont(args.file, lazy=True)
@@ -21,21 +20,8 @@ outputFile = sys.stdout
 if args.output is not None:
     outputFile = open(args.output, "w", encoding='utf-8')
 
-def pf(text: str):
-    print(text, file=outputFile)
-
-pf("""<html xmlns="http://www.w3.org/1999/xhtml">""")
-pf("""<head>""")
-pf(f"""<title>Glyphs from {args.file}</title>""")
-pf("""</head>""")
-pf("""<body>""")
-pf("""<table>""")
-
 glyphOrder = font.getGlyphOrder()
 glyphSet = font.getGlyphSet()
-
-numColumns = args.columns
-numRows = (len(glyphOrder) + (numColumns-1)) // numColumns
 
 # Number of font design units per em
 fontHead = font['head']
@@ -53,54 +39,60 @@ cssScale = 2.0
 cssHeight = f"{(fontHeight / fduScale * cssScale):.2f}em"
 cssWidth = f"{(fontWidth / fduScale * cssScale):.2f}em"
 
-for i in range(numRows):
-    rowGlyphNames = []
-    rowGlyphGraphics = []
+def pf(text: str):
+    print(text, file=outputFile)
 
-    # Render glyphs to SVG
-    for j in range(numColumns):
-        glyphIndex = i*numColumns + j
-        if glyphIndex >= len(glyphOrder):
-            break
+pf("""<html xmlns="http://www.w3.org/1999/xhtml">""")
+pf("""<head>""")
+pf(f"""<title>Glyphs from {args.file}</title>""")
+pf("""<style type="text/css">""")
+pf("""
+div.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+}
+div.cell {
+    display: flex;
+    flex-direction: column;
+}
+span.name {
+    display: inline-box;
+}
+""")
+pf(f"""
+div.cell > svg {{
+    width: {cssWidth};
+    height: {cssHeight};
+}}
+""")   
+pf("""</style>""")
+pf("""</head>""")
 
-        glyphName = glyphOrder[glyphIndex]
-        glyph = glyphSet[glyphName]
-        pen = SVGPathPen(glyphSet)
-        glyph.draw(pen)
+pf("""<body>""")
+pf("""<div class="grid">""")
 
-        # Note: SVG's coordinate system has the positive y-axis pointing downwards.
-        # So, invert the image, and then the lowest y-coordinate (in the SVG system)
-        # becomes -fontYMax (rather than fontYMin originally).
-        svgXml = [
-            f"""<svg width="{cssWidth}" height="{cssHeight}" viewBox="{fontXMin} {-fontYMax} {fontWidth} {fontHeight}" xmlns="http://www.w3.org/2000/svg">""",
-            """<g transform="scale(1 -1)">""",
-            f"""<path d={xmlQuoteAttr(pen.getCommands())}>""",
-            """</g>""",
-            """</svg>"""
-        ]
-        
-        rowGlyphNames.append(glyphName)
-        rowGlyphGraphics.append("".join(svgXml))
+for glyphName in glyphOrder:
+    glyph = glyphSet[glyphName]
+    pen = SVGPathPen(glyphSet)
+    glyph.draw(pen)
 
-    # Output associated row of glyph names
-    pf("""<tr>""")
-    for j in range(numColumns):
-        pf("""<td>""")
-        if j < len(rowGlyphNames):
-            pf(xmlEscape(rowGlyphNames[j]))
-        pf("""</td>""")
-    pf("""</tr>""")
+    # Note: SVG's coordinate system has the positive y-axis pointing downwards.
+    # So, invert the image, and then the lowest y-coordinate (in the SVG system)
+    # becomes -fontYMax (rather than fontYMin originally).
+    svgXml = [
+        f"""<svg viewBox="{fontXMin} {-fontYMax} {fontWidth} {fontHeight}" xmlns="http://www.w3.org/2000/svg">""",
+        """<g transform="scale(1 -1)">""",
+        f"""<path d={xmlQuoteAttr(pen.getCommands())}>""",
+        """</g>""",
+        """</svg>"""
+    ]
+    
+    pf("""<div class="cell">""")
+    pf(f"""<span class="name">{xmlEscape(glyphName)}</span>""")
+    pf("".join(svgXml))
+    pf("""</div>""")
 
-    # Output row of glyph graphics
-    pf("""<tr>""")
-    for j in range(numColumns):
-        pf("""<td>""")
-        if j < len(rowGlyphGraphics):
-            pf(rowGlyphGraphics[j])
-        pf("""</svg>""")        
-        pf("""</td>""")
-    pf("""</tr>""")
-
-pf("""</table>""")
+pf("""</div>""")
 pf("""</body>""")
 pf("""</html>""")
