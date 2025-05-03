@@ -128,17 +128,9 @@ def getHanVariantGlyphs(font, glyphToUnicode, lang: str):
 
     return glyphSet
 
-variantGlyphs = set()
-variantGlyphs.update(getHanVariantGlyphs(font, glyphToUnicode, "JAN"))
-variantGlyphs.update(getHanVariantGlyphs(font, glyphToUnicode, "KOR"))
-variantGlyphs.update(getHanVariantGlyphs(font, glyphToUnicode, "ZHS"))
-variantGlyphs.update(getHanVariantGlyphs(font, glyphToUnicode, "ZHT"))
-
-desiredGlyphs = set(glyph for glyph in glyphSet)
-desiredGlyphs.difference_update(variantGlyphs)
 if args.codepoints:
-    from fontTools.subset import parse_unicodes
-    
+    from fontTools.subset import parse_unicodes, Subsetter
+
     desiredCodepoints = set()
 
     with open(args.codepoints, encoding='utf-8') as inputFile:
@@ -148,15 +140,29 @@ if args.codepoints:
             codepoints = parse_unicodes(line)
             desiredCodepoints.update(codepoints)
 
-    # Delete glyphs that do not belong
-    filteredGlyphs = set()
-    for glyph in desiredGlyphs:
-        codepointSet = glyphToUnicode.get(glyph, None)
-        if codepointSet is None or \
-            any(codepoint in desiredCodepoints for codepoint in codepointSet):
-            filteredGlyphs.add(glyph)
+    # Find glyphs that are connected to the selected Unicode characters
+    # directly (through cmap) or indirectly (e.g. ligatures).
+    #
+    # Note that a font may have glyphs that are just sitting there
+    # wasting space, not connected to anything --- because
+    # it had been created from some master font but was not subset completely.
+    #
+    # Re-use the "glyph closure" algorithm from the "subset" tool 
+    # from fontTools.
+    subsetter = Subsetter()
+    subsetter.populate(unicodes=desiredCodepoints)
+    subsetter._closure_glyphs(font)
+    desiredGlyphs = set(subsetter.glyphs_retained)
 
-    desiredGlyphs = filteredGlyphs
+else:
+    desiredGlyphs = set(glyph for glyph in glyphSet)
+
+variantGlyphs = set()
+variantGlyphs.update(getHanVariantGlyphs(font, glyphToUnicode, "JAN"))
+variantGlyphs.update(getHanVariantGlyphs(font, glyphToUnicode, "KOR"))
+variantGlyphs.update(getHanVariantGlyphs(font, glyphToUnicode, "ZHS"))
+variantGlyphs.update(getHanVariantGlyphs(font, glyphToUnicode, "ZHT"))
+desiredGlyphs.difference_update(variantGlyphs)
 
 outputFile = sys.stdout
 if args.output is not None:
