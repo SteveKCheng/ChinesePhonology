@@ -1,0 +1,4 @@
+config.ini
+.ninja_deps
+.ninja_log
+build.ninja
