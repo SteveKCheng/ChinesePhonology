@@ -95,12 +95,8 @@ a:any-link {
     text-decoration: none;
 }
 
-a:link {
+a:link, a:visited {
     color: blue;
-}
-
-a:visited {
-    color:  rgb(2%, 0, 98%);
 }
 
 a:hover {
