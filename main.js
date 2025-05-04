@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function(e)
     // Make sidebar collapsed any time the user resizes the browser window too narrow.
     // (If no JavaScript code ever runs, the table of contents is set by CSS to be
     // always displayed statically near the beginning of the document.)
-    const narrowScreenQuery = window.matchMedia("screen and (width <= 40em)");
+    const narrowScreenQuery = window.matchMedia("screen and (width <= 65em)");
     function onNarrowScreenQueryChange() {
         toggleSidebar(!narrowScreenQuery.matches);
     }

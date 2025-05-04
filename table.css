@@ -467,7 +467,7 @@ span.toc-number {
 }
 
 /* Screen is wide enough to accomodate a sidebar without obscuring main text */
-@media screen and (width > 40em) {
+@media screen and (width > 65em) {
     /* Properties for sidebar whenever it is expanded, including
        where there is no JavaScript. */
     div#toc {
@@ -494,7 +494,7 @@ span.toc-number {
 }
 
 /* Screen is not wide enough. */
-@media screen and (width <= 40em) {
+@media screen and (width <= 65em) {
     /* Properties for sidebar whenever it is explicitly expanded.
        They are similar but not the same as those for the wide screen
        above: the sidebar covers and obscures the main text when expanded.
