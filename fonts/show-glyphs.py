@@ -72,8 +72,16 @@ pf("""</head>""")
 pf("""<body>""")
 pf("""<div class="grid">""")
 
+emptyGlyphs = 0
+
 for glyphName in glyphOrder:
     glyph = glyphSet[glyphName]
+
+    # Ignore empty glyphs
+    if glyph.width == 0 or glyph.height == 0:
+        emptyGlyphs += 1
+        continue
+
     pen = SVGPathPen(glyphSet)
     glyph.draw(pen)
 
