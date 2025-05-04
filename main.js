@@ -33,21 +33,21 @@ document.addEventListener("DOMContentLoaded", function(e)
     }
 
     divBody = document.getElementById("body");
-    toc_sidebar = document.getElementById("toc-sidebar");
+    divToc = document.getElementById("toc");
 
-    document.getElementById("sidebar-toggle")
+    document.getElementById("sidebar-button")
             .addEventListener("click", function(e) 
     {
         e.preventDefault();
-        
-        if (toc_sidebar.style.display == "none")
+
+        if (divToc.style.display == "none")
         {
-            toc_sidebar.style.display = "block";
+            divToc.style.display = "block";
             divBody.classList.remove("no-sidebar");
         }
         else
         {
-            toc_sidebar.style.display = "none";
+            divToc.style.display = "none";
             divBody.classList.add("no-sidebar");
         }
     });

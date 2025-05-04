@@ -109,11 +109,11 @@
   </xsl:template>
 
   <xsl:template name="table-of-contents">
-    <div id="sidebar-toggle">
+    <div id="sidebar-button">
       <span class="icon">§</span>
     </div>
 
-    <div id="toc-sidebar">
+    <div id="toc">
       <xsl:call-template name="table-of-contents-subtree" />
     </div>
   </xsl:template>
