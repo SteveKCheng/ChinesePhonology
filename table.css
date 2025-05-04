@@ -95,12 +95,8 @@ a:any-link {
     text-decoration: none;
 }
 
-a:link {
+a:link, a:visited {
     color: blue;
-}
-
-a:visited {
-    color:  rgb(2%, 0, 98%);
 }
 
 a:hover {
@@ -141,6 +137,16 @@ span.ordinal > span {
     margin-left: 0.3rem;
     margin-right: 0.3rem;
 }
+
+@media screen, print {
+    cite.biblio {
+        background-color: floralwhite;
+        padding: 0.1em;
+        border: thin dashed currentColor;
+        font-style: normal;
+    }    
+}
+
 
 th {
     text-align: center;
@@ -393,11 +399,21 @@ span.biblio-translation {
 span.biblio-translation:before { content: open-quote; }
 span.biblio-translation:after { content: close-quote; }
 
-div#toc-sidebar {
+/* Table of contents is laid out statically at the beginning
+   as the "default", which works even when there is no JavaScript,
+   or the display medium is not an interactive screen.
+   It will be overridden by the rules below when we do happen
+   to be displaying interactively on screen. */
+div#toc {
     padding-left: 1em;
     padding-right: 1em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+}
+
+/* Sidebar button is totally suppressed if not in screen media */
+div#sidebar-button {
+    display: none;
 }
 
 ol.toc {
@@ -423,29 +439,85 @@ span.toc-number {
     margin-left: -2.5em;  /* move the section number into the "gutter" */
 }
 
+/* Display the button for the sidebar/table of contents
+   on screen media at the top-left corner, 
+   regardless to availability of JavaScript. */ 
 @media screen {
-    div#toc-sidebar {
-        display: none;
+    div#sidebar-button {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        width: 1.5em;
+        height: 1.5em;
+        padding: 0.5em;
+        border: dashed thin black;
         background: white;
+    }
+
+    div#sidebar-button > span.icon {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: 1.4rem;
+        line-height: 100%;
     }
 }
 
-@media screen and (min-width: 40em) {
-    div#toc-sidebar {
-        display: block;
+/* Screen is wide enough to accomodate a sidebar without obscuring main text */
+@media screen and (width > 40em) {
+    /* Properties for sidebar whenever it is expanded, including
+       where there is no JavaScript. */
+    div#toc {
         position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
+
         width: 21em;
         overflow: auto;
+
+        background: white;
+        padding-top: 2em;
         box-shadow: -0.1em 0 0.25em inset;
     }
 
-    div#body {
-        margin-left: 24em;
-    }
+    /* Expand the sidebar by default even when there is no JavaScript */
+    div#toc.collapsed { display: none; }
+
+    /* Main body stays clear of an expanded sidebar */
+    div#body                   { margin-left: 24em; }
+    div#body.sidebar-expanded  { margin-left: 24em; }
+    div#body.sidebar-collapsed { margin-left: unset; }
 }
+
+/* Screen is not wide enough. */
+@media screen and (width <= 40em) {
+    /* Properties for sidebar whenever it is explicitly expanded.
+       They are similar but not the same as those for the wide screen
+       above: the sidebar covers and obscures the main text when expanded.
+
+       If there is no JavaScript then the sidebar displays statically
+       like in non-interactive media. */
+    div#toc.expanded {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        max-width: 21em;
+        height: auto;
+        overflow: auto;
+
+        background: white;
+        padding-top: 2em;
+        border: thin dashed black;
+    }
+
+    div#toc.collapsed { display: none; }
+}
+
 
 @media print {
     div.section {
