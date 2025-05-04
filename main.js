@@ -23,11 +23,24 @@ async function playSound(url)
     await new Audio(cachedUrl).play();
 }
 
-document.addEventListener("DOMContentLoaded", function(e) {
+document.addEventListener("DOMContentLoaded", function(e) 
+{
     const items = document.querySelectorAll("a.audio");
     for (const item of items)
     {
         url = item.getAttribute("href");
         item.addEventListener("click", handlePlaySound.bind(null, url), false);
     }
+
+    toc_sidebar = document.getElementById("toc-sidebar");
+
+    document.getElementById("sidebar-toggle")
+            .addEventListener("click", function(e) 
+    {
+        e.preventDefault();
+        if (toc_sidebar.style.display == "none")
+            toc_sidebar.style.display = "block";
+        else
+            toc_sidebar.style.display = "none";
+    });    
 });
