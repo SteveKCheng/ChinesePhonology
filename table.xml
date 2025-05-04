@@ -21,6 +21,9 @@
       format="table.css?datetime=[Y0001][M01][D01][H01][m01]" />
   </link>
   <script src="main.js" type="text/javascript" />
+  <style type="text/css">
+    <!-- Hook for adding CSS rules dynamically in JavaScript -->
+  </style>
 </head>
 
 <body>

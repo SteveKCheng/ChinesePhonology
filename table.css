@@ -464,11 +464,6 @@ span.toc-number {
         font-size: 1.4rem;
         line-height: 100%;
     }
-    
-    div#sidebar-button * {
-        /* pass through clicks to parent where handler is attached */
-        pointer-events: none;
-    }
 }
 
 /* Screen is wide enough to accomodate a sidebar without obscuring main text */

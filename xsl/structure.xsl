@@ -110,7 +110,9 @@
 
   <xsl:template name="table-of-contents">
     <div id="sidebar-button">
-      <span class="icon">§</span>
+      <span class="icon">
+        <a href="#toc" title="Table of contents">§</a>
+      </span>
     </div>
 
     <div id="toc">

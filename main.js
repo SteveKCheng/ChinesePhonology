@@ -41,8 +41,8 @@ document.addEventListener("DOMContentLoaded", function(e)
     // near the beginning of the document.
     // 
 
-    divBody = document.getElementById("body");
-    divToc = document.getElementById("toc");
+    const divBody = document.getElementById("body");
+    const divToc = document.getElementById("toc");
 
     function toggleSidebar(toExpand) {
         if (toExpand)
@@ -57,17 +57,24 @@ document.addEventListener("DOMContentLoaded", function(e)
         }
     }
 
-    document.getElementById("sidebar-button")
-            .addEventListener("click", function(e) 
-    {
+    const divSidebarButton = document.getElementById("sidebar-button");
+    divSidebarButton.addEventListener("click", function(e) {
         e.preventDefault();
         toggleSidebar(divToc.className == "collapsed");
     });
 
+    // Pass through clicks on the content of divSidebarButton to the above
+    // handler.  We set this CSS rule dynamically here so it does not apply
+    // when JavaScript code does not run; then the button's behavior falls back
+    // to being a plain link expressed through the <a> element in the HTML source.
+    document.styleSheets[document.styleSheets.length - 1].insertRule(
+        "div#sidebar-button * { pointer-events: none; }"
+    );
+
     // Make sidebar collapsed any time the user resizes the browser window too narrow.
     // (If no JavaScript code ever runs, the table of contents is set by CSS to be
     // always displayed statically near the beginning of the document.)
-    narrowScreenQuery = window.matchMedia("screen and (width <= 40em)");
+    const narrowScreenQuery = window.matchMedia("screen and (width <= 40em)");
     function onNarrowScreenQueryChange() {
         toggleSidebar(!narrowScreenQuery.matches);
     }
