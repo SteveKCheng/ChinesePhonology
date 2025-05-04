@@ -32,23 +32,46 @@ document.addEventListener("DOMContentLoaded", function(e)
         item.addEventListener("click", handlePlaySound.bind(null, url), false);
     }
 
+    //
+    // Set up initial state of the sidebar.
+    //
+    // For media other than interactive screens, e.g. print, 
+    // the classes set on divBody and divToc do nothing as there are no
+    // CSS rules for them; and the elements are always displayed statically
+    // near the beginning of the document.
+    // 
+
     divBody = document.getElementById("body");
     divToc = document.getElementById("toc");
+
+    function toggleSidebar(toExpand) {
+        if (toExpand)
+        {
+            divToc.className = "expanded";
+            divBody.className = "sidebar-expanded";    
+        }
+        else
+        {
+            divToc.className = "collapsed";
+            divBody.className = "sidebar-collapsed";    
+        }
+    }
 
     document.getElementById("sidebar-button")
             .addEventListener("click", function(e) 
     {
         e.preventDefault();
-
-        if (divToc.style.display == "none")
-        {
-            divToc.style.display = "block";
-            divBody.classList.remove("no-sidebar");
-        }
-        else
-        {
-            divToc.style.display = "none";
-            divBody.classList.add("no-sidebar");
-        }
+        toggleSidebar(divToc.className == "collapsed");
     });
+
+    // Make sidebar collapsed any time the user resizes the browser window too narrow.
+    // (If no JavaScript code ever runs, the table of contents is set by CSS to be
+    // always displayed statically near the beginning of the document.)
+    narrowScreenQuery = window.matchMedia("screen and (width <= 40em)");
+    function onNarrowScreenQueryChange() {
+        toggleSidebar(!narrowScreenQuery.matches);
+    }
+
+    onNarrowScreenQueryChange();
+    narrowScreenQuery.addEventListener("change", onNarrowScreenQueryChange);
 });
