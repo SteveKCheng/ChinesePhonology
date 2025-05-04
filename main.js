@@ -1,12 +1,23 @@
+// Cache of downloaded sound clips
 var g_soundCache = {};
+
+// Single HTML5 audio object for playing back sound clips.
+// Sounds are not played simultaneously; if a new clip is started
+// the one already playing is stopped.
+var g_audio = null;
 
 function handlePlaySound(url, e)
 {
+    if (g_audio == null)
+        g_audio = new Audio();
+    else
+        g_audio.pause();
+
     e.preventDefault();
-    playSound(url); // play sound in background
+    playSound(g_audio, url); // play sound in background
 }
 
-async function playSound(url)
+async function playSound(audio, url)
 {
     var cachedUrl;
     if (url in g_soundCache)
@@ -20,7 +31,8 @@ async function playSound(url)
         g_soundCache[url] = cachedUrl;
     }
 
-    await new Audio(cachedUrl).play();
+    audio.src = cachedUrl;
+    await audio.play();
 }
 
 document.addEventListener("DOMContentLoaded", function(e) 
