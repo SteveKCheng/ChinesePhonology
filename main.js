@@ -4,36 +4,88 @@ var g_soundCache = {};
 // Single HTML5 audio object for playing back sound clips.
 // Sounds are not played simultaneously; if a new clip is started
 // the one already playing is stopped.
+//
+// This object must be created on first use, from when the user
+// selects a clip to play, because of (mobile) browser restrictions
+// on what they would consider "auto-playing" sounds.
 var g_audio = null;
+
+// The OGV counterpart to g_audio, if needed. 
+var g_ogvAudio = null;
+
+// The async result from loadOggAudioSupport() below.
+var g_ogvModulePromise = null;
+
+// Dynamically load the OGV module if browser does not support Ogg.
+async function loadOggAudioSupport() 
+{
+    const audio = new Audio();
+    const supportsOgg = !!audio.canPlayType && 
+        audio.canPlayType('audio/ogg; codecs="vorbis"') !== '';
+    if (supportsOgg)
+        return;
+
+    const ogvUrl = "https://cdn.jsdelivr.net/npm/ogv@1.9.0/";
+    const ogvModule = await import(ogvUrl + "+esm");
+    ogvModule.OGVLoader.base = ogvUrl + "dist";
+    return ogvModule;
+}
 
 function handlePlaySound(url, e)
 {
     if (g_audio == null)
+    {
         g_audio = new Audio();
+    }
     else
+    {
         g_audio.pause();
+        if (g_ogvAudio != null)
+            g_ogvAudio.pause();
+    }
 
     e.preventDefault();
-    playSound(g_audio, url); // play sound in background
+    playSound(url); // play sound in background
 }
 
-async function playSound(audio, url)
+async function playSound(url)
 {
-    var cachedUrl;
+    var descriptor;
     if (url in g_soundCache)
     {
-        cachedUrl = g_soundCache[url];
+        descriptor = g_soundCache[url];
     }
     else
     {
         blob = await (await fetch(url)).blob();
-        cachedUrl = URL.createObjectURL(blob);
-        g_soundCache[url] = cachedUrl;
+        descriptor = {
+            mediaType: blob.type,
+            cachedUrl: URL.createObjectURL(blob)
+        };
+        g_soundCache[url] = descriptor;
     }
 
-    audio.src = cachedUrl;
+    var audio = g_audio;
+
+    // Use g_ogvAudio in place of g_audio if playing an Ogg file
+    // but the browser does not support Ogg natively.
+    const ogvModule = await g_ogvModulePromise;
+    const mediaTypeRe = /^(application|audio)\/ogg($|;)/;
+    if (ogvModule != null && mediaTypeRe.test(descriptor.mediaType))
+    {
+        if (g_ogvAudio == null)
+            g_ogvAudio = new ogvModule.OGVPlayer();
+        audio = g_ogvAudio;
+    }    
+
+    audio.src = descriptor.cachedUrl;
     await audio.play();
 }
+
+window.addEventListener("load", function(e)
+{
+    g_ogvModulePromise = loadOggAudioSupport();
+});
 
 document.addEventListener("DOMContentLoaded", function(e) 
 {
