@@ -32,15 +32,23 @@ document.addEventListener("DOMContentLoaded", function(e)
         item.addEventListener("click", handlePlaySound.bind(null, url), false);
     }
 
+    divBody = document.getElementById("body");
     toc_sidebar = document.getElementById("toc-sidebar");
 
     document.getElementById("sidebar-toggle")
             .addEventListener("click", function(e) 
     {
         e.preventDefault();
+        
         if (toc_sidebar.style.display == "none")
+        {
             toc_sidebar.style.display = "block";
+            divBody.classList.remove("no-sidebar");
+        }
         else
+        {
             toc_sidebar.style.display = "none";
-    });    
+            divBody.classList.add("no-sidebar");
+        }
+    });
 });

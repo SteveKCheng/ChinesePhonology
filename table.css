@@ -472,6 +472,7 @@ div#sidebar-toggle > span.icon {
     }
 }
 
+/* Screen is wide enough to accomodate a sidebar */
 @media screen and (min-width: 40em) {
     div#toc-sidebar {
         display: block;
@@ -486,6 +487,12 @@ div#sidebar-toggle > span.icon {
 
     div#body {
         margin-left: 24em;
+    }
+
+    /* Applies when the sidebar has been disabled by Javascript.
+       The sidebar is enabled by default given this screen configuration. */
+    div#body.no-sidebar {
+        margin-left: unset;
     }
 }
 
