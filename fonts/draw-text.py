@@ -66,8 +66,6 @@ def shapeText(fontPath: str,
     features = {}
     hb.shape(font, buf, features)
 
-    devicePen = SVGPathPen(None)
-
     # Current pen position after drawing each glyph.
     #
     # Note that the positive y direction is up, same as Postscript
@@ -80,19 +78,51 @@ def shapeText(fontPath: str,
     # The coordinates are measured in font design units.
     penX, penY = 0, 0
 
-    for info, pos in zip(buf.glyph_infos, buf.glyph_positions):
-        glyphId = info.codepoint
+    # Separate the path commands for each cluster.
+    # The commands are all generated under the same PostScript coordinate system.
+    clusterCommands = []
+    clusterPen = None
+    prevCluster = None
 
-        logger.info(f"gid={glyphId} xAdv={pos.x_advance} yAdv={pos.y_advance} xOff={pos.x_offset} yOff={pos.y_offset}")
+    # Flush commands for preceding cluster if any, and prepare to render a new cluster
+    def commitCluster():
+        nonlocal clusterPen, clusterCommands
+        if clusterPen is not None:
+            clusterCommands.append(clusterPen.getCommands())
+        clusterPen = SVGPathPen(glyphSet=None)
 
-        # currentPen = TransformPen(devicePen, 
-        #                           baseTransform.transform(
-        #                               Offset(penX + pos.x_offset, penY + pos.y_offset)))
-        currentPen = TransformPen(devicePen, Offset(penX + pos.x_offset, penY + pos.y_offset))
-        font.draw_glyph_with_pen(glyphId, currentPen)
+    for glyphInfo, pos in zip(buf.glyph_infos, buf.glyph_positions):
+        glyphId = glyphInfo.codepoint
+
+        # uharfbuzz does not allow manually setting the values/indices associated 
+        # with each "cluster" in the source string.  Depending on how Python
+        # is currently representing the (Unicode) string text, HarfBuzz may
+        # have cluster values set to the UTF-8, UTF-16 or UTF-32 indices from
+        # the string.  All we know is that they should be monotonically increasing
+        # (resp. decreasing if the visual text direction is reverse) as we move
+        # from cluster to cluster.
+        cluster = glyphInfo.cluster
+
+        logger.info(f"gid={glyphId} cluster={cluster}")
+        logger.info(f"xAdv={pos.x_advance} yAdv={pos.y_advance} xOff={pos.x_offset} yOff={pos.y_offset}")
+
+        if cluster != prevCluster:
+            commitCluster()
+
+        # The origin of the glyph is essentially arbitrary and decided by the font. 
+        # We must translate so that the current pen position is at the origin.
+        glyphPen = TransformPen(clusterPen, Offset(penX + pos.x_offset, penY + pos.y_offset))
+
+        # HarfBuzz interprets the font outlines and calls back into the methods
+        # of the Python code implementing currentPen, which in turn generates
+        # the SVG commands. 
+        font.draw_glyph_with_pen(glyphId, glyphPen)
 
         penX += pos.x_advance
         penY += pos.y_advance
+        prevCluster = cluster
+
+    commitCluster()
 
     fontExtents = font.get_font_extents(buf.direction)
     lineHeight = fontExtents.ascender - fontExtents.descender + fontExtents.line_gap
@@ -137,9 +167,21 @@ def shapeText(fontPath: str,
 #        pf(f"""<g transform="translate(0 {imageHeight}) scale(1 -1) translate({imageOffsetX} {imageOffsetY})">""")
 
         minY = -imageHeight + imageOffsetY
+        
         pf("""<?xml version="1.0" encoding="utf-8" standalone="yes" ?>""")
-        pf(f"""<svg width="{scaledWidth}" height="{scaledHeight}" viewBox="{-imageOffsetX} {minY} {imageWidth} {imageHeight}" xmlns="http://www.w3.org/2000/svg">""")
-        pf(f"""<path transform="scale(1 -1)" d={xmlQuoteAttr(devicePen.getCommands())} />""")
+        pf("""<svg xmlns="http://www.w3.org/2000/svg" """)
+        pf(f"""  width="{scaledWidth}" height="{scaledHeight}" """)
+        pf(f"""  viewBox="{-imageOffsetX} {minY} {imageWidth} {imageHeight}">""")
+
+        # Invert vertical axis so the fonts are "upright" according to the SVG coordinate system.
+        # The ascender part of the font (for horizontal writing) will have negative SVG y coordinates
+        # however, which is accommodated in the viewBox specification above. 
+        pf("""<g transform="scale(1 -1)">""")
+
+        for command in clusterCommands:
+            pf(f"""<path d={xmlQuoteAttr(command)} />""")
+
+        pf("""</g>""")
         pf("""</svg>""")
 
 shapeText(args.font, 
