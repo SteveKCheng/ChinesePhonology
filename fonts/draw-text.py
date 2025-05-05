@@ -4,7 +4,7 @@ from fontTools.pens.transformPen import TransformPen
 from fontTools.misc.transform import Offset
 from xml.sax.saxutils import escape as xmlEscape
 from xml.sax.saxutils import quoteattr as xmlQuoteAttr
-from typing import NamedTuple, Optional
+from typing import NamedTuple, Optional, Callable
 import contextlib
 import uharfbuzz as hb
 import argparse
@@ -45,11 +45,18 @@ else:
 
 logger = logging.getLogger(__name__)
 
+class VectorRendering(NamedTuple):
+    pathCommands: list[str]
+    emScale: int
+    imageWidth: int
+    imageHeight: int
+    imageOffsetX: int
+    imageOffsetY: int
+
 def shapeText(fontPath: str, 
               direction: str, 
-              scale: Optional[CssLength],
-              svgPath: Optional[str], 
-              text: str):
+              penFactory: Callable,
+              text: str) -> VectorRendering:
 
     blob = hb.Blob.from_file_path(fontPath)
 
@@ -85,11 +92,11 @@ def shapeText(fontPath: str,
     prevCluster = None
 
     # Flush commands for preceding cluster if any, and prepare to render a new cluster
-    def commitCluster():
+    def commitCluster(hasNextCluster: bool):
         nonlocal clusterPen, clusterCommands
         if clusterPen is not None:
             clusterCommands.append(clusterPen.getCommands())
-        clusterPen = SVGPathPen(glyphSet=None)
+        clusterPen = penFactory() if hasNextCluster else None
 
     for glyphInfo, pos in zip(buf.glyph_infos, buf.glyph_positions):
         glyphId = glyphInfo.codepoint
@@ -107,7 +114,7 @@ def shapeText(fontPath: str,
         logger.info(f"xAdv={pos.x_advance} yAdv={pos.y_advance} xOff={pos.x_offset} yOff={pos.y_offset}")
 
         if cluster != prevCluster:
-            commitCluster()
+            commitCluster(True)
 
         # The origin of the glyph is essentially arbitrary and decided by the font. 
         # We must translate so that the current pen position is at the origin.
@@ -122,7 +129,7 @@ def shapeText(fontPath: str,
         penY += pos.y_advance
         prevCluster = cluster
 
-    commitCluster()
+    commitCluster(False)
 
     fontExtents = font.get_font_extents(buf.direction)
     lineHeight = fontExtents.ascender - fontExtents.descender + fontExtents.line_gap
@@ -146,18 +153,24 @@ def shapeText(fontPath: str,
     logger.info(f"ascender={fontExtents.ascender} descender={fontExtents.descender} lineGap={fontExtents.line_gap}" )
     logger.info(f"imageWidth={imageWidth} imageHeight={imageHeight} fontUnitsPerEm={fontUnitsPerEm}")
 
+    return VectorRendering(clusterCommands, fontUnitsPerEm, 
+                           imageWidth, imageHeight, 
+                           imageOffsetX, imageOffsetY)
+
+def outputSvg(rendering: VectorRendering, scale: CssLength, filePath: Optional[str]):
+
     if scale is not None:
         # Note: imageHeight (wrt. imageWidth for vertical writing) is not necessarily equal to fontUnitsPerEm.
         # It may be bigger or smaller.  But fontUnitsPerEm is conventionally used to measure font sizes,
         # e.g. a font at a 72pt means its em square is 72pt (= 1 inch). 
         # See https://www.thomasphinney.com/2011/03/point-size/
-        scaledWidth = CssLength(scale.number * imageWidth / fontUnitsPerEm, scale.units)
-        scaledHeight = CssLength(scale.number * imageHeight / fontUnitsPerEm, scale.units)
+        scaledWidth = CssLength(scale.number * rendering.imageWidth / rendering.emScale, scale.units)
+        scaledHeight = CssLength(scale.number * rendering.imageHeight / rendering.emScale, scale.units)
     else:
-        scaledWidth = imageWidth
-        scaledHeight = imageHeight
+        scaledWidth = rendering.imageWidth
+        scaledHeight = rendering.imageHeight
 
-    outputFileHolder = open(svgPath, "w", encoding="utf8") if svgPath is not None \
+    outputFileHolder = open(filePath, "w", encoding="utf8") if filePath is not None \
                         else contextlib.nullcontext(sys.stdout)
     with outputFileHolder as outputFile:
         def pf(s: str):
@@ -166,26 +179,27 @@ def shapeText(fontPath: str,
 #        pf(f"""<svg width="{imageWidth}" height="{imageHeight}" xmlns="http://www.w3.org/2000/svg">""")
 #        pf(f"""<g transform="translate(0 {imageHeight}) scale(1 -1) translate({imageOffsetX} {imageOffsetY})">""")
 
-        minY = -imageHeight + imageOffsetY
+        minY = -rendering.imageHeight + rendering.imageOffsetY
         
         pf("""<?xml version="1.0" encoding="utf-8" standalone="yes" ?>""")
         pf("""<svg xmlns="http://www.w3.org/2000/svg" """)
         pf(f"""  width="{scaledWidth}" height="{scaledHeight}" """)
-        pf(f"""  viewBox="{-imageOffsetX} {minY} {imageWidth} {imageHeight}">""")
+        pf(f"""  viewBox="{-rendering.imageOffsetX} {minY} {rendering.imageWidth} {rendering.imageHeight}">""")
 
         # Invert vertical axis so the fonts are "upright" according to the SVG coordinate system.
         # The ascender part of the font (for horizontal writing) will have negative SVG y coordinates
         # however, which is accommodated in the viewBox specification above. 
         pf("""<g transform="scale(1 -1)">""")
 
-        for command in clusterCommands:
+        for command in rendering.pathCommands:
             pf(f"""<path d={xmlQuoteAttr(command)} />""")
 
         pf("""</g>""")
         pf("""</svg>""")
 
-shapeText(args.font, 
-          args.direction,
-          args.scale,
-          svgPath = args.output,
-          text = args.text)
+rendering = shapeText(args.font, 
+                      args.direction,
+                      penFactory=lambda: SVGPathPen(glyphSet=None),
+                      text = args.text)
+
+outputSvg(rendering, args.scale, args.output)
