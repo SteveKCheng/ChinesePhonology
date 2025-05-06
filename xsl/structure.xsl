@@ -9,17 +9,35 @@
 
   <xsl:strip-space elements="html:link" />
 
+  <!-- The "re-process" template mode is used when this stylesheet internally
+       generates an intermediate result tree fragment that may contain a mix of 
+       standard XHTML plus custom elements like those from the p: namespace.  
+       The standard XHTML should be passed through verbatim while the custom 
+       elements require the usual processing.  
+
+       The "re-process" template mode deliberately avoids processing the XHTML
+       "twice" which might not be an idempotent operation.  Otherwise it
+       behaves the same as the default template mode. 
+       
+       The template rule immediately below catches all elements and applies
+       the #default behavior.  It gets overridden by the rule immediately
+       below which forces XHTML to be copied verbatim. 
+       --> 
+  <xsl:template match="*" mode="re-process">
+    <xsl:apply-templates select="." />
+  </xsl:template>
+
   <!-- Copy HTML elements from input to output, but force the XHTML namespace
        to be the default namespace to accomodate Web browsers. -->
-  <xsl:template match="html:*" name="process-html">
+  <xsl:template match="html:*" mode="re-process #default" name="process-html">
     <xsl:element name="{local-name()}" namespace="{namespace-uri()}">
-      <xsl:apply-templates select="node()|@*"/>
+      <xsl:apply-templates select="node()|@*" mode="#current" />
     </xsl:element>
   </xsl:template>
 
-  <xsl:template match="text()|@*">
+  <xsl:template match="text()|@*" mode="re-process #default">
     <xsl:copy>
-      <xsl:apply-templates select="node()|@*" />
+      <xsl:apply-templates select="node()|@*" mode="#current" />
     </xsl:copy>
   </xsl:template>
 

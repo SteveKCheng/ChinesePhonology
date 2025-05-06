@@ -439,7 +439,7 @@
 
     <s:fragment>
       <!-- Need to transform the literal p:* elements above -->
-      <xsl:apply-templates select="$content" />
+      <xsl:apply-templates select="$content" mode="re-process" />
     </s:fragment>
   </xsl:template>
 
@@ -464,7 +464,7 @@
       </tr>
     </xsl:variable>
 
-    <xsl:apply-templates select="$content" />
+    <xsl:apply-templates select="$content" mode="re-process" />
   </xsl:template>
 
   <xsl:template match="p:english-analogy">
