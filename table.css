@@ -429,23 +429,57 @@ ol.toc {
     /* ol is used for its semantic meaning only.  We supply our own section numbering
        and must suppress the default numbering. */
     list-style: none;
+
     margin-left: 0;
     padding-left: 0;
 }
 
-ol.toc-1 {
-    padding-bottom: 1em;
-    padding-left: 2.5em;    /* "gutter" allocated for section number */
+ol.toc a {
+    /* Display the section number and title as two flex boxes (horizontally side-by-side).
+       Earlier, this <a> element was left as an inline box, while the section number
+       was floated to the left.  
+       
+       However, for an even better looking menu, we also want to change the background 
+       color of the whole list item when the user hovers the mouse over it.  If floats
+       are used then we cannot get all of the background space to the left of the section 
+       title to change color together. */
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-ol.toc-1 > li > a.toc-title {
+ol.toc span.section-number {
+    width: 2.5em;
+
+    /* All section numbers must have the same width to make them align. 
+       The section title uses the rest of the available horizontal space. */ 
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+/* Major section (chapter) in the table of contents */
+ol.toc-1 > li > a {
     font-weight: bold;
+    margin-top: 0.5em;
 }
 
-span.toc-number {
-    float: left;          /* needed to fix the width of this inline element */
-    width: 2.5em;         /* fixed width so all entries in TOC align */
-    margin-left: -2.5em;  /* move the section number into the "gutter" */
+/* When displaying the table of contents as a sidebar, make the list container
+   be flush against the boundaries of the sidebar.  Otherwise there will
+   be visual gaps in the highlighting (changing the background color) when 
+   the links are hovered over.  Visual space is added as padding to the
+   list items themselves. */
+@media screen {
+    div#toc {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    ol.toc a {
+        padding-left: 0.75em;
+        padding-right: 0.75em;
+    }
 }
 
 /* Display the button for the sidebar/table of contents
@@ -488,9 +522,11 @@ span.toc-number {
         width: 21em;
         overflow: auto;
 
-        background: white;
         padding-top: 2em;
         box-shadow: -0.1em 0 0.25em inset;
+
+        background-color: rgb(25%, 5%, 48%);
+        color: rgb(90%, 90%, 90%);
     }
 
     /* Expand the sidebar by default even when there is no JavaScript */
@@ -500,6 +536,17 @@ span.toc-number {
     div#body                   { margin-left: 24em; }
     div#body.sidebar-expanded  { margin-left: 24em; }
     div#body.sidebar-collapsed { margin-left: unset; }
+
+    ol.toc a {
+        /* Inherit the color scheme from the sidebar */
+        color: unset;
+    }
+
+    ol.toc a:hover {
+        /* Complementary color versus non-highlighted state */
+        background-color: rgb(75%, 95%, 52%);
+        color: black;
+    }
 }
 
 /* Screen is not wide enough. */
@@ -519,14 +566,29 @@ span.toc-number {
         height: auto;
         overflow: auto;
 
-        background: white;
         padding-top: 2em;
         border: thin dashed black;
+        border-radius: 5px;
+
+        background-color: rgb(25%, 5%, 48%);
+        color: rgb(90%, 90%, 90%);
     }
 
     div#toc.collapsed { display: none; }
-}
 
+    div#toc.expanded ol.toc a {
+        /* Inherit the color scheme from the sidebar
+           (unless JavaScript is not available and the table of contents
+            always displays at the beginning of the document) */
+        color: unset;
+    }
+
+    div#toc.expanded ol.toc a:hover {
+        /* Complementary color versus non-highlighted state */
+        background-color: rgb(75%, 95%, 52%);   
+        color: black;
+    }
+}
 
 @media print {
     div.section {
