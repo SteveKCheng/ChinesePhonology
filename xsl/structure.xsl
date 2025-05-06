@@ -126,12 +126,16 @@
       <xsl:for-each select="s:section">
         <li>
           <xsl:variable name="section-number" select="s:make-section-number(.)" />
-          <span class="toc-number">
-            <xsl:value-of select="$section-number" />
-          </span>
-          <xsl:text> </xsl:text>
-          <a class="toc-title" href="#sec-{$section-number}">            
-            <xsl:apply-templates select="s:heading/node()|s:heading/@*" />
+
+          <a href="#sec-{$section-number}">
+            <span class="section-number">
+              <xsl:value-of select="$section-number" />
+              <xsl:text> </xsl:text>
+            </span>
+  
+            <span class="section-title">
+              <xsl:apply-templates select="s:heading/node()|s:heading/@*" />
+            </span>
           </a>
 
           <!-- Recursively generate entries at deeper levels. 

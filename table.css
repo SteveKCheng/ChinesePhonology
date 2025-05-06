@@ -429,23 +429,35 @@ ol.toc {
     /* ol is used for its semantic meaning only.  We supply our own section numbering
        and must suppress the default numbering. */
     list-style: none;
+
     margin-left: 0;
     padding-left: 0;
 }
 
-ol.toc-1 {
-    padding-bottom: 1em;
-    padding-left: 2.5em;    /* "gutter" allocated for section number */
+ol.toc a {
+    /* Display the section number and title as two flex boxes (horizontally side-by-side).
+       Earlier, this <a> element was left as an inline box, while the section number
+       was floated to the left.  
+       
+       However, for an even better looking menu, we also want to change the background 
+       color of the whole list item when the user hovers the mouse over it.  If floats
+       are used then we cannot get all of the background space to the left of the section 
+       title to change color together. */
+    display: flex;
+    width: 100%;
 }
 
-ol.toc-1 > li > a.toc-title {
+ol.toc span.section-number {
+    width: 2.5em;
+}
+
+ol.toc a:hover {
+    background-color: yellowgreen;
+}
+
+/* Major section (chapter) in the table of contents */
+ol.toc-1 > li > a {
     font-weight: bold;
-}
-
-span.toc-number {
-    float: left;          /* needed to fix the width of this inline element */
-    width: 2.5em;         /* fixed width so all entries in TOC align */
-    margin-left: -2.5em;  /* move the section number into the "gutter" */
 }
 
 /* Display the button for the sidebar/table of contents
