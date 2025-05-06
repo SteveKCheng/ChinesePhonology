@@ -87,6 +87,11 @@
     </ol>
   </xsl:template>
 
+  <!-- Prefix footnote IDs with "fn-" instead of the usual "id-" -->
+  <xsl:template match="p:notes-list/html:li/@id" priority="1">
+    <xsl:attribute name="id" select="concat('fn-', string(.))" />
+  </xsl:template>
+
   <xsl:template match="p:notes-list/html:li/html:p[position()=1]">
     <p>
       <xsl:apply-templates select="@*" />
@@ -116,7 +121,7 @@
     <xsl:choose>
       <xsl:when test="$target">
         <xsl:for-each select="$target">
-          <a href="#{$idref}" id="{$here}">
+          <a href="#fn-{$idref}" id="{$here}">
             <sup class="footnote">
               <xsl:text>▼</xsl:text>
               <xsl:number format="1" />
