@@ -120,6 +120,21 @@ sup.footnote a:any-link {
     color: blue;    
 }
 
+/* Highlight footnotes when clicked */
+@media screen {
+    ol.footnotes li:target {
+        animation-name: flash-footnote;
+        animation-duration: 0.5s;
+        animation-iteration-count: 2;
+        scroll-margin-top: 50vh;
+    }
+    
+    @keyframes flash-footnote {  
+        from { background: yellow; }
+        to { background: revert; }
+    }
+}
+
 span.ordinal {
     display: inline-block;
     line-height: 0;
