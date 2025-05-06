@@ -464,6 +464,7 @@ ol.toc a:hover {
 /* Major section (chapter) in the table of contents */
 ol.toc-1 > li > a {
     font-weight: bold;
+    margin-top: 0.5em;
 }
 
 /* When displaying the table of contents as a sidebar, make the list container
