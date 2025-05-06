@@ -450,6 +450,11 @@ ol.toc a {
 
 ol.toc span.section-number {
     width: 2.5em;
+
+    /* All section numbers must have the same width to make them align. 
+       The section title uses the rest of the available horizontal space. */ 
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 
 ol.toc a:hover {

@@ -130,9 +130,14 @@
           <a href="#sec-{$section-number}">
             <span class="section-number">
               <xsl:value-of select="$section-number" />
-              <xsl:text> </xsl:text>
             </span>
   
+            <!-- This <a> element is set to display as a block flexbox 
+                 in CSS, so the following space is just for fallback
+                 when CSS is disabled (or when rendering the document
+                 to a non-visual medium). -->
+            <xsl:text> </xsl:text>
+
             <span class="section-title">
               <xsl:apply-templates select="s:heading/node()|s:heading/@*" />
             </span>
