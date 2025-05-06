@@ -20,6 +20,7 @@
       attr="href" 
       format="table.css?datetime=[Y0001][M01][D01][H01][m01]" />
   </link>
+  <title>The Etymology of Modern Pronunciations of Chinese Characters</title>
   <script src="main.js" type="text/javascript" />
   <style type="text/css">
     <!-- Hook for adding CSS rules dynamically in JavaScript -->
@@ -27,6 +28,16 @@
 </head>
 
 <body>
+
+<h1>
+  <object data="resources/logo-portable.svg" type="image/svg+xml">
+    The Etymology of Modern Pronunciations of Chinese Characters
+  </object>
+</h1>
+
+<p class="by-line">
+— Steve Cheng <span lang="zh">鄭君博 著</span>
+</p>
 
 <p>
   This document was last updated: 

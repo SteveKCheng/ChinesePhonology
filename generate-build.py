@@ -83,7 +83,10 @@ writer.rule(
     command=copyCommand
 )
 
-webOutputs = [ "index.html", "table.css", "main.js" ]
+webOutputs = [ "index.html", "table.css", "main.js",
+               "resources/logo-portable.svg" ]
+webOutputs = [ os.path.normpath(f) for f in webOutputs ]
+
 for f in webOutputs[1:]:
     writer.build(
         outputs=os.path.join("publish", f),
