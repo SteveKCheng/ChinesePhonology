@@ -84,12 +84,17 @@ writer.rule(
 )
 
 webOutputs = [ "index.html", "table.css", "main.js" ]
-for f in webOutputs:
+for f in webOutputs[1:]:
     writer.build(
         outputs=os.path.join("publish", f),
         rule="copy",
         inputs=f
     )
+writer.build(
+    outputs=os.path.join("publish", "index.html"),
+    rule="copy",
+    inputs="table.html"
+)
 
 writer.build(
     "publish", 
