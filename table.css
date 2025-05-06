@@ -445,6 +445,7 @@ ol.toc a {
        title to change color together. */
     display: flex;
     width: 100%;
+    box-sizing: border-box;
 }
 
 ol.toc span.section-number {
@@ -458,6 +459,25 @@ ol.toc a:hover {
 /* Major section (chapter) in the table of contents */
 ol.toc-1 > li > a {
     font-weight: bold;
+}
+
+/* When displaying the table of contents as a sidebar, make the list container
+   be flush against the boundaries of the sidebar.  Otherwise there will
+   be visual gaps in the highlighting (changing the background color) when 
+   the links are hovered over.  Visual space is added as padding to the
+   list items themselves. */
+@media screen {
+    div#toc {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    ol.toc a {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
 }
 
 /* Display the button for the sidebar/table of contents
