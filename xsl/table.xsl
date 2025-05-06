@@ -40,11 +40,6 @@
     use="@id" />
 
   <xsl:key
-    name="fn"
-    match="p:fn"
-    use="@idref" />
-
-  <xsl:key
     name="section-number"
     match="s:section"
     use="s:make-section-number(.)" />
@@ -79,57 +74,6 @@
   </xsl:template>
 
   <xsl:template match="html:head/p:*">
-  </xsl:template>
-
-  <xsl:template match="p:notes-list">
-    <ol class="footnotes">
-      <xsl:apply-templates select="node()|@*" />
-    </ol>
-  </xsl:template>
-
-  <!-- Prefix footnote IDs with "fn-" instead of the usual "id-" -->
-  <xsl:template match="p:notes-list/html:li/@id" priority="1">
-    <xsl:attribute name="id" select="concat('fn-', string(.))" />
-  </xsl:template>
-
-  <xsl:template match="p:notes-list/html:li/html:p[position()=1]">
-    <p>
-      <xsl:apply-templates select="@*" />
-      <xsl:variable name="referrer" select="key('fn', ../@id)" />
-      <xsl:if test="count($referrer) = 1">
-        <xsl:for-each select="$referrer">
-          <a href="#{generate-id()}" class="footnote-return">▲</a>
-          <xsl:text> </xsl:text>
-        </xsl:for-each>
-      </xsl:if>
-      <xsl:apply-templates select="node()" />
-    </p>
-  </xsl:template>
-
-  <!-- Footnote reference.
-
-       This template is also explicitly callable so that 
-       other templates can generate footnotes without re-processing
-       intermediate output trees.  Note: this functionality is broken
-       right now because the generation of the footnote content
-       cannot see where it is referenced.
-       -->
-  <xsl:template match="p:fn" name="make-footnote">
-    <xsl:param name="here" select="generate-id()" as="xs:string" />
-    <xsl:param name="idref" select="@idref" as="xs:string" />
-    <xsl:variable name="target" select="key('id', $idref)" />
-    <xsl:choose>
-      <xsl:when test="$target">
-        <xsl:for-each select="$target">
-          <a href="#fn-{$idref}" id="{$here}">
-            <sup class="footnote">
-              <xsl:text>▼</xsl:text>
-              <xsl:number format="1" />
-            </sup>
-          </a>
-        </xsl:for-each>
-      </xsl:when>
-    </xsl:choose>
   </xsl:template>
 
   <xsl:template match="p:middle-chinese-finals-rows">

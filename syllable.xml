@@ -123,7 +123,7 @@
         </tr>
         <tr>
           <th>
-            Retroflex <p:ac>舌上音</p:ac><p:fn idref="舌上音" />
+            Retroflex <p:ac>舌上音</p:ac><s:fn idref="舌上音" />
           </th>
           <td>
             <p:ac h="initials38">知</p:ac>
@@ -142,7 +142,7 @@
           <td>
             <p:ac h="initials38">娘</p:ac>
             <p:i>ɳ</p:i>
-            <p:fn idref="泥-vs-娘" />
+            <s:fn idref="泥-vs-娘" />
           </td>
         </tr>
         <tr>
@@ -172,7 +172,7 @@
         </tr>      
         <tr>
           <th>
-            Retroflex sibilants <p:ac>齒上音</p:ac><p:fn idref="齒上音" />
+            Retroflex sibilants <p:ac>齒上音</p:ac><s:fn idref="齒上音" />
           </th>
           <td>
             <p:ac h="initials38">莊</p:ac>
@@ -223,7 +223,7 @@
         </tr>
         <tr>
           <th>
-            Palatal <p:ac>半齒音</p:ac><p:fn idref="半齒音" /> &amp; Lateral <p:ac>半舌音</p:ac><p:fn idref="半舌音" />
+            Palatal <p:ac>半齒音</p:ac><s:fn idref="半齒音" /> &amp; Lateral <p:ac>半舌音</p:ac><s:fn idref="半舌音" />
           </th>
           <td />
           <td />
@@ -264,7 +264,7 @@
         </tr>
         <tr>
           <th rowspan="2">
-            Laryngeals <p:ac>喉音</p:ac><p:fn idref="laryngeals" />
+            Laryngeals <p:ac>喉音</p:ac><s:fn idref="laryngeals" />
           </th>
           <td>
             <p:ac h="initials38">影</p:ac>
@@ -299,7 +299,7 @@
       </tbody>
     </table>
 
-    <p:notes-list>
+    <s:notes-list>
       <li id="泥-vs-娘">
         <p>
           Some authors merge <p:ac h="initials38">娘</p:ac> into 
@@ -399,7 +399,7 @@
           row for <p:ac>舌頭音</p:ac>.
         </p>
       </li>
-    </p:notes-list>
+    </s:notes-list>
   </s:section>
 
   <s:section>
@@ -463,9 +463,9 @@
     </s:section>
 
   <!--
-    <p:notes-list>
+    <s:notes-list>
 
-    </p:notes-list>
+    </s:notes-list>
   -->
 
     <s:section>
@@ -630,7 +630,7 @@
               word="t_a_lk" word-ipa="tʰɔk"
               def="https://en.wiktionary.org/wiki/talk"
               audio="https://upload.wikimedia.org/wikipedia/commons/1/16/En-uk-to_talk.ogg">
-              <p:fn idref="vowel-ɔ" />
+              <s:fn idref="vowel-ɔ" />
             </p:english-analogy>
           </td>
         </tr>
@@ -651,7 +651,7 @@
               word="t_u_ck" word-ipa="tʰɐk"
               def="https://en.wiktionary.org/wiki/tuck"
               audio="https://upload.wikimedia.org/wikipedia/commons/8/85/En-us-tuck.ogg">
-              <p:fn idref="vowel-ɐ" />
+              <s:fn idref="vowel-ɐ" />
             </p:english-analogy>
           </td>
           <td />
@@ -667,7 +667,7 @@
               word="t_a_co" word-ipa="ˈtʰako(ː)"
               def="https://en.wiktionary.org/wiki/taco"
               audio="https://upload.wikimedia.org/wikipedia/commons/1/1b/En-ca-taco.oga">
-              <p:fn idref="vowel-a" />
+              <s:fn idref="vowel-a" />
             </p:english-analogy>
           </td>
           <td />
@@ -676,14 +676,14 @@
               word="t_o_p" word-ipa="tʰɑp"
               def="https://en.wiktionary.org/wiki/top"
               audio="https://upload.wikimedia.org/wikipedia/commons/3/32/En-us-top.ogg">
-              <p:fn idref="vowel-ɑ" />
+              <s:fn idref="vowel-ɑ" />
             </p:english-analogy>
           </td>
         </tr>
       </tbody>
     </table>
 
-    <p:notes-list>
+    <s:notes-list>
       <li id="vowel-a">
         <p>
           American English does not 
@@ -753,7 +753,7 @@
           (for otherwise I would struggle to tell the difference in the main vowel!). 
         </p>
       </li>
-    </p:notes-list>
+    </s:notes-list>
 
   </s:section>
 
