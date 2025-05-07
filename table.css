@@ -89,7 +89,10 @@ rt {
     font-size: 50% !important;
 }
 
-
+ul {
+    /* Black Right-Pointing Pointer + 1/3-em space */
+    list-style-type: "\25BA\2004";  
+}
 
 a:any-link {
     text-decoration: none;
@@ -104,8 +107,9 @@ a:hover {
 }
 
 
-.ipa {
+span.ipa {
     font-family: "Noto Sans SC", sans-serif;
+    quotes: "/" "/"
 }
 
 span.ipa-narrow {
@@ -113,6 +117,8 @@ span.ipa-narrow {
     quotes: "[" "]"
 }
 
+span.ipa:before { content: open-quote; }
+span.ipa:after { content: close-quote; }
 span.ipa-narrow:before { content: open-quote; }
 span.ipa-narrow:after { content: close-quote; }
 
@@ -120,23 +126,61 @@ sup.footnote a:any-link {
     color: blue;    
 }
 
-span.ordinal {
-    display: inline-block;
-    line-height: 0;
-    border-radius: 50%;
-    border: 2px solid gray;
-    font-family: "Noto Sans SC", sans-serif;
-    background-color: aliceblue;
-    font-weight: normal;
-    font-size: 90%;
+dl.footnotes {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    /* Align <dt> and <dd> on baseline of the first line even if different
+       font sizes are used (e.g. <dd> content may have Chinese characters
+       which are bigger than the surrounding English text). */
+    align-items: first baseline;
 }
 
-span.ordinal > span {
+dl.footnotes > dt {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 2.5em;
+}
+
+dl.footnotes > dd {
+    /* Force the contents to take up the whole row in the flex container,
+       so the next <dt>,<dd> pair will be laid onto the next row. */
+    flex-basis: calc(100% - 3em);
+    margin-left: auto;                 
+}
+
+/* Highlight footnotes when clicked */
+@media screen {
+    dl.footnotes dd:target {
+        animation-name: flash-footnote;
+        animation-duration: 0.5s;
+        animation-iteration-count: 2;
+        scroll-margin-top: 50vh;
+    }
+    
+    @keyframes flash-footnote {  
+        from { background: yellow; }
+        to { background: revert; }
+    }
+}
+
+span.ordinal {
     display: inline-block;
-    padding-top: 0.5rem;
-    padding-bottom: 0.6rem;
-    margin-left: 0.3rem;
-    margin-right: 0.3rem;
+    border-radius: 50%;
+    border: 2px solid gray;
+    background-color: rgb(95%, 95%, 0%);
+    font-weight: normal;
+    font-family: "Noto Sans SC", sans-serif;
+    font-stretch: condensed;
+    line-height: 1em;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    vertical-align: center;
 }
 
 @media screen, print {
@@ -304,15 +348,30 @@ div.sound-word {
     display: flex;
     flex-direction: row;
     margin: 0;
+
+    /* Ideally we would have the first baseline of the children
+       be vertically aligned.  However, the first child item
+       also has a background color, and if we set 
+       "align-items: first baseline" then the background will
+       not extend to fill all the vertical space in the cell.
+       
+       So approximate first-baseline alignment by setting
+       line-height uniformly to 1.2em.  It is still not
+       perfect though: the real way to fix the problem is to
+       use a grid layout. */
+    align-items: stretch;
+    line-height: 1.2em;
 }
 
 div.sound-word > span.ipa {
     display: inline-block;
     padding-left: 0.2em;
     padding-right: 0.2em;
-    width: 1em;
-    background-color: beige; 
-    margin: 0;
+    background-color: beige;
+    flex-shrink: 0;
+    flex-grow: 0;
+    min-width: 1.5em;
+    text-align: center;
 }
 
 span.pinyin {
@@ -518,9 +577,13 @@ ol.toc-1 > li > a {
         top: 0;
         bottom: 0;
         left: 0;
+        z-index: 3;
 
         width: 21em;
         overflow: auto;
+
+        /* set up sliding animation on collapsing sidebar */
+        transition: left 0.5s linear, display 0.5s allow-discrete;
 
         padding-top: 2em;
         box-shadow: -0.1em 0 0.25em inset;
@@ -530,12 +593,22 @@ ol.toc-1 > li > a {
     }
 
     /* Expand the sidebar by default even when there is no JavaScript */
-    div#toc.collapsed { display: none; }
+    div#toc.collapsed { 
+        left: -21em;    /* for transition of sliding left */
+        display: none;
+    }
 
     /* Main body stays clear of an expanded sidebar */
-    div#body                   { margin-left: 24em; }
-    div#body.sidebar-expanded  { margin-left: 24em; }
-    div#body.sidebar-collapsed { margin-left: unset; }
+    div#body { 
+        margin-left: 24em; 
+
+        /* set up sliding animation on collapsing sidebar */
+        transition: margin-left linear 0.5s;
+    }
+
+    div#body.sidebar-collapsed { 
+        margin-left: unset; 
+    }
 
     ol.toc a {
         /* Inherit the color scheme from the sidebar */
@@ -561,6 +634,7 @@ ol.toc-1 > li > a {
         position: fixed;
         top: 0;
         left: 0;
+        z-index: 3;
 
         max-width: 21em;
         height: auto;
