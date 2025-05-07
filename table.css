@@ -348,15 +348,30 @@ div.sound-word {
     display: flex;
     flex-direction: row;
     margin: 0;
+
+    /* Ideally we would have the first baseline of the children
+       be vertically aligned.  However, the first child item
+       also has a background color, and if we set 
+       "align-items: first baseline" then the background will
+       not extend to fill all the vertical space in the cell.
+       
+       So approximate first-baseline alignment by setting
+       line-height uniformly to 1.2em.  It is still not
+       perfect though: the real way to fix the problem is to
+       use a grid layout. */
+    align-items: stretch;
+    line-height: 1.2em;
 }
 
 div.sound-word > span.ipa {
     display: inline-block;
     padding-left: 0.2em;
     padding-right: 0.2em;
-    width: 1em;
-    background-color: beige; 
-    margin: 0;
+    background-color: beige;
+    flex-shrink: 0;
+    flex-grow: 0;
+    min-width: 1.5em;
+    text-align: center;
 }
 
 span.pinyin {
@@ -590,7 +605,7 @@ ol.toc-1 > li > a {
         /* set up sliding animation on collapsing sidebar */
         transition: margin-left linear 0.5s;
     }
-    
+
     div#body.sidebar-collapsed { 
         margin-left: unset; 
     }
