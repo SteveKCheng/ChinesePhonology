@@ -168,7 +168,7 @@ span.ordinal {
     border-radius: 50%;
     border: 2px solid gray;
     font-family: "Noto Sans SC", sans-serif;
-    background-color: aliceblue;
+    background-color: rgb(95%, 95%, 0%);
     font-weight: normal;
     font-size: 90%;
 }
