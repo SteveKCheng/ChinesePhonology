@@ -568,6 +568,9 @@ ol.toc-1 > li > a {
         width: 21em;
         overflow: auto;
 
+        /* set up sliding animation on collapsing sidebar */
+        transition: left 0.5s linear, display 0.5s allow-discrete;
+
         padding-top: 2em;
         box-shadow: -0.1em 0 0.25em inset;
 
@@ -576,12 +579,22 @@ ol.toc-1 > li > a {
     }
 
     /* Expand the sidebar by default even when there is no JavaScript */
-    div#toc.collapsed { display: none; }
+    div#toc.collapsed { 
+        left: -21em;    /* for transition of sliding left */
+        display: none;
+    }
 
     /* Main body stays clear of an expanded sidebar */
-    div#body                   { margin-left: 24em; }
-    div#body.sidebar-expanded  { margin-left: 24em; }
-    div#body.sidebar-collapsed { margin-left: unset; }
+    div#body { 
+        margin-left: 24em; 
+
+        /* set up sliding animation on collapsing sidebar */
+        transition: margin-left linear 0.5s;
+    }
+    
+    div#body.sidebar-collapsed { 
+        margin-left: unset; 
+    }
 
     ol.toc a {
         /* Inherit the color scheme from the sidebar */
