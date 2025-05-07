@@ -104,8 +104,9 @@ a:hover {
 }
 
 
-.ipa {
+span.ipa {
     font-family: "Noto Sans SC", sans-serif;
+    quotes: "/" "/"
 }
 
 span.ipa-narrow {
@@ -113,6 +114,8 @@ span.ipa-narrow {
     quotes: "[" "]"
 }
 
+span.ipa:before { content: open-quote; }
+span.ipa:after { content: close-quote; }
 span.ipa-narrow:before { content: open-quote; }
 span.ipa-narrow:after { content: close-quote; }
 
