@@ -560,6 +560,7 @@ ol.toc-1 > li > a {
         top: 0;
         bottom: 0;
         left: 0;
+        z-index: 3;
 
         width: 21em;
         overflow: auto;
@@ -603,6 +604,7 @@ ol.toc-1 > li > a {
         position: fixed;
         top: 0;
         left: 0;
+        z-index: 3;
 
         max-width: 21em;
         height: auto;
