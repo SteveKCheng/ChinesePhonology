@@ -89,7 +89,10 @@ rt {
     font-size: 50% !important;
 }
 
-
+ul {
+    /* Black Right-Pointing Pointer + 1/3-em space */
+    list-style-type: "\25BA\2004";  
+}
 
 a:any-link {
     text-decoration: none;
