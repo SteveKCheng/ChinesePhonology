@@ -120,9 +120,36 @@ sup.footnote a:any-link {
     color: blue;    
 }
 
+dl.footnotes {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    /* Align <dt> and <dd> on baseline of the first line even if different
+       font sizes are used (e.g. <dd> content may have Chinese characters
+       which are bigger than the surrounding English text). */
+    align-items: first baseline;
+}
+
+dl.footnotes > dt {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 2.5em;
+}
+
+dl.footnotes > dd {
+    /* Force the contents to take up the whole row in the flex container,
+       so the next <dt>,<dd> pair will be laid onto the next row. */
+    flex-basis: calc(100% - 3em);
+    margin-left: auto;                 
+}
+
 /* Highlight footnotes when clicked */
 @media screen {
-    ol.footnotes li:target {
+    dl.footnotes dd:target {
         animation-name: flash-footnote;
         animation-duration: 0.5s;
         animation-iteration-count: 2;

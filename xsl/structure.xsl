@@ -248,28 +248,29 @@
     use="@idref" />
 
   <xsl:template match="s:notes-list">
-    <ol class="footnotes">
+    <dl class="footnotes">
       <xsl:apply-templates select="node()|@*" />
-    </ol>
+    </dl>
   </xsl:template>
 
   <!-- Prefix footnote IDs with "fn-" instead of the usual "id-" -->
-  <xsl:template match="s:notes-list/html:li/@id" priority="1">
+  <xsl:template match="s:notes-item/@id" priority="1">
     <xsl:attribute name="id" select="concat('fn-', string(.))" />
   </xsl:template>
 
-  <xsl:template match="s:notes-list/html:li/html:p[position()=1]">
-    <p>
-      <xsl:apply-templates select="@*" />
-      <xsl:variable name="referrer" select="key('fn', ../@id)" />
+  <!-- The footnote itself. -->
+  <xsl:template match="s:notes-item">
+    <dt>
+      <xsl:variable name="referrer" select="key('fn', @id)" />
       <xsl:if test="count($referrer) = 1">
-        <xsl:for-each select="$referrer">
-          <a href="#{generate-id()}" class="footnote-return">▲</a>
-          <xsl:text> </xsl:text>
-        </xsl:for-each>
+        <a href="#{generate-id($referrer)}" class="footnote-return">▲</a>
+        <xsl:text> </xsl:text>
       </xsl:if>
-      <xsl:apply-templates select="node()" />
-    </p>
+      <xsl:number format="1." from="s:notes-list" /> 
+    </dt>
+    <dd>
+      <xsl:apply-templates select="node()|@*" />
+    </dd>
   </xsl:template>
 
   <!-- Footnote reference.
@@ -285,15 +286,13 @@
     <xsl:param name="idref" select="@idref" as="xs:string" />
     <xsl:variable name="target" select="key('id', $idref)" />
     <xsl:choose>
-      <xsl:when test="$target">
-        <xsl:for-each select="$target">
-          <a href="#fn-{$idref}" id="{$here}">
-            <sup class="footnote">
-              <xsl:text>▼</xsl:text>
-              <xsl:number format="1" />
-            </sup>
-          </a>
-        </xsl:for-each>
+      <xsl:when test="count($target) = 1">
+        <a href="#fn-{$idref}" id="{$here}">
+          <sup class="footnote">
+            <xsl:text>▼</xsl:text>
+            <xsl:number format="1" select="$target" from="s:notes-list" />
+          </sup>
+        </a>
       </xsl:when>
     </xsl:choose>
   </xsl:template>

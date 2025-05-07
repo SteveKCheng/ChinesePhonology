@@ -300,7 +300,7 @@
     </table>
 
     <s:notes-list>
-      <li id="泥-vs-娘">
+      <s:notes-item id="泥-vs-娘">
         <p>
           Some authors merge <p:ac h="initials38">娘</p:ac> into 
           <p:ac h="initials38">泥</p:ac>, on the belief that
@@ -314,8 +314,8 @@
           <p:ac>泥</p:ac> and
           <p:ac>娘</p:ac>. 
         </p>
-      </li>
-      <li id="舌上音">
+      </s:notes-item>
+      <s:notes-item id="舌上音">
         <p>
           Early re-constructions of Middle Chinese determine these
           initials to be (alveolo-)palatal stops <p:mc>舌面塞音</p:mc>.
@@ -325,8 +325,8 @@
           <p:ac>舌上音</p:ac>, literally meaning
           "above-tongue sound", is itself ambiguous on this matter.
         </p>
-      </li>
-      <li id="齒上音">
+      </s:notes-item>
+      <s:notes-item id="齒上音">
         <p>
           <p:ac>齒上音</p:ac> is a relatively modern appellation for these initials.
           In other texts, this row may simply be called <p:ac>正齒音</p:ac>, mixing it up
@@ -338,8 +338,8 @@
           in this row (i.e. <p:ac>齒上音</p:ac>) were likely retroflex in the same way as 
           <p:ac>舌上音</p:ac>.
         </p>
-      </li>
-      <li id="laryngeals">
+      </s:notes-item>
+      <s:notes-item id="laryngeals">
         <p>
           The consonants 
           are definitely grouped very oddly in this row: 
@@ -363,8 +363,8 @@
           categorize these initials into the respective rows for
           velars and palatals. 
         </p>
-      </li>
-      <li id="半齒音">
+      </s:notes-item>
+      <s:notes-item id="半齒音">
         <p>
           <p:ac h="initials38">日</p:ac> is often categorized into the 
           row for <p:ac>正齒音</p:ac>, as those initials there
@@ -392,13 +392,13 @@
           The reader may notice too, interestingly enough, in Japanese 
           this initial similarly became <p:jr>z-</p:jr>.
         </p>
-      </li>
-      <li id="半舌音">
+      </s:notes-item>
+      <s:notes-item id="半舌音">
         <p>
           <p:ac h="initials38">來</p:ac> is often categorized into the 
           row for <p:ac>舌頭音</p:ac>.
         </p>
-      </li>
+      </s:notes-item>
     </s:notes-list>
   </s:section>
 
@@ -684,7 +684,7 @@
     </table>
 
     <s:notes-list>
-      <li id="vowel-a">
+      <s:notes-item id="vowel-a">
         <p>
           American English does not 
           use the vowel <p:i-narrow>a</p:i-narrow> in native words,
@@ -703,8 +703,8 @@
           in Spanish is unaspirated,
           so I am still not entirely faithful to the source language.)
         </p>
-      </li>
-      <li id="vowel-ɑ">
+      </s:notes-item>
+      <s:notes-item id="vowel-ɑ">
         <p>
           <em class="word">top</em> would not be a good example
           for <p:i-narrow>ɑ</p:i-narrow>, if you
@@ -720,8 +720,8 @@
           might be words like <em class="word">father</em>
           and <em class="word">spa</em> that have ‘short’ <em class="spell">a</em>.
         </p>
-      </li>
-      <li id="vowel-ɐ">
+      </s:notes-item>
+      <s:notes-item id="vowel-ɐ">
         <p>
           English ‘short’ <em class="spell">u</em> is usually transcribed as 
           <p:i>ʌ</p:i>.  But <a href="https://en.wikipedia.org/wiki/Near-open_central_vowel"
@@ -736,8 +736,8 @@
           although I find it difficult
           to tell the difference aurally either way.) 
         </p>
-      </li>
-      <li id="vowel-ɔ">
+      </s:notes-item>
+      <s:notes-item id="vowel-ɔ">
         <p>
           <p:i-narrow>ɔ</p:i-narrow> and <p:i-narrow>ɒ</p:i-narrow> are
           the lip-rounded versions of  
@@ -752,7 +752,7 @@
           fortunately 
           (for otherwise I would struggle to tell the difference in the main vowel!). 
         </p>
-      </li>
+      </s:notes-item>
     </s:notes-list>
 
   </s:section>
