@@ -170,21 +170,17 @@ dl.footnotes > dd {
 
 span.ordinal {
     display: inline-block;
-    line-height: 0;
     border-radius: 50%;
     border: 2px solid gray;
-    font-family: "Noto Sans SC", sans-serif;
     background-color: rgb(95%, 95%, 0%);
     font-weight: normal;
-    font-size: 90%;
-}
-
-span.ordinal > span {
-    display: inline-block;
-    padding-top: 0.5rem;
-    padding-bottom: 0.6rem;
-    margin-left: 0.3rem;
-    margin-right: 0.3rem;
+    font-family: "Noto Sans SC", sans-serif;
+    font-stretch: condensed;
+    line-height: 1em;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    vertical-align: center;
 }
 
 @media screen, print {

@@ -215,11 +215,7 @@
   <!-- Create a circled number with styling to make it visually distinct and appealing.
        Limited from 0 to 20. -->
   <xsl:template match="s:ordinal">
-    <span class="ordinal">
-      <span>
-        <xsl:value-of select="number(@value)" />
-      </span>
-    </span>
+    <span class="ordinal"><xsl:value-of select="number(@value)" /></span>
   </xsl:template>
 
   <!-- Insert the current date/time, usually to inform the reader
