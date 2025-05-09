@@ -257,8 +257,8 @@
     <s:notes-list>
       <s:notes-item id="泥-vs-娘">
         <p>
-          Some authors merge <p:ac h="initials38">娘</p:ac> into 
-          <p:ac h="initials38">泥</p:ac>, on the belief that
+          Some authors merge <p:cs h="initials38">娘</p:cs> into 
+          <p:cs h="initials38">泥</p:cs>, on the belief that
           they were not pronounced any differently, at least
           by the time the <p:mc>廣韻</p:mc> was written. Nevertheless
           it can be confirmed in the present day there 
@@ -266,8 +266,8 @@
           <p:mc>反切</p:mc> from 
           <p:mc>廣韻</p:mc>
             form two equivalence classes for 
-          <p:ac>泥</p:ac> and
-          <p:ac>娘</p:ac>. 
+          <p:cs>泥</p:cs> and
+          <p:cs>娘</p:cs>. 
         </p>
       </s:notes-item>
       <s:notes-item id="舌上音">
@@ -307,9 +307,9 @@
           means "throat sounds".)
           The details are too complicated to get into here, but
           initials referred to by
-          <p:ac h="initials38">匣</p:ac>, 
-          <p:ac h="initials38">云</p:ac>,
-          <p:ac h="initials38">以</p:ac> had gotten mixed up historically
+          <p:cs h="initials38">匣</p:cs>, 
+          <p:cs h="initials38">云</p:cs>,
+          <p:cs h="initials38">以</p:cs> had gotten mixed up historically
           because of sound mergers, explaining why they all ended up
           being categorized as <p:mc>喉音</p:mc>. However, they are
           distinguishable as (three) equivalent classes in
@@ -321,13 +321,13 @@
       </s:notes-item>
       <s:notes-item id="半齒音">
         <p>
-          <p:ac h="initials38">日</p:ac> is often categorized into the 
+          <p:cs h="initials38">日</p:cs> is often categorized into the 
           row for <p:mc>正齒音</p:mc>, as those initials there
           were also articulated with the palate.
         </p>
         <p>
           Occasionally, one may still encounter a phonetic description like
-          <p:i>nʑ</p:i> for the <p:ac>日</p:ac> initial.
+          <p:i>nʑ</p:i> for the <p:cs>日</p:cs> initial.
           That is plain wrong as a sound value, because consonant 
           clusters were already lost 
           by the period of Early Middle Chinese, but is meant to suggest
@@ -350,7 +350,7 @@
       </s:notes-item>
       <s:notes-item id="半舌音">
         <p>
-          <p:ac h="initials38">來</p:ac> is often categorized into the 
+          <p:cs h="initials38">來</p:cs> is often categorized into the 
           row for <p:mc>舌頭音</p:mc>.
         </p>
       </s:notes-item>
@@ -699,8 +699,8 @@
           from <p:i-narrow>ʌ</p:i-narrow> and <p:i-narrow>ɑ</p:i-narrow>
           respectively. <p:mc>邵榮芬</p:mc> uses 
           <p:i-narrow>ɔ</p:i-narrow> and <p:i-narrow>ɒ</p:i-narrow>
-          only in the few places: <p:ac>魚</p:ac>&nbsp;<p:i>iɔ</p:i>, 
-          versus <p:ac>覃</p:ac>&nbsp;<p:i>ɒm</p:i> and <p:ac>合</p:ac>&nbsp;<p:i>ɒp</p:i>.
+          only in the few places: <p:cs>魚</p:cs>&nbsp;<p:i>iɔ</p:i>, 
+          versus <p:cs>覃</p:cs>&nbsp;<p:i>ɒm</p:i> and <p:cs>合</p:cs>&nbsp;<p:i>ɒp</p:i>.
         </p>
         <p>
           Either the medial or the coda is sufficient to distinguish these phonemes, 

@@ -31,10 +31,15 @@
     </span>
   </xsl:template>
 
-  <!-- "ac" stands for terminology in Chinese from 'ancient' times -->
-  <xsl:template match="p:ac">
-    <span lang="zh">
-      <xsl:call-template name="look-up-link" />
+  <!-- "cs" stands for Chinese character speller, i.e.
+       the characters used to represent initials and finals -->
+  <xsl:template match="p:cs">
+    <span lang="zh" class="char-speller">
+      <xsl:call-template name="make-optional-hyperlink">
+        <!-- @h stands for hypertext link -->
+        <xsl:with-param name="url" select="p:get-link(@h, string(.))" />
+        <xsl:with-param name="content" select="node()" />
+      </xsl:call-template>
     </span>
   </xsl:template>
 

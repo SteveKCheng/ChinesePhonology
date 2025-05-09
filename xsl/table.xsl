@@ -45,48 +45,21 @@
     use="s:make-section-number(.)" />
 
   <xsl:function name="p:get-link" as="xs:string?">
-    <xsl:param name="group" />
-    <xsl:param name="key" />
+    <xsl:param name="group" as="xs:string?" />
+    <xsl:param name="key" as="xs:string" />
     <xsl:variable name="item" select="key('link-items', concat($group, ':', $key), $term-links-xml)" />
-    <xsl:variable name="group" select="key('id', $group, $term-links-xml)/self::p:link-group" />
+    <xsl:variable name="group-header" select="key('id', $group, $term-links-xml)/self::p:link-group" />
     <xsl:choose>
+      <xsl:when test="not($group)">
+      </xsl:when>
       <xsl:when test="count($item) = 1">
         <xsl:value-of select="$item/@href" />
       </xsl:when>
-      <xsl:when test="count($group/@prefix) = 1">
-        <xsl:value-of select="concat($group/@prefix, $key)" />
+      <xsl:when test="count($group-header/@prefix) = 1">
+        <xsl:value-of select="concat($group-header/@prefix, $key)" />
       </xsl:when>
     </xsl:choose>
   </xsl:function>
-
-  <xsl:template name="look-up-link">
-    <xsl:choose>
-      <!-- "h" stands for hypertext link -->
-      <xsl:when test="@h">
-        <xsl:variable name="key" select="text()" />
-        <xsl:variable name="item" select="key('link-items', concat(@h, ':', $key), $term-links-xml)" />
-        <xsl:variable name="group" select="key('id', @h, $term-links-xml)/self::p:link-group" />
-        <xsl:choose>
-          <xsl:when test="count($item) = 1">
-            <a href="{$item/@href}">
-              <xsl:apply-templates select="node()|@*" />
-            </a>
-          </xsl:when>
-          <xsl:when test="count($group/@prefix) = 1">
-            <a href="{$group/@prefix}{$key}">
-              <xsl:apply-templates select="node()|@*" />
-            </a>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:apply-templates select="node()|@*" />
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:apply-templates select="node()|@*" />
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
 
   <xsl:template match="html:head/p:*">
   </xsl:template>
@@ -469,7 +442,7 @@
   <xsl:template match="p:initial-consonant">
     <xsl:variable name="content">
       <div class="initial-consonant">
-        <p:ac h="initials38"><xsl:value-of select="@char" /></p:ac>
+        <p:cs h="initials38"><xsl:value-of select="@char" /></p:cs>
 
         <p:i>
           <xsl:call-template name="make-optional-hyperlink">
