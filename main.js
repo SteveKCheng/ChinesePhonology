@@ -89,11 +89,25 @@ window.addEventListener("load", function(e)
 
 document.addEventListener("DOMContentLoaded", function(e) 
 {
-    const items = document.querySelectorAll("a.audio");
-    for (const item of items)
+    for (const item of document.querySelectorAll("a.audio"))
     {
-        url = item.getAttribute("href");
+        const url = item.getAttribute("href");
         item.addEventListener("click", handlePlaySound.bind(null, url), false);
+    }
+
+    // On mobile screens where mouse hover is not available, 
+    // assume the first click activates :hover in CSS,
+    // and make the link activate only on a double click.
+    if (window.matchMedia("(hover: none)").matches)
+    {
+        for (const item of document.querySelectorAll("a.sound-description"))
+        {
+            const url = item.getAttribute("href");
+            item.addEventListener("click", function(e) { e.preventDefault(); });
+            item.addEventListener("dblclick", function(e) {
+                window.location = url;
+            });
+        }
     }
 
     //
