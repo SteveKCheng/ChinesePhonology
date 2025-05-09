@@ -276,6 +276,53 @@ colgroup.mc-initials col.sounds-group-4 {
     background-color: rgb(96%, 96%, 96%);
 }
 
+div.initial-consonant {
+    display: flex;
+    flex-direction: row;
+    align-items: first baseline;
+}
+
+div.initial-consonant > span.char-speller {
+    background-color: rgb(100%, 75%, 75%);
+    text-align: center;
+    width: 1.25em;
+}
+
+div.initial-consonant > span.ipa {
+    background-color: aliceblue;
+    margin-left: 0.25em;
+}
+
+div.initial-consonant > .sound-description {
+    text-decoration: none;
+    display: inline-block;
+    width: 2em;
+}
+
+div.initial-consonant > .sound-description > span {
+    /* Put the content of .sound-description 
+       in a balloon that appears on hovering */
+    position: relative;
+    visibility: hidden;
+    background: yellow;
+    padding: 0.25em;
+    border-radius: 2px;
+    left: 0.5em;
+    top: 0.5em;
+    width: auto;
+    text-decoration: none;
+    display: inline-block;
+    text-wrap: nowrap;
+}
+
+div.initial-consonant > .sound-description:hover {
+    background-color: unset;
+}
+
+div.initial-consonant > .sound-description:hover > span {
+    visibility: visible;
+}
+
 /*
   Tables of Middle Chinese finals
  */
