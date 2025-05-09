@@ -279,13 +279,23 @@ colgroup.mc-initials col.sounds-group-4 {
 div.initial-consonant {
     display: flex;
     flex-direction: row;
-    align-items: stretch;
+    align-items: first baseline;
+}
+
+div.initial-consonant > span.char-speller {
+    background-color: rgb(100%, 75%, 75%);
+    text-align: center;
+    width: 1.25em;
+}
+
+div.initial-consonant > span.ipa {
+    background-color: aliceblue;
+    margin-left: 0.25em;
 }
 
 div.initial-consonant > .sound-description {
     text-decoration: none;
     display: inline-block;
-    background-color: aliceblue;
     width: 2em;
 }
 
@@ -303,6 +313,10 @@ div.initial-consonant > .sound-description > span {
     text-decoration: none;
     display: inline-block;
     text-wrap: nowrap;
+}
+
+div.initial-consonant > .sound-description:hover {
+    background-color: unset;
 }
 
 div.initial-consonant > .sound-description:hover > span {
