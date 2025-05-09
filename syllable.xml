@@ -8,14 +8,14 @@
     
     <table>
       <tr>
-        <td rowspan="2"><p:ac>聲母</p:ac> initial </td>
-        <td colspan="4"><p:ac>韻母</p:ac> final</td>
+        <td rowspan="2"><p:mc>聲母</p:mc> initial </td>
+        <td colspan="4"><p:mc>韻母</p:mc> final</td>
       </tr>
       <tr>
-        <td><p:ac>韻頭</p:ac> <p:mc>(介音)</p:mc> medial</td>
-        <td><p:ac>韻腹</p:ac> nucleus</td>
-        <td><p:ac>韻尾</p:ac> coda</td>
-        <td><p:ac>聲</p:ac> <p:mc>(聲調)</p:mc> tone</td>
+        <td><p:mc>韻頭</p:mc> <p:mc>(介音)</p:mc> medial</td>
+        <td><p:mc>韻腹</p:mc> nucleus</td>
+        <td><p:mc>韻尾</p:mc> coda</td>
+        <td><p:mc>聲</p:mc> <p:mc>(聲調)</p:mc> tone</td>
       </tr>
     </table>
   </s:section>
@@ -59,19 +59,19 @@
         </tr>
         <tr>
           <th />
-          <th><p:ac>全清</p:ac></th>
-          <th><p:ac>次清</p:ac></th>
-          <th><p:ac>全濁</p:ac></th>
-          <th><p:ac>清</p:ac></th>
-          <th><p:ac>濁</p:ac></th>
-          <th><p:ac>次濁</p:ac></th>
-          <th><p:ac>次濁</p:ac></th>
+          <th><p:mc>全清</p:mc></th>
+          <th><p:mc>次清</p:mc></th>
+          <th><p:mc>全濁</p:mc></th>
+          <th><p:mc>清</p:mc></th>
+          <th><p:mc>濁</p:mc></th>
+          <th><p:mc>次濁</p:mc></th>
+          <th><p:mc>次濁</p:mc></th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th>
-            Labials <p:ac>唇音</p:ac>
+            Labials <p:mc>唇音</p:mc>
           </th>
           <td>
             <p:initial-consonant char="幫" ipa="p" description="Unaspirated voiceless bilabial plosive" />
@@ -90,7 +90,7 @@
         </tr>
         <tr>
           <th>
-            Alveolar <p:ac>舌頭音</p:ac>
+            Alveolar <p:mc>舌頭音</p:mc>
           </th>
           <td>
             <p:initial-consonant char="端" ipa="t" description="Unaspirated voiceless alveolar plosive" />
@@ -109,7 +109,7 @@
         </tr>
         <tr>
           <th>
-            Retroflex <p:ac>舌上音</p:ac><s:fn idref="舌上音" />
+            Retroflex <p:mc>舌上音</p:mc><s:fn idref="舌上音" />
           </th>
           <td>
             <p:initial-consonant char="知" ipa="ʈ" description="Unaspirated voiceless retroflex plosive" />
@@ -128,7 +128,7 @@
         </tr>
         <tr>
           <th>
-            Alveolar sibilants <p:ac>齒頭音</p:ac>
+            Alveolar sibilants <p:mc>齒頭音</p:mc>
           </th>
           <td>
             <p:initial-consonant char="精" ipa="ts" description="Unaspirated voiceless alveolar affricate" />
@@ -148,7 +148,7 @@
         </tr>      
         <tr>
           <th>
-            Retroflex sibilants <p:ac>齒上音</p:ac><s:fn idref="齒上音" />
+            Retroflex sibilants <p:mc>齒上音</p:mc><s:fn idref="齒上音" />
           </th>
           <td>
             <p:initial-consonant char="莊" ipa="tʂ" description="Unaspirated voiceless retroflex affricate" />
@@ -168,7 +168,7 @@
         </tr>
         <tr>
           <th>
-            Alveolo-palatal sibilants <p:ac>正齒音</p:ac>
+            Alveolo-palatal sibilants <p:mc>正齒音</p:mc>
           </th>
           <td>
             <p:initial-consonant char="章" ipa="tɕ" description="Unaspirated voiceless alveolo-palatal affricate" />
@@ -189,7 +189,7 @@
         </tr>
         <tr>
           <th>
-            Palatal <p:ac>半齒音</p:ac><s:fn idref="半齒音" /> &amp; Lateral <p:ac>半舌音</p:ac><s:fn idref="半舌音" />
+            Palatal <p:mc>半齒音</p:mc><s:fn idref="半齒音" /> &amp; Lateral <p:mc>半舌音</p:mc><s:fn idref="半舌音" />
           </th>
           <td />
           <td />
@@ -205,7 +205,7 @@
         </tr>      
         <tr>
           <th>
-            Velars <p:ac>牙音</p:ac>
+            Velars <p:mc>牙音</p:mc>
           </th>
           <td>
             <p:initial-consonant char="見" ipa="k" description="Unaspirated voiceless velar plosive" />
@@ -224,7 +224,7 @@
         </tr>
         <tr>
           <th rowspan="2">
-            Laryngeals <p:ac>喉音</p:ac><s:fn idref="laryngeals" />
+            Laryngeals <p:mc>喉音</p:mc><s:fn idref="laryngeals" />
           </th>
           <td>
             <p:initial-consonant char="影" ipa="ʔ" description="Glottal stop" />
@@ -260,11 +260,11 @@
           Some authors merge <p:ac h="initials38">娘</p:ac> into 
           <p:ac h="initials38">泥</p:ac>, on the belief that
           they were not pronounced any differently, at least
-          by the time the <p:ac>廣韻</p:ac> was written. Nevertheless
+          by the time the <p:mc>廣韻</p:mc> was written. Nevertheless
           it can be confirmed in the present day there 
           remains a phonemic distinction, in that the 
-          <p:ac>反切</p:ac> from 
-          <p:ac>廣韻</p:ac>
+          <p:mc>反切</p:mc> from 
+          <p:mc>廣韻</p:mc>
             form two equivalence classes for 
           <p:ac>泥</p:ac> and
           <p:ac>娘</p:ac>. 
@@ -277,21 +277,21 @@
           The consensus seems to have settled on these being retroflex,
           after considering they might have emerged from a medial *r
           from Old Chinese. The philological term 
-          <p:ac>舌上音</p:ac>, literally meaning
+          <p:mc>舌上音</p:mc>, literally meaning
           "above-tongue sound", is itself ambiguous on this matter.
         </p>
       </s:notes-item>
       <s:notes-item id="齒上音">
         <p>
-          <p:ac>齒上音</p:ac> is a relatively modern appellation for these initials.
-          In other texts, this row may simply be called <p:ac>正齒音</p:ac>, mixing it up
-          with the next row for the alveolo-palatal sibilants.  <p:ac>正齒音</p:ac> was
+          <p:mc>齒上音</p:mc> is a relatively modern appellation for these initials.
+          In other texts, this row may simply be called <p:mc>正齒音</p:mc>, mixing it up
+          with the next row for the alveolo-palatal sibilants.  <p:mc>正齒音</p:mc> was
           the original Chinese philological term, but only in the 19<sup>th</sup> century 
           did <p:mc>陳澧</p:mc> (in his pioneering work <p:mc>《切韻考》</p:mc>)
-          discovered that, what had been called <p:ac>正齒音</p:ac> consisted of two
+          discovered that, what had been called <p:mc>正齒音</p:mc> consisted of two
           sets of initials.  Later investigations revealed that the initials
-          in this row (i.e. <p:ac>齒上音</p:ac>) were likely retroflex in the same way as 
-          <p:ac>舌上音</p:ac>.
+          in this row (i.e. <p:mc>齒上音</p:mc>) were likely retroflex in the same way as 
+          <p:mc>舌上音</p:mc>.
         </p>
       </s:notes-item>
       <s:notes-item id="laryngeals">
@@ -303,7 +303,7 @@
           From the modern point of view,
           <p:i>x</p:i>, <p:i>ɣ</p:i> are clearly velars, while 
           <p:i>j</p:i> is a palatal glide.
-          (On the other hand, <p:ac>喉音</p:ac> literally
+          (On the other hand, <p:mc>喉音</p:mc> literally
           means "throat sounds".)
           The details are too complicated to get into here, but
           initials referred to by
@@ -311,9 +311,9 @@
           <p:ac h="initials38">云</p:ac>,
           <p:ac h="initials38">以</p:ac> had gotten mixed up historically
           because of sound mergers, explaining why they all ended up
-          being categorized as <p:ac>喉音</p:ac>. However, they are
+          being categorized as <p:mc>喉音</p:mc>. However, they are
           distinguishable as (three) equivalent classes in
-          <p:ac>反切</p:ac> from the <p:ac>廣韻</p:ac>.
+          <p:mc>反切</p:mc> from the <p:mc>廣韻</p:mc>.
           Many authors, in the modern context,
           categorize these initials into the respective rows for
           velars and palatals. 
@@ -322,7 +322,7 @@
       <s:notes-item id="半齒音">
         <p>
           <p:ac h="initials38">日</p:ac> is often categorized into the 
-          row for <p:ac>正齒音</p:ac>, as those initials there
+          row for <p:mc>正齒音</p:mc>, as those initials there
           were also articulated with the palate.
         </p>
         <p>
@@ -337,11 +337,11 @@
           might have preserved the nasal pronunciation.
         </p>
         <p>
-          The philological term <p:ac>半齒音</p:ac>, literally "half-tooth sound", 
+          The philological term <p:mc>半齒音</p:mc>, literally "half-tooth sound", 
           was probably meant to suggest this initial did 
           become a sound like <p:i>ʐ</p:i>
           in later Chinese varieties, 
-          as opposed to <p:ac>半舌音</p:ac> (below) meaning "half-tongue sound".
+          as opposed to <p:mc>半舌音</p:mc> (below) meaning "half-tongue sound".
         </p>
         <p>
           The reader may notice too, interestingly enough, in Japanese 
@@ -351,7 +351,7 @@
       <s:notes-item id="半舌音">
         <p>
           <p:ac h="initials38">來</p:ac> is often categorized into the 
-          row for <p:ac>舌頭音</p:ac>.
+          row for <p:mc>舌頭音</p:mc>.
         </p>
       </s:notes-item>
     </s:notes-list>
@@ -375,7 +375,7 @@
 
         <thead>
           <tr>
-            <th colspan="2"><p:ac>等</p:ac> Division</th>
+            <th colspan="2"><p:mc>等</p:mc> Division</th>
 
             <s:fragment id="mc-finals-divisions-th">
               <th>1</th>
@@ -394,8 +394,8 @@
             <th>Develops later</th>
           </tr>
           <tr>
-            <th><p:ac>攝</p:ac></th>
-            <th><p:ac>呼</p:ac></th>
+            <th><p:mc>攝</p:mc></th>
+            <th><p:mc>呼</p:mc></th>
           </tr>
         </thead>
         <tbody>
@@ -406,7 +406,7 @@
 
       <p>
       Divisions: It seems even the ancient scholars were fairly confused 
-      about what <p:ac>等</p:ac> divisions actually meant; see 
+      about what <p:mc>等</p:mc> divisions actually meant; see 
       <s:cite-group>
         <s:cite key="Baxter 1992" pages="42" />
         <s:cite key="Táng 2016" pages="57" />
@@ -430,8 +430,8 @@
         <s:copy-of idref="mc-finals-colgroup" />
         <thead>
           <tr>
-            <th><p:ac>攝</p:ac></th>
-            <th><p:ac>呼</p:ac></th>
+            <th><p:mc>攝</p:mc></th>
+            <th><p:mc>呼</p:mc></th>
             <s:copy-of idref="mc-finals-divisions-th" />
           </tr>
         </thead>
@@ -448,8 +448,8 @@
         <s:copy-of idref="mc-finals-colgroup" />
         <thead>
           <tr>
-            <th><p:ac>攝</p:ac></th>
-            <th><p:ac>呼</p:ac></th>
+            <th><p:mc>攝</p:mc></th>
+            <th><p:mc>呼</p:mc></th>
             <s:copy-of idref="mc-finals-divisions-th" />
           </tr>
         </thead>

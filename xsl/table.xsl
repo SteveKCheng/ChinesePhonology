@@ -410,13 +410,13 @@
   <xsl:template match="p:all-comparison-table-row">
     <xsl:variable name="content">
       <tr>
-        <th><p:ac h="wikihan"><xsl:value-of select="@char" /></p:ac></th>
-        <td><p:ac><xsl:value-of select="@fq" /></p:ac></td>
+        <th><p:mc h="wikihan"><xsl:value-of select="@char" /></p:mc></th>
+        <td><p:mc><xsl:value-of select="@fq" /></p:mc></td>
         <td>
-          <p:ac><xsl:value-of select="@if" /></p:ac>
+          <p:mc><xsl:value-of select="@if" /></p:mc>
           <span class="division"><xsl:value-of select="@d" /></span>
           <xsl:if test="@u">
-            <p:ac><xsl:value-of select="@u" /></p:ac>
+            <p:mc><xsl:value-of select="@u" /></p:mc>
           </xsl:if>
         </td>
         <td><p:i><xsl:value-of select="@m" /></p:i></td>

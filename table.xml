@@ -426,15 +426,15 @@
     <s:heading>Rhyme dictionaries</s:heading>
 
     <p>
-              , exemplified by the work <p:ac>廣韻</p:ac>,
+              , exemplified by the work <p:mc>廣韻</p:mc>,
           completed in 1011 AD in the Northern Song dynasty <s:cite key="Dǒng 2008" pages="58–59" />.
           Such dictionaries list out <s:term>rhymes</s:term>, which are sets of characters which end
-          in a similar (but not necessarily the same) sound.  Each rhyme is represented by a head character <p:ac>韻目</p:ac>.
+          in a similar (but not necessarily the same) sound.  Each rhyme is represented by a head character <p:mc>韻目</p:mc>.
 
     </p>
         <p>
           In the first page, reproduced below, from the table of contents of the first volume of
-          <p:ac>廣韻</p:ac>, 
+          <p:mc>廣韻</p:mc>, 
           we can see 18 rhymes listed: <p:ac>東</p:ac>, <p:ac>冬</p:ac>, <p:ac>鍾</p:ac>, and so on.
           <img class="page" src="https://ytenx.org/static/img/DrakDzuonDang/volume1/p014.jpg" />
         </p>
@@ -449,13 +449,13 @@
     <p>
       It is mentioned that at the beginning of the Kāihuáng 開皇 era (AD 581–600) of the
       reign of Emperor Wen of Sui, there was a small gathering hosted by 
-      <p:ac>陸法言</p:ac> (Lù Fǎyán), 
+      <p:mc>陸法言</p:mc> (Lù Fǎyán), 
       where discussions about correct pronunciations came up. They noted that the 
       dialects at that time had considerable phonological differences, and a standard or
       correct pronunciation system was need by scholars and their students. Therefore,
       they compared the pronunciations from the south and the north and decided on
       the correct pronunciations, often with reference to older rhyme dictionaries, thus
-      producing the first manuscript of the <p:ac>切韻</p:ac> (Qièyùn).
+      producing the first manuscript of the <p:mc>切韻</p:mc> (Qièyùn).
     </p>
   </blockquote>
 
@@ -466,7 +466,7 @@
     <s:heading>Rhyme tables</s:heading>
 
     <p>
-    exemplified by <p:ac>韻鏡</p:ac>, compiled in c.a. 1131 AD – 1162 AD,
+    exemplified by <p:mc>韻鏡</p:mc>, compiled in c.a. 1131 AD – 1162 AD,
           during the Southern Song dynasty <s:cite key="Dǒng 1996" pages="112" />.  
         </p>
 
