@@ -44,6 +44,21 @@
     match="s:section"
     use="s:make-section-number(.)" />
 
+  <xsl:function name="p:get-link" as="xs:string?">
+    <xsl:param name="group" />
+    <xsl:param name="key" />
+    <xsl:variable name="item" select="key('link-items', concat($group, ':', $key), $term-links-xml)" />
+    <xsl:variable name="group" select="key('id', $group, $term-links-xml)/self::p:link-group" />
+    <xsl:choose>
+      <xsl:when test="count($item) = 1">
+        <xsl:value-of select="$item/@href" />
+      </xsl:when>
+      <xsl:when test="count($group/@prefix) = 1">
+        <xsl:value-of select="concat($group/@prefix, $key)" />
+      </xsl:when>
+    </xsl:choose>
+  </xsl:function>
+
   <xsl:template name="look-up-link">
     <xsl:choose>
       <!-- "h" stands for hypertext link -->
@@ -416,6 +431,71 @@
     <xsl:apply-templates select="$content" mode="re-process" />
   </xsl:template>
 
+  <!-- If $url is not null, wrap $content in an XHTML <a> element 
+       linking to $url, with class=$a-class  
+       
+       If $url is null and $span-class is not null,
+       wrap $content in a <span> with class=$span-class.
+
+       If $url is null and $span-class is also null,
+       $content is emitted without any wrapper. -->
+  <xsl:template name="make-optional-hyperlink">
+    <xsl:param name="url" as="xs:string?" />
+    <xsl:param name="a-class" as="xs:string?" />
+    <xsl:param name="span-class" as="xs:string?" />
+    <xsl:param name="content" />
+
+    <xsl:choose>
+      <xsl:when test="$url">
+        <a href="{$url}">
+          <xsl:if test="$a-class">
+            <xsl:attribute name="class" select="$a-class" />
+          </xsl:if>
+          <xsl:copy-of select="$content" />
+        </a>
+      </xsl:when>
+      <xsl:when test="$span-class">
+        <span class="{$span-class}">
+          <xsl:copy-of select="$content" />
+        </span>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:copy-of select="$content" />
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <!-- Formats one cell in the table of initial consonants -->
+  <xsl:template match="p:initial-consonant">
+    <xsl:variable name="content">
+      <div class="initial-consonant">
+        <p:ac h="initials38"><xsl:value-of select="@char" /></p:ac>
+
+        <p:i>
+          <xsl:call-template name="make-optional-hyperlink">
+            <xsl:with-param name="url" select="p:get-link('wikipedia-ipa-audio', @ipa)" />
+            <xsl:with-param name="a-class" select="'audio'" />
+            <xsl:with-param name="content" select="string(@ipa)" />
+          </xsl:call-template>
+        </p:i>
+
+        <xsl:call-template name="make-optional-hyperlink">
+          <xsl:with-param name="url" select="p:get-link('wikipedia-ipa', @ipa)" />
+          <xsl:with-param name="a-class" select="'sound-description'" />
+          <xsl:with-param name="span-class" select="'sound-description'" />
+          <xsl:with-param name="content">
+            <!-- Need extra span to target the text in CSS -->
+            <span>
+              <xsl:value-of select="string(@description)" />
+            </span>
+          </xsl:with-param>
+        </xsl:call-template>
+      </div>
+    </xsl:variable>
+    <xsl:apply-templates select="$content" mode="re-process" />
+  </xsl:template>
+
+  <!-- Formats one cell in the table of vowels with English analogies -->
   <xsl:template match="p:english-analogy">
     <div class="sound-word">
       <span class="ipa">
@@ -432,25 +512,21 @@
         </em>
         <br />
         <span class="ipa-narrow">
-          <xsl:variable name="ipa">
-            <xsl:call-template name="emphasize-underlined">
-              <xsl:with-param name="text" select="@word-ipa" />
-            </xsl:call-template>
-          </xsl:variable>
-          <xsl:choose>
-            <xsl:when test="@audio">
-              <a class="audio" href="{@audio}"><xsl:value-of select="$ipa" /></a>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:value-of select="$ipa" />
-            </xsl:otherwise>
-          </xsl:choose>
+          <xsl:call-template name="make-optional-hyperlink">
+            <xsl:with-param name="url" select="@audio" />
+            <xsl:with-param name="a-class" select="'audio'" />
+            <xsl:with-param name="content">
+              <xsl:call-template name="emphasize-underlined">
+                <xsl:with-param name="text" select="@word-ipa" />
+              </xsl:call-template>
+            </xsl:with-param>
+          </xsl:call-template>
         </span>
       </span>
 
       <!-- any additional note or comment -->
       <xsl:if test="node()">
-        <span>
+        <span class="note">
           <xsl:apply-templates />
         </span>
       </xsl:if>

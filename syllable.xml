@@ -74,28 +74,18 @@
             Labials <p:ac>唇音</p:ac>
           </th>
           <td>
-            <p:ac h="initials38">幫</p:ac>
-            <p:in
-              title="Voiceless bilabial plosive (Wikipedia)"
-              href="https://en.wikipedia.org/wiki/Voiceless_bilabial_plosive">p</p:in>
+            <p:initial-consonant char="幫" ipa="p" description="Unaspirated voiceless bilabial plosive" />
           </td>
           <td>
-            <p:ac h="initials38">滂</p:ac>
-            <p:i>pʰ</p:i>
+            <p:initial-consonant char="滂" ipa="pʰ" description="Aspirated voiceless bilabial plosive" />
           </td>
           <td>
-            <p:ac h="initials38">並</p:ac>
-            <p:in
-              title="Voiced bilabial plosive (Wikipedia)"
-              href="https://en.wikipedia.org/wiki/Voiced_bilabial_plosive">b</p:in>
+            <p:initial-consonant char="並" ipa="b" description="Voiced bilabial plosive" />
           </td>
           <td />
           <td />
           <td>
-            <p:ac h="initials38">明</p:ac>
-            <p:in
-              title="Voiced bilabial nasal (Wikipedia)" 
-              href="https://en.wikipedia.org/wiki/Voiced_bilabial_nasal">m</p:in>
+            <p:initial-consonant char="明" ipa="m" description="Voiced bilabial nasal" />
           </td>
         </tr>
         <tr>
@@ -103,22 +93,18 @@
             Alveolar <p:ac>舌頭音</p:ac>
           </th>
           <td>
-            <p:ac h="initials38">端</p:ac>
-            <p:i>t</p:i>
+            <p:initial-consonant char="端" ipa="t" description="Unaspirated voiceless alveolar plosive" />
           </td>
           <td>
-            <p:ac h="initials38">透</p:ac>
-            <p:i>tʰ</p:i>
+            <p:initial-consonant char="透" ipa="tʰ" description="Aspirated voiceless alveolar plosive"/>
           </td>
           <td>
-            <p:ac h="initials38">定</p:ac>
-            <p:i>d</p:i>
+            <p:initial-consonant char="定" ipa="d" description="Voiced alveolar plosive"/>
           </td>
           <td />
           <td />
           <td>
-            <p:ac h="initials38">泥</p:ac>
-            <p:i>n</p:i>
+            <p:initial-consonant char="泥" ipa="n" description="Voiced alveolar nasal" />
           </td>
         </tr>
         <tr>
@@ -126,23 +112,18 @@
             Retroflex <p:ac>舌上音</p:ac><s:fn idref="舌上音" />
           </th>
           <td>
-            <p:ac h="initials38">知</p:ac>
-            <p:i>ʈ</p:i>
+            <p:initial-consonant char="知" ipa="ʈ" description="Unaspirated voiceless retroflex plosive" />
           </td>
           <td>
-            <p:ac h="initials38">徹</p:ac>
-            <p:i>ʈʰ</p:i>
+            <p:initial-consonant char="徹" ipa="ʈʰ" description="Aspirated voiceless retroflex plosive" />
           </td>
           <td>
-            <p:ac h="initials38">澄</p:ac>
-            <p:i>ɖ</p:i>
+            <p:initial-consonant char="澄" ipa="ɖ" description="Voiced retroflex plosive" />
           </td>
           <td />
           <td />
           <td>
-            <p:ac h="initials38">娘</p:ac>
-            <p:i>ɳ</p:i>
-            <s:fn idref="泥-vs-娘" />
+            <p:initial-consonant char="娘" ipa="ɳ" description="Voiced retroflex nasal" />
           </td>
         </tr>
         <tr>
@@ -150,24 +131,19 @@
             Alveolar sibilants <p:ac>齒頭音</p:ac>
           </th>
           <td>
-            <p:ac h="initials38">精</p:ac>
-            <p:i>ts</p:i>
+            <p:initial-consonant char="精" ipa="ts" description="Unaspirated voiceless alveolar affricate" />
           </td>
           <td>
-            <p:ac h="initials38">清</p:ac>
-            <p:i>tsʰ</p:i>
+            <p:initial-consonant char="清" ipa="tsʰ" description="Aspirated voiceless alveolar affricate" />
           </td>
           <td>
-            <p:ac h="initials38">從</p:ac>
-            <p:i>dz</p:i>
+            <p:initial-consonant char="從" ipa="dz" description="Voiced alveolar affricate" />
           </td>
           <td>
-            <p:ac h="initials38">心</p:ac>
-            <p:i>s</p:i>
+            <p:initial-consonant char="心" ipa="s" description="Voiceless alveolar fricative" />
           </td>
           <td>
-            <p:ac h="initials38">邪</p:ac>
-            <p:i>z</p:i>
+            <p:initial-consonant char="邪" ipa="z" description="Voiced alveolar fricative" />
           </td>
         </tr>      
         <tr>
@@ -175,24 +151,19 @@
             Retroflex sibilants <p:ac>齒上音</p:ac><s:fn idref="齒上音" />
           </th>
           <td>
-            <p:ac h="initials38">莊</p:ac>
-            <p:i>tʂ</p:i>
+            <p:initial-consonant char="莊" ipa="tʂ" description="Unaspirated voiceless retroflex affricate" />
           </td>
           <td>
-            <p:ac h="initials38">初</p:ac>
-            <p:i>tʂʰ</p:i>
+            <p:initial-consonant char="初" ipa="tʂʰ" description="Aspirated voiceless retroflex affricate" />
           </td>
           <td>
-            <p:ac h="initials38">崇</p:ac>
-            <p:i>dʐ</p:i>
+            <p:initial-consonant char="崇" ipa="dʐ" description="Voiced retroflex affricate" />
           </td>
           <td>
-            <p:ac h="initials38">生</p:ac>
-            <p:i>ʂ</p:i>
+            <p:initial-consonant char="生" ipa="ʂ" description="Voiceless retroflex fricative" />
           </td>
           <td>
-            <p:ac h="initials38">俟</p:ac>
-            <p:i>ʐ</p:i>
+            <p:initial-consonant char="俟" ipa="ʐ" description="Voiced retroflex fricative" />
           </td>
         </tr>
         <tr>
@@ -200,24 +171,19 @@
             Alveolo-palatal sibilants <p:ac>正齒音</p:ac>
           </th>
           <td>
-            <p:ac h="initials38">章</p:ac>
-            <p:i>tɕ</p:i>
+            <p:initial-consonant char="章" ipa="tɕ" description="Unaspirated voiceless alveolo-palatal affricate" />
           </td>
           <td>
-            <p:ac h="initials38">昌</p:ac>
-            <p:i>tɕ</p:i>
+            <p:initial-consonant char="昌" ipa="tɕʰ" description="Aspirated voiceless alveolo-palatal affricate" />
           </td>
           <td>
-            <p:ac h="initials38">船</p:ac>
-            <p:i>dʑ</p:i>
+            <p:initial-consonant char="船" ipa="dʑ" description="Voiced alveolo-palatal affricate" />
           </td>
           <td>
-            <p:ac h="initials38">書</p:ac>
-            <p:i>ɕ</p:i>
+            <p:initial-consonant char="書" ipa="ɕ" description="Voiceless alveolo-palatal fricative" />
           </td>
           <td>
-            <p:ac h="initials38">禪</p:ac>
-            <p:i>ʑ</p:i>
+            <p:initial-consonant char="禪" ipa="ʑ" description="Voiced alveolo-palatal fricative" />
           </td>
           <td />
         </tr>
@@ -231,12 +197,10 @@
           <td />
           <td />
           <td>
-            <p:ac h="initials38">日</p:ac>
-            <p:i>ɲ</p:i>
+            <p:initial-consonant char="日" ipa="ɲ" description="Voiced palatal nasal" />
           </td>
           <td>
-            <p:ac h="initials38">來</p:ac>
-            <p:i>l</p:i>
+            <p:initial-consonant char="來" ipa="l" description="Voiced post-alveolar lateral approximant" />
           </td>
         </tr>      
         <tr>
@@ -244,22 +208,18 @@
             Velars <p:ac>牙音</p:ac>
           </th>
           <td>
-            <p:ac h="initials38">見</p:ac>
-            <p:i>k</p:i>
+            <p:initial-consonant char="見" ipa="k" description="Unaspirated voiceless velar plosive" />
           </td>
           <td>
-            <p:ac h="initials38">溪</p:ac>
-            <p:i>kʰ</p:i>
+            <p:initial-consonant char="溪" ipa="kʰ" description="Aspirated voiceless alveolo-palatal fricative" />
           </td>
           <td>
-            <p:ac h="initials38">群</p:ac>
-            <p:i>g</p:i>
+            <p:initial-consonant char="群" ipa="g" description="Voiced velar plosive" />
           </td>
           <td />
           <td />
           <td>
-            <p:ac h="initials38">疑</p:ac>
-            <p:i>ŋ</p:i>
+            <p:initial-consonant char="疑" ipa="ŋ" description="Voiced velar nasal" />
           </td>
         </tr>
         <tr>
@@ -267,18 +227,15 @@
             Laryngeals <p:ac>喉音</p:ac><s:fn idref="laryngeals" />
           </th>
           <td>
-            <p:ac h="initials38">影</p:ac>
-            <p:i>ʔ</p:i>
+            <p:initial-consonant char="影" ipa="ʔ" description="Glottal stop" />
           </td>
           <td />
           <td />
           <td>
-            <p:ac h="initials38">曉</p:ac>
-            <p:i>x</p:i>
+            <p:initial-consonant char="曉" ipa="x" description="Voiceless velar fricative" />
           </td>
           <td>
-            <p:ac h="initials38">匣</p:ac>
-            <p:i>ɣ</p:i>
+            <p:initial-consonant char="匣" ipa="ɣ" description="Voiced velar fricative" />
           </td>
         </tr>
         <tr>
@@ -287,13 +244,11 @@
           <td />
           <td />
           <td>
-            <p:ac h="initials38">云</p:ac>
-            <p:i>ɣʲ</p:i>
+            <p:initial-consonant char="云" ipa="ɣʲ" description="Palatized voiced velar fricative" />
           </td>
           <td />
           <td>
-            <p:ac h="initials38">以</p:ac>
-            <p:i>j</p:i>
+            <p:initial-consonant char="以" ipa="j" description="Voiced palatal approximant" />
           </td>
         </tr>
       </tbody>

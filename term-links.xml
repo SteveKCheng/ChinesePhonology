@@ -45,4 +45,88 @@
 
 <p:link-group id="wikihan" prefix="https://en.wiktionary.org/wiki/" />
 
+<p:link-group id="wikipedia-ipa">
+  <p:link-item key="p"   href="https://en.wikipedia.org/wiki/Voiceless_bilabial_plosive" />
+  <p:link-item key="b"   href="https://en.wikipedia.org/wiki/Voiced_bilabial_plosive" />
+  <p:link-item key="m"   href="https://en.wikipedia.org/wiki/Voiced_bilabial_nasal" />
+  
+  <p:link-item key="t"   href="https://en.wikipedia.org/wiki/Voiceless_alveolar_plosive" />
+  <p:link-item key="d"   href="https://en.wikipedia.org/wiki/Voiced_alveolar_plosive" />
+  <p:link-item key="n"   href="https://en.wikipedia.org/wiki/Voiced_alveolar_nasal" />
+
+  <p:link-item key="ʈ"   href="https://en.wikipedia.org/wiki/Voiceless_retroflex_plosive" />
+  <p:link-item key="ɖ"   href="https://en.wikipedia.org/wiki/Voiced_retroflex_plosive" />
+  <p:link-item key="ɳ"   href="https://en.wikipedia.org/wiki/Voiced_retroflex_nasal" />
+  
+  <p:link-item key="ts"  href="https://en.wikipedia.org/wiki/Voiceless_alveolar_affricate" />
+  <p:link-item key="dz"  href="https://en.wikipedia.org/wiki/Voiced_alveolar_affricate" />
+  <p:link-item key="s"   href="https://en.wikipedia.org/wiki/Voiceless_alveolar_fricative" />
+  <p:link-item key="z"   href="https://en.wikipedia.org/wiki/Voiced_alveolar_fricative" />
+
+  <p:link-item key="tʂ"  href="https://en.wikipedia.org/wiki/Voiceless_retroflex_affricate" />
+  <p:link-item key="dʐ"  href="https://en.wikipedia.org/wiki/Voiced_retroflex_affricate" />
+  <p:link-item key="ʂ"   href="https://en.wikipedia.org/wiki/Voiceless_retroflex_fricative" />
+  <p:link-item key="ʐ"   href="https://en.wikipedia.org/wiki/Voiced_retroflex_fricative" />
+
+  <p:link-item key="tɕ"  href="https://en.wikipedia.org/wiki/Voiceless_alveolo-palatal_affricate" />
+  <p:link-item key="dʑ"  href="https://en.wikipedia.org/wiki/Voiced_alveolo-palatal_affricate" />
+  <p:link-item key="ɕ"   href="https://en.wikipedia.org/wiki/Voiceless_alveolo-palatal_fricative" />
+  <p:link-item key="ʑ"   href="https://en.wikipedia.org/wiki/Voiced_alveolo-palatal_fricative" />
+
+  <p:link-item key="ɲ"   href="https://en.wikipedia.org/wiki/Voiced_palatal_nasal" />
+  <p:link-item key="l"   href="https://en.wikipedia.org/wiki/Voiced_postalveolar_lateral_approximant" />
+
+  <p:link-item key="k"   href="https://en.wikipedia.org/wiki/Voiceless_velar_plosive" />
+  <p:link-item key="g"   href="https://en.wikipedia.org/wiki/Voiced_velar_plosive" />
+  <p:link-item key="ŋ"   href="https://en.wikipedia.org/wiki/Voiced_velar_nasal" />
+
+  <p:link-item key="ʔ"   href="https://en.wikipedia.org/wiki/Glottal_stop" />
+  <p:link-item key="x"   href="https://en.wikipedia.org/wiki/Voiceless_velar_fricative" />
+  <p:link-item key="ɣ"   href="https://en.wikipedia.org/wiki/Voiced_velar_fricative" />
+  <p:link-item key="j"   href="https://en.wikipedia.org/wiki/Voiced_palatal_approximant" />
+</p:link-group>
+
+<p:link-group id="wikipedia-ipa-audio">
+  <p:link-item key="p"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/5/51/Voiceless_bilabial_plosive.ogg/Voiceless_bilabial_plosive.ogg.mp3" />
+  <p:link-item key="b"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/2/2c/Voiced_bilabial_plosive.ogg/Voiced_bilabial_plosive.ogg.mp3" />
+  <p:link-item key="m"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a9/Bilabial_nasal.ogg/Bilabial_nasal.ogg.mp3" />
+  
+  <p:link-item key="t"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/0/02/Voiceless_alveolar_plosive.ogg/Voiceless_alveolar_plosive.ogg.mp3" />
+  <p:link-item key="d"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/0/01/Voiced_alveolar_plosive.ogg/Voiced_alveolar_plosive.ogg.mp3" />
+  <p:link-item key="n"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/2/29/Alveolar_nasal.ogg/Alveolar_nasal.ogg.mp3" />
+
+  <p:link-item key="ʈ"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b0/Voiceless_retroflex_stop.oga/Voiceless_retroflex_stop.oga.mp3" />
+  <p:link-item key="ɖ"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/2/27/Voiced_retroflex_stop.oga/Voiced_retroflex_stop.oga.mp3" />
+  <p:link-item key="ɳ"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/af/Retroflex_nasal.ogg/Retroflex_nasal.ogg.mp3" />
+  
+  <p:link-item key="ts"  href="https://upload.wikimedia.org/wikipedia/commons/transcoded/9/9d/Voiceless_alveolar_sibilant_affricate.oga/Voiceless_alveolar_sibilant_affricate.oga.mp3" />
+  <!-- p:link-item key="tsʰ"  -->
+  <p:link-item key="dz"  href="https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d8/Voiced_alveolar_sibilant_affricate.oga/Voiced_alveolar_sibilant_affricate.oga.mp3" />
+  <p:link-item key="s"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/ac/Voiceless_alveolar_sibilant.ogg/Voiceless_alveolar_sibilant.ogg.mp3" />
+  <p:link-item key="z"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c0/Voiced_alveolar_sibilant.ogg/Voiced_alveolar_sibilant.ogg.mp3" />
+
+  <!-- p:link-item key="tʂ"  -->
+  <p:link-item key="tʂʰ"  href="https://upload.wikimedia.org/wikipedia/commons/transcoded/e/e9/Voiceless_retroflex_affricate.ogg/Voiceless_retroflex_affricate.ogg.mp3" />
+  <p:link-item key="dʐ"  href="https://upload.wikimedia.org/wikipedia/commons/transcoded/5/58/Voiced_retroflex_affricate.ogg/Voiced_retroflex_affricate.ogg.mp3" />
+  <p:link-item key="ʂ"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b1/Voiceless_retroflex_sibilant.ogg/Voiceless_retroflex_sibilant.ogg.mp3" />
+  <p:link-item key="ʐ"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7f/Voiced_retroflex_sibilant.ogg/Voiced_retroflex_sibilant.ogg.mp3" />
+
+  <!-- p:link-item key="tɕ"  -->
+  <p:link-item key="tɕʰ"  href="https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c4/Voiceless_alveolo-palatal_affricate.ogg/Voiceless_alveolo-palatal_affricate.ogg.mp3" />
+  <p:link-item key="dʑ"  href="https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c1/Voiced_alveolo-palatal_affricate.ogg/Voiced_alveolo-palatal_affricate.ogg.mp3" />
+  <p:link-item key="ɕ"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/0/0b/Voiceless_alveolo-palatal_sibilant.ogg/Voiceless_alveolo-palatal_sibilant.ogg.mp3" />
+  <p:link-item key="ʑ"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/1/15/Voiced_alveolo-palatal_sibilant.ogg/Voiced_alveolo-palatal_sibilant.ogg.mp3" />
+
+  <p:link-item key="ɲ"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/4/46/Palatal_nasal.ogg/Palatal_nasal.ogg.mp3" />
+  <p:link-item key="l"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/bc/Alveolar_lateral_approximant.ogg/Alveolar_lateral_approximant.ogg.mp3" />
+
+  <p:link-item key="k"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/e/e3/Voiceless_velar_plosive.ogg/Voiceless_velar_plosive.ogg.mp3" />
+  <p:link-item key="g"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/1/12/Voiced_velar_plosive_02.ogg/Voiced_velar_plosive_02.ogg.mp3" />
+  <p:link-item key="ŋ"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/3/39/Velar_nasal.ogg/Velar_nasal.ogg.mp3" />
+
+  <p:link-item key="ʔ"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/4/4d/Glottal_stop.ogg/Glottal_stop.ogg.mp3" />
+  <p:link-item key="x"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/0/0f/Voiceless_velar_fricative.ogg/Voiceless_velar_fricative.ogg.mp3" />
+  <p:link-item key="ɣ"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/4/47/Voiced_velar_fricative.ogg/Voiced_velar_fricative.ogg.mp3" />
+  <p:link-item key="j"   href="https://upload.wikimedia.org/wikipedia/commons/transcoded/e/e8/Palatal_approximant.ogg/Palatal_approximant.ogg.mp3" />
+</p:link-group>
 </p:link-data>
