@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function(e)
     // and make the link activate only on a double click.
     if (window.matchMedia("(hover: none)").matches)
     {
-        for (const item of document.querySelectorAll("a.sound-description"))
+        for (const item of document.querySelectorAll("a.balloon"))
         {
             const url = item.getAttribute("href");
             item.addEventListener("click", function(e) { e.preventDefault(); });

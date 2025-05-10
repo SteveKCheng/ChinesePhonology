@@ -454,8 +454,8 @@
 
         <xsl:call-template name="make-optional-hyperlink">
           <xsl:with-param name="url" select="p:get-link('wikipedia-ipa', @ipa)" />
-          <xsl:with-param name="a-class" select="'sound-description'" />
-          <xsl:with-param name="span-class" select="'sound-description'" />
+          <xsl:with-param name="a-class" select="'balloon'" />
+          <xsl:with-param name="span-class" select="'balloon'" />
           <xsl:with-param name="content">
             <!-- Need extra span to target the text in CSS -->
             <span>
