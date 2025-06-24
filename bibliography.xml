@@ -316,6 +316,15 @@
         <original><year>1980</year></original>
       </book>
 
+      <book xml:lang="zh" key="Shek 2024">
+        <author>王見田</author>
+        <title>解・救・正讀 香港粵讀問題探索</title>
+        <edition>第三版</edition>
+        <publisher>心一堂</publisher>
+        <year>2024</year>
+        <link class="source" url="https://www.savepropercantonese.com/files/save-proper-cantonese-book-3ed.pdf" />
+      </book>
+
       <book xml:lang="zh" key="Sinica 1992">
         <editor>中央研究院歷史語言研究所出版品編輯委員會</editor>
         <title>中國境內語言暨語言學 第一輯: 漢語方言</title>
