@@ -293,34 +293,59 @@ div.initial-consonant > span.ipa {
     margin-left: 0.25em;
 }
 
-div.initial-consonant > .sound-description {
-    text-decoration: none;
-    display: inline-block;
+div.initial-consonant > .balloon {
     width: 2em;
+    height: 1em;
 }
 
-div.initial-consonant > .sound-description > span {
-    /* Put the content of .sound-description 
-       in a balloon that appears on hovering */
-    position: relative;
-    visibility: hidden;
-    background: yellow;
-    padding: 0.25em;
-    border-radius: 2px;
+/* Puts the content of in a balloon that only appears on hovering.
+   This technique is used to present auxiliary information
+   associated with a cell in a table while conserving
+   visual space. 
+   
+   For this CSS rule to work, the containing <span> or <a> element
+   of class "balloon" must contain a lone <span> element that
+   holds the content of the balloon. */
+.balloon > span {
+    position: absolute;
+    z-index: 1;
     left: 0.5em;
     top: 0.5em;
-    width: auto;
-    text-decoration: none;
+
     display: inline-block;
-    text-wrap: nowrap;
+    padding: 0.25em;
+    border-radius: 2px;
+
+    visibility: hidden;
+    background: yellow;
+
+    /* Try to avoid wrapping unless the text is too long */
+    max-width: 15em;
+    width: max-content;
+    text-wrap: wrap;
 }
 
-div.initial-consonant > .sound-description:hover {
-    background-color: unset;
-}
-
-div.initial-consonant > .sound-description:hover > span {
+.balloon:hover > span {
     visibility: visible;
+}
+
+.balloon {
+    /* Establish context for absolute positioning of <span> child. */
+    position: relative;
+    z-index: 0;
+    
+    /* The width/height of the originating element of the ballon,
+       i.e. the blank space that can be hovered over, can be set
+       independently.  A more specific rule can be used to override
+       these defaults, e.g. depending on the size of the cell
+       that the balloon is to be emdedded in. */
+    width: 1em;
+    height: 1em;
+}
+
+a.balloon:hover {
+    /* Disable the highlighting of links that are revealed in a balloon */
+    background-color: unset;
 }
 
 /*
