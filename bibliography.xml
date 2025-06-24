@@ -277,6 +277,21 @@
         </trans>
       </book>
 
+      <book xml:lang="zh" key="Kataoka 2022">
+        <author>片岡 新</author>
+        <author>李燕萍</author>
+        <title>晚清民初歐美傳教士書寫的廣東話文獻精選</title>
+        <publisher>香港中文大學中國文化研究所吳多泰中國語文研究中心</publisher>
+        <year>2022</year>
+        <trans xml:lang="en">
+          <author>Kataoka, Shin</author>
+          <author>Lee, Yin-Ping Cream</author>
+          <title>Selected Cantonese Publications by Western Missionaries in China (1828-1927)</title>
+          <publisher>T.T. Ng Chinese Language Research Centre, Institute of Chinese Studies, The Chinese University of Hong Kong</publisher>
+        </trans>
+        <link class="source" url="https://www.lordwilson-heritagetrust.org.hk/filemanager/archive/project_doc/27-9-129-1/1.pdf" />
+      </book>
+
       <book xml:lang="zh" key="Lǐ 2001">
         <author>李思敬</author>
         <title>音韻</title>
