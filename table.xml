@@ -492,6 +492,16 @@
     </thead>
     <tbody>
       <tr>
+        <th>Phonology (study of)</th>
+        <td><p:mc>音韻學</p:mc></td>
+        <td><p:j>音韻論</p:j></td>
+      </tr>
+      <tr>
+        <th>Phonetics (study of)</th>
+        <td><p:mc>語音學</p:mc></td>
+        <td><p:j>音声学</p:j></td>
+      </tr>
+      <tr>
         <th>Place of articulation</th>
         <td><p:mc>發音部位</p:mc></td>
         <td><p:j>調音点</p:j></td>
